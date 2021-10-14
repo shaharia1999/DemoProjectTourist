@@ -5,8 +5,8 @@ class Footer extends Component {
     render() {
         return (
             <Fragment>
-                <footer className="site-footer p-5">
-                    <div className="container-fluid p-5">
+                <footer className="site-footer mt-5">
+                    <div className="container">
                         <div className="row">
                             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
                                 <h1 className="FooterTitle mb-3">About</h1>
