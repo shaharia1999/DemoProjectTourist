@@ -26,65 +26,56 @@ class NavTopSection extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <Navbar variant="light" bg="light" expand="lg">
+
                     <Container>
-                        <Navbar.Toggle aria-controls="navbar-dark-example" />
-                        <Navbar.Collapse id="navbar-dark-example">
                             <Nav>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Dhaka" menuVariant="dark">
+                                <NavDropdown title="Dhaka" className="nav2margin mx-3" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Chittagong" menuVariant="dark">
+                                <NavDropdown title="Chittagong" className="nav2margin mx-3" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Sylhet" menuVariant="dark">
+                                <NavDropdown  title="Sylhet" className="nav2margin mx-3" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Rajshahi" menuVariant="dark">
+                                <NavDropdown title="Rajshahi" className="nav2margin" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Jossore" menuVariant="dark">
+                                <NavDropdown title="Jossore" className="nav2margin" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Barisal" menuVariant="dark">
+                                <NavDropdown title="Barisal" className="nav2margin" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Khulna" menuVariant="dark">
+                                <NavDropdown title="Khulna" className="nav2margin" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Rangpur" menuVariant="dark">
+                                <NavDropdown title="Rangpur" className="nav2margin" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Mymanshing" menuVariant="dark">
-                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                </NavDropdown>
-                                <NavDropdown id="nav-dropdown-dark-example" title="Narayangan" menuVariant="dark">
+                                <NavDropdown title="Mymanshing" className="nav2margin" menuVariant="dark">
                                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
-                        </Navbar.Collapse>
                     </Container>
-                </Navbar>
             </Fragment>
         );
     }
