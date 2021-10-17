@@ -1,11 +1,14 @@
 import React, {Component, Fragment} from 'react';
 import Footer from "../../component/common/footer/Footer";
+import NavTopSection from "../../component/common/navTopSection/NavTopSection";
+
 
 class HomePage extends Component {
     render() {
         return (
             <Fragment>
-             <Footer/>
+                 <NavTopSection/>
+                <Footer/>
             </Fragment>
         );
     }

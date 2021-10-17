@@ -1,0 +1,42 @@
+.placeholder-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contactCardPadding{
+    padding:40px;
+    background: #ffffff;
+}
+
+.contact-btn{
+    background-color: #198c9f;
+    border-color: #198c9f;
+    border-radius: 0px!important;
+}
+.contact-btn:hover{
+    background-color: #198c9f;
+    border-color: #198c9f;
+    border-radius: 0px!important;
+}
+
+.contact-section-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #198c9f;
+}
+
+.contact-section-subTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (max-width: 374.98px) {
+    .contactCardPadding{padding:15px;}
+}
+
+@media (min-width: 375.98px) and (max-width: 575.98px){
+    .contactCardPadding{padding:20px;}
+}
