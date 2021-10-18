@@ -30,6 +30,31 @@
 }
 
 .nav2margin{
-    margin: 2px 6px 2px 6px!important;
-
+    margin: 2px 20px 2px 20px!important;
+    font-family: 'Poppins', sans-serif;
+    color: #242424!important;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none!important;
 }
+
+.nav2font{
+    font-family: 'Poppins', sans-serif;
+    color: #242424!important;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none!important;
+}
+
+.nav2font:hover{
+    font-family: 'Poppins', sans-serif;
+    color: #242424!important;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none!important;
+}
+
+.nav2Background{
+    background-color: #ededed;
+}
+

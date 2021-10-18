@@ -1,0 +1,37 @@
+.statistic-container{
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 300px;
+}
+
+.Project-card{
+    border-radius: 0px!important;
+    margin: 0px!important;
+    height: auto;
+    box-shadow: 0px 2px 2px 2px #C20035;
+}
+
+.statistics-img{
+    display: block;
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    min-width: 80px;
+    min-height: 80px;
+}
+
+.statistics-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #7D58A5FF;
+}
+
+.statistics-des{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #595959;
+}

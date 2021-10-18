@@ -1,6 +1,6 @@
 .homeSearch{
     background-color: #C20035;
-    height: 250px;
+    height: 200px;
     width: 100%;
 }
 
@@ -9,14 +9,34 @@
     width: 100px;
     color: white;
     background-color: #1b1e21;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.search-btn:hover{
+    height: 60px;
+    width: 100px;
+    color: #C20035;
+    background-color: #1b1e21;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .searchUpText{
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 28px;
-    margin-top: 100px;
+    margin-top: 40px;
+}
+
+.search-placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 20px;
 }
 
 .formSearch-control{

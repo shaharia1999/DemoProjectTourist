@@ -1,14 +1,14 @@
 import React, {Component, Fragment} from 'react';
-import homeBanner from "../../../asset/images/homeBanner.webp"
+import HomeBannerImg from "../../../asset/images/HomeBannerImg.jpg"
 
 class HomeBanner extends Component {
     render() {
         return (
             <Fragment>
                 <div className="container-fluid">
-                    <div className="row">
+                    <div className="row p-4">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <img className="homeBannerImage" src={homeBanner} alt=""/>
+                            <img className="homeBannerImage" src={HomeBannerImg} alt=""/>
                         </div>
                     </div>
                 </div>
