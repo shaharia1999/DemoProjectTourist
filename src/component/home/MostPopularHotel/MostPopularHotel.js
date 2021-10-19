@@ -13,7 +13,7 @@ class MostPopularHotel extends Component {
                     <div className="row">
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="roomStar mb-2"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
@@ -21,7 +21,7 @@ class MostPopularHotel extends Component {
                         </div>
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="roomStar mb-2"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
@@ -30,7 +30,7 @@ class MostPopularHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="roomStar mb-2"><FaStar/><FaStar/><FaStar/></h6>
@@ -39,7 +39,7 @@ class MostPopularHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="roomStar mb-2"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
@@ -48,7 +48,7 @@ class MostPopularHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="roomStar mb-2"><FaStar/><FaStar/><FaStar/><FaStar/></h6>
@@ -57,7 +57,7 @@ class MostPopularHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="roomStar mb-2"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>

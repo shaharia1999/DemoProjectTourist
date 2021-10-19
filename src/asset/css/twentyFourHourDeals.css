@@ -2,37 +2,87 @@ div [class^="col-"]{
     padding-left:5px;
     padding-right:5px;
 }
-.TrendingNow{
-    transition:1s;
-    cursor:pointer;
+.TwentyFourHoursCard{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.9s;
+    width: 100%;
+    background-color: #ffffff;
 }
-
+.TwentyFourHoursCard:hover{
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+}
 .twentyFourImage{
     width: 100%;
-    height: 150px;
+    height: 200px;
 }
-
+.TwentyFourHoursHotelBoxCard{
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.7;
+    height: 40px;
+    width: 100%;
+    margin-top: 160px;
+}
+.TwentyFourHoursHotelTitle{
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none!important;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 3px 0 0 12px !important;
+    opacity: 1;
+}
+.TwentyFourHoursHotelDiscountCard{
+    position: absolute;
+    background-color: #ffffff;
+    opacity: 0.8;
+    height: 26px;
+    width: 90px;
+    margin-top: 15px;
+    margin-left: 190px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.TwentyFourHoursHotelDiscountTitle{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none!important;
+    color: #C20035;
+    font-weight: 500;
+    margin: 3px 0 0 12px !important;
+    opacity: 1;
+}
+.TwentyFourHoursAnimation{
+    transition:1s;
+    cursor: pointer;
+}
 .roomStar{
     color: #C20035;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 0px;
-    margin-left: 10px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
-
+.TwentyFourHoursHotelIcon{
+    color: #C20035;
+    font-size: 12px;
+}
+.TwentyFourHoursLocationIcon{
+    color: #C20035;
+    font-size: 16px;
+}
 .room-title{
     font-family: 'Poppins', sans-serif;
     font-size:16px;
-    transition:1s;
     cursor:pointer;
     text-decoration: none!important;
     color: #393939;
     margin-top: 3px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
-
-.TrendingNow:hover{
+.TwentyFourHoursAnimation:hover{
     transform: scale(1.1);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
     text-decoration: none!important;
 }
 .room-price{
@@ -40,28 +90,28 @@ div [class^="col-"]{
     font-family: 'Poppins', sans-serif;
     text-decoration: none!important;
     color: #C20035;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 0px!important;
 }
-
-.TrendingNow::before, .TrendingNow::after {
+/*
+.TwentyFourHoursAnimation::before, .TwentyFourHoursAnimation::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
+    transition: transform .1s ease-out 0s;
     background: rgba(255, 255, 255, 0.1);
     content: '';
     pointer-events: none;
 }
-.TrendingNow::before {
+.TwentyFourHoursAnimation::before {
     transform-origin: left top;
 }
-.TrendingNow::after {
+.TwentyFourHoursAnimation::after {
     transform-origin: right bottom;
 }
-.TrendingNow:hover::before, .TrendingNow:hover::after, .TrendingNow:focus::before, .TrendingNow:focus::after {
+.TwentyFourHoursAnimation:hover::before, .TwentyFourHoursAnimation:hover::after, .TwentyFourHoursAnimation:focus::before, .TwentyFourHoursAnimation:focus::after {
     transform: scale3d(1, 1, 1);
-}
+}*/

@@ -13,7 +13,7 @@ class RecommendedHotel extends Component {
                     <div className="row">
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/night</span></h6>
@@ -22,7 +22,7 @@ class RecommendedHotel extends Component {
                         </div>
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/night</span></h6>
@@ -32,7 +32,7 @@ class RecommendedHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/night</span></h6>
@@ -42,7 +42,7 @@ class RecommendedHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/night</span></h6>
@@ -52,7 +52,7 @@ class RecommendedHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/night</span></h6>
@@ -62,7 +62,7 @@ class RecommendedHotel extends Component {
 
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="card TrendingNow">
+                            <Link to="/" className="TwentyFourHoursCard card TrendingNow">
                                 <img className="twentyFourImage" src={hotel1} alt="Photo of sunset"/>
                                 <h5 className="room-title">DELUXE KING</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/night</span></h6>
