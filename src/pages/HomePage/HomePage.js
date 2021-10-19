@@ -6,7 +6,9 @@ import HomeBanner from "../../component/home/HomeBanner/HomeBanner";
 import HotelStatistics from "../../component/home/HotelStatistics/HotelStatistics";
 import WhyChoose from "../../component/home/WhyChoose/WhyChoose";
 import TwentyFourHoursDeal from "../../component/home/TwentyFourHoursDeal/TwentyFourHoursDeal";
-
+import MostPopularHotel from "../../component/home/MostPopularHotel/MostPopularHotel";
+import PopularCity from "../../component/home/PopularCity/PopularCity";
+import RecommendedHotel from "../../component/home/RecommendedHotel/RecommendedHotel";
 
 class HomePage extends Component {
     render() {
@@ -16,6 +18,9 @@ class HomePage extends Component {
                 <HomeSearch/>
                 <HomeBanner/>
                 <TwentyFourHoursDeal/>
+                <MostPopularHotel/>
+                <PopularCity/>
+                <RecommendedHotel/>
                 <HotelStatistics/>
                 <WhyChoose/>
                 <Footer/>

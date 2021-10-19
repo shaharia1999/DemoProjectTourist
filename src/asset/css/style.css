@@ -14,9 +14,13 @@
 @import "responsive.css";
 @import "typo.css";
 @import "homeSearch.css";
-@import "HomeStatistic.css";
+@import "homeStatistic.css";
 @import "whyChoose.css";
 @import "twentyFourHourDeals.css";
+@import "mostPopularHotel.css";
+@import "popularCity.css";
+@import "recommendedHotel.css";
+
 
 
 

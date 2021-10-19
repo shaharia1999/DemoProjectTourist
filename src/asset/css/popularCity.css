@@ -1,0 +1,22 @@
+.popularCityImage{
+    width: 100%;
+    height: 250px;
+}
+
+.popularCityTitle{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.popularCityHrTag{
+    width: 50%;
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: #ffffff;
+    border-width: 2px;
+}
