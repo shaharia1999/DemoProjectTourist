@@ -1,10 +1,10 @@
-.img-Center {
+.main-logo {
     display: block;
-    margin-left: auto;
+    margin-left: 60px;
     margin-right: auto;
-    height: 100px!important;
-    width: 150px!important;
-    padding: 20px 20px 20px 20px;
+    height: 60px!important;
+    width: 160px!important;
+    padding:2px;
 }
 .nav-font{
     font-family: 'Poppins', sans-serif;
@@ -55,11 +55,14 @@
 }
 
 .nav1Background{
-    background-color: #f4f4f4;
+    background-color: #ffffff;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.9s;
+    width: 100%;
 }
 
 .nav2Background{
-    background-color: #ededed;
+    background-color: #e9e9e9;
 }
 
 .nav1Text{
@@ -68,6 +71,14 @@
     font-weight: 400;
     font-size: 16px;
     text-decoration: none!important;
-    margin-left: 5px;
+    margin-left: 20px;
+}
+
+.nav1BackgroundCard{
+    transition: 0.9s;
+    width: 100%;
+    background-color: #eaeaea;
+    background-image: linear-gradient(to top, rgb(241, 240, 240), rgb(217, 217, 217));
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
 }
 

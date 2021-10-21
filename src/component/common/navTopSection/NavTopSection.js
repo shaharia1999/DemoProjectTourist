@@ -1,11 +1,12 @@
 import React, {Component,Fragment} from 'react';
-import {Container, Navbar, Nav, NavLink, Row, Col} from "react-bootstrap";
+import {Container, Navbar, Nav, NavLink, Row, Col, Button} from "react-bootstrap";
 import facebook from "../../../asset/images/facebook.svg";
 import instagram from "../../../asset/images/instagram.svg";
 import twitter from "../../../asset/images/twitter.svg";
 import youtube from "../../../asset/images/youtube.svg";
-import {FaPhone,FaEnvelopeOpen} from "react-icons/fa";
+import {FaPhone,FaEnvelopeOpen,FaUser,FaCartPlus} from "react-icons/fa";
 import {} from "react-icons/all";
+import porzotok from "../../../asset/images/Porzotok.png"
 
 class NavTopSection extends Component {
     render() {
@@ -19,15 +20,15 @@ class NavTopSection extends Component {
                     </div>
                 </div>*/}
 
-                <Container fluid={true} className="nav1Background">
+                <Container fluid={true} className="nav1BackgroundCard">
                     <Row className="pl-5 pr-5">
                         <Col xl={6} lg={6} md={6} sm={12} xs={12}>
                             <ul className="list-unstyled">
-                                <li className="mt-2"><a className="nav1Text"><FaPhone/> +880 1779224640</a><a className="nav1Text ml-5"><FaEnvelopeOpen/> info@porzotok.com</a></li>
+                                <li className="mt-2"><a className="nav1Text"><FaPhone/> +880 1779224640</a><a className="nav1Text ml-4"><FaEnvelopeOpen/> info@porzotok.com</a></li>
                             </ul>
                         </Col>
                         <Col xl={6} lg={6} md={6} sm={12} xs={12}>
-                            <ul className="social-icons">
+                            <ul className="social-icons float-right">
                                 <li><a className="facebook" target="_blank" href=""><img className="w-50" src={facebook} alt=""/></a></li>
                                 <li><a className="instagram" target="_blank" href=""><img className="w-50" src={instagram} alt=""/></a></li>
                                 <li><a className="twitter" target="_blank" href=""><img className="w-50" src={twitter} alt=""/></a></li>
@@ -38,13 +39,15 @@ class NavTopSection extends Component {
                 </Container>
 
                 <Navbar expand="lg" className="sticky-top Navbar">
-                    <Container>
+                    <Container fluid={true}>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
+                            <img className="main-logo" src={porzotok} alt=""/>
                             <Nav className="ml-auto">
                                 <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Become a Member</NavLink></Nav.Link>
                                 <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/About">List your Property</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Login/Signup</NavLink></Nav.Link>
+                                <Nav.Link> <Button exact className="navItem nav-font" to="/"><FaUser/> Login</Button></Nav.Link>
+                                <Nav.Link> <Button exact className="navItem nav-font" to="/"><FaCartPlus/> Cart</Button></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
