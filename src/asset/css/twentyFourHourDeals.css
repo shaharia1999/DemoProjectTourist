@@ -39,8 +39,7 @@ div [class^="col-"]{
     height: 26px;
     width: 90px;
     margin-top: 15px;
-    margin-left: 190px;
-    margin-right: 5px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 .TwentyFourHoursHotelDiscountTitle{
@@ -55,6 +54,11 @@ div [class^="col-"]{
 .TwentyFourHoursAnimation{
     transition:1s;
     cursor: pointer;
+}
+.TwentyFourHoursAnimation:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    text-decoration: none!important;
 }
 .roomStar{
     color: #C20035;
@@ -79,11 +83,6 @@ div [class^="col-"]{
     color: #393939;
     margin-top: 3px;
     margin-left: 15px;
-}
-.TwentyFourHoursAnimation:hover{
-    transform: scale(1.1);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-    text-decoration: none!important;
 }
 .room-price{
     font-size: 16px;

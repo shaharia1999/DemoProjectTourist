@@ -21,3 +21,17 @@
     background-color: #ffffff;
     border-width: 2px;
 }
+
+.popularCityAnimation{
+    transition:1s;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.popularCityAnimation:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+    text-decoration: none!important;
+    margin: 5px;
+}

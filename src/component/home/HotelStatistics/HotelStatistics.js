@@ -12,7 +12,7 @@ class HotelStatistics extends Component {
             <Fragment>
                 <div className="statistic-container p-0 m-0">
                     <Container className="justify-content-center p-5 mb-0">
-                        <h5 className="section-title text-center">24 Hours Deal</h5>
+                        <h5 className="section-title text-center">Hotel Statistic</h5>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                         <Row className="">
                             <Col className="" xl={3} lg={3} md={3} sm={6} xs={6}>
