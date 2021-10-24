@@ -1,0 +1,136 @@
+.PreviewImgLarge{
+    height: 280px;
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.PreviewImgSmall{
+    height: 130px;
+    width: 100%;
+    padding: 4px;
+    border-radius: 5px;
+}
+.HotelTitle{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #1b1e21;
+}
+.HotelDetailsSubTitle{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #C20035;
+}
+
+.RoomDetailsPrice{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #C20035;
+}
+
+.ReviewTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ReviewDes{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.ReviewDescriptionText{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.DescriptionDetails{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.CartBtn{
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #C20035;
+    color: #ffffff;
+    padding: 8px 12px;
+}
+
+.CartBtn:hover{
+    font-weight: 400;
+    background-color: #9b042d;
+    color: #ffffff;
+}
+
+.CartBtn:focus{
+    border-color: #9b042d;
+    box-shadow: none;
+}
+
+.BookBtn{
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #10831e;
+    color: #f5f5f5;
+    padding: 8px 12px;
+}
+
+.BookBtn:hover{
+    font-weight: 400;
+    background-color: #146f25;
+    color: #f5f5f5;
+}
+
+.BookBtn:focus{
+    border-color: #146f25;
+    box-shadow: none;
+}
+
+.facilityDes{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1b1e21;
+}
+
+.hrBarColor{
+    background-color: #f9f9f9;
+}
+
+.price1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #1b1e21;
+}
+
+.price2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #1b1e21;
+}
+
+.StarText{
+    font-size: 16px;
+    color: #C20035;
+}
+
+.StarText2{
+    font-size: 12px;
+    color: #C20035;
+}
+
+
+

@@ -47,10 +47,10 @@ class NavTopSection extends Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <img className="main-logo" src={porzotok} alt=""/>
                             <Nav className="ml-auto">
-                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Become a Member</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/About">List your Property</NavLink></Nav.Link>
-                                <Nav.Link> <Button exact className="navItem login-btn" to="/"><FaUser/> Login</Button></Nav.Link>
-                                <Nav.Link> <Button exact className="navItem cart-btn" to="/"><FaCartPlus/> Cart</Button></Nav.Link>
+                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Abc</NavLink></Nav.Link>
+                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/About">Xyz</NavLink></Nav.Link>
+                                <Nav.Link> <Button exact className="navItem btn btn-sm loginBtn" to="/"><FaUser/> Login</Button></Nav.Link>
+                                <Nav.Link> <Button exact className="navItem btn btn-sm cartBtn" to="/"><FaCartPlus/> Cart</Button></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

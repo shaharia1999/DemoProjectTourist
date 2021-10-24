@@ -9,6 +9,7 @@ import ContactPage from "../pages/ContactPage/ContactPage";
 import FaqPage from "../pages/FAQPage/FAQPage";
 import HelpCenterPage from "../pages/HelpCenterPage/HelpCenterPage";
 import PressPage from "../pages/PressPage/PressPage";
+import RoomDetailsPage from "../pages/RoomDetailsPage/RoomDetailsPage";
 
 class AppRoute extends Component {
     render() {
@@ -25,6 +26,8 @@ class AppRoute extends Component {
                     <Route exact path="/terms" render={(props) => <TermsPage {...props} key={Date.now()} />}/>
                     <Route exact path="/refund" render={(props) => <RefundPage {...props} key={Date.now()} />}/>
                     <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()} />}/>
+
+                    <Route exact path="/roomDetails" render={(props) => <RoomDetailsPage {...props} key={Date.now()} />}/>
                 </Switch>
             </Fragment>
         );

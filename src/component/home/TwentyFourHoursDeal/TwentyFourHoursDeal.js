@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {FaHotel, FaStar} from "react-icons/fa";
 import {IoMdPin} from "react-icons/all";
-import hotel1 from "../../../asset/images/hotel1.jpg"
 import room1 from "../../../asset/images/room/room1.jpg"
 import room2 from "../../../asset/images/room/room2.jpg"
 import room3 from "../../../asset/images/room/room3.jpg"
@@ -13,10 +12,6 @@ import room4 from "../../../asset/images/room/room4.jpg"
 import room5 from "../../../asset/images/room/room5.jpg"
 import room6 from "../../../asset/images/room/room6.jpg"
 import room7 from "../../../asset/images/room/room7.jpg"
-import room8 from "../../../asset/images/room/room8.jpg"
-import room9 from "../../../asset/images/room/room9.jpg"
-import room10 from "../../../asset/images/room/room10.jpg"
-
 
 class TwentyFourHoursDeal extends Component {
     render() {
@@ -65,7 +60,7 @@ class TwentyFourHoursDeal extends Component {
                     <Slider ref={c=>(this.slider=c)} {...settings}>
 
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room1} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
                                     <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -81,7 +76,7 @@ class TwentyFourHoursDeal extends Component {
                         </div>
 
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room2} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
                                     <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -96,9 +91,8 @@ class TwentyFourHoursDeal extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room3} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
                                     <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -113,9 +107,8 @@ class TwentyFourHoursDeal extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room4} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
                                     <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -131,10 +124,10 @@ class TwentyFourHoursDeal extends Component {
                         </div>
 
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room5} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">40% OFF</h6>
                                 </div>
                                 <div className="TwentyFourHoursHotelBoxCard">
                                     <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
@@ -146,12 +139,11 @@ class TwentyFourHoursDeal extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room6} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">55% OFF</h6>
                                 </div>
                                 <div className="TwentyFourHoursHotelBoxCard">
                                     <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
@@ -164,7 +156,7 @@ class TwentyFourHoursDeal extends Component {
                         </div>
 
                         <div className="row mt-2 mb-2 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room7} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
                                     <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -178,10 +170,7 @@ class TwentyFourHoursDeal extends Component {
                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
-
-
                     </Slider>
-
 
            {/*         <div className="row">
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
@@ -280,7 +269,6 @@ class TwentyFourHoursDeal extends Component {
                             </Link>
                         </div>
                     </div>*/}
-
 
                 </div>
             </Fragment>

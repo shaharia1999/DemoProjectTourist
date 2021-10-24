@@ -2,6 +2,9 @@ import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import {FaHotel, FaStar} from "react-icons/fa";
 import {IoMdPin} from "react-icons/all";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import hotel1 from "../../../asset/images/Hotel/HotelSarina.jpg"
 import hotel2 from "../../../asset/images/Hotel/TheRaintreeHotel.jpg"
 import hotel3 from "../../../asset/images/Hotel/LeMéridienDhaka.jpg"
@@ -9,14 +12,6 @@ import hotel4 from "../../../asset/images/Hotel/SixSeasonsHotel.jpg"
 import hotel5 from "../../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg"
 import hotel6 from "../../../asset/images/Hotel/TheMermaidBeachResort.jpg"
 import hotel7 from "../../../asset/images/Hotel/InterContinentalDhaka.jpg"
-import Slider from "react-slick";
-import room1 from "../../../asset/images/room/room1.jpg";
-import room2 from "../../../asset/images/room/room2.jpg";
-import room3 from "../../../asset/images/room/room3.jpg";
-import room4 from "../../../asset/images/room/room4.jpg";
-import room5 from "../../../asset/images/room/room5.jpg";
-import room6 from "../../../asset/images/room/room6.jpg";
-import room7 from "../../../asset/images/room/room7.jpg";
 
 class MostPopularHotel extends Component {
     render() {
@@ -60,12 +55,6 @@ class MostPopularHotel extends Component {
 
         return (
             <Fragment>
-
-
-
-
-
-
                 <div className="container-fluid whyChooseTop p-5">
                     <h5 className="section-title text-center">Most Popular Hotel</h5>
                     <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
@@ -84,7 +73,7 @@ class MostPopularHotel extends Component {
 
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <img className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
@@ -93,10 +82,9 @@ class MostPopularHotel extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <img className="mostPopularHotelImage" src={hotel3} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
@@ -105,10 +93,9 @@ class MostPopularHotel extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <img className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
@@ -117,10 +104,9 @@ class MostPopularHotel extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <img className="mostPopularHotelImage" src={hotel5} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
@@ -129,10 +115,9 @@ class MostPopularHotel extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <img className="mostPopularHotelImage" src={hotel6} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
@@ -141,10 +126,9 @@ class MostPopularHotel extends Component {
                             </Link>
                         </div>
 
-
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <img className="mostPopularHotelImage" src={hotel7} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
