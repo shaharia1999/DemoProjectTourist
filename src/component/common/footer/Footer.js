@@ -36,6 +36,8 @@ class Footer extends Component {
                                 <ul className="footer-links">
                                     <li><Link className="FooterInfoLinkText" to="/about">About Us</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/contact">Contact</Link></li>
+                                    <li><Link className="FooterInfoLinkText" to="/about">FAQ</Link></li>
+                                    <li><Link className="FooterInfoLinkText" to="/contact">Press</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/terms">Terms and conditions</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/refund">Guest Policies</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/privacy">Privacy Policy</Link></li>

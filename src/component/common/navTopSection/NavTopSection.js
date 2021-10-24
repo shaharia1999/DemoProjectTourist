@@ -7,6 +7,7 @@ import youtube from "../../../asset/images/youtube.svg";
 import {FaPhone,FaEnvelopeOpen,FaUser,FaCartPlus} from "react-icons/fa";
 import {} from "react-icons/all";
 import porzotok from "../../../asset/images/Porzotok.png"
+import {Link} from "react-router-dom";
 
 class NavTopSection extends Component {
     render() {
@@ -24,15 +25,17 @@ class NavTopSection extends Component {
                     <Row className="pl-5 pr-5">
                         <Col xl={6} lg={6} md={6} sm={12} xs={12}>
                             <ul className="list-unstyled">
-                                <li className="mt-2"><a className="nav1Text"><FaPhone/> +880 1779224640</a><a className="nav1Text ml-4"><FaEnvelopeOpen/> info@porzotok.com</a></li>
+                                <li className="mt-2"><a className="nav1Text"> <FaPhone/> +880 1779224640</a><a className="nav1Text ml-4"><FaEnvelopeOpen/> info@porzotok.com</a></li>
                             </ul>
                         </Col>
                         <Col xl={6} lg={6} md={6} sm={12} xs={12}>
-                            <ul className="social-icons float-right">
+                            <ul className="nav-social-icons float-right">
                                 <li><a className="facebook" target="_blank" href=""><img className="w-50" src={facebook} alt=""/></a></li>
                                 <li><a className="instagram" target="_blank" href=""><img className="w-50" src={instagram} alt=""/></a></li>
                                 <li><a className="twitter" target="_blank" href=""><img className="w-50" src={twitter} alt=""/></a></li>
                                 <li><a className="youTube" target="_blank" href=""><img className="w-50" src={youtube} alt=""/></a></li>
+                                <li><h6 className="nav1Text mt-1">HelpLine</h6></li>
+                                <li><h6 className="nav1Text mt-1">Support</h6></li>
                             </ul>
                         </Col>
                     </Row>
@@ -46,8 +49,8 @@ class NavTopSection extends Component {
                             <Nav className="ml-auto">
                                 <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Become a Member</NavLink></Nav.Link>
                                 <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/About">List your Property</NavLink></Nav.Link>
-                                <Nav.Link> <Button exact className="navItem nav-font" to="/"><FaUser/> Login</Button></Nav.Link>
-                                <Nav.Link> <Button exact className="navItem nav-font" to="/"><FaCartPlus/> Cart</Button></Nav.Link>
+                                <Nav.Link> <Button exact className="navItem login-btn" to="/"><FaUser/> Login</Button></Nav.Link>
+                                <Nav.Link> <Button exact className="navItem cart-btn" to="/"><FaCartPlus/> Cart</Button></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
