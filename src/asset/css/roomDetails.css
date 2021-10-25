@@ -17,6 +17,18 @@
     font-size: 22px;
     color: #1b1e21;
 }
+.LocationMapFont{
+    color: #C20035;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+ }
+.LocationMapTitle{
+    color: #1b1e21;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
 .HotelDetailsSubTitle{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -123,8 +135,9 @@
 }
 
 .StarText{
-    font-size: 16px;
-    color: #C20035;
+    font-size: 12px;
+    color: #0f7424;
+    margin-left: 4px;
 }
 
 .StarText2{

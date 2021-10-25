@@ -67,9 +67,9 @@
 
 .nav1Text{
     font-family: 'Poppins', sans-serif;
-    color: #000000 !important;
-    font-weight: 300;
-    font-size: 16px;
+    color: #353535 !important;
+    font-weight: 400;
+    font-size: 15px;
     text-decoration: none!important;
     margin-left: 20px;
 }
@@ -79,11 +79,9 @@
     width: 100%;
     height: 42px;
     background-color: #eaeaea;
-    background-image: linear-gradient(to top, rgb(241, 240, 240), rgb(217, 217, 217));
+    background-image: linear-gradient(to top, rgb(241, 240, 240), rgb(242, 242, 242));
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
 }
-
-
 
 .nav-social-icons {
     padding-left:0;
@@ -93,18 +91,18 @@
 }
 .nav-social-icons li {
     display:inline-block;
-    margin-bottom:4px
+    margin-bottom:4px;
 }
 .nav-social-icons li.title {
     margin-right:15px;
     text-transform:uppercase;
     color:#96a2b2;
     font-weight:700;
-    font-size:13px
+    font-size:13px;
 }
 .nav-social-icons a{
   /*  background-color: #c20035;*/
-    background-image: linear-gradient(to right, rgba(143,83,134,100),rgba(194,0,53,100));
+    background-image: linear-gradient(to right, rgb(162, 159, 159), rgb(118, 115, 115));
     color:#818a91;
     font-size:6px;
     display:inline-block;
@@ -129,16 +127,16 @@
     font-size:14px;
 }
 .nav-social-icons a.facebook:hover {
-    background-color:#3b5998
+    background-color:#3b5998;
 }
 .nav-social-icons a.instagram:hover {
-    background-color:#8a3ab9
+    background-color:#8a3ab9;
 }
 .nav-social-icons a.twitter:hover {
-    background-color: #1DA1F2
+    background-color: #1DA1F2;
 }
 .nav-social-icons a.youTube:hover {
-    background-color: #FF0000
+    background-color: #FF0000;
 }
 
 @media (max-width:767px)
@@ -146,11 +144,11 @@
     .nav-social-icons li.title {
         display:block;
         margin-right:0;
-        font-weight:600
+        font-weight:600;
     }
 }
 
-.loginBtn{
+.logInBtn{
     border-radius: 5px;
     font-weight: 300;
     font-size: 14px;
@@ -161,13 +159,13 @@
     border-color: #393838;
 }
 
-.loginBtn:hover{
+.logInBtn:hover{
     font-weight: 400;
     background-color: #070707;
     color: #ffffff;
 }
 
-.loginBtn:focus{
+.logInBtn:focus{
     border-color: #070707;
     box-shadow: none;
 }
@@ -197,4 +195,20 @@
     box-shadow: none!important;
 }
 
+.Nav-Apply{
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none!important;
+}
 
+.Nav-Apply:hover{
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #59a8e1;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none!important;
+}

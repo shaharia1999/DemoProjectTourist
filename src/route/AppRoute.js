@@ -10,6 +10,9 @@ import FaqPage from "../pages/FAQPage/FAQPage";
 import HelpCenterPage from "../pages/HelpCenterPage/HelpCenterPage";
 import PressPage from "../pages/PressPage/PressPage";
 import RoomDetailsPage from "../pages/RoomDetailsPage/RoomDetailsPage";
+import HotelDetailsPage from "../pages/hotelDetailsPage/hotelDetailsPage";
+import LoginPage from "../pages/LoginPage/LoginPage";
+
 
 class AppRoute extends Component {
     render() {
@@ -28,6 +31,9 @@ class AppRoute extends Component {
                     <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()} />}/>
 
                     <Route exact path="/roomDetails" render={(props) => <RoomDetailsPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/hotelDetails" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
+
+                    <Route exact path="/userLogin" render={(props) => <LoginPage {...props} key={Date.now()} />}/>
                 </Switch>
             </Fragment>
         );

@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
-import RoomReview from "./RoomReview";
+import HotelReview from "./HotelReview";
 
-class RoomDescription extends Component {
+class HotelDescription extends Component {
     render() {
         return (
             <Fragment>
@@ -19,7 +19,7 @@ class RoomDescription extends Component {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 col-12 float-left">
-                            <RoomReview/>
+                            <HotelReview/>
                         </div>
                     </div>
                 </div>
@@ -28,4 +28,4 @@ class RoomDescription extends Component {
     }
 }
 
-export default RoomDescription;
+export default HotelDescription;

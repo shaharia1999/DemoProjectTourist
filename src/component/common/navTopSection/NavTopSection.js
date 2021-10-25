@@ -4,8 +4,8 @@ import facebook from "../../../asset/images/facebook.svg";
 import instagram from "../../../asset/images/instagram.svg";
 import twitter from "../../../asset/images/twitter.svg";
 import youtube from "../../../asset/images/youtube.svg";
-import {FaPhone,FaEnvelopeOpen,FaUser,FaCartPlus} from "react-icons/fa";
-import {} from "react-icons/all";
+import {FaPhone, FaEnvelopeOpen, FaUser, FaCartPlus, FaUserAlt} from "react-icons/fa";
+import {BsFillPhoneVibrateFill, MdEmail} from "react-icons/all";
 import porzotok from "../../../asset/images/Porzotok.png"
 import {Link} from "react-router-dom";
 
@@ -25,7 +25,7 @@ class NavTopSection extends Component {
                     <Row className="pl-5 pr-5">
                         <Col xl={6} lg={6} md={6} sm={12} xs={12}>
                             <ul className="list-unstyled">
-                                <li className="mt-2"><a className="nav1Text"> <FaPhone/> +880 1779224640</a><a className="nav1Text ml-4"><FaEnvelopeOpen/> info@porzotok.com</a></li>
+                                <li className="mt-2"><a className="nav1Text"> <BsFillPhoneVibrateFill/> +880 1779224640</a><a className="nav1Text ml-4"><MdEmail/> info@porzotok.com</a></li>
                             </ul>
                         </Col>
                         <Col xl={6} lg={6} md={6} sm={12} xs={12}>
@@ -47,16 +47,12 @@ class NavTopSection extends Component {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <img className="main-logo" src={porzotok} alt=""/>
                             <Nav className="ml-auto">
-                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Abc</NavLink></Nav.Link>
-                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/About">Xyz</NavLink></Nav.Link>
-                                <Nav.Link> <Button exact className="navItem btn btn-sm loginBtn" to="/"><FaUser/> Login</Button></Nav.Link>
-                                <Nav.Link> <Button exact className="navItem btn btn-sm cartBtn" to="/"><FaCartPlus/> Cart</Button></Nav.Link>
+                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Hotel</NavLink></Nav.Link>
+                                <Nav.Link> <NavLink exact className="btn btn-sm logInBtn" to="/userLogin"><FaUser/> Login</NavLink></Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-
-
 
                 {/*    <Container fluid={true} className="nav2Background">
                     <Nav className="justify-content-center">
