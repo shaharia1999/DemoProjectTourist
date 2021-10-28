@@ -4,16 +4,21 @@ import room2 from "../../../src/asset/images/room/room2.jpg"
 import room3 from "../../../src/asset/images/room/room3.jpg"
 import room4 from "../../../src/asset/images/room/room4.jpg"
 import {FaMapMarkerAlt} from "react-icons/all";
+import {Breadcrumb} from "react-bootstrap";
 
 class RoomDetails extends Component {
     render() {
         return (
             <Fragment>
                 <div className="container-fluid bg-light">
-                    <div className="row p-3">
+                    <div className="row p-2">
+                        <Breadcrumb className="p-0 m-0 w-100">
+                            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+                            <Breadcrumb.Item href="#">Library</Breadcrumb.Item>
+                            <Breadcrumb.Item active>Data</Breadcrumb.Item>
+                        </Breadcrumb>
                         <div className="col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div className="row shadow-sm bg-white">
-
+                            <div className="row shadow-sm bg-white p-0 m-0">
                                 <div className="p-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <img className="PreviewImgLarge" src={room1}/>
 
@@ -51,8 +56,8 @@ class RoomDetails extends Component {
                                     </div>
 
                                     <div className="input-group mt-3">
-                                        <button className="btn CartBtn m-1 "> <i className="fa fa-shopping-cart"/> Add Cart</button>
-                                        <button className="btn BookBtn m-1"> <i className="fa fa-book"/> Book Now</button>
+                                        <button className="btn CartBtn m-1 "> <i className="fa fa-shopping-cart"/> Add To Cart</button>
+                                        <button className="btn BookBtn m-1"> <i className="fa fa-book"/> Booking Now</button>
                                     </div>
                                 </div>
                             </div>

@@ -5,6 +5,7 @@ import hotel3 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
 import hotel4 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
 import hotel5 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
 import hotel6 from "../../asset/images/Hotel/InterContinentalDhaka.jpg";
+import {Breadcrumb} from "react-bootstrap";
 
 class HotelDetails extends Component {
     render() {
@@ -12,6 +13,7 @@ class HotelDetails extends Component {
             <Fragment>
                 <div className="container-fluid bg-light">
                     <div className="row p-3">
+
                         <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div className="row shadow-sm bg-white">
 

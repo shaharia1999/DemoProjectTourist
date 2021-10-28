@@ -23,10 +23,9 @@
     padding: 5px 100px 5px 100px;
 }
 .image-footer{
-    width: 200px;
-    height: 80px;
+    width: auto;
+    height: 60px;
 }
-
 .footer-links {
     padding-left:0;
     list-style:none;
@@ -172,7 +171,7 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px!important;
-    color: #a41212;
+    color: #8d8d8d!important;
     text-decoration: none!important;
 }
 

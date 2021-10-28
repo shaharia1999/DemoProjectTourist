@@ -1,21 +1,22 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
+import HotelPerCity from "../../component/HotelPerCity/HotelPerCity";
 import Footer from "../../component/common/footer/Footer";
-import Privacy from "../../component/other/Privacy/Privacy";
 
-class PrivacyPage extends Component {
+class CityHotelPage extends Component {
     componentDidMount() {
         window.scroll(0,0)
     }
+
     render() {
         return (
             <Fragment>
                 <NavTopSection/>
-                <Privacy/>
+                <HotelPerCity/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default PrivacyPage;
+export default CityHotelPage;

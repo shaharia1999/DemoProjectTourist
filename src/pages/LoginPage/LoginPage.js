@@ -4,6 +4,9 @@ import Footer from "../../component/common/footer/Footer";
 import LogIn from "../../component/login/LogIn";
 
 class LoginPage extends Component {
+    componentDidMount() {
+        window.scroll(0,0)
+    }
     render() {
         return (
             <Fragment>

@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from 'react';
-import {Link} from "react-router-dom";
-import {Button, Col, Container, Form, Row} from "react-bootstrap";
+import {Col, Container, Form, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
+import {Link} from "react-router-dom";
 
-class LogIn extends Component {
+class ForgotPasswordSet extends Component {
     render() {
         return (
             <Fragment>
@@ -16,15 +16,13 @@ class LogIn extends Component {
                             <Form>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>
                                 <div className="form-group">
-                                    <input type="text" className="form-control placeholder-text" placeholder="Your Mobile Number"/>
+                                    <input type="Password" className="form-control placeholder-text" placeholder="Enter new Password"/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="password" className="form-control placeholder-text" placeholder="Enter Password"/>
+                                    <input type="Password" className="form-control placeholder-text" placeholder="Enter Confirm Password"/>
                                 </div>
-                                <Button className="btn SendBtnColorText btn-block">Login</Button>
+                                <h1> <Link to="/userLogin" className="btn SendBtnColorText mb-5 btn-block">SET PASSWORD</Link> </h1>
                             </Form>
-                            <h1 className="forgotText text-center mt-3"> <Link to="/forgetPassword" className="signUpText">Forgot Password</Link> </h1>
-                            <h1 className="forgotText text-center mt-5 mb-4"> Don't Have an Account ? <Link to="/signUp" className="signUpText">SignUp</Link></h1>
                         </Col>
                         <Col xl={1} lg={1} md={1} sm={12} xs={12}>
 
@@ -36,4 +34,4 @@ class LogIn extends Component {
     }
 }
 
-export default LogIn;
+export default ForgotPasswordSet;

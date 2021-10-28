@@ -1,9 +1,8 @@
 import React, {Component, Fragment} from 'react';
-import {Link} from "react-router-dom";
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
 
-class LogIn extends Component {
+class Registration extends Component {
     render() {
         return (
             <Fragment>
@@ -16,15 +15,22 @@ class LogIn extends Component {
                             <Form>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>
                                 <div className="form-group">
-                                    <input type="text" className="form-control placeholder-text" placeholder="Your Mobile Number"/>
+                                    <input type="text" className="form-control placeholder-text" placeholder="Your Full Name"/>
+                                </div>
+                                <div className="form-group">
+                                    <input type="email" className="form-control placeholder-text" placeholder="Enter Your Email"/>
+                                </div>
+                                <div className="form-group">
+                                    <input type="text" className="form-control placeholder-text" placeholder="Enter Phone Number"/>
                                 </div>
                                 <div className="form-group">
                                     <input type="password" className="form-control placeholder-text" placeholder="Enter Password"/>
                                 </div>
-                                <Button className="btn SendBtnColorText btn-block">Login</Button>
+                                <div className="form-group">
+                                    <input type="password" className="form-control placeholder-text" placeholder="Enter Confirm Password"/>
+                                </div>
+                                <Button className="btn SendBtnColorText mb-5 btn-block">Registration</Button>
                             </Form>
-                            <h1 className="forgotText text-center mt-3"> <Link to="/forgetPassword" className="signUpText">Forgot Password</Link> </h1>
-                            <h1 className="forgotText text-center mt-5 mb-4"> Don't Have an Account ? <Link to="/signUp" className="signUpText">SignUp</Link></h1>
                         </Col>
                         <Col xl={1} lg={1} md={1} sm={12} xs={12}>
 
@@ -36,4 +42,4 @@ class LogIn extends Component {
     }
 }
 
-export default LogIn;
+export default Registration;

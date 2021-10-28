@@ -11,6 +11,9 @@ import PopularCity from "../../component/home/PopularCity/PopularCity";
 import RecommendedHotel from "../../component/home/RecommendedHotel/RecommendedHotel";
 
 class HomePage extends Component {
+    componentDidMount() {
+        window.scroll(0,0)
+    }
     render() {
         return (
             <Fragment>

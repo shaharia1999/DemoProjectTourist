@@ -1,0 +1,58 @@
+.LoginCard{
+    border-radius: 0px;
+    box-shadow: #1b1e21;
+    height: auto;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+.LoginCardPorzotokImg{
+    display: block;
+    height: 80px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.SendBtnColorText{
+    border-radius: 2px;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ad013a !important;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-color: #ad013a !important;
+    height: 50px;
+}
+
+.SendBtnColorText:hover{
+    font-weight: 400;
+    background-color: #C20035 !important;
+    border-color: #C20035 !important;
+    color: #ffffff;
+}
+
+.SendBtnColorText:focus{
+    border-color: #C20035 !important;
+    box-shadow: none!important;
+}
+
+.forgotText{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1b1e21;
+}
+
+.signUpText{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #C20035;
+}

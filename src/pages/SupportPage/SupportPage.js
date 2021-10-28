@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
 import Footer from "../../component/common/footer/Footer";
-import Privacy from "../../component/other/Privacy/Privacy";
+import Support from "../../component/other/Support/Support";
 
-class PrivacyPage extends Component {
+class SupportPage extends Component {
     componentDidMount() {
         window.scroll(0,0)
     }
@@ -11,11 +11,11 @@ class PrivacyPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <Privacy/>
+                <Support/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default PrivacyPage;
+export default SupportPage;

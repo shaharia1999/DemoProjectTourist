@@ -1,21 +1,18 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
+import ForgotPasswordSet from "../../component/login/ForgotPasswordSet";
 import Footer from "../../component/common/footer/Footer";
-import Privacy from "../../component/other/Privacy/Privacy";
 
-class PrivacyPage extends Component {
-    componentDidMount() {
-        window.scroll(0,0)
-    }
+class ForgotPasswordSetPage extends Component {
     render() {
         return (
             <Fragment>
                 <NavTopSection/>
-                <Privacy/>
+                <ForgotPasswordSet/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default PrivacyPage;
+export default ForgotPasswordSetPage;

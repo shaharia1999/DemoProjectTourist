@@ -1,9 +1,9 @@
 .main-logo {
     display: block;
-    margin-left: 60px;
+    margin-left: 70px;
     margin-right: auto;
-    height: 60px!important;
-    width: 160px!important;
+    height: 65px!important;
+    width: auto;
     padding:2px;
 }
 .nav-font{
@@ -26,7 +26,7 @@
     background-color: #ffffff;
     border: none!important;
     padding: 12px;
-    box-shadow: 0px 0px 0px 0px #cecece;
+    box-shadow: 0 0 3px 0 #d4d4d4;
 }
 
 .nav2margin{
@@ -67,7 +67,7 @@
 
 .nav1Text{
     font-family: 'Poppins', sans-serif;
-    color: #353535 !important;
+    color: #5c5c5c !important;
     font-weight: 400;
     font-size: 15px;
     text-decoration: none!important;
@@ -78,20 +78,21 @@
     transition: 0.9s;
     width: 100%;
     height: 42px;
-    background-color: #eaeaea;
-    background-image: linear-gradient(to top, rgb(241, 240, 240), rgb(242, 242, 242));
-    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+    background-color: #f4f4f4;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 1);
 }
 
 .nav-social-icons {
     padding-left:0;
     margin-bottom:0;
     list-style:none;
-    margin-top: 3px;
+    margin-top: 2px;
+    font-family: 'Poppins', sans-serif;
 }
 .nav-social-icons li {
     display:inline-block;
     margin-bottom:4px;
+    font-family: 'Poppins', sans-serif;
 }
 .nav-social-icons li.title {
     margin-right:15px;
@@ -99,10 +100,10 @@
     color:#96a2b2;
     font-weight:700;
     font-size:13px;
+    font-family: 'Poppins', sans-serif;
 }
 .nav-social-icons a{
-  /*  background-color: #c20035;*/
-    background-image: linear-gradient(to right, rgb(162, 159, 159), rgb(118, 115, 115));
+    background-color: #c20035;
     color:#818a91;
     font-size:6px;
     display:inline-block;
@@ -115,28 +116,43 @@
     -webkit-transition:all .2s linear;
     -o-transition:all .2s linear;
     transition:all .2s linear;
+    font-family: 'Poppins', sans-serif;
 }
 .nav-social-icons a:active,.nav-social-icons a:focus,.nav-social-icons a:hover {
     color:#fff;
     background-color:#29aafe;
 }
 .nav-social-icons.size-sm a {
-    line-height:34px;
-    height:32px;
-    width:32px;
+    line-height:28px;
+    height:28px;
+    width:28px;
     font-size:14px;
 }
-.nav-social-icons a.facebook:hover {
+
+.nav-social-icons a.facebook {
     background-color:#3b5998;
 }
-.nav-social-icons a.instagram:hover {
+.nav-social-icons a.instagram {
     background-color:#8a3ab9;
 }
-.nav-social-icons a.twitter:hover {
+.nav-social-icons a.twitter {
     background-color: #1DA1F2;
 }
-.nav-social-icons a.youTube:hover {
+.nav-social-icons a.youTube {
     background-color: #FF0000;
+}
+
+.nav-social-icons a.facebook:hover {
+    background-color: #244a98;
+}
+.nav-social-icons a.instagram:hover {
+    background-color: #782da4;
+}
+.nav-social-icons a.twitter:hover {
+    background-color: #1779b9;
+}
+.nav-social-icons a.youTube:hover {
+    background-color: #ad0808;
 }
 
 @media (max-width:767px)
@@ -149,7 +165,7 @@
 }
 
 .logInBtn{
-    border-radius: 5px;
+    border-radius: 0px;
     font-weight: 300;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
@@ -157,6 +173,7 @@
     color: #ffffff;
     padding: 8px 12px;
     border-color: #393838;
+    height: 40px;
 }
 
 .logInBtn:hover{
@@ -171,7 +188,7 @@
 }
 
 .cartBtn{
-    border-radius: 5px;
+    border-radius: 0px;
     font-weight: 300;
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
