@@ -1,13 +1,23 @@
 import React, {Component, Fragment} from 'react';
 import {FaMapMarkerAlt} from "react-icons/all";
-import hotel2 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
-import hotel3 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
-import hotel4 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
-import hotel5 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
-import hotel6 from "../../asset/images/Hotel/InterContinentalDhaka.jpg";
-import {Breadcrumb} from "react-bootstrap";
+import ReactDOM from 'react-dom';
+import hotel1 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
+import hotel2 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
+import hotel3 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
+import hotel4 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
+import hotel5 from "../../asset/images/Hotel/InterContinentalDhaka.jpg";
 
 class HotelDetails extends Component {
+    constructor() {
+        super();
+    }
+
+    imgOnclick=(event)=>{
+        let imgSrc=event.target.getAttribute('src');
+        let PreviewImg=document.getElementById('PreviewImg');
+        ReactDOM.findDOMNode(PreviewImg).setAttribute('src',imgSrc);
+    }
+
     render() {
         return (
             <Fragment>
@@ -18,21 +28,21 @@ class HotelDetails extends Component {
                             <div className="row shadow-sm bg-white">
 
                                 <div className="p-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <img className="HotelPreviewImgLarge" src={hotel6}/>
+                                    <img id="PreviewImg" className="HotelPreviewImgLarge" src={hotel1} alt=""/>
 
                                     <div className="container my-1">
                                         <div className="row">
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="HotelPreviewImgSmall" src={hotel2} alt=""/>
+                                                <img onClick={this.imgOnclick} className="HotelPreviewImgSmall" src={hotel1} alt=""/>
                                             </div>
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="HotelPreviewImgSmall" src={hotel3} alt=""/>
+                                                <img onClick={this.imgOnclick} className="HotelPreviewImgSmall" src={hotel2} alt=""/>
                                             </div>
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="HotelPreviewImgSmall" src={hotel4} alt=""/>
+                                                <img onClick={this.imgOnclick} className="HotelPreviewImgSmall" src={hotel3} alt=""/>
                                             </div>
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="HotelPreviewImgSmall" src={hotel5} alt=""/>
+                                                <img onClick={this.imgOnclick} className="HotelPreviewImgSmall" src={hotel4} alt=""/>
                                             </div>
                                         </div>
                                     </div>

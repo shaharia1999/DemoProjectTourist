@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f43c7c1-07b3-491d-8832-fa56ce59514a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/asset/css/profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/asset/images/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/login/ChangePassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/profile/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ChangePasswordPage/ChangePasswordPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/navMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/navMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/twentyFourHourDeals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/twentyFourHourDeals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/navTopSection/NavTopSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/navTopSection/NavTopSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/About/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Contact/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/FAQ/FAQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/FAQ/FAQ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/GuestPolicies/GuestPolicies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/GuestPolicies/GuestPolicies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/HelpCenter/HelpCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/HelpCenter/HelpCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Press/Press.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Press/Press.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Privacy/Privacy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Privacy/Privacy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Refund/Refund.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Refund/Refund.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Support/Support.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Support/Support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Terms/Terms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Terms/Terms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/roomDetails/RoomDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/roomDetails/RoomDescription.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/roomDetails/RoomReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/roomDetails/RoomReview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RoomDetailsPage/RoomDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomDetailsPage/RoomDetailsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20C1a0ytldJkWIkhFPao1JiQuK5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/asset/images" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PorzotokFrontend\src\asset\images" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f43c7c1-07b3-491d-8832-fa56ce59514a" name="Default Changelist" comment="" />
+      <created>1635533824530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635533824530</updated>
+      <workItem from="1635533827969" duration="5913000" />
+      <workItem from="1635541729637" duration="8000" />
+      <workItem from="1635541751166" duration="5000" />
+      <workItem from="1635598696095" duration="7811000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

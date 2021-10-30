@@ -71,7 +71,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
 
@@ -87,7 +86,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
 
@@ -103,7 +101,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
 
@@ -119,7 +116,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
 
@@ -135,7 +131,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
 
@@ -151,7 +146,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
 
@@ -167,7 +161,6 @@ class TwentyFourHoursDeal extends Component {
                                 </div>
                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
                                 <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>
                     </Slider>

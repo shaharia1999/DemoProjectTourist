@@ -4,37 +4,48 @@ import room2 from "../../../src/asset/images/room/room2.jpg"
 import room3 from "../../../src/asset/images/room/room3.jpg"
 import room4 from "../../../src/asset/images/room/room4.jpg"
 import {FaMapMarkerAlt} from "react-icons/all";
-import {Breadcrumb} from "react-bootstrap";
+import {Breadcrumb, Container} from "react-bootstrap";
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import ReactDOM from 'react-dom';
+import RoomReview from "./RoomReview";
+import {Link} from "react-router-dom";
 
 class RoomDetails extends Component {
+    constructor() {
+        super();
+    }
+
+    imgOnclick=(event)=>{
+        let imgSrc= event.target.getAttribute('src');
+        let PreviewImg=document.getElementById('PreviewImg');
+        ReactDOM.findDOMNode(PreviewImg).setAttribute('src',imgSrc);
+    }
     render() {
         return (
             <Fragment>
                 <div className="container-fluid bg-light">
-                    <div className="row p-2">
-                        <Breadcrumb className="p-0 m-0 w-100">
-                            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                            <Breadcrumb.Item href="#">Library</Breadcrumb.Item>
-                            <Breadcrumb.Item active>Data</Breadcrumb.Item>
-                        </Breadcrumb>
+                    <Breadcrumb className="mt-2">
+                        <Breadcrumb.Item className="breadcrumbText"> <Link to="/">Home</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item className="breadcrumbText"> <Link to="/">Room Details</Link></Breadcrumb.Item>
+                    </Breadcrumb>
+                    <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div className="row shadow-sm bg-white p-0 m-0">
                                 <div className="p-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <img className="PreviewImgLarge" src={room1}/>
-
+                                    <img id="PreviewImg" className="PreviewImgLarge" src={room1} alt=""/>
                                     <div className="container my-1">
                                         <div className="row">
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="PreviewImgSmall" src={room1} alt=""/>
+                                                <img onClick={this.imgOnclick} className="PreviewImgSmall" src={room1} alt=""/>
                                             </div>
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="PreviewImgSmall" src={room2} alt=""/>
+                                                <img onClick={this.imgOnclick} className="PreviewImgSmall" src={room2} alt=""/>
                                             </div>
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="PreviewImgSmall" src={room3} alt=""/>
+                                                <img onClick={this.imgOnclick} className="PreviewImgSmall" src={room3} alt=""/>
                                             </div>
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
-                                                <img className="PreviewImgSmall" src={room4} alt=""/>
+                                                <img onClick={this.imgOnclick} className="PreviewImgSmall" src={room4} alt=""/>
                                             </div>
                                         </div>
                                     </div>
@@ -62,8 +73,22 @@ class RoomDetails extends Component {
                                 </div>
                             </div>
                         </div>
-
-
+                    </div>
+                    <div className="row">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 bg-white">
+                            <div className="container ml-2">
+                                <div className="row shadow-sm p-3">
+                                    <div className="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h4 className="ReviewDescriptionText mb-4 mt-2">Description</h4>
+                                        <p className="DescriptionDetails text-justify">Welcome to Hotel Sarina, Dhaka’s most conveniently located Five Star Hotel. ‘Banani’, one of the posh areas of Dhaka, also the new business hub, are the neighborhood of Hotel Sarina. Being located in this business district you are not far from any of the important destination of your choice like business district of Gulshan, Baridhara Diplomatic Zone, Airport and so on. It is only thirty minutes drive from the International Airport, about five to ten minutes drive to Gulshan and to the diplomatic zone. Two renowned shopping malls are only a few minutes walking distance from the hotel.</p>
+                                        <p className="DescriptionDetails text-justify">Welcome to Hotel Sarina, Dhaka’s most conveniently located Five Star Hotel. ‘Banani’, one of the posh areas of Dhaka, also the new business hub, are the neighborhood of Hotel Sarina. Being located in this business district you are not far from any of the important destination of your choice like business district of Gulshan. Welcome to Hotel Sarina, Dhaka’s most conveniently located Five Star Hotel. Welcome to Hotel Sarina, Dhaka’s most conveniently located Five Star Hotel. Two renowned shopping malls are only a few minutes walking distance from the hotel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 bg-white">
+                             <RoomReview/>
+                        </div>
                     </div>
                 </div>
             </Fragment>

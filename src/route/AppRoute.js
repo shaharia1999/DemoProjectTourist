@@ -19,6 +19,8 @@ import RegistrationPage from "../pages/RegistrationPage/RegistrationPage";
 import ForgetPasswordPage from "../pages/ForgetPasswordPage/ForgetPasswordPage";
 import ForgetPasswordVerifyPage from "../pages/ForgetPasswordVerifyPage/ForgetPasswordVerifyPage";
 import ForgotPasswordSetPage from "../pages/forgotPasswordSetPage/forgotPasswordSetPage";
+import ChangePasswordPage from "../pages/ChangePasswordPage/ChangePasswordPage";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
 class AppRoute extends Component {
     render() {
@@ -36,6 +38,9 @@ class AppRoute extends Component {
                     <Route exact path="/forgetPassword" render={(props) => <ForgetPasswordPage {...props} key={Date.now()} />}/>
                     <Route exact path="/forgetPasswordVerify" render={(props) => <ForgetPasswordVerifyPage {...props} key={Date.now()} />}/>
                     <Route exact path="/forgotPasswordSet" render={(props) => <ForgotPasswordSetPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/changePassword" render={(props) => <ChangePasswordPage {...props} key={Date.now()} />}/>
+
+                    <Route exact path="/profile" render={(props) => <ProfilePage {...props} key={Date.now()} />}/>
 
                     {/*Other Route*/}
                     <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()} />}/>

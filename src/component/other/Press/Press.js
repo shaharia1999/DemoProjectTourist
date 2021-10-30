@@ -1,11 +1,16 @@
 import React, {Component, Fragment} from 'react';
-import {Col, Container, Row} from "react-bootstrap";
+import {Breadcrumb, Col, Container, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class Press extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="mt-4 mb-2">
+                <Container className="">
+                    <Breadcrumb className="mt-2">
+                        <Breadcrumb.Item className="breadcrumbText"> <Link to="/">Home</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item className="breadcrumbText"> <Link to="/press">Press</Link></Breadcrumb.Item>
+                    </Breadcrumb>
                     <Row className="des-card">
                         <Col xl={12} lg={12} md={12} sm={12} xs={12} className="p-5">
                             <h3 className="aboutTitle text-center">Press</h3>
