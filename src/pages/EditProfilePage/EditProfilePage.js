@@ -1,22 +1,18 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
-import Registration from "../../component/login/Registration";
+import EditProfile from "../../component/profile/EditProfile";
 import Footer from "../../component/common/footer/Footer";
 
-class RegistrationPage extends Component {
-    componentDidMount() {
-        window.scroll(0,0)
-    }
-
+class EditProfilePage extends Component {
     render() {
         return (
             <Fragment>
                 <NavTopSection/>
-                <Registration/>
+                <EditProfile/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default RegistrationPage;
+export default EditProfilePage;

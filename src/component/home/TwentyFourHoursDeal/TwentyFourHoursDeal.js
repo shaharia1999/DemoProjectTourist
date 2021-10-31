@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {FaHotel, FaStar} from "react-icons/fa";
+import {FaHotel} from "react-icons/fa";
 import {IoMdPin} from "react-icons/all";
 import room1 from "../../../asset/images/room/room1.jpg"
 import room2 from "../../../asset/images/room/room2.jpg"

@@ -113,10 +113,10 @@ class Footer extends Component {
 
                             <div className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <ul className="social-icons">
-                                    <li><a className="facebook" target="_blank" href=""><img className="w-50" src={facebook} alt=""/></a></li>
-                                    <li><a className="instagram" target="_blank" href=""><img className="w-50" src={instagram} alt=""/></a></li>
-                                    <li><a className="twitter" target="_blank" href=""><img className="w-50" src={twitter} alt=""/></a></li>
-                                    <li><a className="youTube" target="_blank" href=""><img className="w-50" src={youtube} alt=""/></a></li>
+                                    <li><a className="facebook" target="_blank" href="/"><img className="w-50" src={facebook} alt=""/></a></li>
+                                    <li><a className="instagram" target="_blank" href="/"><img className="w-50" src={instagram} alt=""/></a></li>
+                                    <li><a className="twitter" target="_blank" href="/"><img className="w-50" src={twitter} alt=""/></a></li>
+                                    <li><a className="youTube" target="_blank" href="/"><img className="w-50" src={youtube} alt=""/></a></li>
                                 </ul>
                             </div>
                         </div>

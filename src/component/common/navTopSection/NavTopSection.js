@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Container, Navbar, Nav, NavLink, Row, Col, Button} from "react-bootstrap";
+import {Container, Navbar, Nav, NavLink, Row, Col} from "react-bootstrap";
 import facebook from "../../../asset/images/facebook.svg";
 import instagram from "../../../asset/images/instagram.svg";
 import twitter from "../../../asset/images/twitter.svg";

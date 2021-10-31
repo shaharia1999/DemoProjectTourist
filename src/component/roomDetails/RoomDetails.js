@@ -55,7 +55,7 @@ class RoomDetails extends Component {
                                     <h5 className="HotelTitle">Le Méridien Dhaka <span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
                                     <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <h6 className="HotelDetailsSubTitle">DELUXE KING SPECIAL DELUXE KING SPECIAL</h6>
-                                    <h6 className="RoomDetailsPrice mt-4"><strike class="price1">৳2800</strike> ৳2300 <span className="price2">( per room per night )</span></h6>
+                                    <h6 className="RoomDetailsPrice mt-4"><strike className="price1">৳2800</strike> ৳2300 <span className="price2">( per room per night )</span></h6>
                                     <hr className="w-100"/>
                                     <div>
                                         <h6 className="RoomDetailsPrice">Facilities</h6>

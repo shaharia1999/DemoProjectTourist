@@ -9,6 +9,7 @@ import hotel4 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
 import hotel5 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
 import hotel6 from "../../asset/images/Hotel/TheMermaidBeachResort.jpg";
 import hotel7 from "../../asset/images/Hotel/InterContinentalDhaka.jpg";
+import {Image} from "react-bootstrap";
 
 class HotelPerCity extends Component {
     render() {
@@ -20,7 +21,7 @@ class HotelPerCity extends Component {
 
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                <Image className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                 </div>
@@ -31,7 +32,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -42,7 +43,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel3} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel3} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -53,7 +54,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -64,7 +65,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel5} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel5} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -75,7 +76,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel6} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel6} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -86,52 +87,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel7} alt="Photo of sunset"/>
-                                 <div className="mostPopularHotelBoxCard">
-                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                 </div>
-                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                             </Link>
-                         </div>
-
-
-                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
-                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
-                                 <div className="mostPopularHotelBoxCard">
-                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                 </div>
-                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                             </Link>
-                         </div>
-
-                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
-                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
-                                 <div className="mostPopularHotelBoxCard">
-                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                 </div>
-                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                             </Link>
-                         </div>
-
-                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
-                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel6} alt="Photo of sunset"/>
-                                 <div className="mostPopularHotelBoxCard">
-                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                 </div>
-                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                             </Link>
-                         </div>
-
-                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
-                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel7} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -143,7 +99,40 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
+                                 <div className="mostPopularHotelBoxCard">
+                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                 </div>
+                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
+                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                             </Link>
+                         </div>
+
+                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
+                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                 <Image className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
+                                 <div className="mostPopularHotelBoxCard">
+                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                 </div>
+                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
+                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                             </Link>
+                         </div>
+
+                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
+                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                 <Image className="mostPopularHotelImage" src={hotel6} alt="Photo of sunset"/>
+                                 <div className="mostPopularHotelBoxCard">
+                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                 </div>
+                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
+                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                             </Link>
+                         </div>
+
+                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
+                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                 <Image className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -155,7 +144,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel7} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -167,7 +156,7 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel5} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel7} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
@@ -179,7 +168,19 @@ class HotelPerCity extends Component {
 
                          <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
                              <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <img className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
+                                 <Image className="mostPopularHotelImage" src={hotel5} alt="Photo of sunset"/>
+                                 <div className="mostPopularHotelBoxCard">
+                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                 </div>
+                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
+                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                             </Link>
+                         </div>
+
+
+                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
+                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                 <Image className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
                                  <div className="mostPopularHotelBoxCard">
                                      <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
                                  </div>
