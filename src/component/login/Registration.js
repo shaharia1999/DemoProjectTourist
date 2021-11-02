@@ -153,7 +153,7 @@ class Registration extends Component {
                     autoClose: 2000,
                 });
                 RegistrationBtn.innerHTML="Registration";
-            })
+            });
         }
         event.preventDefault();
     }

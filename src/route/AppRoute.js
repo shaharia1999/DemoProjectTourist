@@ -22,6 +22,9 @@ import ForgotPasswordSetPage from "../pages/forgotPasswordSetPage/forgotPassword
 import ChangePasswordPage from "../pages/ChangePasswordPage/ChangePasswordPage";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import EditProfilePage from "../pages/EditProfilePage/EditProfilePage";
+import CartListPage from "../pages/CartListPage/CartListPage";
+import UserVerificationPage from "../pages/UserVerificationPage/UserVerificationPage";
+import HomeSearchPage from "../pages/HomeSearchPage/HomeSearchPage";
 
 class AppRoute extends Component {
     render() {
@@ -34,8 +37,12 @@ class AppRoute extends Component {
                     <Route exact path="/hotelDetails" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
                     <Route exact path="/hotelPerCity" render={(props) => <CityHotelPage {...props} key={Date.now()} />}/>
 
+                    <Route exact path="/homeSearch" render={(props) => <HomeSearchPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()} />}/>
+
                     <Route exact path="/userLogin" render={(props) => <LoginPage {...props} key={Date.now()} />}/>
                     <Route exact path="/signUp" render={(props) => <RegistrationPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/userVerification" render={(props) => <UserVerificationPage {...props} key={Date.now()} />}/>
                     <Route exact path="/forgetPassword" render={(props) => <ForgetPasswordPage {...props} key={Date.now()} />}/>
                     <Route exact path="/forgetPasswordVerify" render={(props) => <ForgetPasswordVerifyPage {...props} key={Date.now()} />}/>
                     <Route exact path="/forgotPasswordSet" render={(props) => <ForgotPasswordSetPage {...props} key={Date.now()} />}/>

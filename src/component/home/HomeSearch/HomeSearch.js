@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import TypeWriterEffect from 'react-typewriter-effect';
+import {Link} from "react-router-dom";
 
 class HomeSearch extends Component {
     render() {
@@ -40,7 +41,7 @@ class HomeSearch extends Component {
                             <div className="input-group mb-3">
                                 <input type="text" className="form-control search-placeholder" placeholder="Search by City, Hotel or Location" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append">
-                                    <button className="btn search-btn" type="button">Search</button>
+                                  <Link to="/homeSearch" className="btn pt-3 search-btn" type="button">Search</Link>
                                 </div>
                             </div>
                         </Col>

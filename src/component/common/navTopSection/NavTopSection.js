@@ -39,12 +39,12 @@ class NavTopSection extends Component {
                     <Container fluid={true}>
                         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Link to="/">   <img className="main-logo" src={porzotok} alt=""/></Link>
+                            <Link to="/"><img className="main-logo" src={porzotok} alt=""/></Link>
                             <Nav className="ml-auto mr-5">
-                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font"
-                                                    to="/">Hotel</NavLink></Nav.Link>
-                                <Link exact className="btn my-2 mx-2 logInBtn" to="/userLogin"><FaUser/> Login</Link>
-                                <Link exact className="btn my-2 cartBtn" to="/userLogin"><FaCartPlus/> Cart</Link>
+                                <Nav.Link> <NavLink exact className="navItem mx-2 nav-font" to="/">Hotel</NavLink></Nav.Link>
+                                <Link className="btn my-2 mx-2 logInBtn" to="/userLogin"><FaUser/> Login</Link>
+                                <Link className="btn my-2 cartBtn" to="/cartList"><FaCartPlus/> Cart</Link>
+
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
@@ -57,42 +57,7 @@ class NavTopSection extends Component {
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="Chittagong" className="nav2margin mx-3" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown  title="Sylhet" className="nav2margin mx-3" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="Rajshahi" className="nav2margin" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="Jossore" className="nav2margin" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="Barisal" className="nav2margin" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
                         <NavDropdown title="Khulna" className="nav2margin" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="Rangpur" className="nav2margin" menuVariant="dark">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                        </NavDropdown>
-                        <NavDropdown title="Mymanshing" className="nav2margin" menuVariant="dark">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>

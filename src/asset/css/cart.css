@@ -1,0 +1,94 @@
+.RoomCartListTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #1b1e21;
+}
+
+.RoomCartListPrice{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #C20035;
+}
+
+.CheckOutBtn{
+    background-color: #C20035;
+    border-radius: 0px;
+}
+
+.CheckOutBtn:hover{
+    background-color: #000000;
+    border-radius: 0px;
+}
+
+.CheckOutBtn:focus{
+    background-color: #000000!important;
+    box-shadow: none!important;
+    border-radius: 0px;
+}
+
+.CheckOutText{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.CheckOutText:hover{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.RoomOnCartCard{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.9s;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 5px;
+}
+.RoomOnCartCard:hover{
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+}
+
+.RoomNameOnCard{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1b1e21;
+}
+
+.RoomPriceOnCard{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #C20035;
+}
+
+.CartRoomImage{
+    width: 100%;
+    height: 200px;
+}
+
+.CartDeleteBtn{
+    background-color: #f4f4f4!important;
+    border-color: #f4f4f4!important;
+    border-radius: 0px;
+}
+
+.CartDeleteBtn:hover{
+    background-color: #d1d1d1!important;
+    border-color: #d1d1d1!important;
+    border-radius: 0px;
+}
+
+.CartDeleteBtn:focus{
+    background-color: #d1d1d1!important;
+    border-color: #d1d1d1!important;
+    box-shadow: none!important;
+}
+
+
+
