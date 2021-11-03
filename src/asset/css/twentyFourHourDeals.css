@@ -7,6 +7,7 @@ div [class^="col-"]{
     transition: 0.9s;
     width: 100%;
     background-color: #ffffff;
+    border-radius: 5px;
 }
 .TwentyFourHoursCard:hover{
     box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
@@ -14,6 +15,7 @@ div [class^="col-"]{
 .twentyFourImage{
     width: 100%;
     height: 200px;
+    border-radius: 5px;
 }
 
 .TwentyFourHoursHotelBoxCard{
@@ -26,7 +28,7 @@ div [class^="col-"]{
 }
 .TwentyFourHoursHotelTitle{
     font-size: 12px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none!important;
     color: #ffffff;
     font-weight: 300;
@@ -45,7 +47,7 @@ div [class^="col-"]{
 }
 .TwentyFourHoursHotelDiscountTitle{
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none!important;
     color: #C20035;
     font-weight: 500;
@@ -64,7 +66,7 @@ div [class^="col-"]{
 .roomStar{
     color: #C20035;
     font-size: 16px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 15px;
     margin-bottom: 15px;
 }
@@ -76,24 +78,24 @@ div [class^="col-"]{
     color: #C20035;
     font-size: 16px;
 }
-.room-title{
-    font-family: 'Poppins', sans-serif;
-    font-size:16px;
-    font-weight: 400;
+.roomTitle{
+    font-family: 'Roboto', sans-serif;
+    font-size:15px;
+    font-weight: 300;
     cursor:pointer;
     text-decoration: none!important;
     color: #393939;
     margin-top: 3px;
     margin-left: 15px;
 }
-.room-price{
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+.roomPrice{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     text-decoration: none!important;
     color: #C20035;
     margin-left: 15px;
-    margin-top: 0px!important;
+    margin-top: 0 !important;
     margin-bottom: 15px;
 }
 /*

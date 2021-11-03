@@ -13,9 +13,30 @@ import hotel5 from "../../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg"
 import hotel6 from "../../../asset/images/Hotel/TheMermaidBeachResort.jpg"
 import hotel7 from "../../../asset/images/Hotel/InterContinentalDhaka.jpg"
 
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button
+            className={className}
+            style={{ ...style, fontSize: "40px", display: 'block', right:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
+            onClick={onClick}
+        />
+    );
+}
+
+function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <button
+            className={className}
+            style={{ ...style, fontSize: "40px", display: 'block', left:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
+            onClick={onClick}
+        />
+    );
+}
+
 class MostPopularHotel extends Component {
     render() {
-
         let settings = {
             dots: false,
             infinite: true,
@@ -26,6 +47,10 @@ class MostPopularHotel extends Component {
             autoplay:true,
             slidesToShow: 6,
             slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: "20px",
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
             responsive: [
                 {
                     breakpoint: 1024,

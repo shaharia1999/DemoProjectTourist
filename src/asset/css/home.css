@@ -4,18 +4,19 @@
 .section-title{
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 20px;
-    color: #7D58A5FF;
+    font-size: 28px;
+    color: #414141;
 }
 
 .sectionSubTitle{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 14px;
-    color: #7D58A5FF;
+    color: #1d1d1d;
 }
 
 .choose-img{
     width: 100%;
     height: 80px;
 }
+

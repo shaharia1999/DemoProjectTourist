@@ -7,17 +7,32 @@
 .popularCityTitle{
     position: absolute;
     top: 30px;
-    left: 40px;
-    font-size: 20px;
+    margin-left: 30px;
+    display: block;
+    font-size: 18px;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     color: #ffffff;
+    background-color: #1c1c1c;
+    opacity: 0.7;
+    height: 30px;
+    width: auto;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.popularCitySmallCardBackground{
+    background-color: #000000;
+    opacity: 0.5;
+    height: 30px;
+    width: 100px;
 }
 
 .popularCityHrTag{
     width: 50%;
     margin-top: 5px;
-    margin-left: 0px;
+    margin-left: 0;
     background-color: #ffffff;
     border-width: 2px;
 }
