@@ -42,13 +42,11 @@ class TwentyFourHoursDeal extends Component {
         super(props);
         this.state={
             myData:[],
-            error:false
         }
     }
 
     componentDidMount() {
         axios.get(ApiURL.TwentyFourDealRoom).then(response=> {
-            console.log(response.data);
             this.setState({myData:response.data})
         }).catch(error=> {
 
@@ -98,19 +96,19 @@ class TwentyFourHoursDeal extends Component {
         };
 
         const myList=this.state.myData;
-        const myView=myList.map((TFRoomDeal,i)=>{
+        const myView=myList.map((myRoom,i)=>{
             return <div className="row mt-2 mb-2 p-2">
                 <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                    <img className="twentyFourImage" src={TFRoomDeal.image_url[0].Image} alt="Photo of sunset"/>
+                    <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myRoom.image_url[0].Image} alt="Photo of sunset"/>
                     <div className="TwentyFourHoursHotelDiscountCard">
                         <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
                     </div>
                     <div className="TwentyFourHoursHotelBoxCard">
-                        <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  {TFRoomDeal.hotel_details.hotel_name}</h6>
-                        <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {TFRoomDeal.hotel_details.city.city_name}, {TFRoomDeal.hotel_details.city.state.country.country_name} </h6>
+                        <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  {myRoom.hotel_details.hotel_name}</h6>
+                        <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {myRoom.hotel_details.city.city_name}, {myRoom.hotel_details.city.state.country.country_name} </h6>
                     </div>
-                    <h5 className="roomTitle">{TFRoomDeal.room_name}</h5>
-                    <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> {TFRoomDeal.price_details.price} <span className="text-dark">/ NIGHT</span></h6>
+                    <h5 className="roomTitle">{myRoom.room_name}</h5>
+                    <h6 className="roomPrice"><strike class="text-dark">৳{parseInt(myRoom.price_details.offer_price)}</strike> ৳{parseInt(myRoom.price_details.price)} <span className="text-dark">/ NIGHT</span></h6>
                 </Link>
             </div>
         });
@@ -139,95 +137,6 @@ class TwentyFourHoursDeal extends Component {
                             </Link>
                         </div>*/}
 
-                       {/* <div className="row mt-2 mb-2 p-2">
-                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room2} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/ NIGHT</span></h6>
-                            </Link>
-                        </div>
-
-                        <div className="row mt-2 mb-2 p-2">
-                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room3} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/ NIGHT</span></h6>
-                            </Link>
-                        </div>
-
-                        <div className="row mt-2 mb-2 p-2">
-                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room4} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/ NIGHT</span></h6>
-                            </Link>
-                        </div>
-
-                        <div className="row mt-2 mb-2 p-2">
-                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room5} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">40% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/ NIGHT</span></h6>
-                            </Link>
-                        </div>
-
-                        <div className="row mt-2 mb-2 p-2">
-                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room6} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">55% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/ NIGHT</span></h6>
-                            </Link>
-                        </div>
-
-                        <div className="row mt-2 mb-2 p-2">
-                            <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room7} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/ NIGHT</span></h6>
-                            </Link>
-                        </div>*/}
                     </Slider>
 
            {/*         <div className="row">
