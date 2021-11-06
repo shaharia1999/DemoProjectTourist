@@ -3,24 +3,19 @@ import {Link} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {FaHotel} from "react-icons/fa";
-import {IoMdPin} from "react-icons/all";
-import room1 from "../../../asset/images/room/room1.jpg"
-import room2 from "../../../asset/images/room/room2.jpg"
-import room3 from "../../../asset/images/room/room3.jpg"
-import room4 from "../../../asset/images/room/room4.jpg"
-import room5 from "../../../asset/images/room/room5.jpg"
-import room6 from "../../../asset/images/room/room6.jpg"
-import room7 from "../../../asset/images/room/room7.jpg"
 import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
+import {FaHotel} from "react-icons/fa";
+import {IoMdPin} from "react-icons/all";
+import {Container} from "react-bootstrap";
+import TwentyFourHourDealPlaceholder from "../../placeholder/TwentyFourHourDealPlaceholder";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <button
             className={className}
-            style={{ ...style, fontSize: "40px", display: 'block', right:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
+            style={{ ...style, fontSize: "40px", right:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
             onClick={onClick}
         />
     );
@@ -31,7 +26,7 @@ function SamplePrevArrow(props) {
     return (
         <button
             className={className}
-            style={{ ...style, fontSize: "40px", display: 'block', left:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
+            style={{ ...style, fontSize: "40px", left:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
             onClick={onClick}
         />
     );
@@ -42,12 +37,14 @@ class TwentyFourHoursDeal extends Component {
         super(props);
         this.state={
             myData:[],
+            isLoading:"",
+            MainDiv:"d-none"
         }
     }
 
     componentDidMount() {
         axios.get(ApiURL.TwentyFourDealRoom).then(response=> {
-            this.setState({myData:response.data})
+            this.setState({myData:response.data,isLoading:"d-none",MainDiv:" "})
         }).catch(error=> {
 
         });
@@ -115,14 +112,16 @@ class TwentyFourHoursDeal extends Component {
 
         return (
             <Fragment>
-                <div className="container-fluid bg-light p-5">
-                    <h5 className="section-title mt-4 text-center">24 Hours Deal</h5>
-                    <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
-                    <Slider ref={c=>(this.slider=c)} {...settings}>
+                <TwentyFourHourDealPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <Container fluid={true} className="bg-light p-5">
+                        <h5 className="section-title mt-4 text-center">24 Hours Deal</h5>
+                        <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
+                        <Slider ref={c=>(this.slider=c)} {...settings}>
 
-                        {myView}
+                            {myView}
 
-                        {/*<div className="row mt-2 mb-2 p-2">
+                            {/*<div className="row mt-2 mb-2 p-2">
                             <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room1} alt="Photo of sunset"/>
                                 <div className="TwentyFourHoursHotelDiscountCard">
@@ -137,9 +136,9 @@ class TwentyFourHoursDeal extends Component {
                             </Link>
                         </div>*/}
 
-                    </Slider>
+                        </Slider>
 
-           {/*         <div className="row">
+                        {/*         <div className="row">
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="twentyFourImage" src={room1} alt="Photo of sunset"/>
@@ -237,6 +236,7 @@ class TwentyFourHoursDeal extends Component {
                         </div>
                     </div>*/}
 
+                    </Container>
                 </div>
             </Fragment>
         );

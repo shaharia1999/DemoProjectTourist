@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
+import {Container} from "react-bootstrap";
+import MostPopularHotelPlaceholder from "../../placeholder/MostPopularHotelPlaceholder";
 import hotel1 from "../../../asset/images/Hotel/HotelSarina.jpg"
 import hotel2 from "../../../asset/images/Hotel/TheRaintreeHotel.jpg"
 import hotel3 from "../../../asset/images/Hotel/LeMéridienDhaka.jpg"
@@ -42,12 +44,14 @@ class MostPopularHotel extends Component {
         super(props);
         this.state={
             myData:[],
+            isLoading:"",
+            MainDiv:"d-none"
         }
     }
 
     componentDidMount() {
         axios.get(ApiURL.AllHotel).then(response=> {
-            this.setState({myData:response.data.data})
+            this.setState({myData:response.data.data,isLoading:"d-none",MainDiv:" "})
         }).catch(error=> {
 
         });
@@ -112,7 +116,9 @@ class MostPopularHotel extends Component {
 
         return (
             <Fragment>
-                <div className="container-fluid whyChooseTop p-5">
+                <MostPopularHotelPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                <Container className="whyChooseTop p-5">
                     <h5 className="section-title text-center">Most Popular Hotel</h5>
                     <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                     <Slider ref={c=>(this.slider=c)} {...settings}>
@@ -145,6 +151,7 @@ class MostPopularHotel extends Component {
                             </Link>
                         </div>
                     </div>*/}
+                </Container>
                 </div>
             </Fragment>
         );
