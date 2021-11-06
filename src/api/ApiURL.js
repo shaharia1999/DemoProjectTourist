@@ -6,6 +6,7 @@ class ApiUrl{
     static Contact=this.BaseUrl+"contact/";
     static TwentyFourDealRoom=this.BaseUrl+"room-deals/";
     static AllHotel=this.BaseUrl+"hotel_details/";
+    static HomeCity=this.BaseUrl+"city/";
 
 }
 export default ApiUrl;

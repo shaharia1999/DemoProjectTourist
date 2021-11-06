@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e91d914-58e0-4668-be87-e92154dc4ddf" name="Default Changelist" comment="" />
+    <list default="true" id="5e91d914-58e0-4668-be87-e92154dc4ddf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ApiURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/home/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/PopularCity/PopularCity.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +71,7 @@
       <workItem from="1636136900284" duration="4023000" />
       <workItem from="1636200829579" duration="4903000" />
       <workItem from="1636209197389" duration="168000" />
-      <workItem from="1636209386068" duration="410000" />
+      <workItem from="1636209386068" duration="2092000" />
     </task>
     <servers />
   </component>
