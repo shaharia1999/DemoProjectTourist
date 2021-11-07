@@ -7,6 +7,7 @@ class ApiUrl{
     static TwentyFourDealRoom=this.BaseUrl+"room-deals/";
     static AllHotel=this.BaseUrl+"hotel_details/";
     static HomeCity=this.BaseUrl+"city/";
+    static RecommendedHotel=this.BaseUrl+"recommended-hotels/";
 
 }
 export default ApiUrl;

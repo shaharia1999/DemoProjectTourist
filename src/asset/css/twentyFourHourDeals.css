@@ -5,7 +5,7 @@ div [class^="col-"]{
 .TwentyFourHoursCard{
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.9s;
-    width: 100%;
+    width: 100% !important;
     background-color: #ffffff;
     border-radius: 5px;
 }
@@ -18,7 +18,7 @@ div [class^="col-"]{
     transition: 0.9s;
     width: 100%;
     min-height: 250px!important;
-    background-color: #ffffff;
+    background-color: #ffffff!important;
     border-radius: 5px;
     padding: 4px 1px 2px 1px!important;
 }

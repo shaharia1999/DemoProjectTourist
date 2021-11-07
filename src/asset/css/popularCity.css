@@ -50,3 +50,17 @@
     text-decoration: none!important;
     margin: 5px;
 }
+
+.PopularCityCardPH{
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.9s;
+    width: 100%;
+    min-height: 200px!important;
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    padding: 1px 1px 1px 1px!important;
+}
+
+.PopularCityCardPH:hover{
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+}

@@ -64,6 +64,21 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
+.SearchPageImage{
+    width: 220px!important;
+    height: 150px!important;
+}
+
+.SearchPageHotelCard{
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.125);
+    transition: 0.9s;
+    width: 100%;
+    background-color: #fbfbfb;
+}
+.SearchPageHotelCard:hover{
+    box-shadow: 0 0 48px 0 rgba(0,0,0,0.1);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .formSearch-control {
         transition: none

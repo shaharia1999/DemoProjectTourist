@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
-import {FaHotel, FaStar} from "react-icons/fa";
+import {FaStar} from "react-icons/fa";
 import {IoMdPin} from "react-icons/all";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,19 +10,13 @@ import ApiURL from "../../../api/ApiURL";
 import {Container} from "react-bootstrap";
 import MostPopularHotelPlaceholder from "../../placeholder/MostPopularHotelPlaceholder";
 import hotel1 from "../../../asset/images/Hotel/HotelSarina.jpg"
-import hotel2 from "../../../asset/images/Hotel/TheRaintreeHotel.jpg"
-import hotel3 from "../../../asset/images/Hotel/LeMéridienDhaka.jpg"
-import hotel4 from "../../../asset/images/Hotel/SixSeasonsHotel.jpg"
-import hotel5 from "../../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg"
-import hotel6 from "../../../asset/images/Hotel/TheMermaidBeachResort.jpg"
-import hotel7 from "../../../asset/images/Hotel/InterContinentalDhaka.jpg"
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <button
             className={className}
-            style={{ ...style, fontSize: "40px", display: 'block', right:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
+            style={{ ...style, fontSize: "40px", right:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
             onClick={onClick}
         />
     );
@@ -33,7 +27,7 @@ function SamplePrevArrow(props) {
     return (
         <button
             className={className}
-            style={{ ...style, fontSize: "40px", display: 'block', left:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
+            style={{ ...style, fontSize: "40px", left:"-40px", zIndex:"15", height:"35px", width:"35px", opacity:"1", color:"White", display: "block", background: "#C20035" }}
             onClick={onClick}
         />
     );
@@ -56,7 +50,6 @@ class MostPopularHotel extends Component {
 
         });
     }
-
 
     render() {
         let settings = {
@@ -104,7 +97,7 @@ class MostPopularHotel extends Component {
         const myView=myList.map((myHotel,i)=>{
             return  <div className="row mt-2 mb-2 p-2">
                 <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                    <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
+                    <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt="Photo of sunset"/>
                     <div className="mostPopularHotelBoxCard">
                         <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {myHotel.city.city_name} , {myHotel.city.state.country.country_name}</h6>
                     </div>
@@ -118,13 +111,12 @@ class MostPopularHotel extends Component {
             <Fragment>
                 <MostPopularHotelPlaceholder isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
-                <Container className="whyChooseTop p-5">
+                <Container className="whyChooseTop p-5" fluid={true}>
                     <h5 className="section-title text-center">Most Popular Hotel</h5>
                     <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                     <Slider ref={c=>(this.slider=c)} {...settings}>
 
                         {myView}
-
 
                        {/*<div className="row mt-2 mb-2 p-2">
                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
@@ -138,8 +130,7 @@ class MostPopularHotel extends Component {
                         </div>*/}
 
                     </Slider>
-
-                   {/* <div className="row">
+                    {/*<div className="row">
                         <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
                             <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
