@@ -39,7 +39,7 @@ class MostPopularHotel extends Component {
         this.state={
             myData:[],
             isLoading:"",
-            MainDiv:"d-none"
+            MainDiv:"d-none",
         }
     }
 

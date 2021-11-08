@@ -6,7 +6,7 @@
 }
 
 .font26{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 26px;
     font-weight: 500;
     color: #56B5E3FF;
@@ -22,27 +22,27 @@
     background-image: linear-gradient(to right, rgba(86,181,227,100), rgba(125,88,165,100));
     border-color: rgba(86,181,227,100);
     border-radius: 2px!important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     box-shadow: none!important;
 }
 .contact-btn:hover{
     border-color: rgba(86,181,227,100);
     border-radius: 2px!important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     box-shadow: none!important;
 }
 
 .contact-section-title{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #56B5E3FF;
 }
 
 .contact-section-subTitle{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
 }

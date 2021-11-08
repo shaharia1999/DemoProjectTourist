@@ -6,7 +6,7 @@ import PrivacyPage from "../pages/PrivacyPage/PrivacyPage";
 import TermsPage from "../pages/TermsPage/TermsPage";
 import RefundPage from "../pages/RefundPage/RefundPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
-import FaqPage from "../pages/FAQPage/FAQPage";
+import NotificationPage from "../pages/NotificationPage/NotificationPage";
 import HelpCenterPage from "../pages/HelpCenterPage/HelpCenterPage";
 import PressPage from "../pages/PressPage/PressPage";
 import RoomDetailsPage from "../pages/RoomDetailsPage/RoomDetailsPage";
@@ -53,7 +53,7 @@ class AppRoute extends Component {
 
                     {/*Other Route*/}
                     <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/faq" render={(props) => <FaqPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/notification" render={(props) => <NotificationPage {...props} key={Date.now()} />}/>
                     <Route exact path="/helpCenter" render={(props) => <HelpCenterPage {...props} key={Date.now()} />}/>
                     <Route exact path="/press" render={(props) => <PressPage {...props} key={Date.now()} />}/>
                     <Route exact path="/support" render={(props) => <SupportPage {...props} key={Date.now()} />}/>

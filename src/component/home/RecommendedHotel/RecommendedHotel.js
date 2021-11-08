@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
+import RecommendedHotelPlaceholder from "../../placeholder/RecommendedHotelPlaceholder";
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -30,8 +31,8 @@ function SamplePrevArrow(props) {
 }
 
 class RecommendedHotel extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state={
             myData:[],
             isLoading:"",
@@ -105,14 +106,16 @@ class RecommendedHotel extends Component {
 
         return (
             <Fragment>
-                <div className="container-fluid whyChooseTop p-5">
-                    <h5 className="section-title text-center">Recommended Hotel</h5>
-                    <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
-                    <Slider ref={c=>(this.slider=c)} {...settings}>
+                <RecommendedHotelPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <div className="container-fluid whyChooseTop p-5">
+                        <h5 className="section-title text-center">Recommended Hotel</h5>
+                        <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
+                        <Slider ref={c=>(this.slider=c)} {...settings}>
 
-                        {myView}
+                            {myView}
 
-                        {/*<div className="row mt-2 mb-2 p-2">
+                            {/*<div className="row mt-2 mb-2 p-2">
                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
                                 <div className="mostPopularHotelBoxCard">
@@ -123,7 +126,8 @@ class RecommendedHotel extends Component {
                             </Link>
                         </div>*/}
 
-                    </Slider>
+                        </Slider>
+                    </div>
                 </div>
             </Fragment>
         );

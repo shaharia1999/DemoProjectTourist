@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
-import {Container} from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 import PopularCityPlaceholder from "../../placeholder/PopularCityPlaceholder";
 class PopularCity extends Component {
     constructor(props) {
@@ -23,10 +23,10 @@ class PopularCity extends Component {
     }
     render() {
         const myList=this.state.myData;
-        const myView=myList.map((myCity,i)=>{
+        const myView=myList.map(myCity=>{
             return <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2">
                 <Link to="/hotelPerCity" className="card popularCityAnimation">
-                    <img className="popularCityImage" src={myCity.city_image} alt="Photo of sunset"/>
+                    <img className="popularCityImage" src={myCity.city_image} alt=""/>
                     <div className="popularCityTitle">{myCity.city_name} <hr className="popularCityHrTag"/></div>
                 </Link>
             </div>
@@ -38,7 +38,7 @@ class PopularCity extends Component {
                     <Container className="whyChooseTop bg-light p-5" fluid={true}>
                         <h5 className="section-title text-center">Popular City</h5>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
-                        <div className="row">
+                        <Row>
                             {myView}
 
                             {/*<div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2">
@@ -47,7 +47,7 @@ class PopularCity extends Component {
                                 <div className="popularCityTitle">Dhaka City <hr className="popularCityHrTag"/></div>
                             </Link>
                         </div>*/}
-                        </div>
+                        </Row>
                     </Container>
                 </div>
 

@@ -11,11 +11,11 @@
     height: auto;
     min-height: 375px!important;
     border: none;
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 0;
+    padding-left: 0;
 }
 
-@media (max-width: 374.98px) {
+@media (max-width: 374px) {
     .googleMap{
         min-height: 220px!important;
         min-width: 220px!important;
@@ -24,19 +24,19 @@
     }
 }
 
-@media (min-width: 375.98px) and (max-width: 575.98px){
+@media (min-width: 375px) and (max-width: 575px){
     .googleMap{min-height: 305px!important;min-width: 305px!important;border: none!important;margin-top: 15px;}
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767px) {
     .googleMap{min-height: 320px!important;min-width: 430px!important;margin-top: 15px; border: none!important;}
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .googleMap{height:350px;min-height: 320px!important;min-width: 320px!important; border: none!important;}
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .googleMap{min-height: 320px!important;min-width: 440px!important; border: none!important;}
 }
 

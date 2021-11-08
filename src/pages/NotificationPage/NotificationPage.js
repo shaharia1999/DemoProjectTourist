@@ -1,9 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
 import Footer from "../../component/common/footer/Footer";
-import Faq from "../../component/other/FAQ/FAQ";
-
-class FaqPage extends Component {
+import Notification from "../../component/other/Notofication/Notification";
+class NotificationPage extends Component {
     componentDidMount() {
         window.scroll(0,0)
     }
@@ -11,11 +10,10 @@ class FaqPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <Faq/>
+                <Notification/>
                 <Footer/>
             </Fragment>
         );
     }
 }
-
-export default FaqPage;
+export default NotificationPage;

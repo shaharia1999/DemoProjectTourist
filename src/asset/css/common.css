@@ -1,6 +1,5 @@
-
 .breadcrumbText{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px!important;
     color: #000000!important;
@@ -8,7 +7,7 @@
 }
 
 .breadcrumbText:hover{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px!important;
     color: #000000!important;

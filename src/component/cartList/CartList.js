@@ -150,27 +150,25 @@ class CartList extends Component {
                         </Row>
 
                         <Row>
-                            <Col className="p-2" xl={2} lg={2} md={2} sm={2} xs={2} >
+                            <Col className="p-2" xl={4} lg={4} md={4} sm={4} xs={4} >
                             </Col>
-                            <Col className="p-2" xl={6} lg={6} md={6} sm={6} xs={6} >
-                                <Row className="RoomOnCartCard bg-white w-100">
-                                    <Col className="" xl={12} lg={12} md={12} sm={12} xs={12}>
-                                        <Form>
-                                            <div className="form-group">
-                                                <input type="text" className="form-control placeholder-text" placeholder="PROMO CODE"/>
-                                                <Button id="" type="submit" className="btn PromoCodeBtn">SEND</Button>
-                                            </div>
-                                        </Form>
-                                    </Col>
+                            <Col className="p-0 m-0" xl={4} lg={4} md={4} sm={4} xs={4} >
+                                <Row className="PromoCartCard bg-white">
+                                    <Form>
+                                        <Col xl={12} lg={12} md={12} sm={12} xs={12} className="input-group">
+                                            <input type="text" className="form-control PromoUppercase m-0 mx-3 placeholder-text" placeholder="PROMO CODE"/>
+                                            <Button type="submit" className="btn PromoCodeBtn">SEND</Button>
+                                        </Col>
+                                    </Form>
                                 </Row>
                             </Col>
                             <Col className="p-2" xl={4} lg={4} md={4} sm={4} xs={4} >
                                 <Row className="RoomOnCartCard bg-white w-100">
                                     <Col className="" xl={6} lg={6} md={6} sm={6} xs={6}>
-                                        <h6 className="SubTotalPriceTitle">DISCOUNT </h6>
+                                        <h6 className="PromoDiscountPriceTitle">DISCOUNT </h6>
                                     </Col>
                                     <Col className="" xl={6} lg={6} md={6} sm={6} xs={6}>
-                                        <h6 className="SubTotalPriceTitle">990 TK</h6>
+                                        <h6 className="PromoDiscountPriceTitle">990 TK</h6>
                                     </Col>
                                 </Row>
                             </Col>

@@ -12,7 +12,7 @@
 }
 .mostPopularHotelTitle{
     font-size: 12px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none!important;
     color: #ffffff;
     font-weight: 300;
@@ -20,7 +20,7 @@
     opacity: 1;
 }
 .room-title{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size:16px;
     cursor:pointer;
     text-decoration: none!important;
@@ -35,11 +35,11 @@
 }
 .room-price{
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none!important;
     color: #C20035;
     margin-left: 15px;
-    margin-top: 0px!important;
+    margin-top: 0!important;
 }
 /*
 .TwentyFourHoursAnimation::before, .TwentyFourHoursAnimation::after {

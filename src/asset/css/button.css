@@ -1,0 +1,9 @@
+.badgeBtn{
+    box-shadow: none!important;
+}
+.badgeBtn:hover{
+    box-shadow: none!important;
+}
+.badgeBtn:focus{
+    box-shadow: none!important;
+}

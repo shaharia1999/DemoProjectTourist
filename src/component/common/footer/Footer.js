@@ -29,7 +29,6 @@ class Footer extends Component {
                                 <ul className="footer-links">
                                     <li><Link className="FooterInfoLinkText" to="/about">About Us</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/contact">Contact</Link></li>
-                                    <li><Link className="FooterInfoLinkText" to="/faq">FAQ</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/press">Press</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/terms">Terms & conditions</Link></li>
                                     <li><Link className="FooterInfoLinkText" to="/guestPolicies">Guest Policies</Link></li>

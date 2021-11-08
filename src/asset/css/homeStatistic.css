@@ -5,16 +5,16 @@
 }
 
 .HomeStatistic-card{
-    border-radius: 0px!important;
-    margin: 0px!important;
+    border-radius: 0!important;
+    margin: 0!important;
     height: auto;
     background-color: #ffffff;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
 }
 
 .HomeStatistic-card:hover{
-    border-radius: 0px!important;
-    margin: 0px!important;
+    border-radius: 0!important;
+    margin: 0!important;
     height: auto;
     background-color: #ffffff;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,0.2);
@@ -32,14 +32,14 @@
 }
 
 .statistics-title{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: #7D58A5FF;
 }
 
 .statistics-des{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #595959;
