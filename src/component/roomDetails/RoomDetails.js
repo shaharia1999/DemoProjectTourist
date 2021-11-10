@@ -4,22 +4,20 @@ import room2 from "../../../src/asset/images/room/room2.jpg"
 import room3 from "../../../src/asset/images/room/room3.jpg"
 import room4 from "../../../src/asset/images/room/room4.jpg"
 import {FaMapMarkerAlt} from "react-icons/all";
-import {Breadcrumb, Container} from "react-bootstrap";
+import {Breadcrumb} from "react-bootstrap";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import ReactDOM from 'react-dom';
 import RoomReview from "./RoomReview";
 import {Link} from "react-router-dom";
 
 class RoomDetails extends Component {
-    constructor() {
-        super();
-    }
 
     imgOnclick=(event)=>{
         let imgSrc= event.target.getAttribute('src');
         let PreviewImg=document.getElementById('PreviewImg');
         ReactDOM.findDOMNode(PreviewImg).setAttribute('src',imgSrc);
     }
+
     render() {
         return (
             <Fragment>
@@ -52,7 +50,7 @@ class RoomDetails extends Component {
                                 </div>
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">
-                                    <h5 className="HotelTitle">Le Méridien Dhaka <span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
+                                    <h5 className="HotelTitle">Le Méridien Dhaka <span className="SearchStarText"><i className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i className="fa fa-star"> </i> </span></h5>
                                     <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <h6 className="HotelDetailsSubTitle">DELUXE KING SPECIAL DELUXE KING SPECIAL</h6>
                                     <h6 className="RoomDetailsPrice mt-4"><strike className="price1">৳2800</strike> ৳2300 <span className="price2">( per room per night )</span></h6>

@@ -17,8 +17,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                 <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
+                                        <div className="ph-col-10"/>
+                                        <div className="ph-col-8"/>
                                     </div>
                                 </div>
                             </div>
@@ -29,8 +29,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                 <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
+                                        <div className="ph-col-10"/>
+                                        <div className="ph-col-8"/>
                                     </div>
                                 </div>
                             </div>
@@ -41,8 +41,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                 <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
+                                        <div className="ph-col-10"/>
+                                        <div className="ph-col-8"/>
                                     </div>
                                 </div>
                             </div>
@@ -53,8 +53,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                 <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
+                                        <div className="ph-col-10"/>
+                                        <div className="ph-col-8"/>
                                     </div>
                                 </div>
                             </div>
@@ -65,8 +65,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                 <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
+                                        <div className="ph-col-10"/>
+                                        <div className="ph-col-8"/>
                                     </div>
                                 </div>
                             </div>
@@ -77,8 +77,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                 <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
-                                        <div className="ph-col-12"/>
+                                        <div className="ph-col-10"/>
+                                        <div className="ph-col-8"/>
                                     </div>
                                 </div>
                             </div>
