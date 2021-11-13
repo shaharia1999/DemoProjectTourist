@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Button, Col, Container, DropdownButton, Form, Row} from "react-bootstrap";
+import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
 
 class EditProfile extends Component {

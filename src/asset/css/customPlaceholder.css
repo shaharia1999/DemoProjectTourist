@@ -1,0 +1,18 @@
+.CartItemCardPH{
+    width: 100%;
+    background-color: #fbfbfb!important;
+    border-radius: 5px;
+    border-color: #fbfbfb;
+}
+
+.CartRoomImagePH{
+    width: 100%!important;
+    height: 120px!important;
+    margin: 0 0 0 0!important;
+    padding: 2px 2px 2px 2px !important;
+}
+
+.CartSmallItemCardPH{
+    background-color: #fbfbfb!important;
+    border-color: #fbfbfb;
+}

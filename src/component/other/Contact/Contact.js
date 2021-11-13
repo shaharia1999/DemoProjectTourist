@@ -78,13 +78,13 @@ class Contact extends Component {
             MyFormData.append("msg",contact_msg);
 
             axios.post(ApiUrl.Contact,MyFormData).then(function (response) {
-                if(response.code===200){
+                if(response.status===200){
                     toast.success('Contact Send Successful', {
                         position: "top-center",
                         autoClose: 2000,
                     });
                     ContactBtn.innerHTML="SEND";
-                    /* RegistrationForm.reset();*/
+                    ContactForm.reset();
                 }
                 else{
                     toast.error('Request Fail ! Try Again', {
@@ -123,13 +123,13 @@ class Contact extends Component {
                                     <input onChange={this.contact_mobileOnChange} className="form-control placeholderApplyText py-md-4 py-sm-4 py-4" placeholder="Mobile Number"/>
                                 </div>
                                 <div className="form-group">
-                                    <textarea onChange={this.contact_msgOnChange} type="text" className="form-control placeholderApplyText py-md-4 py-sm-4 py-4" placeholder="Massage"/>
+                                    <textarea onChange={this.contact_msgOnChange} className="form-control placeholderApplyText py-md-4 py-sm-4 py-4" placeholder="Massage"/>
                                 </div>
                                 <Button id="ContactBtn" type="submit" className="btn btn-block SendBtnColorText">SEND</Button>
                             </Form>
                         </Col>
                         <Col xl={6} lg={6} md={6} sm={12} xs={12} className="mt-3">
-                            <iframe className="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.492105191644!2d90.4251011154022!3d23.765484494115892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9998b8a324f%3A0xc7e89d05a8adc2e1!2sArena%20Web%20Security%20-%20The%20Hacker&#39;s%20Arena!5e0!3m2!1sen!2sbd!4v1631611812115!5m2!1sen!2sbd"></iframe>
+                            <iframe className="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.492105191644!2d90.4251011154022!3d23.765484494115892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9998b8a324f%3A0xc7e89d05a8adc2e1!2sArena%20Web%20Security%20-%20The%20Hacker&#39;s%20Arena!5e0!3m2!1sen!2sbd!4v1631611812115!5m2!1sen!2sbd"> </iframe>
                         </Col>
                     </Row>
                 </Container>

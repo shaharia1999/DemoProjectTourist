@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Form, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
-import {Link} from "react-router-dom";
 
 class ChangePassword extends Component {
     render() {
@@ -24,7 +23,7 @@ class ChangePassword extends Component {
                                 <div className="form-group">
                                     <input type="text" className="form-control placeholder-text" placeholder="Enter Confirm Password"/>
                                 </div>
-                                <a className="btn SendBtnColorText mb-5 btn-block">Change Password</a>
+                                <button className="btn SendBtnColorText mb-5 btn-block">Change Password</button>
                             </Form>
                         </Col>
                         <Col xl={1} lg={1} md={1} sm={12} xs={12}>

@@ -93,7 +93,7 @@ class TwentyFourHoursDeal extends Component {
         };
 
         const myList=this.state.myData;
-        const myView=myList.map((myRoom,i)=>{
+        const myView=myList.map((myRoom)=>{
             return <div className="row mt-2 mb-2 p-2">
                 <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myRoom.image_url[0].Image} alt="Photo of sunset"/>

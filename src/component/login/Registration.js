@@ -121,7 +121,7 @@ class Registration extends Component {
                         autoClose: 2000,
                     });
                     RegistrationBtn.innerHTML="Registration";
-                   /* RegistrationForm.reset();*/
+                    RegistrationForm.reset();
                 }
 
                 else if(response.status===409){

@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import RoomReview from "./RoomReview";
 
 class RoomDescription extends Component {
     render() {

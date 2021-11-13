@@ -9,7 +9,6 @@ import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
 import {Container} from "react-bootstrap";
 import MostPopularHotelPlaceholder from "../../placeholder/MostPopularHotelPlaceholder";
-import hotel1 from "../../../asset/images/Hotel/HotelSarina.jpg"
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -45,11 +44,19 @@ class MostPopularHotel extends Component {
 
     componentDidMount() {
         axios.get(ApiURL.AllHotel).then(response=> {
+            if (response.status===200){
+                this.setState({myData:response.data.data,isLoading:"d-none",MainDiv:" "});
+            }
+        }).catch();
+    }
+
+    /*componentDidMount() {
+        axios.get(ApiURL.AllHotel).then(response=> {
             this.setState({myData:response.data.data,isLoading:"d-none",MainDiv:" "})
         }).catch(error=> {
 
         });
-    }
+    }*/
 
     render() {
         let settings = {
@@ -94,10 +101,10 @@ class MostPopularHotel extends Component {
         };
 
         const myList=this.state.myData;
-        const myView=myList.map((myHotel,i)=>{
+        const myView=myList.map(myHotel=>{
             return  <div className="row mt-2 mb-2 p-2">
                 <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                    <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt="Photo of sunset"/>
+                    <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt=""/>
                     <div className="mostPopularHotelBoxCard">
                         <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {myHotel.city.city_name} , {myHotel.city.state.country.country_name}</h6>
                     </div>
