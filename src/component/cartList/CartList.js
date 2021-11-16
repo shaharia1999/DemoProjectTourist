@@ -156,7 +156,7 @@ class CartList extends Component {
                                 <Row className="PromoCartCard bg-white">
                                     <Form>
                                         <Col xl={12} lg={12} md={12} sm={12} xs={12} className="input-group">
-                                            <input type="text" className="form-control PromoUppercase m-0 mx-3 placeholder-text" placeholder="PROMO CODE"/>
+                                            <input type="text" className="form-control PromoUppercase ml-5 placeholder-text" placeholder="PROMO CODE"/>
                                             <Button type="submit" className="btn PromoCodeBtn">SEND</Button>
                                         </Col>
                                     </Form>

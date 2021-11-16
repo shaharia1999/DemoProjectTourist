@@ -3,6 +3,7 @@ class ApiUrl{
     //API URL START
     static BaseUrl="http://127.0.0.1:8000/api/";
     static Registration=this.BaseUrl+"user/";
+    static UserLogin=this.BaseUrl+"user-login/";
     static Contact=this.BaseUrl+"contact/";
     static TwentyFourDealRoom=this.BaseUrl+"room-deals/";
     static AllHotel=this.BaseUrl+"hotel_details/";

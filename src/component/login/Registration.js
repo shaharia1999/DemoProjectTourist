@@ -7,8 +7,6 @@ import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 
 class Registration extends Component {
-
-
     constructor(props) {
         super(props);
         this.state={
@@ -55,24 +53,28 @@ class Registration extends Component {
         if (user_name.length===0){
             toast.error('Name is Required!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
         else if(user_email.length===0){
             toast.error('Email is Required!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
         else if(user_mobile.length===0){
             toast.error('Mobile is Required!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
         else if(user_mobile.length!==11){
             toast.error('Mobile 11 digit is Required!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
@@ -80,6 +82,7 @@ class Registration extends Component {
         else if(!(MobileRegx).test(user_mobile)){
             toast.error("Invalid Mobile Number",{
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
@@ -88,6 +91,7 @@ class Registration extends Component {
         else if(user_password.length===0){
             toast.error('Password is Required!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
@@ -95,6 +99,7 @@ class Registration extends Component {
         else if(user_password.length<6){
             toast.error('Password 6 digit Required!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
@@ -102,6 +107,7 @@ class Registration extends Component {
         else if(user_password!==confirm_password){
             toast.error('Confirm Password not match!', {
                 position: "top-center",
+                theme:"colored",
                 autoClose: 2000,
             });
         }
@@ -118,6 +124,7 @@ class Registration extends Component {
                 if(response.status===200){
                     toast.success('Registration Successful', {
                         position: "top-center",
+                        theme:"colored",
                         autoClose: 2000,
                     });
                     RegistrationBtn.innerHTML="Registration";
@@ -127,6 +134,7 @@ class Registration extends Component {
                 else if(response.status===409){
                     toast.error('Email Already Used', {
                         position: "top-center",
+                        theme:"colored",
                         autoClose: 2000,
                     });
                     RegistrationBtn.innerHTML="Registration";
@@ -135,6 +143,7 @@ class Registration extends Component {
                 else if(response.status===302){
                     toast.error('Phone Number Already Used', {
                         position: "top-center",
+                        theme:"colored",
                         autoClose: 2000,
                     });
                     RegistrationBtn.innerHTML="Registration";
@@ -143,6 +152,7 @@ class Registration extends Component {
                 else{
                     toast.error('Request Fail ! Try Again', {
                         position: "top-center",
+                        theme:"colored",
                         autoClose: 2000,
                     });
                     RegistrationBtn.innerHTML="Registration";
@@ -150,6 +160,7 @@ class Registration extends Component {
             }).catch(function (error) {
                 toast.error('Request Fail ! Try Again', {
                     position: "top-center",
+                    theme:"colored",
                     autoClose: 2000,
                 });
                 RegistrationBtn.innerHTML="Registration";

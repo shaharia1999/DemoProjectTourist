@@ -51,6 +51,10 @@ class HomeSearchMain extends Component {
 
     }
 
+    function=()=>{
+        ('[data-toggle="tooltip"]').tooltip()
+    }
+
     render() {
         const open = this.state.open;
         const open1 = this.state.open1;
@@ -61,7 +65,8 @@ class HomeSearchMain extends Component {
                     <Row className="justify-content-center mb-4">
                         <Col xl={8} lg={8} md={8} sm={8} xs={8} className="input-group searchUpText mb-3">
                             <input type="text" className="form-control search-placeholder"
-                                   placeholder="Search by City, Hotel or Location" aria-label="Recipient's username"
+                                   placeholder="Search by City, Hotel or Location"
+                                   aria-label="Recipient's username"
                                    aria-describedby="basic-addon2"/>
                             <div className="input-group-append">
                                 <Link to="/homeSearch" className="btn pt-3 search-btn" type="button">Search</Link>
@@ -206,10 +211,17 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel1} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <h5 className="HotelSearchTitle">Six Seasons Hotel <span className="SearchStarText"><i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> </span></h5>
+                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                    <h5 className="HotelSearchTitle">Six Seasons Hotel
+                                        <span className="SearchStarText">
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        </span>
+                                    </h5>
+                                    </Link>
                                     <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
                                         className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <ul className="list-unstyled mb-2 d-md-flex">
@@ -234,10 +246,17 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel2} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <h5 className="HotelSearchTitle">InterContinental Dhaka <span
-                                        className="SearchStarText"><i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> </span></h5>
+                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                    <h5 className="HotelSearchTitle">InterContinental Dhaka
+                                        <span className="SearchStarText">
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        </span>
+                                    </h5>
+                                    </Link>
                                     <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
                                         className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <ul className="list-unstyled mb-2 d-md-flex">
@@ -261,10 +280,17 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel3} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <h5 className="HotelSearchTitle">The Raintree Hotel <span
-                                        className="SearchStarText"><i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> </span></h5>
+                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                        <h5 className="HotelSearchTitle">The Raintree Hotel
+                                            <span className="SearchStarText">
+                                            <i className="fa fa-star"> </i>
+                                            <i className="fa fa-star"> </i>
+                                            <i className="fa fa-star"> </i>
+                                            <i className="fa fa-star"> </i>
+                                            <i className="fa fa-star"> </i>
+                                            </span>
+                                        </h5>
+                                    </Link>
                                     <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
                                         className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <ul className="list-unstyled mb-2 d-md-flex">
@@ -273,6 +299,22 @@ class HomeSearchMain extends Component {
                                             <Button className="btn mx-1 FacilitiesBtn">Car Parking</Button>
                                             <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>
                                             <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>
+                                            {/*<button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
+                                                    data-placement="top" title="WiFi">
+                                                <FaWifi/>
+                                            </button>
+                                            <button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
+                                                    data-placement="top" title="Car Parking">
+                                                <FaCar/>
+                                            </button>
+                                            <button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
+                                                    data-placement="top" title="Breakfast">
+                                                <IoFastFood/>
+                                            </button>
+                                            <button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
+                                                    data-placement="top" title="Swimming pool">
+                                                <FaSwimmingPool/>
+                                            </button>*/}
                                         </li>
                                     </ul>
                                 </Col>
@@ -288,10 +330,17 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel4} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <h5 className="HotelSearchTitle">Six Seasons Hotel <span className="SearchStarText"><i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> </span></h5>
+                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                    <h5 className="HotelSearchTitle">Six Seasons Hotel
+                                        <span className="SearchStarText">
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        <i className="fa fa-star"> </i>
+                                        </span>
+                                    </h5>
+                                    </Link>
                                     <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
                                         className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <ul className="list-unstyled mb-2 d-md-flex">
