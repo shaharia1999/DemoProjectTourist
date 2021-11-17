@@ -25,6 +25,7 @@ import EditProfilePage from "../pages/EditProfilePage/EditProfilePage";
 import CartListPage from "../pages/CartListPage/CartListPage";
 import UserVerificationPage from "../pages/UserVerificationPage/UserVerificationPage";
 import HomeSearchPage from "../pages/HomeSearchPage/HomeSearchPage";
+import RoomBookingPage from "../pages/RoomBookingPage/RoomBookingPage";
 
 class AppRoute extends Component {
     render() {
@@ -39,6 +40,7 @@ class AppRoute extends Component {
 
                     <Route exact path="/homeSearch" render={(props) => <HomeSearchPage {...props} key={Date.now()} />}/>
                     <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/roomBooking" render={(props) => <RoomBookingPage {...props} key={Date.now()} />}/>
 
                     <Route exact path="/userLogin" render={(props) => <LoginPage {...props} key={Date.now()} />}/>
                     <Route exact path="/signUp" render={(props) => <RegistrationPage {...props} key={Date.now()} />}/>

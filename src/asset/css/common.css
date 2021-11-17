@@ -13,3 +13,8 @@
     color: #000000!important;
     text-decoration: none!important;
 }
+
+.bookingPadding{
+    padding-left: 70px;
+    padding-right: 70px;
+}

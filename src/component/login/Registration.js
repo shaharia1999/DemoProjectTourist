@@ -40,7 +40,7 @@ class Registration extends Component {
     }
 
     onFromRegistrationSubmit=(event)=>{
-        let MobileRegx=/^(?:\+?88|0088)?01[13-9]\d{8}$/;
+        let NumberRegx=/^\d+$/;
         let user_name=this.state.user_name;
         let user_email=this.state.user_email;
         let user_mobile=this.state.user_mobile;
@@ -54,64 +54,58 @@ class Registration extends Component {
             toast.error('Name is Required!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
         else if(user_email.length===0){
             toast.error('Email is Required!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
         else if(user_mobile.length===0){
             toast.error('Mobile is Required!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
         else if(user_mobile.length!==11){
             toast.error('Mobile 11 digit is Required!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
-
-        else if(!(MobileRegx).test(user_mobile)){
+        else if(!(NumberRegx).test(user_mobile)){
             toast.error("Invalid Mobile Number",{
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
-
-
         else if(user_password.length===0){
             toast.error('Password is Required!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
-
         else if(user_password.length<6){
             toast.error('Password 6 digit Required!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
-
         else if(user_password!==confirm_password){
             toast.error('Confirm Password not match!', {
                 position: "top-center",
                 theme:"colored",
-                autoClose: 2000,
+                autoClose: 3000,
             });
         }
-
         else{
             RegistrationBtn.innerHTML="Sending...";
             let MyFormData=new FormData();
@@ -125,45 +119,28 @@ class Registration extends Component {
                     toast.success('Registration Successful', {
                         position: "top-center",
                         theme:"colored",
-                        autoClose: 2000,
+                        autoClose: 3000,
                     });
                     RegistrationBtn.innerHTML="Registration";
                     RegistrationForm.reset();
                 }
-
-                else if(response.status===409){
-                    toast.error('Email Already Used', {
+            }).catch(function (error) {
+                if (error.response) {
+                    toast.error(error.response.data.message,{
                         position: "top-center",
                         theme:"colored",
-                        autoClose: 2000,
+                        autoClose: 3000,
                     });
                     RegistrationBtn.innerHTML="Registration";
                 }
-
-                else if(response.status===302){
-                    toast.error('Phone Number Already Used', {
-                        position: "top-center",
-                        theme:"colored",
-                        autoClose: 2000,
-                    });
-                    RegistrationBtn.innerHTML="Registration";
-                }
-
                 else{
                     toast.error('Request Fail ! Try Again', {
                         position: "top-center",
                         theme:"colored",
-                        autoClose: 2000,
+                        autoClose: 3000,
                     });
                     RegistrationBtn.innerHTML="Registration";
                 }
-            }).catch(function (error) {
-                toast.error('Request Fail ! Try Again', {
-                    position: "top-center",
-                    theme:"colored",
-                    autoClose: 2000,
-                });
-                RegistrationBtn.innerHTML="Registration";
             });
         }
         event.preventDefault();

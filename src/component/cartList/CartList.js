@@ -5,7 +5,6 @@ import room1 from "../../../src/asset/images/room/room1.jpg"
 import room2 from "../../../src/asset/images/room/room2.jpg"
 import room3 from "../../../src/asset/images/room/room3.jpg"
 import {ImArrowRight2} from "react-icons/all";
-import Porzotok from "../../asset/images/Porzotok.png";
 
 class CartList extends Component {
     render() {
@@ -188,7 +187,7 @@ class CartList extends Component {
                                 </Row>
                             </Col>
                         </Row>
-                        <Link to="/order" className="btn m-1 CheckOutBtn CheckOutText float-right">CHECK OUT <ImArrowRight2/></Link>
+                        <Link to="/roomBooking" className="btn m-1 CheckOutBtn CheckOutText float-right">CHECK OUT <ImArrowRight2/></Link>
                     </div>
                 </Container>
             </Fragment>

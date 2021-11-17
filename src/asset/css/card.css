@@ -1,6 +1,20 @@
 .des-card{
     border: none!important;
-    border-radius: 0px!important;
+    border-radius: 0!important;
     background-color: #f5f5f5;
     margin: 2px;
+}
+
+.bookingCard{
+    border: none!important;
+    border-radius: 0!important;
+    background-color: #f5f5f5;
+    padding: 25px!important;
+}
+
+.bookingCard1{
+    border: none!important;
+    border-radius: 0!important;
+    background-color: #ffffff;
+    padding: 10px!important;
 }

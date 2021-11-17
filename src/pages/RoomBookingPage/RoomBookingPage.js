@@ -1,11 +1,16 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+import NavTopSection from "../../component/common/navTopSection/NavTopSection";
+import RoomBooking from "../../component/RoomBooking/RoomBooking";
+import Footer from "../../component/common/footer/Footer";
 
 class RoomBookingPage extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <Fragment>
+                <NavTopSection/>
+                <RoomBooking/>
+                <Footer/>
+            </Fragment>
         );
     }
 }
