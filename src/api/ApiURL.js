@@ -1,14 +1,16 @@
 class ApiUrl{
-    static BaseUrl1="http://127.0.0.1:8000";
+    static BaseUrl1="http://13.52.81.125:8000";
     //API URL START
-    static BaseUrl="http://127.0.0.1:8000/api/";
-    static Registration=this.BaseUrl+"user/";
+    static BaseUrl="http://13.52.81.125:8000/api/";
+    static Registration=this.BaseUrl+"user/";  // done
     static UserLogin=this.BaseUrl+"user-login/";
-    static Contact=this.BaseUrl+"contact/";
-    static TwentyFourDealRoom=this.BaseUrl+"room-deals/";
-    static AllHotel=this.BaseUrl+"hotel_details/";
-    static HomeCity=this.BaseUrl+"city/";
-    static RecommendedHotel=this.BaseUrl+"recommended-hotels/";
 
+    static TwentyFourDealRoom=this.BaseUrl+"room-deals/";  //done
+    static AllHotel=this.BaseUrl+"hotel_details/";  //done
+    static HomeCity=this.BaseUrl+"city/";  //done
+    static RecommendedHotel=this.BaseUrl+"recommended-hotels/"; //done
+
+
+    static Contact=this.BaseUrl+"contact/";
 }
 export default ApiUrl;

@@ -5,12 +5,8 @@ import hotel1 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
 import hotel2 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
 import hotel3 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
 import hotel4 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
-import hotel5 from "../../asset/images/Hotel/InterContinentalDhaka.jpg";
 
 class HotelDetails extends Component {
-    constructor() {
-        super();
-    }
 
     imgOnclick=(event)=>{
         let imgSrc=event.target.getAttribute('src');

@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
+import {Redirect} from "react-router-dom";
 
 class Registration extends Component {
     constructor(props) {
@@ -15,7 +16,17 @@ class Registration extends Component {
             user_mobile:"",
             user_password:"",
             confirm_password:"",
+            userRedirect: false,
         };
+        this.onUserRedirect=this.onUserRedirect.bind(this);
+    }
+
+    onUserRedirect(){
+        if(this.state.userRedirect===true){
+            return(
+                <Redirect to="/userVerification"/>
+            )
+        }
     }
 
     user_nameOnChange=(event)=>{
@@ -114,27 +125,19 @@ class Registration extends Component {
             MyFormData.append("mobile",user_mobile);
             MyFormData.append("password",user_password);
 
-            axios.post(ApiUrl.Registration,MyFormData).then(function (response) {
-                if(response.status===200){
-                    toast.success('Registration Successful', {
+            axios.post(ApiUrl.Registration,MyFormData).then((response)=> {
+                if(response.status===200 && response.data.error===false){
+                    toast.success(response.data.message, {
                         position: "top-center",
                         theme:"colored",
                         autoClose: 3000,
-                    });
+                    })
                     RegistrationBtn.innerHTML="Registration";
-                    RegistrationForm.reset();
+                    this.setState({userRedirect:true});
                 }
-            }).catch(function (error) {
+            }).catch((error)=> {
                 if (error.response) {
                     toast.error(error.response.data.message,{
-                        position: "top-center",
-                        theme:"colored",
-                        autoClose: 3000,
-                    });
-                    RegistrationBtn.innerHTML="Registration";
-                }
-                else{
-                    toast.error('Request Fail ! Try Again', {
                         position: "top-center",
                         theme:"colored",
                         autoClose: 3000,
@@ -180,6 +183,7 @@ class Registration extends Component {
                         </Col>
                     </Row>
                 </Container>
+                {this.onUserRedirect()}
                 <ToastContainer/>
             </Fragment>
         );
