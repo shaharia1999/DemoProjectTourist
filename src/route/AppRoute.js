@@ -26,6 +26,9 @@ import CartListPage from "../pages/CartListPage/CartListPage";
 import UserVerificationPage from "../pages/UserVerificationPage/UserVerificationPage";
 import HomeSearchPage from "../pages/HomeSearchPage/HomeSearchPage";
 import RoomBookingPage from "../pages/RoomBookingPage/RoomBookingPage";
+import AllMostPopularHotelsPage from "../pages/AllMostPopularHotelsPage/AllMostPopularHotelsPage";
+import AllTwentyFourHoursHotelsPage from "../pages/AllTwentyFourHoursHotelsPage/AllTwentyFourHoursHotelsPage";
+import AllRecommandedHotelsPage from "../pages/AllRecommandedHotelsPage/AllRecommandedHotelsPage";
 
 class AppRoute extends Component {
     render() {
@@ -64,6 +67,9 @@ class AppRoute extends Component {
                     <Route exact path="/refund" render={(props) => <RefundPage {...props} key={Date.now()} />}/>
                     <Route exact path="/guestPolicies" render={(props) => <GuestPoliciesPage {...props} key={Date.now()} />}/>
                     <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/all-most-popular-hotels" render={(props) => <AllMostPopularHotelsPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/all-twenty-four-hotels" render={(props) => <AllTwentyFourHoursHotelsPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/all-recommended-hotels" render={(props) => <AllRecommandedHotelsPage {...props} key={Date.now()} />}/>
                 </Switch>
             </Fragment>
         );
