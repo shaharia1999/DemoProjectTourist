@@ -9,7 +9,7 @@ class AllRecommandedHotels extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="MostPopularHotelTop p-5" fluid={true}>
+                <Container className="MostPopularHotelTop p-5">
                     <h5 className="section-title text-center">All Recommended Hotel</h5>
 
                     <div className="row">

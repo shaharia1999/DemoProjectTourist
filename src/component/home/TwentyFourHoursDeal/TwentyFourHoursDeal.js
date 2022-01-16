@@ -44,7 +44,7 @@ class TwentyFourHoursDeal extends Component {
 
     componentDidMount() {
         axios.get(ApiURL.TwentyFourDealRoom).then(response=> {
-            this.setState({myData:response.data,isLoading:"d-none",MainDiv:" "})
+            this.setState({myData:response.data.data,isLoading:"d-none",MainDiv:" "})
         }).catch(error=> {
 
         });
@@ -92,7 +92,7 @@ class TwentyFourHoursDeal extends Component {
             ]
         };
 
-    /*    const myList=this.state.myData;
+      const myList=this.state.myData;
         const myView=myList.map((myRoom)=>{
             return <div className="row mt-2 mb-2 p-2">
                 <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
@@ -108,7 +108,7 @@ class TwentyFourHoursDeal extends Component {
                     <h6 className="roomPrice"><strike class="text-dark">৳{parseInt(myRoom.price_details.offer_price)}</strike> ৳{parseInt(myRoom.price_details.price)} <span className="text-dark">/ NIGHT</span></h6>
                 </Link>
             </div>
-        });*/
+        });
 
         return (
             <Fragment>
@@ -119,7 +119,7 @@ class TwentyFourHoursDeal extends Component {
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                         <Slider ref={c=>(this.slider=c)} {...settings}>
 
-                          {/*  {myView}*/}
+                           {myView}
 
                            {/* <div className="row mt-2 mb-2 p-2">
                                 <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">

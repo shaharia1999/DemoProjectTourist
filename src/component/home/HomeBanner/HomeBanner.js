@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import HomeBannerImg1 from "../../../asset/images/HomeBannerImg1.jpg"
+import city5 from "../../../asset/images/city/city5.jpg"
 
 class HomeBanner extends Component {
     render() {
@@ -8,7 +8,7 @@ class HomeBanner extends Component {
                 <div className="container-fluid bg-light">
                     <div className="row">
                         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <img className="homeBannerImage" src={HomeBannerImg1} alt=""/>
+                            <img className="homeBannerImage" src={city5} alt=""/>
                         </div>
                     </div>
                 </div>
