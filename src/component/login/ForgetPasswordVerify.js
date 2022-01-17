@@ -4,6 +4,10 @@ import Porzotok from "../../asset/images/Porzotok.png";
 import {Link} from "react-router-dom";
 
 class ForgetPasswordVerify extends Component {
+    constructor() {
+        super();
+
+    }
     render() {
         return (
             <Fragment>
@@ -18,7 +22,7 @@ class ForgetPasswordVerify extends Component {
                                 <div className="form-group">
                                     <input type="text" className="form-control placeholder-text" placeholder="Enter Your OTP"/>
                                 </div>
-                                <h1> <Link to="/forgotPasswordSet" className="btn SendBtnColorText mb-5 btn-block">VERIFY</Link> </h1>
+                                <h1> <Link to="/forgot-password-set" className="btn SendBtnColorText mb-5 btn-block">VERIFY</Link> </h1>
                             </Form>
                             <h1 className="forgotText text-center mb-5 mt-3"> <p className="signUpText">Resend</p> </h1>
                         </Col>

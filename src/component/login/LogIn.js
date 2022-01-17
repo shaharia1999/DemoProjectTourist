@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 class LogIn extends Component {
     constructor(props) {
@@ -13,13 +13,32 @@ class LogIn extends Component {
         this.state={
             user_mobile:"",
             user_password:"",
+            userProfileRedirect:false,
+            userOtpVerificationRedirect:false,
         };
+    }
+
+    onUserProfileRedirect(){
+        if(this.state.userProfileRedirect===true){
+            return(
+                <Redirect to="/profile"/>
+            )
+        }
+    }
+
+    onUserOtpVerificationRedirect(){
+        if(this.state.userOtpVerificationRedirect===true){
+            return(
+               <Redirect to="/user-verification-after-login"/>
+            )
+        }
     }
 
     mobileLoginOnChange=(event)=>{
         let user_mobile=event.target.value;
         this.setState(({user_mobile:user_mobile}))
     }
+
     passwordLoginOnChange=(event)=>{
         let user_password=event.target.value;
         this.setState(({user_password:user_password}))
@@ -79,14 +98,14 @@ class LogIn extends Component {
             MyFormData.append("mobile",user_mobile);
             MyFormData.append("password",user_password);
 
-            axios.post(ApiUrl.UserLogin,MyFormData).then(function (response) {
+            axios.post(ApiUrl.UserLogin,MyFormData).then((response)=>{
                 if(response.status===200){
                     toast.success('Login Successful', {
                         position: "top-center",
                         theme:"colored",
                         autoClose: 2000,
                     });
-                    LogInBtn.innerHTML="Login";
+                    this.setState({userProfileRedirect:true});
                     LoginForm.reset();
                 }
 
@@ -98,6 +117,12 @@ class LogIn extends Component {
                     });
                     LogInBtn.innerHTML="Login";
                 }
+                else if(response.status===201){
+                    sessionStorage.setItem("UserIDForVerify",response.data.data.user_id);
+                    this.setState({userOtpVerificationRedirect:true});
+                    LoginForm.reset();
+                }
+
                 else{
                     toast.error('Login Fail ! Try Again', {
                         position: "top-center",
@@ -106,7 +131,7 @@ class LogIn extends Component {
                     });
                     LogInBtn.innerHTML="Login";
                 }
-            }).catch(function (error) {
+            }).catch((error)=> {
                toast.error('Login Fail ! Try Again', {
                     position: "top-center",
                     theme:"colored",
@@ -123,9 +148,6 @@ class LogIn extends Component {
             <Fragment>
                 <Container className="p-5 d-flex justify-content-center">
                     <Row className="LoginCard shadow-sm">
-                        <Col xl={1} lg={1} md={1} sm={12} xs={12}>
-
-                        </Col>
                         <Col xl={10} lg={10} md={10} sm={12} xs={12}>
                             <Form id="LoginForm" onSubmit={this.onLoginSubmit}>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>
@@ -137,13 +159,12 @@ class LogIn extends Component {
                                 </div>
                                 <Button id="LogInBtn" type="submit" className="btn SendBtnColorText btn-block">Login</Button>
                             </Form>
-                            <h1 className="forgotText text-center mt-3"> <Link to="/forgetPassword" className="signUpText">Forgot Password</Link> </h1>
+                            <h1 className="forgotText text-center mt-3"> <Link to="/forget-password" className="signUpText">Forgot Password</Link> </h1>
                             <h1 className="forgotText text-center mt-5 mb-4"> Don't Have an Account ? <Link to="/signUp" className="signUpText">SignUp</Link></h1>
                         </Col>
-                        <Col xl={1} lg={1} md={1} sm={12} xs={12}>
-
-                        </Col>
                     </Row>
+                    {this.onUserProfileRedirect()}
+                    {this.onUserOtpVerificationRedirect()}
                 </Container>
                 <ToastContainer/>
             </Fragment>

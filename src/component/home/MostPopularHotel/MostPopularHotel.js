@@ -75,9 +75,25 @@ class MostPopularHotel extends Component {
             prevArrow: <SamplePrevArrow />,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1900,
                     settings: {
                         slidesToShow: 6,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         infinite: true,
                     }

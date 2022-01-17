@@ -5,6 +5,7 @@ class ApiUrl{
     static Registration=this.BaseUrl+"user/";  // done
     static UserLogin=this.BaseUrl+"user-login/";
     static otpSend=this.BaseUrl+"otp-verify/";
+    static otpSendLogin=this.BaseUrl+"otp-verify/";
 
     static TwentyFourDealRoom=this.BaseUrl+"room-deals/";    //Home Twenty Four Deal Room done
     static AllHotel=this.BaseUrl+"hotel_details/";     //Home most popular done
@@ -12,5 +13,8 @@ class ApiUrl{
     static RecommendedHotel=this.BaseUrl+"recommended-hotels/";    //Home recommended hotel done
 
     static Contact=this.BaseUrl+"contact/";
+
+
+    static ResetPasswordForMobile=this.BaseUrl+"v1/reset-password/";  //Reset Password for send Mobile Number
 }
 export default ApiUrl;

@@ -67,9 +67,25 @@ class TwentyFourHoursDeal extends Component {
             prevArrow: <SamplePrevArrow />,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1900,
                     settings: {
                         slidesToShow: 6,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         infinite: true,
                     }
@@ -115,7 +131,7 @@ class TwentyFourHoursDeal extends Component {
                 <TwentyFourHourDealPlaceholder isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
                     <Container fluid={true} className="bg-light p-5">
-                        <h5 className="section-title mt-4 text-center">24 Hours Deal</h5>
+                        <h5 className="section-title mt-4 text-center">24 Hours Deal Room</h5>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                         <Slider ref={c=>(this.slider=c)} {...settings}>
 

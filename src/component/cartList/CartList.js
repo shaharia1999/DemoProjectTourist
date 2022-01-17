@@ -5,11 +5,21 @@ import room1 from "../../../src/asset/images/room/room1.jpg"
 import room2 from "../../../src/asset/images/room/room2.jpg"
 import room3 from "../../../src/asset/images/room/room3.jpg"
 import {ImArrowRight2} from "react-icons/all";
+import CartListPlaceholder from "../placeholder/CartListPlaceholder";
 
 class CartList extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            isLoading:"",
+            MainDiv:"",
+        }
+    }
     render() {
         return (
             <Fragment>
+                <CartListPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
                 <br/>
                 <Container className="TopSection pb-5 text-center shadow-sm bg-white">
                     <Row className="p-2 bg-light text-center">
@@ -190,6 +200,7 @@ class CartList extends Component {
                         <Link to="/roomBooking" className="btn m-1 CheckOutBtn CheckOutText float-right">CHECK OUT <ImArrowRight2/></Link>
                     </div>
                 </Container>
+                </div>
             </Fragment>
         );
     }

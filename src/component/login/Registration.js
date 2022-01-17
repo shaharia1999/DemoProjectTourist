@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 import {Redirect} from "react-router-dom";
-import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class Registration extends Component {
     constructor(props) {
@@ -25,7 +24,7 @@ class Registration extends Component {
     onUserRedirect(){
         if(this.state.userRedirect===true){
             return(
-                <Redirect to="/userVerification"/>
+                <Redirect to="/user-verification"/>
             )
         }
     }

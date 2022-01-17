@@ -4,8 +4,9 @@ import cardPhotoPlaceholder from "../../asset/images/cardPhotoPlaceholder.svg";
 
 class CartListPlaceholder extends Component {
     render() {
+        let isLoading=this.props.isLoading;
         return (
-            <div>
+            <div className={isLoading}>
                 <Container className="TopSection pb-5 text-center shadow-sm bg-white">
                     <Row className="p-2 bg-light text-center">
                         <Col className="p-3" key={1} xl={12} lg={12} md={12} sm={12} xs={12}>
