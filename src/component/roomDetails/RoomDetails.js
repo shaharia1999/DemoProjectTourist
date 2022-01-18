@@ -9,16 +9,75 @@ import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import ReactDOM from 'react-dom';
 import RoomReview from "./RoomReview";
 import {Link} from "react-router-dom";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class RoomDetails extends Component {
-
+/*
     imgOnclick=(event)=>{
         let imgSrc= event.target.getAttribute('src');
         let PreviewImg=document.getElementById('PreviewImg');
         ReactDOM.findDOMNode(PreviewImg).setAttribute('src',imgSrc);
-    }
+    }*/
 
     render() {
+        let settings = {
+            dots: false,
+            infinite: true,
+            height: 600,
+            loop:true,
+            speed: 500,
+            autoplaySpeed:1800,
+            autoplay:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: "0px",
+        /*    nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,*/
+            responsive: [
+                {
+                    breakpoint: 1900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        initialSlide: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
                 <div className="container-fluid bg-light">
@@ -30,7 +89,7 @@ class RoomDetails extends Component {
                         <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div className="row shadow-sm bg-white p-0 m-0">
                                 <div className="p-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <img id="PreviewImg" className="PreviewImgLarge" src={room1} alt=""/>
+                                   {/* <img id="PreviewImg" className="PreviewImgLarge" src={room1} alt=""/>
                                     <div className="container my-1">
                                         <div className="row">
                                             <div className="p-0 m-0 col-lg-3 col-md-3 col-sm-3 col-3">
@@ -46,7 +105,11 @@ class RoomDetails extends Component {
                                                 <img onClick={this.imgOnclick} className="PreviewImgSmall" src={room4} alt=""/>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>*/}
+                                    <Slider ref={c=>(this.slider=c)} {...settings}>
+                                        <img id="PreviewImg" className="PreviewImgLarge" src={room1} alt=""/>
+                                        <img id="PreviewImg" className="PreviewImgLarge" src={room2} alt=""/>
+                                    </Slider>
                                 </div>
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">

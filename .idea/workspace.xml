@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="037263c5-f456-49b2-835f-7bc4e50b7c7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/asset/images/404Logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/NotFound/NotFound.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/login/UserVerificationAfterLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/404NotFoundPage/NotFoundPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/UserVerificationAfterLoginPage/UserVerificationAfterLoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ApiURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/css/homeBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/homeBanner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/cartList/CartList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/cartList/CartList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/common/navTopSection/NavTopSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/navTopSection/NavTopSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/HomeBanner/HomeBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/HomeBanner/HomeBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/ForgetPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ForgetPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/ForgetPasswordVerify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ForgetPasswordVerify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/LogIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/Registration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/Registration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/UserVerification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/UserVerification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/placeholder/CartListPlaceholder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/placeholder/CartListPlaceholder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/roomDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/roomDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/login/ChangePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ChangePassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +58,8 @@
       <option name="presentableId" value="Default" />
       <updated>1642395835389</updated>
       <workItem from="1642395838293" duration="10919000" />
-      <workItem from="1642411511423" duration="8960000" />
+      <workItem from="1642411511423" duration="9321000" />
+      <workItem from="1642480353826" duration="4726000" />
     </task>
     <servers />
   </component>

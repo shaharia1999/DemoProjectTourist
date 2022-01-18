@@ -7,6 +7,8 @@ class ApiUrl{
     static otpSend=this.BaseUrl+"otp-verify/";
     static otpSendLogin=this.BaseUrl+"otp-verify/";
 
+    static changePassword=this.BaseUrl+"change-user-password/";
+
     static TwentyFourDealRoom=this.BaseUrl+"room-deals/";    //Home Twenty Four Deal Room done
     static AllHotel=this.BaseUrl+"hotel_details/";     //Home most popular done
     static HomeCity=this.BaseUrl+"city/";     //Home city api call done
