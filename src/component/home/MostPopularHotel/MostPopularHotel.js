@@ -117,8 +117,8 @@ class MostPopularHotel extends Component {
         };
 
         const myList=this.state.myData;
-        const myView=myList.map(myHotel=>{
-            return  <div className="row mt-2 mb-2 p-2">
+        const myView=myList.map((myHotel,i)=>{
+            return  <div className="row mt-2 mb-2 p-2" key={i}>
                 <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt=""/>
                     <div className="mostPopularHotelBoxCard">

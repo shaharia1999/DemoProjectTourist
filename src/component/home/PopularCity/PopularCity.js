@@ -26,7 +26,7 @@ class PopularCity extends Component {
     render() {
         const myList = this.state.myData;
         const myView = myList.map((myCity, i) => {
-            return <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2">
+            return <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2" key={i}>
                 <Link to="/hotelPerCity" className="card popularCityAnimation">
                     <img className="popularCityImage" src={myCity.city_image} alt=""/>
                     <div className="popularCityTitle">{myCity.city_name}
