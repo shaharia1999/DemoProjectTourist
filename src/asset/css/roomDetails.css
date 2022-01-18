@@ -1,8 +1,19 @@
 .PreviewImgLarge{
     height: 380px;
     width: 100%;
-    padding: 4px;
-    border-radius: 5px;
+    border-radius: 5px!important;
+}
+
+.PreviewImgLarge:hover{
+    height: 380px;
+    width: 100%;
+    border-radius: 5px!important;
+}
+
+.PreviewImgLarge:focus{
+    height: 380px;
+    width: 100%;
+    border-radius: 5px!important;
 }
 
 .PreviewImgSmall{

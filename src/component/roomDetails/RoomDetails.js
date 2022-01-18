@@ -4,7 +4,7 @@ import room2 from "../../../src/asset/images/room/room2.jpg"
 import room3 from "../../../src/asset/images/room/room3.jpg"
 import room4 from "../../../src/asset/images/room/room4.jpg"
 import {FaMapMarkerAlt, IoMdPin} from "react-icons/all";
-import {Breadcrumb} from "react-bootstrap";
+import {Breadcrumb, Button, Modal} from "react-bootstrap";
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import ReactDOM from 'react-dom';
 import RoomReview from "./RoomReview";
@@ -37,8 +37,17 @@ class RoomDetails extends Component {
             RoomDes: "",
             Review: "",
             RoomImage: [],
-            error: false
+            error: false,
+            DateModal1:false,
         };
+    }
+
+    handleClose1=()=>{
+        this.setState({ DateModal1:false})
+    }
+
+    handleOpen1=()=>{
+        this.setState({ DateModal1:true})
     }
 
     componentDidMount() {
@@ -180,12 +189,28 @@ class RoomDetails extends Component {
                                     </div>
 
                                     <div className="input-group mt-3">
-                                        <button className="btn CartBtn m-1 "><i className="fa fa-shopping-cart"/> Add To
+                                        <button onClick={this.handleOpen1} className="btn CartBtn m-1 "><i className="fa fa-shopping-cart"/> Add To
                                             Cart
                                         </button>
                                         <button className="btn BookBtn m-1"><i className="fa fa-book"/> Booking Now
                                         </button>
                                     </div>
+
+
+                                    <Modal size="lg" show={this.state.DateModal1} aria-labelledby="contained-modal-title-vcenter" onHide={this.handleClose1}>
+                                        <Modal.Header closeButton>
+                                            <h6> </h6>
+                                        </Modal.Header>
+                                        <Modal.Body className="p-3">
+                                            <input type="date"/>
+                                            <input type="date"/>
+                                        </Modal.Body>
+                                        <Modal.Footer>
+                                            <Button className="notificationModalBtn btn-sm" variant="danger" onClick={this.handleClose1}>
+                                                Close
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
 
 
                                 </div>

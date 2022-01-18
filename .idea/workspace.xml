@@ -5,13 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/ApiURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/PopularCity/PopularCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/PopularCity/PopularCity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/asset/css/roomDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/roomDetails.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/other/Notofication/Notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/other/Notofication/Notification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RoomDetailsPage/RoomDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RoomDetailsPage/RoomDetailsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,7 @@
       <workItem from="1642395838293" duration="10919000" />
       <workItem from="1642411511423" duration="9321000" />
       <workItem from="1642480353826" duration="6555000" />
-      <workItem from="1642487312292" duration="11880000" />
+      <workItem from="1642487312292" duration="15068000" />
     </task>
     <servers />
   </component>

@@ -14,6 +14,7 @@ class Notification extends Component {
     handleClose1=()=>{
         this.setState({ FaqModal1:false})
     }
+
     handleOpen1=()=>{
         this.setState({ FaqModal1:true})
     }
