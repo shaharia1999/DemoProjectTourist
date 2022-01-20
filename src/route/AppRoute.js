@@ -39,10 +39,14 @@ class AppRoute extends Component {
                 <Switch>
                     <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()} />}/>
 
-                    <Route exact path="/roomDetails/:room_id" render={(props) => <RoomDetailsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/hotelDetails" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/hotelPerCity" render={(props) => <CityHotelPage {...props} key={Date.now()} />}/>
 
+
+                    <Route exact path="/roomDetails/:room_id" render={(props) => <RoomDetailsPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/hotel-details/:hotel_id" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
+
+
+
+                    <Route exact path="/hotelPerCity" render={(props) => <CityHotelPage {...props} key={Date.now()} />}/>
                     <Route exact path="/homeSearch" render={(props) => <HomeSearchPage {...props} key={Date.now()} />}/>
                     <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()} />}/>
                     <Route exact path="/roomBooking" render={(props) => <RoomBookingPage {...props} key={Date.now()} />}/>

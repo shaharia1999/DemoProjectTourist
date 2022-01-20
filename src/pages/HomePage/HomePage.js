@@ -9,11 +9,50 @@ import TwentyFourHoursDeal from "../../component/home/TwentyFourHoursDeal/Twenty
 import MostPopularHotel from "../../component/home/MostPopularHotel/MostPopularHotel";
 import PopularCity from "../../component/home/PopularCity/PopularCity";
 import RecommendedHotel from "../../component/home/RecommendedHotel/RecommendedHotel";
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 class HomePage extends Component {
-    componentDidMount() {
-        window.scroll(0,0)
+    constructor() {
+        super();
+        this.state={
+            session_value:sessionStorage.getItem('session_value'),
+            session_key: sessionStorage.getItem('session_key'),
+            // session_value:cookies.get('session_value'),
+            // session_key: cookies.get('session_key'),
+        }
+        console.log('session session_key = ', this.state.session_key);
+        console.log('session value = ', this.state.session_value);
     }
+
+
+    sessionMethod=()=>{
+        if (this.state.session_key){
+
+        }
+        else {
+            axios.get(ApiURL.SessionCreate).then(response=> {
+                if (response.data.error===false){
+                    sessionStorage.setItem('session_value',response.data.session_id);
+                    sessionStorage.setItem('session_key',response.data.session_key);
+                    // cookies.set('session_value', response.data.session_id);
+                    // cookies.set('session_key', response.data.session_key);
+                }
+
+            }).catch(error=> {
+
+            });
+        }
+    }
+
+
+     componentDidMount() {
+         window.scroll(0,0);
+         this.sessionMethod();
+     }
+
     render() {
         return (
             <Fragment>

@@ -118,7 +118,7 @@ class LogIn extends Component {
                     LogInBtn.innerHTML="Login";
                 }
                 else if(response.status===201){
-                    sessionStorage.setItem("UserIDForVerify",response.data.data.user_id);
+                    sessionStorage.setItem("UserID",response.data.data.user_id);
                     this.setState({userOtpVerificationRedirect:true});
                     LoginForm.reset();
                 }

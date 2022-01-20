@@ -63,6 +63,7 @@ class ForgetPassword extends Component {
                         progress: undefined,
                         autoClose: 3000,
                     });
+                    sessionStorage.setItem("UserID",response.data.data.user_id);
                     this.setState({userRedirect:true});
                     ForgetPasswordForm.reset();
                 }
