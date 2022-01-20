@@ -7,14 +7,37 @@ import hotel3 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
 import hotel4 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
 import Slider from "react-slick";
 import ApiURL from "../../api/ApiURL";
+import axios from "axios";
+import ApiUrl from "../../api/ApiURL";
 
 class HotelDetails extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state={
-
+            hotel_id: props.hotel_id,
+            HotelName: "",
         }
+    }
+
+
+    componentDidMount() {
+        axios.get(ApiUrl.SingleHotelDetails + this.state.hotel_id + '/').then(response => {
+            /*this.setState({myData:response.data.data})
+            console.log('myData',response.data.data);
+            console.log('room_name',response.data.data.room_name);*/
+            if (response.data.error === false) {
+                this.setState({
+                    HotelName: response.data.data.hotel_name,
+                })
+            } else {
+
+            }
+            console.log('hotel name = ', this.state.HotelName);
+
+        }).catch(error => {
+
+        });
     }
 
     render() {
@@ -110,7 +133,7 @@ class HotelDetails extends Component {
                                 </div>
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">
-                                    <h5 className="HotelTitle">Le Méridien Dhaka <span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
+                                    <h5 className="HotelTitle">{this.state.HotelName}<span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
                                     <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <hr className="w-100"/>
                                     <div>

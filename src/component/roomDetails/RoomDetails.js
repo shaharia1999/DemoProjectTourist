@@ -18,6 +18,9 @@ import ApiURL from "../../api/ApiURL";
 import {FaHotel} from "react-icons/fa";
 import {toast,ToastContainer} from "react-toastify";
 
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
+
 class RoomDetails extends Component {
     /*
         imgOnclick=(event)=>{
@@ -30,9 +33,14 @@ class RoomDetails extends Component {
         super(props);
         this.state = {
             room_id: props.room_id,
-            session_value: sessionStorage.getItem('session_value'),
-            cart_id: sessionStorage.getItem('cart_id'),
-            cart_key: sessionStorage.getItem('cart_key'),
+            session_value: localStorage.getItem('session_value'),
+           /* cart_id: sessionStorage.getItem('cart_id'),
+            cart_key: sessionStorage.getItem('cart_key'),*/
+
+            cart_id: cookies.get('cart_id'),
+            cart_key: cookies.get('cart_key'),
+            result: JSON.parse(localStorage.getItem("AddToCart")),
+
             RoomTitle: "",
             RoomNumber: "",
             Price: "",
@@ -45,7 +53,12 @@ class RoomDetails extends Component {
             RoomImage: [],
             error: false,
             DateModal1: false,
+            checkValue: 0,
+            addToCart:[]
         };
+
+        console.log('cart_id=',this.state.cart_id);
+        console.log('cart_key=',this.state.cart_key);
     }
 
     handleClose1=()=>{
@@ -70,18 +83,26 @@ class RoomDetails extends Component {
     }
 
     componentDidMount() {
-        if (this.state.cart_key){
 
+
+
+
+
+      /*  if (this.state.cart_key){
         }
         else {
             let MyFormData = new FormData();
             MyFormData.append("session_id", this.state.session_value);
             axios.post(ApiURL.CartsCreate,MyFormData).then(response=> {
                 console.log('response carts = ', response);
-                sessionStorage.setItem("cart_id",response.data.cart_id);
-                sessionStorage.setItem("cart_key",true);
+               /!* sessionStorage.setItem("cart_id",response.data.cart_id);
+                sessionStorage.setItem("cart_key",true);*!/
+
+                cookies.set('cart_id', response.data.cart_id);
+                cookies.set('cart_key', true);
+
             }).catch();
-        }
+        }*/
 
 
         axios.get(ApiUrl.SingleRoom + this.state.room_id + '/').then(response => {
@@ -106,11 +127,35 @@ class RoomDetails extends Component {
         });
     }
 
+    BookingCheck = (room_id) =>{
+        let room = JSON.parse(localStorage.getItem("AddToCart"))
+        try{
+            let rt = true;
+            for(let i=0; i<room.length;i++){
+                if(room_id === room[i].room_id){
+                    console.log("Room Id Found", room_id);
+                    console.log("Rooms", room);
+                    rt = false;
+                }else{
+                    console.log("Room not Found", room_id);
+                    console.log("Rooms", room);
+                    rt = true;
+                }
+            }
+            return rt;
+        }catch (e) {
+            console.log(e);
+        }
+
+
+    }
+
+
     onAddToCardFromSubmit = (event) => {
-        let roomId=this.props.room_id;
+     /*   let roomId=this.props.room_id;*/
         let start_date = this.state.start_date;
         let end_date = this.state.end_date;
-        let cart_id = this.state.cart_id;
+      /*  let cart_id = this.state.cart_id;*/
         let cartSendBtn = document.getElementById('cartSendBtn');
         let AddCartForm = document.getElementById('AddCartForm');
 
@@ -137,16 +182,110 @@ class RoomDetails extends Component {
                 progress: undefined,
             });
         } else {
-            cartSendBtn.innerHTML = "Sending...";
-            let MyFormData = new FormData();
-            MyFormData.append("check_in_time", start_date);
-            MyFormData.append("check_out_time", end_date);
-            MyFormData.append("room_id", roomId);
-            MyFormData.append("cart_id", cart_id);
+            // let MyFormData = new FormData();
+            // MyFormData.append("check_in_time", start_date);
+            // MyFormData.append("check_out_time", end_date);
+            // MyFormData.append("room_id", roomId);
+            // MyFormData.append("cart_id", cart_id);
+            // console.log('MyFormData=',MyFormData);
 
-            console.log('MyFormData=',MyFormData);
+            var result = this.state.result;
 
+            console.log('result = ', result)
+            console.log('result length = ', result.length);
 
+            if (this.BookingCheck(this.state.room_id)){
+                let b ={
+                    "check_in_time": this.state.start_date,
+                    "check_out_time": this.state.end_date,
+                    "room_id": this.state.room_id,
+                    "cart_id": this.state.cart_id,
+                }
+                result.push(b);
+
+                localStorage.setItem('AddToCart', JSON.stringify(result));
+                toast.success('Successfully Cart Added', {
+                    position: "top-center",
+                    theme: "colored",
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    autoClose: 3000,
+                });
+                cartSendBtn.innerHTML = "Confirm Add To Cart";
+            }
+            else{
+                toast.error('This room already add to cart', {
+                    position: "top-center",
+                    theme: "colored",
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    autoClose: 1000,
+                });
+                cartSendBtn.innerHTML = "Confirm Add To Cart";
+            }
+            /*else if (result.length >= 1) {
+                console.log('result = ', result);
+                console.log('result length = ', result.length);
+
+                for (let i =0; i < result.length; i++) {
+                    console.log('room id = ', result[i].room_id);
+                    let storage_room_id = result[i].room_id;
+                    let instance_room_id = this.state.room_id;
+
+                    console.log('storage_room_id = ', storage_room_id)
+                    console.log('instance_room_id = ', instance_room_id)
+                    console.log('checkValue = ', this.state.checkValue)
+
+                    if (storage_room_id === instance_room_id) {
+                        console.log('this room already add to cart');
+                        this.setState({checkValue: this.state.checkValue+1})
+                    }
+                }
+                if (this.state.checkValue > 0)
+                {
+                    toast.error('This room already add to cart', {
+                        position: "top-center",
+                        theme: "colored",
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        autoClose: 1000,
+                    });
+                    cartSendBtn.innerHTML = "Confirm Add To Cart";
+                }
+                else{
+                    let c = {
+                        "check_in_time": this.state.start_date,
+                        "check_out_time": this.state.end_date,
+                        "room_id": this.state.room_id,
+                        "cart_id": this.state.cart_id,
+                    }
+                    result.push(c);
+                    localStorage.setItem('AddToCart', JSON.stringify(result));
+                    toast.success('Successfully Cart Added', {
+                        position: "top-center",
+                        theme: "colored",
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        autoClose: 3000,
+                    });
+                    cartSendBtn.innerHTML = "Confirm Add To Cart";
+
+                }
+            }*/
+
+/*
             axios.post(ApiURL.AddToCartRoomDetails,MyFormData).then((response)=> {
                 if (response.data.error===false) {
                     cartSendBtn.innerHTML = "Confirm Add To Cart";
@@ -187,7 +326,7 @@ class RoomDetails extends Component {
                     autoClose: 3000,
                 });
                 cartSendBtn.innerHTML = "Confirm Add To Cart";
-            })
+            })*/
         }
         event.preventDefault();
     }
@@ -327,7 +466,7 @@ class RoomDetails extends Component {
                                             <Form id="AddCartForm" onSubmit={this.onAddToCardFromSubmit}>
                                                 <input onChange={this.startDateOnChange} className="mx-3 mt-3" type="date"/>
                                                 <input onChange={this.endDateOnChange} className="mx-3 mt-3" type="date"/>
-                                                <Button type="submit" id="cartSendBtn" className="btn mt-3 btn-block CartBtn">Confirm Add To Cart</Button>
+                                                <button type="submit" id="cartSendBtn" className="btn mt-3 btn-block CartBtn">Confirm Add To Cart</button>
                                             </Form>
                                         </Modal.Body>
                                         <Modal.Footer /*style={{borderTop: "none"}}*/>

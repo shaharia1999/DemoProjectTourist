@@ -4,22 +4,9 @@
     <list default="true" id="037263c5-f456-49b2-835f-7bc4e50b7c7e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ApiURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/css/hotelDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/hotelDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/asset/css/roomDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/asset/css/roomDetails.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/ForgetPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ForgetPassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/ForgetPasswordVerify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ForgetPasswordVerify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/ForgotPasswordSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ForgotPasswordSet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/login/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/LogIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/roomDetails/RoomDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/hotelDetailsPage/hotelDetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/hotelDetailsPage/hotelDetailsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +62,7 @@
       <workItem from="1642480353826" duration="6555000" />
       <workItem from="1642487312292" duration="15184000" />
       <workItem from="1642565359951" duration="24657000" />
-      <workItem from="1642651495961" duration="4444000" />
+      <workItem from="1642651495961" duration="25362000" />
     </task>
     <servers />
   </component>

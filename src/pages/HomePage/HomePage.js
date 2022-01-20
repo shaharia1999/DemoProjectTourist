@@ -18,8 +18,8 @@ class HomePage extends Component {
     constructor() {
         super();
         this.state={
-            session_value:sessionStorage.getItem('session_value'),
-            session_key: sessionStorage.getItem('session_key'),
+            session_value:localStorage.getItem('session_value'),
+            session_key: localStorage.getItem('session_key'),
             // session_value:cookies.get('session_value'),
             // session_key: cookies.get('session_key'),
         }
@@ -35,8 +35,10 @@ class HomePage extends Component {
         else {
             axios.get(ApiURL.SessionCreate).then(response=> {
                 if (response.data.error===false){
-                    sessionStorage.setItem('session_value',response.data.session_id);
-                    sessionStorage.setItem('session_key',response.data.session_key);
+                    localStorage.setItem('session_value',response.data.session_id);
+                    localStorage.setItem('session_key',response.data.session_key);
+                    let addToCart = [];
+                    localStorage.setItem('AddToCart',JSON.stringify(addToCart));
                     // cookies.set('session_value', response.data.session_id);
                     // cookies.set('session_key', response.data.session_key);
                 }
