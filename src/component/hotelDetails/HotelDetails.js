@@ -1,36 +1,35 @@
 import React, {Component, Fragment} from 'react';
-import {FaMapMarkerAlt} from "react-icons/all";
-import ReactDOM from 'react-dom';
-import hotel1 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
-import hotel2 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
-import hotel3 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
-import hotel4 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
+import {FaMapMarkerAlt, IoMdPin} from "react-icons/all";
 import Slider from "react-slick";
 import ApiURL from "../../api/ApiURL";
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 import HotelReview from "./HotelReview";
+import {Link} from "react-router-dom";
+import {FaHotel, FaStar} from "react-icons/fa";
 
 class HotelDetails extends Component {
 
     constructor(props) {
         super(props);
         this.state={
-            hotel_id: props.hotel_id,
+            slug_name: props.slug_name,
             HotelName: "",
             HotelImage:[],
-            Short_address:"",
+            city:"",
+            country:"",
             Hotel_Info:"",
             latitude:"",
             longitude:"",
             hotel_type_star_id:"",
+            RelatedRoom:[]
         }
     }
 
 
     componentDidMount() {
         this.hotelTypeStarId();
-        axios.get(ApiUrl.SingleHotelDetails + this.state.hotel_id + '/').then(response => {
+        axios.get(ApiUrl.SingleHotelDetails + this.state.slug_name + '/').then(response => {
             /*this.setState({myData:response.data.data})
             console.log('myData',response.data.data);
             console.log('room_name',response.data.data.room_name);*/
@@ -38,13 +37,15 @@ class HotelDetails extends Component {
                 this.setState({
                     HotelName: response.data.data.hotel_name,
                     HotelImage: response.data.data.image_url,
-                    Short_address: response.data.data.short_address,
+                    city: response.data.data.city.city_name,
+                    country: response.data.data.city.state.country.country_name,
                     Hotel_Info: response.data.data.hotel_info,
 
                     latitude: response.data.data.latitude,
                     longitude: response.data.data.longitude,
                     hotel_type_star_id: response.data.data.hotel_type_star_id,
 
+                    RelatedRoom:response.data.data.room_details,
                 })
             } else {
 
@@ -145,6 +146,64 @@ class HotelDetails extends Component {
                 }
             ]
         };
+
+        let settings1 = {
+            dots: false,
+            infinite: true,
+            height: 600,
+            loop:true,
+            speed: 500,
+            autoplaySpeed:1800,
+            autoplay:true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
+
+        const myList=this.state.RelatedRoom;
+        const myView=myList.map((myHotelRoom,i)=>{
+            return  <div className="row mt-2 mb-2 p-2">
+                <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                    <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myHotelRoom.image_url[0]['Image']} alt=""/>
+                    <div className="TwentyFourHoursHotelDiscountCard">
+                        <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
+                    </div>
+                    <div className="TwentyFourHoursHotelBoxCard">
+                        <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  {this.state.HotelName}</h6>
+                        <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {this.state.city},{this.state.country}</h6>
+                    </div>
+                    <h5 className="room-title">{myHotelRoom.room_name}</h5>
+                    <h6 className="room-price"><strike class="text-dark">৳{myHotelRoom.price_details.price}</strike> ৳{myHotelRoom.price_details.offer_price} <span className="text-dark">/Night</span></h6>
+                    <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                </Link>
+            </div>
+        });
+
+
         return (
             <Fragment>
                 <div className="container-fluid bg-light">
@@ -183,7 +242,7 @@ class HotelDetails extends Component {
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">
                                     <h5 className="HotelTitle">{this.state.HotelName}<span className="StarText"> {this.hotelTypeStarId()} </span></h5>
-                                    <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> {this.state.Short_address}</h6>
+                                    <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> {this.state.city}, {this.state.country}</h6>
                                     <hr className="w-100"/>
                                     <div>
                                         <h6 className="RoomDetailsPrice">Facilities</h6>
@@ -218,9 +277,121 @@ class HotelDetails extends Component {
                             <HotelReview/>
                         </div>
                     </div>
+                </div>
 
+
+                <div className="container-fluid whyChooseTop bg-light p-5">
+                    <h5 className="section-title text-center">Room</h5>
+                    <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
+                    <Slider ref={d=>(this.slider=d)} {...settings1}>
+
+                        {myView}
+
+
+                    </Slider>
+
+                    {/*         <div className="row">
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
+                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                <img className="twentyFourImage" src={room1} alt="Photo of sunset"/>
+                                <div className="TwentyFourHoursHotelDiscountCard">
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
+                                </div>
+                                <div className="TwentyFourHoursHotelBoxCard">
+                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
+                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                </div>
+                                <h5 className="room-title">DELUXE KING SPECIAL</h5>
+                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
+                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                            </Link>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
+                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                <img className="twentyFourImage" src={room2} alt="Photo of sunset"/>
+                                <div className="TwentyFourHoursHotelDiscountCard">
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">70% OFF</h6>
+                                </div>
+                                <div className="TwentyFourHoursHotelBoxCard">
+                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  The Mermaid Beach Resort</h6>
+                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                </div>
+                                <h5 className="room-title">1 BEDROOM BEACH BUNGALOWS</h5>
+                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
+                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                            </Link>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
+                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                <img className="twentyFourImage" src={room3} alt="Photo of sunset"/>
+                                <div className="TwentyFourHoursHotelDiscountCard">
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">80% OFF</h6>
+                                </div>
+                                <div className="TwentyFourHoursHotelBoxCard">
+                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
+                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                </div>
+                                <h5 className="room-title">DELUXE KING</h5>
+                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
+                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                            </Link>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
+                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                <img className="twentyFourImage" src={room4} alt="Photo of sunset"/>
+                                <div className="TwentyFourHoursHotelDiscountCard">
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">40% OFF</h6>
+                                </div>
+                                <div className="TwentyFourHoursHotelBoxCard">
+                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
+                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                </div>
+                                <h5 className="room-title">DELUXE KING</h5>
+                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
+                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                            </Link>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
+                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                <img className="twentyFourImage" src={room5} alt="Photo of sunset"/>
+                                <div className="TwentyFourHoursHotelDiscountCard">
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">55% OFF</h6>
+                                </div>
+                                <div className="TwentyFourHoursHotelBoxCard">
+                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
+                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                </div>
+                                <h5 className="room-title">DELUXE KING</h5>
+                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
+                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                            </Link>
+                        </div>
+
+                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
+                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                                <img className="twentyFourImage" src={room6} alt="Photo of sunset"/>
+                                <div className="TwentyFourHoursHotelDiscountCard">
+                                    <h6 className="TwentyFourHoursHotelDiscountTitle">60% OFF</h6>
+                                </div>
+                                <div className="TwentyFourHoursHotelBoxCard">
+                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
+                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
+                                </div>
+                                <h5 className="room-title">DELUXE KING</h5>
+                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
+                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                            </Link>
+                        </div>
+                    </div>*/}
 
                 </div>
+
+
+
             </Fragment>
         );
     }

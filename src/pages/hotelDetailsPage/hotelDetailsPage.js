@@ -9,7 +9,7 @@ class HotelDetailsPage extends Component {
     constructor({match}) {
         super();
         this.state={
-            hotel_id:match.params.hotel_id,
+            slug_name:match.params.slug_name,
         }
     }
 
@@ -21,10 +21,10 @@ class HotelDetailsPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <HotelDetails hotel_id={this.state.hotel_id}/>
+                <HotelDetails slug_name={this.state.slug_name}/>
 
                {/* <HotelDescription/>*/}
-                <RelatedRoom/>
+             {/*   <RelatedRoom/>*/}
                 <Footer/>
             </Fragment>
         );

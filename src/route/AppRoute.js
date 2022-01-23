@@ -40,7 +40,7 @@ class AppRoute extends Component {
                     <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()} />}/>
 
                     <Route exact path="/roomDetails/:room_id" render={(props) => <RoomDetailsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/hotel-details/:hotel_id" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/hotel-details/:slug_name" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
 
                     <Route exact path="/hotel-per-city/:city_id" render={(props) => <CityHotelPage {...props} key={Date.now()} />}/>
 

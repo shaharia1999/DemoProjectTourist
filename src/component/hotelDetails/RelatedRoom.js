@@ -56,7 +56,7 @@ class RelatedRoom extends Component {
                 <div className="container-fluid whyChooseTop bg-light p-5">
                     <h5 className="section-title text-center">Room</h5>
                     <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
-                    <Slider ref={c=>(this.slider=c)} {...settings}>
+                    <Slider ref={d=>(this.slider=d)} {...settings}>
 
                         <div className="row mt-2 mb-2 p-2">
                             <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">

@@ -164,7 +164,7 @@ class Registration extends Component {
         return (
             <Fragment>
                 <Container className="p-5 d-flex justify-content-center">
-                    <Row className="LoginCard shadow-sm">
+                    <Row className="LoginCard shadow-sm border-0 pt-4 pb-4">
                         <Col xl={1} lg={1} md={1} sm={12} xs={12}>
 
                         </Col>

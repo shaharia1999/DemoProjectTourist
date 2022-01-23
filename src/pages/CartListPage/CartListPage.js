@@ -10,7 +10,6 @@ class CartListPage extends Component {
             <Fragment>
                 <NavTopSection/>
                 <CartList/>
-                <CartListPlaceholder/>
                 <Footer/>
             </Fragment>
         );

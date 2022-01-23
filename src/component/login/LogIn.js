@@ -147,7 +147,7 @@ class LogIn extends Component {
         return (
             <Fragment>
                 <Container className="p-5 d-flex justify-content-center">
-                    <Row className="LoginCard shadow-sm">
+                    <Row className="LoginCard shadow-sm border-0 pt-4 pb-4">
                         <Col xl={10} lg={10} md={10} sm={12} xs={12}>
                             <Form id="LoginForm" onSubmit={this.onLoginSubmit}>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>

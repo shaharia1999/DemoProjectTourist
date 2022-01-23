@@ -28,7 +28,7 @@ class HotelPerCity extends Component {
             if (response.data.error===false){
                 this.setState({
                     CityData:response.data.data,
-                })
+                });
             }
         }).catch(error=> {
 
@@ -40,8 +40,8 @@ class HotelPerCity extends Component {
 
         const MyView=MyList.map((CityList,i)=> {
              return <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3" key={i}>
-                 <Link to={"/hotel-details/" + CityList.hotel_id} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                     <Image className="mostPopularHotelImage" src={hotel2} alt="Photo of sunset"/>
+                 <Link to={"/hotel-details/" + CityList.slug_name} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                     <Image className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + CityList.image_url[0]['Image']} alt="Photo of sunset"/>
                      <div className="mostPopularHotelBoxCard">
                          <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {CityList.city.city_name}, {CityList.city.state.country.country_name}</h6>
                      </div>
