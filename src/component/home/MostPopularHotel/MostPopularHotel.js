@@ -50,14 +50,6 @@ class MostPopularHotel extends Component {
         }).catch();
     }
 
-    /*componentDidMount() {
-        axios.get(ApiURL.AllHotel).then(response=> {
-            this.setState({myData:response.data.data,isLoading:"d-none",MainDiv:" "})
-        }).catch(error=> {
-
-        });
-    }*/
-
     render() {
         let settings = {
             dots: false,
@@ -75,9 +67,25 @@ class MostPopularHotel extends Component {
             prevArrow: <SamplePrevArrow />,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1900,
                     settings: {
                         slidesToShow: 6,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         infinite: true,
                     }
@@ -101,9 +109,9 @@ class MostPopularHotel extends Component {
         };
 
         const myList=this.state.myData;
-        const myView=myList.map(myHotel=>{
-            return  <div className="row mt-2 mb-2 p-2">
-                <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+        const myView=myList.map((myHotel,i)=>{
+            return  <div className="row mt-2 mb-2 p-2" key={i}>
+                <Link to={"/hotel-details/" + myHotel.hotel_id} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt=""/>
                     <div className="mostPopularHotelBoxCard">
                         <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> {myHotel.city.city_name} , {myHotel.city.state.country.country_name}</h6>

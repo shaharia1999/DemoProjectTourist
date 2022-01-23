@@ -6,44 +6,39 @@ import {toast, ToastContainer} from "react-toastify";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
 
-class ForgotPasswordSet extends Component {
+class UserVerificationAfterLogin extends Component {
     constructor() {
         super();
         this.state={
-            UserID: sessionStorage.getItem('UserID'),
+            OtpCodeForVerify:"",
             userRedirect:false,
-            NewPassword:"",
-            NewConfirmPassword:"",
+            UserIDForVerify: sessionStorage.getItem('UserIDForVerify'),
         }
+        this.onUserRedirect=this.onUserRedirect.bind(this);
+    }
+
+    OtpOnChange=(event)=>{
+        let OtpCodeForVerify=event.target.value;
+        this.setState(({OtpCodeForVerify:OtpCodeForVerify}));
     }
 
     onUserRedirect(){
         if(this.state.userRedirect===true){
             return(
-                <Redirect to="/"/>
+                <Redirect to="/user-login"/>
             )
         }
     }
 
-    NewPasswordOnChange=(event)=>{
-        let NewPassword=event.target.value;
-        this.setState(({NewPassword:NewPassword}));
-    }
+    onOTPFromSubmit=(event)=> {
+        let UserIDForVerify = this.state.UserIDForVerify;
+        let OtpCodeForVerify = this.state.OtpCodeForVerify;
 
-    NewConfirmPasswordOnChange=(event)=>{
-        let NewConfirmPassword=event.target.value;
-        this.setState(({NewConfirmPassword:NewConfirmPassword}));
-    }
+        let OtpBtn = document.getElementById('OtpBtn');
+        let OtpForm = document.getElementById('OtpForm');
 
-    onPasswordSetFromSubmit=(event)=> {
-        let UserID = this.state.UserID;
-        let NewPassword = this.state.NewPassword;
-        let NewConfirmPassword = this.state.NewConfirmPassword;
-        let PasswordBtn = document.getElementById('PasswordBtn');
-        let ConfirmPasswordForm = document.getElementById('ConfirmPasswordForm');
-
-        if (NewPassword.length === 0) {
-            toast.error('New Password is Required !', {
+        if (OtpCodeForVerify.length === 0) {
+            toast.error('Otp Code is Required !', {
                 position: "top-center",
                 theme: "colored",
                 autoClose: 3000,
@@ -53,9 +48,8 @@ class ForgotPasswordSet extends Component {
                 draggable: true,
                 progress: undefined,
             });
-        }
-        else if (NewPassword!==NewConfirmPassword) {
-            toast.error('Confirm Password Not Match !', {
+        } else if(OtpCodeForVerify.length!== 6){
+            toast.error('Otp 6 Digit Code is Required !', {
                 position: "top-center",
                 theme: "colored",
                 autoClose: 3000,
@@ -67,14 +61,15 @@ class ForgotPasswordSet extends Component {
             });
         }
         else {
-            PasswordBtn.innerHTML = "Verifying...";
-            let MyFormData = new FormData();
-            // MyFormData.append("user_id", UserID);
-            MyFormData.append("new_password", NewPassword);
+            OtpBtn.innerHTML = "Verifying...";
 
-            axios.put(ApiURL.ResetConfirmPasswordSet+UserID+'/',MyFormData).then((response)=> {
+            let MyFormData = new FormData();
+            MyFormData.append("user_id", UserIDForVerify);
+            MyFormData.append("code", OtpCodeForVerify);
+
+            axios.post(ApiURL.otpSendLogin,MyFormData).then((response)=> {
                 if (response.data.error===false) {
-                    toast.success('New Password Set Successfully', {
+                    toast.success('Verification Successfully', {
                         position: "top-center",
                         theme: "colored",
                         hideProgressBar: false,
@@ -85,7 +80,7 @@ class ForgotPasswordSet extends Component {
                         autoClose: 3000,
                     });
                     this.setState({userRedirect:true});
-                    ConfirmPasswordForm.reset();
+                    OtpForm.reset();
                 }
                 else{
                     toast.success(response.data.message, {
@@ -98,7 +93,7 @@ class ForgotPasswordSet extends Component {
                         progress: undefined,
                         autoClose: 3000,
                     });
-                    PasswordBtn.innerHTML = "SET PASSWORD";
+                    OtpBtn.innerHTML = "Verify";
                     this.setState({userRedirect:false});
                 }
             }).catch((error)=> {
@@ -112,37 +107,34 @@ class ForgotPasswordSet extends Component {
                     progress: undefined,
                     autoClose: 3000,
                 });
-                PasswordBtn.innerHTML = "SET PASSWORD";
+                OtpBtn.innerHTML = "Verify";
                 this.setState({userRedirect:false});
             })
         }
         event.preventDefault();
     }
-
     render() {
         return (
             <Fragment>
                 <Container className="p-5 d-flex justify-content-center">
                     <Row className="LoginCard shadow-sm">
                         <Col xl={10} lg={10} md={10} sm={12} xs={12}>
-                            <Form id="ConfirmPasswordForm" onSubmit={this.onPasswordSetFromSubmit}>
+                            <Form id="OtpForm" onSubmit={this.onOTPFromSubmit}>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>
                                 <div className="form-group">
-                                    <input onChange={this.NewPasswordOnChange} type="Password" className="form-control placeholder-text" placeholder="Enter new Password"/>
+                                    <input type="text" onChange={this.OtpOnChange} className="form-control placeholder-text" placeholder="Enter Your OTP"/>
                                 </div>
-                                <div className="form-group">
-                                    <input onChange={this.NewConfirmPasswordOnChange} type="Password" className="form-control placeholder-text" placeholder="Enter Confirm Password"/>
-                                </div>
-                                <Button id="PasswordBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">SET PASSWORD</Button>
+                                <Button id="OtpBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Verify</Button>
+                                <h1 className="forgotText text-center mb-5 mt-3"> <p className="signUpText">Resend</p> </h1>
                             </Form>
                         </Col>
                     </Row>
-                    <ToastContainer/>
+                    {this.onUserRedirect()}
                 </Container>
-                {this.onUserRedirect()}
+                <ToastContainer/>
             </Fragment>
         );
     }
 }
 
-export default ForgotPasswordSet;
+export default UserVerificationAfterLogin;

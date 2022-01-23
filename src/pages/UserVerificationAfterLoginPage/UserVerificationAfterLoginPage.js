@@ -1,26 +1,18 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
-import HotelPerCity from "../../component/HotelPerCity/HotelPerCity";
 import Footer from "../../component/common/footer/Footer";
+import UserVerificationAfterLogin from "../../component/login/UserVerificationAfterLogin";
 
-class CityHotelPage extends Component {
-    constructor({match}) {
-        super();
-        this.state={
-            city_id:match.params.city_id,
-        }
-    }
-
-
+class UserVerificationAfterLoginPage extends Component {
     render() {
         return (
             <Fragment>
                 <NavTopSection/>
-                <HotelPerCity city_id={this.state.city_id}/>
+                <UserVerificationAfterLogin/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default CityHotelPage;
+export default UserVerificationAfterLoginPage;

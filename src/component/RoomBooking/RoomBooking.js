@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Col, Collapse, Container, Form, Row} from "react-bootstrap";
 import room1 from "../../asset/images/room/room1.jpg";
-
+import {DatePicker} from 'react-rainbow-components';
 class RoomBooking extends Component {
     constructor(props) {
         super(props);
@@ -46,9 +46,11 @@ class RoomBooking extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="mx-2 my-3">
-                                    <Col>
-                                        <input type="date" className="form-control" placeholder="First name" />
-                                    </Col>
+                                    <DatePicker
+                                        value={this.state.date}
+                                        className="inputDateP placeholderApplyText RainbowBorder col-md-6 mt-0"
+                                        placeholder="Select Date of Birth"
+                                    />
                                     <Col className="form-check form-check-inline">
                                         <label className="form-check-label placeholderApplyText ml-2 mr-3" htmlFor="inlineRadio1">Gender*: </label>
                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male"/>

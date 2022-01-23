@@ -5,26 +5,155 @@ import hotel1 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
 import hotel2 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
 import hotel3 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
 import hotel4 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
+import Slider from "react-slick";
+import ApiURL from "../../api/ApiURL";
+import axios from "axios";
+import ApiUrl from "../../api/ApiURL";
+import HotelReview from "./HotelReview";
 
 class HotelDetails extends Component {
 
-    imgOnclick=(event)=>{
-        let imgSrc=event.target.getAttribute('src');
-        let PreviewImg=document.getElementById('PreviewImg');
-        ReactDOM.findDOMNode(PreviewImg).setAttribute('src',imgSrc);
+    constructor(props) {
+        super(props);
+        this.state={
+            hotel_id: props.hotel_id,
+            HotelName: "",
+            HotelImage:[],
+            Short_address:"",
+            Hotel_Info:"",
+            latitude:"",
+            longitude:"",
+            hotel_type_star_id:"",
+        }
+    }
+
+
+    componentDidMount() {
+        this.hotelTypeStarId();
+        axios.get(ApiUrl.SingleHotelDetails + this.state.hotel_id + '/').then(response => {
+            /*this.setState({myData:response.data.data})
+            console.log('myData',response.data.data);
+            console.log('room_name',response.data.data.room_name);*/
+            if (response.data.error === false) {
+                this.setState({
+                    HotelName: response.data.data.hotel_name,
+                    HotelImage: response.data.data.image_url,
+                    Short_address: response.data.data.short_address,
+                    Hotel_Info: response.data.data.hotel_info,
+
+                    latitude: response.data.data.latitude,
+                    longitude: response.data.data.longitude,
+                    hotel_type_star_id: response.data.data.hotel_type_star_id,
+
+                })
+            } else {
+
+            }
+
+        }).catch(error => {
+
+        });
+    }
+
+
+    hotelTypeStarId=()=>{
+        let hotel_type_star_id=this.state.hotel_type_star_id;
+        if(hotel_type_star_id===1){
+            return(
+                <span><i className="fa fa-star"></i></span>
+            )
+        }
+        else if(hotel_type_star_id===2){
+            return(
+            <span><i className="fa fa-star"></i><i className="fa fa-star"></i></span>
+            )
+        }
+        else if(hotel_type_star_id===3){
+            return(
+                <span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>
+            )
+        }
+
+        else if(hotel_type_star_id===4){
+            return(
+                <span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>
+            )
+        }
+
+        else if(hotel_type_star_id===5){
+            return(
+                <span><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></span>
+            )
+        }
+
     }
 
     render() {
+        let settings = {
+            dots: false,
+            infinite: true,
+            height: 600,
+            loop: true,
+            speed: 500,
+            autoplaySpeed: 1800,
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: "0px",
+            /*    nextArrow: <SampleNextArrow />,
+                prevArrow: <SamplePrevArrow />,*/
+            responsive: [
+                {
+                    breakpoint: 1900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        initialSlide: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
                 <div className="container-fluid bg-light">
                     <div className="row p-3">
-
                         <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                             <div className="row shadow-sm bg-white">
 
                                 <div className="p-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <img id="PreviewImg" className="HotelPreviewImgLarge" src={hotel1} alt=""/>
+                                {/*    <img id="PreviewImg" className="HotelPreviewImgLarge" src={hotel1} alt=""/>
 
                                     <div className="container my-1">
                                         <div className="row">
@@ -41,12 +170,20 @@ class HotelDetails extends Component {
                                                 <img onClick={this.imgOnclick} className="HotelPreviewImgSmall" src={hotel4} alt=""/>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>*/}
+
+                                    <Slider ref={c => (this.slider = c)} {...settings}>
+                                        {this.state.HotelImage.map((myHotelImage, i) => (
+                                            <span key={i}><img id="PreviewImg" className="PreviewImgLarge"
+                                                               src={ApiURL.BaseUrl1 + myHotelImage.Image} alt=""/></span>
+                                        ))}
+                                    </Slider>
+
                                 </div>
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">
-                                    <h5 className="HotelTitle">Le Méridien Dhaka <span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
-                                    <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> Dhaka, bangladesh</h6>
+                                    <h5 className="HotelTitle">{this.state.HotelName}<span className="StarText"> {this.hotelTypeStarId()} </span></h5>
+                                    <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> {this.state.Short_address}</h6>
                                     <hr className="w-100"/>
                                     <div>
                                         <h6 className="RoomDetailsPrice">Facilities</h6>
@@ -54,16 +191,35 @@ class HotelDetails extends Component {
                                     </div>
                                     <div className="col-lg-8 col-md-8 col-sm-12 col-12">
                                         <h6 className="mt-3 mb-2 RoomDetailsPrice">Map View</h6>
-                                        <iframe className="googleMapHotel" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.492105191647!2d90.42510111543172!3d23.765484494115775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9998b8a324f%3A0xc7e89d05a8adc2e1!2sArena%20Web%20Security%20-%20The%20Hacker&#39;s%20Arena!5e0!3m2!1sen!2sbd!4v1635144082545!5m2!1sen!2sbd"
-                                                width="100%" height="270" allowFullScreen="" loading="lazy">
+                                        <iframe className="googleMapHotel"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4922429662934!2d90.42510111424305!3d23.765479584581925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9998b8a324f%3A0xc7e89d05a8adc2e1!2sArena%20Web%20Security%20-%20The%20Hacker&#39;s%20Arena!5e0!3m2!1sen!2sbd!4v1642880141169!5m2!1sen!2sbd"
+                                            width="100%" height="200" allowFullScreen=""
+                                            loading="lazy">
                                         </iframe>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
+
+
+                    <div className="row">
+                        <div className="col-lg-6 col-md-6 col-sm-12 col-12 bg-white">
+                            <div className="container">
+                                <div className="row shadow-sm p-5">
+                                    <div className="col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h4 className="ReviewDescriptionText mb-4 mt-2">Description</h4>
+                                        <p className="DescriptionDetails text-justify">{this.state.Hotel_Info}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-md-6 col-sm-12 col-12 float-left bg-white">
+                            <HotelReview/>
+                        </div>
+                    </div>
+
+
                 </div>
             </Fragment>
         );
