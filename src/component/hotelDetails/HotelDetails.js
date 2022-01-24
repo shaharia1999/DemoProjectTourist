@@ -187,7 +187,7 @@ class HotelDetails extends Component {
         const myList=this.state.RelatedRoom;
         const myView=myList.map((myHotelRoom,i)=>{
             return  <div className="row mt-2 mb-2 p-2">
-                <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                <Link to={"/roomDetails/"+myHotelRoom.room_id} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myHotelRoom.image_url[0]['Image']} alt=""/>
                     <div className="TwentyFourHoursHotelDiscountCard">
                         <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -260,7 +260,6 @@ class HotelDetails extends Component {
                             </div>
                         </div>
                     </div>
-
 
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12 col-12 bg-white">

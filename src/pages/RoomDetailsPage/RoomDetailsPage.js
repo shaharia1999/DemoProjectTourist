@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
 import RoomDetails from "../../component/roomDetails/RoomDetails";
 import Footer from "../../component/common/footer/Footer";
+import RoomDetailsPlaceholder from "../../component/placeholder/RoomDetailsPlaceholder";
 
 class RoomDetailsPage extends Component {
     constructor({match}) {

@@ -12,6 +12,7 @@ import ApiURL from "../../api/ApiURL";
 import {toast, ToastContainer} from "react-toastify";
 
 import Cookies from 'universal-cookie';
+import RoomDetailsPlaceholder from "../placeholder/RoomDetailsPlaceholder";
 const cookies = new Cookies();
 class RoomDetails extends Component {
 
@@ -40,7 +41,9 @@ class RoomDetails extends Component {
             error: false,
             DateModal1: false,
             checkValue: 0,
-            addToCart: []
+            addToCart: [],
+            isLoading:"",
+            MainDiv:"d-none",
         };
 
         console.log('cart_id=', this.state.cart_id);
@@ -100,6 +103,7 @@ class RoomDetails extends Component {
                     Price: response.data.data.price_details.price,
                     OfferPrice: response.data.data.price_details.offer_price,
                     RoomImage: response.data.data.image_url,
+                    isLoading:"d-none",MainDiv:" "
                 })
             } else {
                 this.setState({error: true})
@@ -381,6 +385,8 @@ class RoomDetails extends Component {
         };
         return (
             <Fragment>
+                <RoomDetailsPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
                 <div className="container-fluid bg-light">
                     <Breadcrumb className="mt-2">
                         <Breadcrumb.Item className="breadcrumbText"> <Link to="">Home</Link></Breadcrumb.Item>
@@ -421,7 +427,7 @@ class RoomDetails extends Component {
                                     <div className="input-group mt-3">
                                         <button onClick={this.handleOpen1} className="btn CartBtn m-1 "><i
                                             className="fa fa-shopping-cart"/> Add To
-                                            Cart
+                                            Pre-Book
                                         </button>
                                         <button className="btn BookBtn m-1"><i className="fa fa-book"/> Booking Now
                                         </button>
@@ -477,6 +483,7 @@ class RoomDetails extends Component {
                             <RoomReview/>
                         </div>
                     </div>
+                </div>
                 </div>
             </Fragment>
         );

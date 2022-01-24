@@ -45,7 +45,7 @@ class NavTopSection extends Component {
                                 <Link to="/" className="btn my-2"><i className="fa h4 fa-heart"> </i>  <sup><span className="badge text-white bg-danger">3</span></sup></Link>
                                 <Link to="/notification" className="btn badgeBtn my-2"><i className="fa h4 fa-bell"> </i> <sup><span className="badge text-white bg-danger">1</span></sup></Link>
                                 <Link className="btn my-2 mx-2 logInBtn" to="/user-login"><FaUser/> Login</Link>
-                                <Link className="btn my-2 cartBtn" to="/cartList"><FaCartPlus/> Cart</Link>
+                                <Link className="btn my-2 cartBtn" to="/cartList"><FaCartPlus/> Pre-Book</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
