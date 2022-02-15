@@ -114,7 +114,7 @@ class TwentyFourHoursDeal extends Component {
                 <Link to={"/roomDetails/"+myRoom.room_id} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myRoom.image_url[0].Image} alt="Photo of sunset"/>
                     <div className="TwentyFourHoursHotelDiscountCard">
-                        <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
+                        <h6 className="TwentyFourHoursHotelDiscountTitle">{Math.round(myRoom.deals_info[0].allow_offer_percent)}% OFF</h6>
                     </div>
                     <div className="TwentyFourHoursHotelBoxCard">
                         <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  {myRoom.hotel_details.hotel_name}</h6>
@@ -134,47 +134,8 @@ class TwentyFourHoursDeal extends Component {
                         <h5 className="section-title mt-4 text-center">24 Hours Deal Room</h5>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                         <Slider ref={c=>(this.slider=c)} {...settings}>
-
                            {myView}
-
-                           {/* <div className="row mt-2 mb-2 p-2">
-                                <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                    <img className="twentyFourImage" src={room1} alt="Photo of sunset"/>
-                                    <div className="TwentyFourHoursHotelDiscountCard">
-                                        <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                                    </div>
-                                    <div className="TwentyFourHoursHotelBoxCard">
-                                        <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel
-                                            className="TwentyFourHoursHotelIcon"/> Hotel Sarina</h6>
-                                        <h6 className="TwentyFourHoursHotelTitle"><IoMdPin
-                                            className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                    </div>
-                                    <h5 className="roomTitle">DELUXE KING SPECIAL</h5>
-                                    <h6 className="roomPrice"><strike class="text-dark">৳2800</strike> ৳2300 <span
-                                        className="text-dark">/ NIGHT</span></h6>
-                                </Link>
-                            </div>*/}
-
                         </Slider>
-
-                    {/*<div className="row">
-                        <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-2">
-                            <Link to="/" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="twentyFourImage" src={room1} alt="Photo of sunset"/>
-                                <div className="TwentyFourHoursHotelDiscountCard">
-                                    <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                                </div>
-                                <div className="TwentyFourHoursHotelBoxCard">
-                                    <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  Hotel Sarina</h6>
-                                    <h6 className="TwentyFourHoursHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                <h6 className="room-price"><strike class="text-dark">৳2800</strike> ৳2300 <span className="text-dark">/Night</span></h6>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                            </Link>
-                        </div>
-                    </div>*/}
-
                     </Container>
                 </div>
             </Fragment>

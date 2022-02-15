@@ -60,18 +60,6 @@ class HotelPerCity extends Component {
 
                          {MyView}
 
-
-                        {/* <div className="col-lg-2 col-md-3 col-sm-4 col-6 p-3">
-                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                 <Image className="mostPopularHotelImage" src={hotel4} alt="Photo of sunset"/>
-                                 <div className="mostPopularHotelBoxCard">
-                                     <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                 </div>
-                                 <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                             </Link>
-                         </div>*/}
-
                     </div>
                 </div>
             </Fragment>

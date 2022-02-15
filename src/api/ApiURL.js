@@ -10,7 +10,7 @@ class ApiUrl {
     static changePassword = this.BaseUrl + "change-user-password/";   // Change Password api done
     static ResetPasswordForMobile = this.BaseUrl + "reset-password/";  //Reset Password for send Mobile Number
     static ResetConfirmPasswordSet = this.BaseUrl + "reset-confirm-password/";  // Reset Password for send Mobile Number
-    static UserProfileView = this.BaseUrl + "user/";
+    static UserProfileView = this.BaseUrl + "user/";  // User Profile api done
 
     static TwentyFourDealRoom = this.BaseUrl + "room-deals/";    // Home Twenty Four Deal Room done
     static AllHotel = this.BaseUrl + "hotel_details/";     // Home most popular done
@@ -21,13 +21,11 @@ class ApiUrl {
 
     static HotelByCity = this.BaseUrl + "hotel-by-city/?city_id=";   // Hotel By City Home Page to all Hotel & Hotel Details
 
-
     static SessionCreate = this.BaseUrl + "session-create/";    // 24 hotel deals room details done
     static CartsCreate = this.BaseUrl + "carts/";
     static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; //
 
     static Contact = this.BaseUrl + "contact/";
-
 }
 
 export default ApiUrl;

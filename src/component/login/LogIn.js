@@ -105,6 +105,8 @@ class LogIn extends Component {
                         theme:"colored",
                         autoClose: 2000,
                     });
+                    sessionStorage.setItem("UserID",response.data.data.user_id);
+                    sessionStorage.setItem("UserPhone",response.data.data.user_phone);
                     this.setState({userProfileRedirect:true});
                     LoginForm.reset();
                 }
@@ -119,6 +121,7 @@ class LogIn extends Component {
                 }
                 else if(response.status===201){
                     sessionStorage.setItem("UserID",response.data.data.user_id);
+                    sessionStorage.setItem("UserPhone",response.data.data.user_phone);
                     this.setState({userOtpVerificationRedirect:true});
                     LoginForm.reset();
                 }

@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff8f8;
 }
 
 .profileImg{
@@ -18,14 +19,14 @@
 }
 
 .profileTxt{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px;
     color: #1b1e21;
 }
 
 .profileTxt2{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #1b1e21;
@@ -36,7 +37,7 @@
     border-radius: 2px;
     font-weight: 300;
     font-size: 16px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #ad013a !important;
     color: #ffffff;
     padding: 8px 12px;

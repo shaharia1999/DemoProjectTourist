@@ -29,6 +29,7 @@ class RoomDetails extends Component {
             result: JSON.parse(localStorage.getItem("AddToCart")),
 
             RoomTitle: "",
+            HotelName:"",
             RoomNumber: "",
             Price: "",
             OfferPrice: "",
@@ -103,6 +104,7 @@ class RoomDetails extends Component {
                     Price: response.data.data.price_details.price,
                     OfferPrice: response.data.data.price_details.offer_price,
                     RoomImage: response.data.data.image_url,
+                    HotelName: response.data.data.hotel_id.hotel_name,
                     isLoading:"d-none",MainDiv:" "
                 })
             } else {
@@ -405,16 +407,13 @@ class RoomDetails extends Component {
                                 </div>
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">
-                                    <h5 className="HotelTitle"> {this.state.RoomTitle} <span className="SearchStarText"><i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> <i className="fa fa-star"> </i> <i
-                                        className="fa fa-star"> </i> </span></h5>
+                                    <h5 className="HotelTitle"> {this.state.RoomTitle}  <span className="price2">( {this.state.HotelName} )</span></h5>
                                     {/*  <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <h6 className="HotelDetailsSubTitle">DELUXE KING SPECIAL DELUXE KING SPECIAL</h6>*/}
                                     <h6 className="RoomDetailsPrice mt-4"><span className="text-black-50">Price: </span>
                                         <strike
                                             className="price1"> ৳{this.state.Price}</strike> ৳{this.state.OfferPrice}
-                                        <span className="price2">( per room per night )</span></h6>
+                                        <span className="price2"> ( per night )</span></h6>
                                     <hr className="w-100"/>
                                     <div>
                                         <h6 className="RoomDetailsPrice">Facilities</h6>

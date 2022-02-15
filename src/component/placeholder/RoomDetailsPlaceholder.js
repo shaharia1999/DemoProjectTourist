@@ -73,8 +73,8 @@ class RoomDetailsPlaceholder extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 col-12 float-left bg-white">
-                            <HotelReview/>
+                        <div className="col-lg-6 col-md-6 col-sm-12 col-12 float-left bg-white p-5">
+                                <div className="ph-picture PreviewImgLarge"/>
                         </div>
                     </div>
                 </div>
