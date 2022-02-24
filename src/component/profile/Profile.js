@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Col, Container, Form, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 import img1 from "../../asset/images/img1.png";
 import {
     BiIdCard,

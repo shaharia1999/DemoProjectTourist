@@ -11,8 +11,8 @@ import PopularCity from "../../component/home/PopularCity/PopularCity";
 import RecommendedHotel from "../../component/home/RecommendedHotel/RecommendedHotel";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
-import Cookies from 'universal-cookie';
-const cookies = new Cookies();
+/*import Cookies from 'universal-cookie';
+const cookies = new Cookies();*/
 
 class HomePage extends Component {
     constructor() {

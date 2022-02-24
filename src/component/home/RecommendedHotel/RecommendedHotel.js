@@ -24,7 +24,9 @@ function SampleNextArrow(props) {
                 opacity: "1",
                 color: "White",
                 display: "block",
-                background: "#C20035"
+                background: "#6d6d6d",
+                borderRadius: '50px',
+                boxShadow: '0 0 3px 0 #d4d4d4'
             }}
             onClick={onClick}
         />
@@ -46,7 +48,9 @@ function SamplePrevArrow(props) {
                 opacity: "1",
                 color: "White",
                 display: "block",
-                background: "#C20035"
+                background: "#6d6d6d",
+                borderRadius: '50px',
+                boxShadow: '0 0 3px 0 #d4d4d4'
             }}
             onClick={onClick}
         />
@@ -132,7 +136,8 @@ class RecommendedHotel extends Component {
         const myList = this.state.myData;
         const myView = myList.map((myHotel, i) => {
             return <div className="row mt-2 mb-2 p-2" key={i}>
-                <Link to={"/hotel-details/" + myHotel.slug_name} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+                <Link to={"/hotel-details/" + myHotel.slug_name}
+                      className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image}
                          alt="Photo of sunset"/>
                     <div className="mostPopularHotelBoxCard">

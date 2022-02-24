@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from 'react';
-import {Container, Navbar, Nav, NavLink, Row, Col, Dropdown, Button} from "react-bootstrap";
+import {Container, Navbar, Nav, NavLink, Row, Col, Dropdown} from "react-bootstrap";
 import facebook from "../../../asset/images/facebook.svg";
 import instagram from "../../../asset/images/instagram.svg";
 import twitter from "../../../asset/images/twitter.svg";
 import youtube from "../../../asset/images/youtube.svg";
 import {FaUser, FaCartPlus} from "react-icons/fa";
-import {BsFillPhoneVibrateFill, MdEmail, BiDownArrow, MdLogout, FaList} from "react-icons/all";
+import {BsFillPhoneVibrateFill, MdEmail, BiDownArrow, MdLogout, FaList, VscKey} from "react-icons/all";
 import porzotok from "../../../asset/images/Porzotok.png";
 import {Link, Redirect} from "react-router-dom";
 
@@ -145,9 +145,11 @@ class NavTopSection extends Component {
 
                                         <Dropdown.Menu className="navDropdownProfile">
                                             <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
-                                                                 to="/order-details"><FaList/> ORDER LIST</Link></Dropdown.Item>
+                                                                 to="/order"><FaList/> ORDER LIST</Link></Dropdown.Item>
                                             <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
                                                                  to="/profile"><FaUser/> PROFILE</Link></Dropdown.Item>
+                                            <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
+                                                                 to="/profile"><VscKey/> PASSWORD CHANGE</Link></Dropdown.Item>
                                             <Dropdown.Item><Link onClick={this.onLogout}
                                                                  className="my-2 mx-2 navDropdownProfileText"
                                                                  to="/"><MdLogout/> LOGOUT</Link></Dropdown.Item>

@@ -1,5 +1,4 @@
-import React, {Component, Fragment} from 'react';
-import HotelReview from "../hotelDetails/HotelReview";
+import React, {Component} from 'react';
 
 class RoomDetailsPlaceholder extends Component {
     render() {

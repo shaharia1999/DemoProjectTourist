@@ -428,8 +428,10 @@ class RoomDetails extends Component {
                                             className="fa fa-shopping-cart"/> Add To
                                             Pre-Book
                                         </button>
-                                        <button className="btn BookBtn m-1"><i className="fa fa-book"/> Booking Now
-                                        </button>
+                                        {/*<button className="btn BookBtn m-1"><i className="fa fa-book"/> Booking Now
+                                        </button>   */}
+                                        <Link to="/room-booking" className="btn BookBtn m-1"><i className="fa fa-book"/> Booking Now
+                                        </Link>
                                     </div>
 
                                     {/* cart Modal*/}

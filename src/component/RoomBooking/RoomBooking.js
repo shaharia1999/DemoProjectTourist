@@ -86,7 +86,7 @@ class RoomBooking extends Component {
                                         placeholder="Select Date of Birth"
                                     />
                                     <Col className="form-check form-check-inline">
-                                        <label className="form-check-label placeholderApplyText ml-2 mr-3" htmlFor="inlineRadio1">Gender*: </label>
+                                        <label className="form-check-label placeholderApplyText ml-2 mr-3" htmlFor="inlineRadio1">Gender: </label>
                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male"/>
                                         <label className="form-check-label placeholderApplyText mr-3" htmlFor="inlineRadio1">Male</label>
                                         <input className="form-check-input ml-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female"/>

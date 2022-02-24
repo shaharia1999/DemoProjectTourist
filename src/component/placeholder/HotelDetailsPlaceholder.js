@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import HotelReview from "../hotelDetails/HotelReview";
 
 class HotelDetailsPlaceholder extends Component {
     render() {
