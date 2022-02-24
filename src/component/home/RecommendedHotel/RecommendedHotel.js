@@ -59,7 +59,7 @@ class RecommendedHotel extends Component {
         this.state = {
             myData: [],
             isLoading: "",
-            MainDiv: "d-none"
+            MainDiv: "d-none",
         }
     }
 
@@ -156,9 +156,7 @@ class RecommendedHotel extends Component {
                             marketplaces has so many demands on IT security related work. We focus on our learners, we
                             make a path for them to earn money and built their own career.</h6>
                         <Slider ref={c => (this.slider = c)} {...settings}>
-
                             {myView}
-
                             {/*<div className="row mt-2 mb-2 p-2">
                             <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                                 <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
@@ -169,7 +167,6 @@ class RecommendedHotel extends Component {
                                 <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                             </Link>
                         </div>*/}
-
                         </Slider>
                     </div>
                 </div>

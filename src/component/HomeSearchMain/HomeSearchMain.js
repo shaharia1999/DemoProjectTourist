@@ -5,7 +5,9 @@ import {FaMapMarkerAlt} from "react-icons/all";
 import hotel1 from "../../asset/images/Hotel/HotelSarina.jpg"
 import hotel2 from "../../asset/images/Hotel/InterContinentalDhaka.jpg"
 import hotel3 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg"
-import hotel4 from "../../asset/images/Hotel/TheRaintreeHotel.jpg"
+import hotel4 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
+import axios from "axios";
+import ApiUrl from "../../api/ApiURL";
 
 class HomeSearchMain extends Component {
     constructor(props) {
@@ -14,10 +16,12 @@ class HomeSearchMain extends Component {
             open: true,
             open1: true,
             open2: true,
+            CityData: [],
         };
     }
 
-    myCityFunction = () => {
+
+/*    myCityFunction = () => {
         let dots = document.getElementById("dots");
         let moreText = document.getElementById("more");
         let btnText = document.getElementById("myCityBtn");
@@ -32,6 +36,14 @@ class HomeSearchMain extends Component {
             moreText.style.display = "inline";
         }
 
+    }*/
+
+    componentDidMount() {
+        axios.get(ApiUrl.City).then((response) => {
+            this.setState({CityData: response.data})
+        }).catch(error => {
+
+        });
     }
 
     myFacilitiesFunction = () => {
@@ -94,7 +106,7 @@ class HomeSearchMain extends Component {
                                 </Collapse>
                             </div>
 
-                            <div className="pr-3" style={{width: 'auto'}}>
+                        {/*    <div className="pr-3" style={{width: 'auto'}}>
                                 <Button
                                     className="btn-block porzotokCollapseBtn porzotokCollapseMainTitle"
                                     onClick={() => this.setState({open1: !open1})}
@@ -147,9 +159,30 @@ class HomeSearchMain extends Component {
                                                 id="myCityBtn">See All</Button>
                                     </Form>
                                 </Collapse>
-                            </div>
+                            </div>*/}
+
 
                             <div className="pr-3" style={{width: 'auto'}}>
+                                <Button
+                                    className="btn-block porzotokCollapseBtn porzotokCollapseMainTitle"
+                                    onClick={() => this.setState({open1: !open1})}
+                                    aria-controls="example0"
+                                    aria-expanded={open1}>
+                                    <h6 className="float-left">City</h6>
+                                </Button>
+                                <Collapse in={this.state.open1}>
+                                    <Form id="example0">
+                                        {this.state.CityData.map((AllCity) => (
+                                            <Form.Group className="mb-2" controlId="formBasicCheckbox1">
+                                                 <Form.Check className="porzotokCollapseBodyTitle" type="checkbox"
+                                                  label={AllCity.city_name}/>
+                                            </Form.Group>
+                                        ))}
+                                    </Form>
+                                </Collapse>
+                            </div>
+
+                         {/*   <div className="pr-3" style={{width: 'auto'}}>
                                 <Button
                                     className="btn-block porzotokCollapseBtn porzotokCollapseMainTitle"
                                     onClick={() => this.setState({open2: !open2})}
@@ -202,7 +235,7 @@ class HomeSearchMain extends Component {
                                                 id="myFacilitiesBtn">See All</Button>
                                     </Form>
                                 </Collapse>
-                            </div>
+                            </div>*/}
                         </Col>
                         <Col xl={9} lg={9} md={9} sm={9} xs={9}>
 

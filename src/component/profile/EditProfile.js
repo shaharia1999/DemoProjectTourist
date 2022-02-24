@@ -103,7 +103,7 @@ class EditProfile extends Component {
                                 })()}
 
                                 <div className="form-group">
-                                    <input type="date" className="form-control placeholder-text" />
+                                    <input type="date" value={this.state.date_of_birth} className="form-control placeholder-text" />
                                 </div>
                                 <div className="form-group">
                                     <select id="" className="form-control">

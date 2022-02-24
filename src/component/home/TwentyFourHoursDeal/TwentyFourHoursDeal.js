@@ -114,7 +114,8 @@ class TwentyFourHoursDeal extends Component {
                 <Link to={"/roomDetails/"+myRoom.room_id} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myRoom.image_url[0].Image} alt="Photo of sunset"/>
                     <div className="TwentyFourHoursHotelDiscountCard">
-                        <h6 className="TwentyFourHoursHotelDiscountTitle">{Math.round(myRoom.deals_info[0].allow_offer_percent)}% OFF</h6>
+                        <h6 className="TwentyFourHoursHotelDiscountTitle">10% OFF</h6>
+                     {/*   <h6 className="TwentyFourHoursHotelDiscountTitle">{Math.round(myRoom.deals_info[0].allow_offer_percent)}% OFF</h6>*/}
                     </div>
                     <div className="TwentyFourHoursHotelBoxCard">
                         <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel className="TwentyFourHoursHotelIcon"/>  {myRoom.hotel_details.hotel_name}</h6>

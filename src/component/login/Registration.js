@@ -16,6 +16,7 @@ class Registration extends Component {
             user_mobile:"",
             user_password:"",
             confirm_password:"",
+            refer_code:"",
             userRedirect: false,
         };
         this.onUserRedirect=this.onUserRedirect.bind(this);
@@ -49,6 +50,10 @@ class Registration extends Component {
         let confirm_password=event.target.value;
         this.setState(({confirm_password:confirm_password}))
     }
+    refer_codeOnChange=(event)=>{
+        let refer_code=event.target.value;
+        this.setState(({refer_code:refer_code}))
+    }
 
     onFromRegistrationSubmit=(event)=>{
         let NumberRegx=/^\d+$/;
@@ -57,6 +62,7 @@ class Registration extends Component {
         let user_mobile=this.state.user_mobile;
         let user_password=this.state.user_password;
         let confirm_password=this.state.confirm_password;
+        let refer_code=this.state.refer_code;
 
         let RegistrationBtn=document.getElementById('RegistrationBtn');
         let RegistrationForm=document.getElementById('RegistrationForm');
@@ -124,6 +130,7 @@ class Registration extends Component {
             MyFormData.append("email",user_email);
             MyFormData.append("mobile",user_mobile);
             MyFormData.append("password",user_password);
+            MyFormData.append("ref_code",refer_code);
 
             axios.post(ApiUrl.Registration,MyFormData).then((response)=> {
                 if(response.data.error===false){
@@ -144,8 +151,6 @@ class Registration extends Component {
                     })
                     RegistrationBtn.innerHTML="Registration";
                 }
-
-
             }).catch((error)=> {
                 if (error.response) {
                     toast.error(error.response.data.message,{
@@ -185,6 +190,9 @@ class Registration extends Component {
                                 </div>
                                 <div className="form-group">
                                     <input onChange={this.userConfirm_passwordOnChange} type="password" className="form-control placeholder-text" placeholder="Enter Confirm Password"/>
+                                </div>
+                                <div className="form-group">
+                                    <input onChange={this.refer_codeOnChange} type="text" className="form-control placeholder-text" placeholder="Enter Refer Code"/>
                                 </div>
                                 <Button id="RegistrationBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Registration</Button>
                             </Form>
