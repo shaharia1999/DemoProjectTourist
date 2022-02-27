@@ -24,7 +24,6 @@ class AllTwentyFourHoursHotels extends Component {
     }
 
     render() {
-
         const myList = this.state.all24DealRoomData;
         const all24DealRoomView = myList.map((my24DealRoomData, i) => {
             return <div className="col-lg-3 col-md-3 col-sm-4 col-6 p-2" key={i}>

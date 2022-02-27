@@ -1,11 +1,11 @@
 class ApiUrl {
-  /*  static BaseUrl1 = "http://13.52.81.125:8000";*/
+    /*  static BaseUrl1 = "http://13.52.81.125:8000";*/
     static BaseUrl1 = "http://3.82.148.255";
 
     //API URL START
     static BaseUrl = "http://3.82.148.255/api/";
-   /* static BaseUrl = "http://3.82.148.255/api/";*/
- /*   static BaseUrl = "http://13.52.81.125:8000/api/";*/
+    /* static BaseUrl = "http://3.82.148.255/api/";*/
+    /*   static BaseUrl = "http://13.52.81.125:8000/api/";*/
     static Registration = this.BaseUrl + "user/";    // User Registration api done
     static UserLogin = this.BaseUrl + "user-login/";    // User Login api done
     static otpSend = this.BaseUrl + "otp-verify/";    // Otp Send api done
@@ -29,10 +29,10 @@ class ApiUrl {
     static CartsCreate = this.BaseUrl + "carts/";
     static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; //
 
-    static Country =this.BaseUrl+"country/"  // country api call done
-    static State =this.BaseUrl+"state/" // state api call done
-    static CountryByState =this.BaseUrl+"state_by_country/"
-    static StateByCityUrl =this.BaseUrl+"city_by_state/"  // state by city api call done
+    static Country = this.BaseUrl + "country/"  // country api call done
+    static State = this.BaseUrl + "state/" // state api call done
+    static CountryByState = this.BaseUrl + "state_by_country/"
+    static StateByCityUrl = this.BaseUrl + "city_by_state/"  // state by city api call done
 
     static Contact = this.BaseUrl + "contact/";
 }

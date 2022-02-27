@@ -146,7 +146,31 @@ class RecommendedHotel extends Component {
                         </h6>
                     </div>
                     <h5 className="room-title">{myHotel.hotel_name}</h5>
-                    <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                    <h6 className="roomStar">
+                        {(() => {
+                            if (myHotel.hotel_type_star_info.hotel_type_star_name === '1') {
+                                return (
+                                    <h6 className="roomStar"><FaStar/></h6>
+                                )
+                            } else if (myHotel.hotel_type_star_info.hotel_type_star_name === '2') {
+                                return (
+                                    <h6 className="roomStar"><FaStar/><FaStar/></h6>
+                                )
+                            } else if (myHotel.hotel_type_star_info.hotel_type_star_name === '3') {
+                                return (
+                                    <h6 className="roomStar"><FaStar/><FaStar/><FaStar/></h6>
+                                )
+                            } else if (myHotel.hotel_type_star_info.hotel_type_star_name === '4') {
+                                return (
+                                    <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                                )
+                            } else if (myHotel.hotel_type_star_info.hotel_type_star_name === '5') {
+                                return (
+                                    <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                                )
+                            }
+                        })()}
+                    </h6>
                 </Link>
             </div>
         });
@@ -156,22 +180,14 @@ class RecommendedHotel extends Component {
                 <RecommendedHotelPlaceholder isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
                     <div className="container-fluid whyChooseTop p-5">
-                        <h5 className="section-title text-center">Recommended Hotel</h5>
+                        <h6 className="section-title text-center">Recommended Hotel<Link to="/all-recommended-hotels"
+                                                                                          className="btn SeeMore">See
+                            More</Link></h6>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different
                             marketplaces has so many demands on IT security related work. We focus on our learners, we
                             make a path for them to earn money and built their own career.</h6>
                         <Slider ref={c => (this.slider = c)} {...settings}>
                             {myView}
-                            {/*<div className="row mt-2 mb-2 p-2">
-                            <Link to="/hotelDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                                <img className="mostPopularHotelImage" src={hotel1} alt="Photo of sunset"/>
-                                <div className="mostPopularHotelBoxCard">
-                                    <h6 className="mostPopularHotelTitle"><IoMdPin className="TwentyFourHoursLocationIcon"/> Dhaka, Bangladesh</h6>
-                                </div>
-                                <h5 className="room-title">DELUXE KING SPECIAL</h5>
-                                <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
-                            </Link>
-                        </div>*/}
                         </Slider>
                     </div>
                 </div>

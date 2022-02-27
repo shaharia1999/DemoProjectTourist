@@ -178,7 +178,8 @@ class TwentyFourHoursDeal extends Component {
                 <TwentyFourHourDealPlaceholder isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
                     <Container fluid={true} className="bg-light p-5">
-                        <h6 className="section-title mt-4 text-center">24 Hours Deal Room <Link to="/all-twenty-four-hotels" className="btn SeeMore">See More</Link></h6>
+                        <h6 className="section-title mt-4 text-center">24 Hours Deal Room <Link
+                            to="/all-twenty-four-hotels" className="btn SeeMore">See More</Link></h6>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different
                             marketplaces has so many demands on IT security related work. We focus on our learners, we
                             make a path for them to earn money and built their own career.</h6>

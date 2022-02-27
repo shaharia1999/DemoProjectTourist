@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e27a5a2-5292-4b26-88d3-4d3a0489bfa3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/api/ApiURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/AllMostPopularHotels/AllMostPopularHotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/AllMostPopularHotels/AllMostPopularHotels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/AllRecommandedHotels/AllRecommandedHotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/AllRecommandedHotels/AllRecommandedHotels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/AllTwentyFourHoursHotels/AllTwentyFourHoursHotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/AllTwentyFourHoursHotels/AllTwentyFourHoursHotels.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/HotelPerCity/HotelPerCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/HotelPerCity/HotelPerCity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="245GgDnRo6YHW8Xvanh4ozMIKSA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e27a5a2-5292-4b26-88d3-4d3a0489bfa3" name="Changes" comment="" />
+      <created>1642913143076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642913143076</updated>
+      <workItem from="1642913144377" duration="18932000" />
+      <workItem from="1643009128596" duration="68000" />
+      <workItem from="1643009207868" duration="6307000" />
+      <workItem from="1643018623208" duration="403000" />
+      <workItem from="1643022618755" duration="2000" />
+      <workItem from="1644298623618" duration="2876000" />
+      <workItem from="1644316381461" duration="3678000" />
+      <workItem from="1644321830127" duration="31000" />
+      <workItem from="1644906046623" duration="17856000" />
+      <workItem from="1644991205028" duration="17759000" />
+      <workItem from="1645504671064" duration="615000" />
+      <workItem from="1645510925527" duration="3835000" />
+      <workItem from="1645607165162" duration="10134000" />
+      <workItem from="1645676089685" duration="23428000" />
+      <workItem from="1645935273016" duration="10407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

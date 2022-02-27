@@ -191,9 +191,9 @@ class HotelDetails extends Component {
                 <Link to={"/roomDetails/" + myHotelRoom.room_id}
                       className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myHotelRoom.image_url[0]['Image']} alt=""/>
-                    <div className="TwentyFourHoursHotelDiscountCard">
+                  {/*  <div className="TwentyFourHoursHotelDiscountCard">
                         <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
-                    </div>
+                    </div>*/}
                     <div className="TwentyFourHoursHotelBoxCard">
                         <h6 className="TwentyFourHoursHotelTitle">&nbsp;<FaHotel
                             className="TwentyFourHoursHotelIcon"/> {this.state.HotelName}</h6>
@@ -201,10 +201,9 @@ class HotelDetails extends Component {
                             className="TwentyFourHoursLocationIcon"/> {this.state.city},{this.state.country}</h6>
                     </div>
                     <h5 className="room-title">{myHotelRoom.room_name}</h5>
-                    <h6 className="room-price"><strike
+                    <h6 className="room-price mb-3"><strike
                         class="text-dark">৳{myHotelRoom.price_details.price}</strike> ৳{myHotelRoom.price_details.offer_price}
                         <span className="text-dark">/Night</span></h6>
-                    <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
                 </Link>
             </div>
         });

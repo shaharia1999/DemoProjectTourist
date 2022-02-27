@@ -39,6 +39,31 @@ class HotelPerCity extends Component {
                      </div>
                      <h5 className="room-title">{CityList.hotel_name}</h5>
                      <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                  {/*   <h6 className="roomStar">
+                         {(() => {
+                             if (CityList.hotel_type_star_info.hotel_type_star_name === '1') {
+                                 return (
+                                     <h6 className="roomStar"><FaStar/></h6>
+                                 )
+                             } else if (CityList.hotel_type_star_info.hotel_type_star_name === '2') {
+                                 return (
+                                     <h6 className="roomStar"><FaStar/><FaStar/></h6>
+                                 )
+                             } else if (CityList.hotel_type_star_info.hotel_type_star_name === '3') {
+                                 return (
+                                     <h6 className="roomStar"><FaStar/><FaStar/><FaStar/></h6>
+                                 )
+                             } else if (CityList.hotel_type_star_info.hotel_type_star_name === '4') {
+                                 return (
+                                     <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                                 )
+                             } else if (CityList.hotel_type_star_info.hotel_type_star_name === '5') {
+                                 return (
+                                     <h6 className="roomStar"><FaStar/><FaStar/><FaStar/><FaStar/><FaStar/></h6>
+                                 )
+                             }
+                         })()}
+                     </h6>*/}
                  </Link>
              </div>
         })
