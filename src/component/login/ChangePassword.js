@@ -4,6 +4,7 @@ import Porzotok from "../../asset/images/Porzotok.png";
 import {toast, ToastContainer} from "react-toastify";
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
+import {Redirect} from "react-router-dom";
 
 class ChangePassword extends Component {
     constructor(props) {
@@ -14,7 +15,16 @@ class ChangePassword extends Component {
             confirm_pass:"",
             userProfileRedirect:false,
             UserID: sessionStorage.getItem('UserID'),
+            userRedirect:false,
         };
+    }
+
+    onUserRedirect=()=>{
+        if(this.state.userRedirect===true){
+            return(
+                <Redirect to="/user-login"/>
+            )
+        }
     }
 
     currentPasswordOnChange=(event)=>{
@@ -82,7 +92,9 @@ class ChangePassword extends Component {
                         theme:"colored",
                         autoClose: 3000,
                     });
-                    ChangePasswordForm.reset();
+                    sessionStorage.removeItem('UserPhone');
+                    sessionStorage.removeItem('UserID');
+                    this.setState({userRedirect:true});
                 }
                 else{
                     toast.success('Not change', {
@@ -119,6 +131,7 @@ class ChangePassword extends Component {
                             </Form>
                         </Col>
                     </Row>
+                    {this.onUserRedirect()}
                 </Container>
                 <ToastContainer/>
             </Fragment>

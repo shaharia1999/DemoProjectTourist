@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e27a5a2-5292-4b26-88d3-4d3a0489bfa3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/api/ApiURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ApiURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/AllMostPopularHotels/AllMostPopularHotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/AllMostPopularHotels/AllMostPopularHotels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/AllRecommandedHotels/AllRecommandedHotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/AllRecommandedHotels/AllRecommandedHotels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/AllTwentyFourHoursHotels/AllTwentyFourHoursHotels.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/AllTwentyFourHoursHotels/AllTwentyFourHoursHotels.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/HotelPerCity/HotelPerCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/HotelPerCity/HotelPerCity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/MostPopularHotel/MostPopularHotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/RecommendedHotel/RecommendedHotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/home/TwentyFourHoursDeal/TwentyFourHoursDeal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/hotelDetails/HotelDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/common/navTopSection/NavTopSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/navTopSection/NavTopSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/login/ChangePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/login/ChangePassword.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +62,8 @@
       <workItem from="1645510925527" duration="3835000" />
       <workItem from="1645607165162" duration="10134000" />
       <workItem from="1645676089685" duration="23428000" />
-      <workItem from="1645935273016" duration="10407000" />
+      <workItem from="1645935273016" duration="10498000" />
+      <workItem from="1645960892896" duration="2196000" />
     </task>
     <servers />
   </component>

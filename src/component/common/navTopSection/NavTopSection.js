@@ -149,7 +149,7 @@ class NavTopSection extends Component {
                                             <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
                                                                  to="/profile"><FaUser/> PROFILE</Link></Dropdown.Item>
                                             <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
-                                                                 to="/profile"><VscKey/> PASSWORD CHANGE</Link></Dropdown.Item>
+                                                                 to="/change-password"><VscKey/> PASSWORD CHANGE</Link></Dropdown.Item>
                                             <Dropdown.Item><Link onClick={this.onLogout}
                                                                  className="my-2 mx-2 navDropdownProfileText"
                                                                  to="/"><MdLogout/> LOGOUT</Link></Dropdown.Item>
