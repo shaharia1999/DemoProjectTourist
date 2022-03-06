@@ -24,7 +24,7 @@ class Registration extends Component {
     onUserRedirect(){
         if(this.state.userRedirect===true){
             return(
-                <Redirect to="/userVerification"/>
+                <Redirect to="/user-verification"/>
             )
         }
     }
@@ -126,15 +126,26 @@ class Registration extends Component {
             MyFormData.append("password",user_password);
 
             axios.post(ApiUrl.Registration,MyFormData).then((response)=> {
-                if(response.status===200 && response.data.error===false){
+                if(response.data.error===false){
                     toast.success(response.data.message, {
                         position: "top-center",
                         theme:"colored",
                         autoClose: 3000,
                     })
                     RegistrationBtn.innerHTML="Registration";
+                    sessionStorage.setItem("UserID",response.data.data.user_id);
                     this.setState({userRedirect:true});
                 }
+                else{
+                    toast.error(response.data.message, {
+                        position: "top-center",
+                        theme:"colored",
+                        autoClose: 3000,
+                    })
+                    RegistrationBtn.innerHTML="Registration";
+                }
+
+
             }).catch((error)=> {
                 if (error.response) {
                     toast.error(error.response.data.message,{

@@ -5,16 +5,98 @@ import hotel1 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
 import hotel2 from "../../asset/images/Hotel/LeMéridienDhaka.jpg";
 import hotel3 from "../../asset/images/Hotel/SixSeasonsHotel.jpg";
 import hotel4 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg";
+import Slider from "react-slick";
+import ApiURL from "../../api/ApiURL";
+import axios from "axios";
+import ApiUrl from "../../api/ApiURL";
 
 class HotelDetails extends Component {
 
-    imgOnclick=(event)=>{
-        let imgSrc=event.target.getAttribute('src');
-        let PreviewImg=document.getElementById('PreviewImg');
-        ReactDOM.findDOMNode(PreviewImg).setAttribute('src',imgSrc);
+    constructor(props) {
+        super(props);
+        this.state={
+            hotel_id: props.hotel_id,
+            HotelName: "",
+        }
+    }
+
+
+    componentDidMount() {
+        axios.get(ApiUrl.SingleHotelDetails + this.state.hotel_id + '/').then(response => {
+            /*this.setState({myData:response.data.data})
+            console.log('myData',response.data.data);
+            console.log('room_name',response.data.data.room_name);*/
+            if (response.data.error === false) {
+                this.setState({
+                    HotelName: response.data.data.hotel_name,
+                })
+            } else {
+
+            }
+            console.log('hotel name = ', this.state.HotelName);
+
+        }).catch(error => {
+
+        });
     }
 
     render() {
+        let settings = {
+            dots: false,
+            infinite: true,
+            height: 600,
+            loop: true,
+            speed: 500,
+            autoplaySpeed: 1800,
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: "0px",
+            /*    nextArrow: <SampleNextArrow />,
+                prevArrow: <SamplePrevArrow />,*/
+            responsive: [
+                {
+                    breakpoint: 1900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        initialSlide: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
         return (
             <Fragment>
                 <div className="container-fluid bg-light">
@@ -24,7 +106,7 @@ class HotelDetails extends Component {
                             <div className="row shadow-sm bg-white">
 
                                 <div className="p-4 col-lg-6 col-md-6 col-sm-12 col-12">
-                                    <img id="PreviewImg" className="HotelPreviewImgLarge" src={hotel1} alt=""/>
+                                {/*    <img id="PreviewImg" className="HotelPreviewImgLarge" src={hotel1} alt=""/>
 
                                     <div className="container my-1">
                                         <div className="row">
@@ -41,11 +123,17 @@ class HotelDetails extends Component {
                                                 <img onClick={this.imgOnclick} className="HotelPreviewImgSmall" src={hotel4} alt=""/>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>*/}
+
+                                    <Slider ref={c => (this.slider = c)} {...settings}>
+                                        <img className="HotelPreviewImgLarge" src={hotel1} alt=""/>
+                                        <img className="HotelPreviewImgLarge" src={hotel1} alt=""/>
+                                    </Slider>
+
                                 </div>
 
                                 <div className="p-3 col-lg-6 col-md-6 col-sm-12 col-12 mt-3 pl-4">
-                                    <h5 className="HotelTitle">Le Méridien Dhaka <span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
+                                    <h5 className="HotelTitle">{this.state.HotelName}<span className="StarText"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span></h5>
                                     <h6 className="LocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/> Dhaka, bangladesh</h6>
                                     <hr className="w-100"/>
                                     <div>

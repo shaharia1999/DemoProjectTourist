@@ -44,7 +44,7 @@ class TwentyFourHoursDeal extends Component {
 
     componentDidMount() {
         axios.get(ApiURL.TwentyFourDealRoom).then(response=> {
-            this.setState({myData:response.data,isLoading:"d-none",MainDiv:" "})
+            this.setState({myData:response.data.data,isLoading:"d-none",MainDiv:" "})
         }).catch(error=> {
 
         });
@@ -67,9 +67,25 @@ class TwentyFourHoursDeal extends Component {
             prevArrow: <SamplePrevArrow />,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1900,
                     settings: {
                         slidesToShow: 6,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 5,
                         slidesToScroll: 1,
                         infinite: true,
                     }
@@ -92,10 +108,10 @@ class TwentyFourHoursDeal extends Component {
             ]
         };
 
-    /*    const myList=this.state.myData;
-        const myView=myList.map((myRoom)=>{
-            return <div className="row mt-2 mb-2 p-2">
-                <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">
+      const myList=this.state.myData;
+        const myView=myList.map((myRoom,i)=>{
+            return <div className="row mt-2 mb-2 p-2" key={i}>
+                <Link to={"/roomDetails/"+myRoom.room_id} className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="twentyFourImage" src={ApiURL.BaseUrl1 + myRoom.image_url[0].Image} alt="Photo of sunset"/>
                     <div className="TwentyFourHoursHotelDiscountCard">
                         <h6 className="TwentyFourHoursHotelDiscountTitle">50% OFF</h6>
@@ -108,18 +124,18 @@ class TwentyFourHoursDeal extends Component {
                     <h6 className="roomPrice"><strike class="text-dark">৳{parseInt(myRoom.price_details.offer_price)}</strike> ৳{parseInt(myRoom.price_details.price)} <span className="text-dark">/ NIGHT</span></h6>
                 </Link>
             </div>
-        });*/
+        });
 
         return (
             <Fragment>
                 <TwentyFourHourDealPlaceholder isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
                     <Container fluid={true} className="bg-light p-5">
-                        <h5 className="section-title mt-4 text-center">24 Hours Deal</h5>
+                        <h5 className="section-title mt-4 text-center">24 Hours Deal Room</h5>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
                         <Slider ref={c=>(this.slider=c)} {...settings}>
 
-                          {/*  {myView}*/}
+                           {myView}
 
                            {/* <div className="row mt-2 mb-2 p-2">
                                 <Link to="/roomDetails" className="TwentyFourHoursCard card TwentyFourHoursAnimation">

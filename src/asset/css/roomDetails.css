@@ -1,8 +1,19 @@
 .PreviewImgLarge{
-    height: 280px;
+    height: 380px;
     width: 100%;
-    padding: 4px;
-    border-radius: 5px;
+    border-radius: 5px!important;
+}
+
+.PreviewImgLarge:hover{
+    height: 380px;
+    width: 100%;
+    border-radius: 5px!important;
+}
+
+.PreviewImgLarge:focus{
+    height: 380px;
+    width: 100%;
+    border-radius: 5px!important;
 }
 
 .PreviewImgSmall{
@@ -75,17 +86,20 @@
     background-color: #C20035;
     color: #ffffff;
     padding: 10px 15px;
+    border-color: #9b042d;
 }
 
 .CartBtn:hover{
+    border-color: #9b042d;
     font-weight: 400;
     background-color: #9b042d;
     color: #ffffff;
 }
 
 .CartBtn:focus{
-    border-color: #9b042d;
-    box-shadow: none;
+    border-color: #9b042d!important;
+    background-color: #9b042d!important;
+    box-shadow: none!important;
 }
 
 .BookBtn{
