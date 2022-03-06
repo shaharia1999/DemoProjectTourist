@@ -11,7 +11,6 @@ class RoomDetailsPage extends Component {
         }
     }
 
-
     componentDidMount() {
         window.scroll(0,0)
     }

@@ -16,6 +16,12 @@
     border-radius: 5px!important;
 }
 
+.PreviewImgMapPlaceholder{
+    height: 400px;
+    width: 100%;
+    border-radius: 5px!important;
+}
+
 .PreviewImgSmall{
     height: 130px;
     width: 100%;

@@ -1,12 +1,11 @@
 .LoginCard{
-    border-radius: 0px;
+    border-radius: 5px;
     box-shadow: #1b1e21;
     height: auto;
     width: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
 }
 
 .LoginCardPorzotokImg{

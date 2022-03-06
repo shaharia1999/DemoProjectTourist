@@ -2,14 +2,14 @@ import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
 import Footer from "../../component/common/footer/Footer";
 import HotelDetails from "../../component/hotelDetails/HotelDetails";
-import HotelDescription from "../../component/hotelDetails/HotelDescription";
-import RelatedRoom from "../../component/hotelDetails/RelatedRoom";
+/*import HotelDescription from "../../component/hotelDetails/HotelDescription";
+import RelatedRoom from "../../component/hotelDetails/RelatedRoom";*/
 
 class HotelDetailsPage extends Component {
     constructor({match}) {
         super();
         this.state={
-            hotel_id:match.params.hotel_id,
+            slug_name:match.params.slug_name,
         }
     }
 
@@ -21,9 +21,10 @@ class HotelDetailsPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <HotelDetails hotel_id={this.state.hotel_id}/>
-                <HotelDescription/>
-                <RelatedRoom/>
+                <HotelDetails slug_name={this.state.slug_name}/>
+
+               {/* <HotelDescription/>*/}
+             {/*   <RelatedRoom/>*/}
                 <Footer/>
             </Fragment>
         );

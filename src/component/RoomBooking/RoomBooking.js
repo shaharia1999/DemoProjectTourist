@@ -2,6 +2,9 @@ import React, {Component, Fragment} from 'react';
 import {Button, Col, Collapse, Container, Form, Row} from "react-bootstrap";
 import room1 from "../../asset/images/room/room1.jpg";
 import {DatePicker} from 'react-rainbow-components';
+import axios from "axios";
+import ApiUrl from "../../api/ApiURL";
+
 class RoomBooking extends Component {
     constructor(props) {
         super(props);
@@ -9,8 +12,39 @@ class RoomBooking extends Component {
             open: true,
             open1: true,
             open2: true,
+            CountryData: [],
+            StateData: [],
+            CityData:[],
+            StateByCity:'',
         };
     }
+
+    StateByCityOnChange = (event) => {
+        let StateByCity = event.target.value;
+        this.setState(({StateByCity: StateByCity}));
+        console.log('StateByCity',StateByCity);
+
+        axios.get(ApiUrl.StateByCityUrl + StateByCity).then((response) => {
+            this.setState({CityData: response.data})
+        }).catch(error => {
+
+        });
+    }
+
+    componentDidMount() {
+        axios.get(ApiUrl.Country).then((response) => {
+            this.setState({CountryData: response.data})
+        }).catch(error => {
+
+        });
+
+        axios.get(ApiUrl.State).then((response) => {
+            this.setState({StateData: response.data})
+        }).catch(error => {
+
+        });
+    }
+
     render() {
         const open = this.state.open;
         const open1 = this.state.open1;
@@ -52,7 +86,7 @@ class RoomBooking extends Component {
                                         placeholder="Select Date of Birth"
                                     />
                                     <Col className="form-check form-check-inline">
-                                        <label className="form-check-label placeholderApplyText ml-2 mr-3" htmlFor="inlineRadio1">Gender*: </label>
+                                        <label className="form-check-label placeholderApplyText ml-2 mr-3" htmlFor="inlineRadio1">Gender: </label>
                                         <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male"/>
                                         <label className="form-check-label placeholderApplyText mr-3" htmlFor="inlineRadio1">Male</label>
                                         <input className="form-check-input ml-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female"/>
@@ -63,21 +97,25 @@ class RoomBooking extends Component {
                                     <Col>
                                         <select className="form-control">
                                             <option>Select Country</option>
-                                            <option>Bangladesh</option>
+                                            {this.state.CountryData.map((my_country) => (
+                                                <option value={my_country.country_id}>{my_country.country_name}</option>
+                                            ))}
                                         </select>
                                     </Col>
                                     <Col>
-                                        <select className="form-control">
+                                        <select onChange={this.StateByCityOnChange} className="form-control">
                                             <option>Select State</option>
-                                            <option>Bangladesh</option>
-                                            <option>USA</option>
+                                            {this.state.StateData.map((my_state) => (
+                                                <option value={my_state.state_id}>{my_state.state_name}</option>
+                                            ))}
                                         </select>
                                     </Col>
                                     <Col>
                                         <select className="form-control">
                                             <option>Select City</option>
-                                            <option>Dhaka</option>
-                                            <option>Rangpur</option>
+                                            {this.state.CityData.map((my_city) => (
+                                                <option value={my_city.city_id}>{my_city.city_name}</option>
+                                            ))}
                                         </select>
                                     </Col>
                                 </Row>

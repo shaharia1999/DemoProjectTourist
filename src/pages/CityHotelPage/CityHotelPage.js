@@ -4,15 +4,19 @@ import HotelPerCity from "../../component/HotelPerCity/HotelPerCity";
 import Footer from "../../component/common/footer/Footer";
 
 class CityHotelPage extends Component {
-    componentDidMount() {
-        window.scroll(0,0)
+    constructor({match}) {
+        super();
+        this.state={
+            city_id:match.params.city_id,
+        }
     }
+
 
     render() {
         return (
             <Fragment>
                 <NavTopSection/>
-                <HotelPerCity/>
+                <HotelPerCity city_id={this.state.city_id}/>
                 <Footer/>
             </Fragment>
         );

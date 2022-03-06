@@ -1,8 +1,46 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
 
 class EditProfile extends Component {
+    constructor() {
+        super();
+        this.state = {
+            user_id: sessionStorage.getItem('UserID'),
+            user_name:"",
+            user_email:"",
+            user_phone:"",
+            gender:"",
+            user_national_id_card:"",
+            date_of_birth:"",
+            user_short_address:"",
+            user_image:"",
+        }
+    }
+
+    componentDidMount() {
+        let user_id=this.state.user_id;
+        axios.get(ApiURL.UserProfileView + user_id + '/').then((response) => {
+            if (response.data.error===false){
+                this.setState({
+                    user_name: response.data.data.user_name,
+                    user_email: response.data.data.user_email,
+                    user_phone: response.data.data.user_phone,
+                    gender: response.data.data.gender,
+                    user_national_id_card: response.data.data.user_national_id_card,
+                    date_of_birth: response.data.data.date_of_birth,
+                    user_short_address: response.data.data.user_short_address,
+                    user_image: response.data.data.user_image,
+                });
+            }
+        }).catch(error => {
+
+        });
+
+    }
+
     render() {
         return (
             <Fragment>
@@ -15,34 +53,62 @@ class EditProfile extends Component {
                             <Form>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>
                                 <div className="form-group">
-                                    <input type="text" className="form-control placeholder-text" value="01792706304"/>
+                                    <input type="text" className="form-control placeholder-text" value={this.state.user_phone} disabled />
                                 </div>
                                 <div className="form-group">
-                                    <input type="email" className="form-control placeholder-text" value="Monirul Islam Akand" placeholder="Enter Full Name"/>
+                                    <input type="text" className="form-control placeholder-text" value={this.state.user_name} placeholder="Enter Full Name" />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" className="form-control placeholder-text" value="monirul.arenawebsecurity.net" placeholder="Enter Your Email"/>
+                                    <input type="email" className="form-control placeholder-text" value={this.state.user_email} placeholder="Enter Your Email"/>
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" className="form-control placeholder-text" value="1234567890" placeholder="Enter NID Number"/>
-                                </div>
-
-                                <div className="form-group">
-                                    <select id="" className="form-control">
-                                        <option value="">Select Gender</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Other">Other</option>
-                                    </select>
+                                    <input type="text" className="form-control placeholder-text" value={this.state.user_national_id_card} placeholder="Enter NID Number"/>
                                 </div>
 
+                                {(() => {
+                                    if (this.state.gender==="1") {
+                                        return (
+                                            <div className="form-group">
+                                                <select id="" className="form-control">
+                                                    <option value="">select gender</option>
+                                                    <option value="1" selected>Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </div>
+                                        )
+                                    } else if (this.state.gender==="2") {
+                                        return (
+                                            <div className="form-group">
+                                                <select id="" className="form-control">
+                                                    <option value="">select gender</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2" selected>Female</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </div>
+                                        )
+                                    } else {
+                                        return (
+                                            <div className="form-group">
+                                                <select id="" className="form-control">
+                                                    <option value="" selected>select gender</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </div>
+                                        )
+                                    }
+                                })()}
+
                                 <div className="form-group">
-                                    <input type="date" className="form-control placeholder-text" />
+                                    <input type="date" value={this.state.date_of_birth} className="form-control placeholder-text" />
                                 </div>
                                 <div className="form-group">
                                     <select id="" className="form-control">
                                         <option value="">Choose City</option>
-                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="">Dhaka</option>
                                         <option value="Rajshahi">Rajshahi</option>
                                         <option value="Rangpur">Rangpur</option>
                                         <option value="Chittagong">Chittagong</option>

@@ -27,7 +27,7 @@ class PopularCity extends Component {
         const myList = this.state.myData;
         const myView = myList.map((myCity, i) => {
             return <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2" key={i}>
-                <Link to="/hotelPerCity" className="card popularCityAnimation">
+                <Link to={"hotel-per-city/"+myCity.city_id} className="card popularCityAnimation">
                     <img className="popularCityImage" src={myCity.city_image} alt=""/>
                     <div className="popularCityTitle">{myCity.city_name}
                         <hr className="popularCityHrTag"/>
@@ -49,12 +49,6 @@ class PopularCity extends Component {
                         </Row>
                     </Container>
                 </div>
-                {/*<div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2">
-                    <Link to="/hotelPerCity" className="card popularCityAnimation">
-                        <img className="popularCityImage" src={city8} alt="Photo of sunset"/>
-                        <div className="popularCityTitle">Dhaka City <hr className="popularCityHrTag"/></div>
-                    </Link>
-                </div>*/}
             </Fragment>
         );
     }

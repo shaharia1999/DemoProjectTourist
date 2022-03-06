@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Breadcrumb, Container,Row,Col} from "react-bootstrap";
+import {Breadcrumb, Container, Row, Col} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class Terms extends Component {
@@ -14,10 +14,48 @@ class Terms extends Component {
                     <Row className="des-card">
                         <Col className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-5">
                             <h3 className="aboutTitle text-center">Terms & Condition</h3>
-                            <p className="text-justify aboutDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <p className="text-justify aboutDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <p className="text-justify aboutDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                            <p className="text-justify aboutDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p className="text-justify aboutDescription mt-3">1. এই শর্তাবলিত উল্লেখিত সেবাসমূহের গ্রহিতা
+                                পর্যটক পার্টনার হিসেবে গণ্য হবেন। পার্টনার একাউন্ট এর সকল কার্যক্রম এর নির্দেশিকা, সকল
+                                নিয়ম এবং পর্যটক প্রবিধান যারা পরিচালিত হবে। </p>
+                            <p className="text-justify aboutDescription mt-3">2. পার্টনার একাউন্ট সংক্রান্ত কাগজপত্রে এবং
+                                প্রকাশনায় পার্টনার তার পার্টনার একাউন্ট নাম্বার উল্লেখ করবেন। ভুল একাউন্ট নাম্বার
+                                উল্লেখ করার কারণে কোনো লোকসান বা ক্ষতির জন্য পর্যটক তার দায়ভার গ্রহণ করবে না। </p>
+                            <p className="text-justify aboutDescription mt-3">3. পার্টনার কখনোই এই পার্টনার একাউন্ট আবেদন
+                                ফরমের শর্তাবলির বিধি উল্লিখিত লেনদেন/কার্যক্রম ব্যতীত অন্য কোনো লেনদেন/কার্যক্রমে
+                                নিয়োজিত হবেন না, যদি এর কোনো ব্যত্যয় ঘটে পর্যটক তার দায়ভার গ্রহণ করবে না। </p>
+                            <p className="text-justify aboutDescription mt-3">4. শর্তাবলি লংঘন করলে পর্যটক উক্ত পার্টনার
+                                একাউন্টটি সাময়িকভাবে স্থগিত করা অথবা বাতিল করা অথবা স্থায়ীভাবে বন্ধ করে দেওয়া সহ
+                                পর্যটক এর বিবেচনায় সঠিক এবং যুক্তিসঙ্গত বলে প্রতীয়মান হয় এমন যেকোনো প্রকার উপযুক্ত
+                                সংশোধনীমূলক ব্যবস্থা গ্রহণ করতে পারবে। </p>
+                            <p className="text-justify aboutDescription mt-3">5. পার্টনার কর্তৃক তার পার্টনার একাউন্ট ব্যবহার
+                                সংক্রান্ত কোনো অবহেলা বা অজ্ঞতার কারণে কোনো পর্যটক গ্রাহক ক্ষতিগ্রস্থ হলে, উক্ত গ্রাহককে
+                                ক্ষতিপূরণের জন্য পার্টনার এককভাবে দায়ী থাকবে। এবং এর ব্যাতায় হলে পর্যটক যথাযথ তদন্তের
+                                পর পার্টনার-এর বিরুদ্ধে উপযুক্ত সংশোধনীমূলক ব্যবস্থা নিতে পারবে এবং এক্ষেত্রে পর্যটক-এর
+                                সিদ্ধান্তই চূড়ান্ত এবং অনিবার্য বলে গণ্য হবে। তদন্ত চলাকালীন পর্যটক, পার্টনার একাউন্ট
+                                এর কার্যক্রম সাময়িকভাবে বন্ধ রাখতে পারবে।</p>
+                            <p className="text-justify aboutDescription mt-3">6. পার্টনার পর্যটক কর্তৃক সময়ে সময়ে প্রেরিত
+                                ট্রেডলেটারসমূহ পড়বেন, বুঝবেন, মেনে চলবেন এবং তার যথাযথ প্রয়োগ, সংরক্ষণ ও রক্ষণাবেক্ষণ
+                                করবেন। পার্টনার পর্যটক কর্তৃক সময়ে সময়ে এসএমএস বা অন্য যেকোনো মাধ্যমে প্রেরিত
+                                নির্দেশনাসমূহ মেনে চলতে বাধ্য থাকবেন।</p>
+                            <p className="text-justify aboutDescription mt-3">7. পার্টনার বাংলাদেশের প্রচলিত আইন অনুযায়ী
+                                ট্যাক্স এবং ভ্যাট দিতে বাধ্য থাকবেন।</p>
+                            <p className="text-justify aboutDescription mt-3">8. পার্টনারকে কোনো পূর্ব ঘোষণা অথবা বিজ্ঞাপন
+                                প্রমান ছাড়াই যেকোনো সময়ে যেকোনোভাবে বর্তমান নিয়মাবলী সংশোধন, উন্নয়ন, পরিবর্তন করার
+                                ক্ষমতা পর্যটক সংরক্ষণ করে।</p>
+                            <p className="text-justify aboutDescription mt-3">9. পার্টনার এর লেনদেন সকল ক্ষেত্রে পর্যটক
+                                সর্বোচ্চ গোপনীয়তা বজায় রাখবে। তবে, যদি প্রয়োজন হয় তবে নিম্নবর্ণিত যেকোনো ক্ষেত্রে
+                                পার্টনার সংক্রান্ত যেকোনো তথ্য প্রকাশ করার ক্ষমতা পর্যটক সংরক্ষণ করে।</p>
+                            <p className="text-justify aboutDescription mt-3">10. পর্যটক এর বিবেচনায় পার্টনার এর একাউন্টে
+                                লেনদেনের আচরণ সন্দেহজনক হলে অথবা নিরাপত্তাজনিত অথবা জন্য যেকোনো কারণে কোনো ক্ষমতা পর্যটক
+                                সংরক্ষণ করে। এক্ষেত্রে পর্যটক কর্তৃক গৃহীত সিদ্ধান্তই চূড়ান্ত বলে গণ্য হবে এবং পার্টনার
+                                তা মানতে বাধ্য থাকবেন।</p>
+                            <p className="text-justify aboutDescription mt-3">11. পার্টনার কোনো অবস্থাতেই তার প্রদত
+                                ট্রেডলাইসেন্স-এ উল্লিখিত ব্যবসার ঠিকানা ব্যতীত অন্য কোনো ঠিকানায় ব্যবসা পরিচালনা করবে
+                                না। এর ব্যত্যয় ঘটলে পর্যটক আর কোনো প্রকার অবহিতকরণ ছাড়াই পার্টনার-এর একাউন্ট স্থগিত
+                                করা বা বাতিল করা সহ পার্টনার-এর বিরুদ্ধে যেকোনো প্রকার শাস্তিমূলক বা আইনানুগ ব্যবস্থা
+                                নিতে পারবে। স্থানীয় সরকার কর্তৃক ধার্যকৃত করা প্রদান পূর্বক তার প্রতিষ্ঠানের
+                                ট্রেডলাইসেন্স হালনাগাদ করার জন্য এককভাবে দায়ী থাকবে। উক্ত হালনাগাদ ট্রেডলাইসেন্স
+                                প্রাপ্তির অনতিবিলম্বে এর একটি কপি পার্টনার নিজ দায়িত্বে পর্যটক কে প্রদান করবে।</p>
                         </Col>
                     </Row>
                 </Container>

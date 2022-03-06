@@ -12,7 +12,7 @@ class CartList extends Component {
         super(props);
         this.state={
             isLoading:"",
-            MainDiv:"",
+            MainDiv: "d-none",
         }
     }
     render() {

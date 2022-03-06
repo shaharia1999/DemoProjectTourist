@@ -1,0 +1,10 @@
+.ph-item{
+    border: none!important;
+}
+
+.PreviewImgLarge{
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 5px!important;
+    max-height: 380px!important;
+}

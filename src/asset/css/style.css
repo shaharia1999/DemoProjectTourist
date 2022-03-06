@@ -30,8 +30,12 @@
 @import "notification.css";
 @import "customPlaceholder.css";
 @import "rainbow.css";
+@import "placeholder.css";
+@import "password.css";
 
-
-
-
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #2a2a2a;
+}
 

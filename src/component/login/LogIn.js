@@ -18,6 +18,7 @@ class LogIn extends Component {
         };
     }
 
+
     onUserProfileRedirect(){
         if(this.state.userProfileRedirect===true){
             return(
@@ -105,6 +106,8 @@ class LogIn extends Component {
                         theme:"colored",
                         autoClose: 2000,
                     });
+                    sessionStorage.setItem("UserID",response.data.data.user_id);
+                    sessionStorage.setItem("UserPhone",response.data.data.user_phone);
                     this.setState({userProfileRedirect:true});
                     LoginForm.reset();
                 }
@@ -119,6 +122,7 @@ class LogIn extends Component {
                 }
                 else if(response.status===201){
                     sessionStorage.setItem("UserID",response.data.data.user_id);
+                    sessionStorage.setItem("UserPhone",response.data.data.user_phone);
                     this.setState({userOtpVerificationRedirect:true});
                     LoginForm.reset();
                 }
@@ -147,7 +151,7 @@ class LogIn extends Component {
         return (
             <Fragment>
                 <Container className="p-5 d-flex justify-content-center">
-                    <Row className="LoginCard shadow-sm">
+                    <Row className="LoginCard shadow-sm border-0 pt-4 pb-4">
                         <Col xl={10} lg={10} md={10} sm={12} xs={12}>
                             <Form id="LoginForm" onSubmit={this.onLoginSubmit}>
                                 <img className="LoginCardPorzotokImg mt-4" src={Porzotok} alt=""/>
@@ -155,7 +159,7 @@ class LogIn extends Component {
                                     <input onChange={this.mobileLoginOnChange} type="text" className="form-control placeholder-text" placeholder="Your Mobile Number"/>
                                 </div>
                                 <div className="form-group">
-                                    <input onChange={this.passwordLoginOnChange} type="password" className="form-control placeholder-text" placeholder="Enter Password"/>
+                                    <input type={this.state.type} onChange={this.passwordLoginOnChange} type="password" className="form-control placeholder-text inputPassword" placeholder="Enter Password"/>
                                 </div>
                                 <Button id="LogInBtn" type="submit" className="btn SendBtnColorText btn-block">Login</Button>
                             </Form>

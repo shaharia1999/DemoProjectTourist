@@ -1,0 +1,158 @@
+.SeeMore{
+    background-color: #455A64;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 2px;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 2px 8px 2px 8px;
+    margin-left: 10px;
+    color: #ffffff;
+    box-shadow: none!important;
+}
+
+.SeeMore:hover{
+    background-color: #C2185B;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 2px;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 2px 8px 2px 8px;
+    margin-left: 10px;
+    color: #ffffff;
+    box-shadow: none!important;
+}
+
+.OrderNo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px !important;
+    color: #026b42 !important;
+    margin-top: 10px;
+}
+
+.OrderTaka {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 28px !important;
+    color: #d22c2c !important;
+}
+
+.OrderNo1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px !important;
+    color: #616161 !important;
+}
+
+.orderCard {
+    border-radius: 10px !important;
+    margin: 10px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    background-color: #fcfbf8;
+    border: none !important;
+    box-shadow: 0 0 5px 0 #eaeaea;
+}
+
+.OrderNumberText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px !important;
+    color: #1c1c1c !important;
+}
+
+.OrderNumberRed {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px !important;
+    color: #d22c2c !important;
+}
+
+.OrderImage {
+    border-radius: 50px;
+    height: 65px;
+    width: 65px !important;
+}
+
+.OrderAddress {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px !important;
+    color: #494949 !important;
+}
+
+.OrderHotelText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px !important;
+    color: #1c1c1c !important;
+}
+
+
+.OrderRoomText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px !important;
+    color: #1c1c1c !important;
+}
+
+
+.OrderCheckInOut {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12px !important;
+    color: #434343 !important;
+}
+
+.OrderSubTotalDiscountTotal {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px !important;
+    color: #1f1f1f !important;
+}
+
+.OrderBigAmount {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px !important;
+    color: #000000 !important;
+}
+
+.OrderAmount {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px !important;
+    color: #000000 !important;
+}
+
+.OrderPaymentDetailsText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px !important;
+    color: #C20035 !important;
+}
+
+.OrderPaid {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 22px !important;
+    color: #C20035 !important;
+}
+
+.hrWeight {
+    border: 1px solid #eaeaea;
+}
+
+.FormTo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px !important;
+    color: #000000 !important;
+}
+
+.NameText{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px !important;
+    color: #000000 !important;
+}

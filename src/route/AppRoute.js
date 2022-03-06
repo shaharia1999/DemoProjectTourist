@@ -31,54 +31,77 @@ import AllTwentyFourHoursHotelsPage from "../pages/AllTwentyFourHoursHotelsPage/
 import AllRecommandedHotelsPage from "../pages/AllRecommandedHotelsPage/AllRecommandedHotelsPage";
 import UserVerificationAfterLoginPage from "../pages/UserVerificationAfterLoginPage/UserVerificationAfterLoginPage";
 import NotFoundPage from "../pages/404NotFoundPage/NotFoundPage";
+import OrderDetailsPage from "../pages/OrderDetailsPage/OrderDetailsPage";
+import OrderDetailsDescriptionPage from "../pages/OrderDetailsDescriptionPage/OrderDetailsDescriptionPage";
+import SearchPagePlaceholder from "../component/placeholder/SearchPagePlaceholder";
+import OrderListPlaceholder from "../component/placeholder/OrderListPlaceholder";
 
 class AppRoute extends Component {
     render() {
         return (
             <Fragment>
                 <Switch>
-                    <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()} />}/>
+                    <Route exact path="/" render={(props) => <HomePage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/roomDetails/:room_id"
+                           render={(props) => <RoomDetailsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/hotel-details/:slug_name"
+                           render={(props) => <HotelDetailsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/hotel-per-city/:city_id"
+                           render={(props) => <CityHotelPage {...props} key={Date.now()}/>}/>
 
+                    <Route exact path="/homeSearch" render={(props) => <HomeSearchPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/room-booking"
+                           render={(props) => <RoomBookingPage {...props} key={Date.now()}/>}/>
 
+                    <Route exact path="/user-login" render={(props) => <LoginPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/signUp" render={(props) => <RegistrationPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/user-verification"
+                           render={(props) => <UserVerificationPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/user-verification-after-login"
+                           render={(props) => <UserVerificationAfterLoginPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/forget-password"
+                           render={(props) => <ForgetPasswordPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/forget-password-verify"
+                           render={(props) => <ForgetPasswordVerifyPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/forgot-password-set"
+                           render={(props) => <ForgotPasswordSetPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/change-password"
+                           render={(props) => <ChangePasswordPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/profile" render={(props) => <ProfilePage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/editProfile"
+                           render={(props) => <EditProfilePage {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/roomDetails/:room_id" render={(props) => <RoomDetailsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/hotel-details/:hotel_id" render={(props) => <HotelDetailsPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/notification"
+                           render={(props) => <NotificationPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/helpCenter" render={(props) => <HelpCenterPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/press" render={(props) => <PressPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/support" render={(props) => <SupportPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/privacy" render={(props) => <PrivacyPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/terms" render={(props) => <TermsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/refund" render={(props) => <RefundPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/guestPolicies"
+                           render={(props) => <GuestPoliciesPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()}/>}/>
 
+                    <Route exact path="/all-most-popular-hotels"
+                           render={(props) => <AllMostPopularHotelsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/all-twenty-four-hotels"
+                           render={(props) => <AllTwentyFourHoursHotelsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/all-recommended-hotels"
+                           render={(props) => <AllRecommandedHotelsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/order" render={(props) => <OrderDetailsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/order-details/:booking_id"
+                           render={(props) => <OrderDetailsDescriptionPage {...props} key={Date.now()}/>}/>
 
+                    <Route exact path="/search-page"
+                           render={(props) => <SearchPagePlaceholder {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/hotelPerCity" render={(props) => <CityHotelPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/homeSearch" render={(props) => <HomeSearchPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/roomBooking" render={(props) => <RoomBookingPage {...props} key={Date.now()} />}/>
+                    <Route exact path="/demo"
+                           render={(props) => <OrderListPlaceholder {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/user-login" render={(props) => <LoginPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/signUp" render={(props) => <RegistrationPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/user-verification" render={(props) => <UserVerificationPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/user-verification-after-login" render={(props) => <UserVerificationAfterLoginPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/forget-password" render={(props) => <ForgetPasswordPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/forget-password-verify" render={(props) => <ForgetPasswordVerifyPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/forgot-password-set" render={(props) => <ForgotPasswordSetPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/change-password" render={(props) => <ChangePasswordPage {...props} key={Date.now()} />}/>
-
-                    <Route exact path="/profile" render={(props) => <ProfilePage {...props} key={Date.now()} />}/>
-                    <Route exact path="/editProfile" render={(props) => <EditProfilePage {...props} key={Date.now()} />}/>
-
-                    {/*Other Route*/}
-                    <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/notification" render={(props) => <NotificationPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/helpCenter" render={(props) => <HelpCenterPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/press" render={(props) => <PressPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/support" render={(props) => <SupportPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/privacy" render={(props) => <PrivacyPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/terms" render={(props) => <TermsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/refund" render={(props) => <RefundPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/guestPolicies" render={(props) => <GuestPoliciesPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/all-most-popular-hotels" render={(props) => <AllMostPopularHotelsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/all-twenty-four-hotels" render={(props) => <AllTwentyFourHoursHotelsPage {...props} key={Date.now()} />}/>
-                    <Route exact path="/all-recommended-hotels" render={(props) => <AllRecommandedHotelsPage {...props} key={Date.now()} />}/>
-
-                    <Route path="" component={NotFoundPage} />
+                    <Route path="" component={NotFoundPage}/>
                 </Switch>
             </Fragment>
         );
