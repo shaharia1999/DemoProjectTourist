@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
-import cardPhotoPlaceholder from "../../asset/images/cardPhotoPlaceholder.svg"
+import cardPhotoPlaceholder from "../../asset/images/cardPhotoPlaceholder.svg";
 class MostPopularHotelPlaceholder extends Component {
     render() {
         let isLoading=this.props.isLoading;

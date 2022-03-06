@@ -18,6 +18,7 @@ class LogIn extends Component {
         };
     }
 
+
     onUserProfileRedirect(){
         if(this.state.userProfileRedirect===true){
             return(
@@ -158,7 +159,7 @@ class LogIn extends Component {
                                     <input onChange={this.mobileLoginOnChange} type="text" className="form-control placeholder-text" placeholder="Your Mobile Number"/>
                                 </div>
                                 <div className="form-group">
-                                    <input onChange={this.passwordLoginOnChange} type="password" className="form-control placeholder-text" placeholder="Enter Password"/>
+                                    <input type={this.state.type} onChange={this.passwordLoginOnChange} type="password" className="form-control placeholder-text inputPassword" placeholder="Enter Password"/>
                                 </div>
                                 <Button id="LogInBtn" type="submit" className="btn SendBtnColorText btn-block">Login</Button>
                             </Form>

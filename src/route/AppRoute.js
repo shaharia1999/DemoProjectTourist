@@ -34,6 +34,7 @@ import NotFoundPage from "../pages/404NotFoundPage/NotFoundPage";
 import OrderDetailsPage from "../pages/OrderDetailsPage/OrderDetailsPage";
 import OrderDetailsDescriptionPage from "../pages/OrderDetailsDescriptionPage/OrderDetailsDescriptionPage";
 import SearchPagePlaceholder from "../component/placeholder/SearchPagePlaceholder";
+import OrderListPlaceholder from "../component/placeholder/OrderListPlaceholder";
 
 class AppRoute extends Component {
     render() {
@@ -96,6 +97,9 @@ class AppRoute extends Component {
 
                     <Route exact path="/search-page"
                            render={(props) => <SearchPagePlaceholder {...props} key={Date.now()}/>}/>
+
+                    <Route exact path="/demo"
+                           render={(props) => <OrderListPlaceholder {...props} key={Date.now()}/>}/>
 
                     <Route path="" component={NotFoundPage}/>
                 </Switch>
