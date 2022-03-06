@@ -4,11 +4,21 @@ import OrderDetailsDescription from "../../component/OrderDetailsDescription/Ord
 import Footer from "../../component/common/footer/Footer";
 
 class OrderDetailsDescriptionPage extends Component {
+    constructor({match}) {
+        super();
+        this.state={
+            booking_id:match.params.booking_id,
+        }
+    }
+    componentDidMount() {
+        window.scroll(0,0)
+    }
+
     render() {
         return (
             <Fragment>
                 <NavTopSection/>
-                <OrderDetailsDescription/>
+                <OrderDetailsDescription booking_id={this.state.booking_id}/>
                 <Footer/>
             </Fragment>
         );

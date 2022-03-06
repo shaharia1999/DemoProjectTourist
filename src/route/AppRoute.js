@@ -91,7 +91,7 @@ class AppRoute extends Component {
                     <Route exact path="/all-recommended-hotels"
                            render={(props) => <AllRecommandedHotelsPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/order" render={(props) => <OrderDetailsPage {...props} key={Date.now()}/>}/>
-                    <Route exact path="/order-details"
+                    <Route exact path="/order-details/:booking_id"
                            render={(props) => <OrderDetailsDescriptionPage {...props} key={Date.now()}/>}/>
 
                     <Route exact path="/search-page"

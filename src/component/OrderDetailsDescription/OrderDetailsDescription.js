@@ -2,8 +2,31 @@ import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import OrderImage from "../../asset/images/city/city5.jpg"
-
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
 class OrderDetailsDescription extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            booking_id: props.booking_id,
+            OrderDetailsDescriptionData:[],
+        }
+    }
+
+    componentDidMount() {
+        let booking_id = this.state.booking_id;
+        axios.get(ApiURL.OrderDetails + booking_id + '/').then(response => {
+            if (response.data.error === false) {
+                this.setState({
+                    OrderDetailsDescriptionData: response.data.data,
+                });
+            }
+        }).catch(error => {
+
+        });
+    }
+
+
     render() {
         return (
             <Fragment>
@@ -17,7 +40,7 @@ class OrderDetailsDescription extends Component {
                             </div>
                             <div className="p-4 col-xl-6 col-lg-6 col-sm-6 col-md-6">
                                <span className="text-right">
-                                    <h6 className="OrderNumberRed">PZ0239578290452</h6>
+                                    <h6 className="OrderNumberRed">{this.state.OrderDetailsDescriptionData.booking_id_default}</h6>
                                     <h6 className="OrderNo1">12-12-2022 5:45</h6>
                                </span>
                             </div>
@@ -34,7 +57,7 @@ class OrderDetailsDescription extends Component {
                             <div className="p-4 col-xl-6 col-lg-6 col-sm-6 col-md-6">
                                <span className="text-right">
                                     <h6 className="FormTo">To</h6>
-                                    <h6 className="NameText">Monirul Islam Akand</h6>
+                                    <h6 className="NameText">Monirul Islam</h6>
                                     <h6 className="OrderAddress">B/1, Main Road, Banasree, Dhaka</h6>
                                </span>
                             </div>

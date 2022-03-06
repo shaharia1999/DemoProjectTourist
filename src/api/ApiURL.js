@@ -34,6 +34,9 @@ class ApiUrl {
     static CountryByState = this.BaseUrl + "state_by_country/"
     static StateByCityUrl = this.BaseUrl + "city_by_state/"  // state by city api call done
 
+    static OrderList = this.BaseUrl + "booking-details/?user_id="  // Order list api call done
+    static OrderDetails = this.BaseUrl + "booking-details/"  // Order list api call done
+
     static Contact = this.BaseUrl + "contact/";
 }
 
