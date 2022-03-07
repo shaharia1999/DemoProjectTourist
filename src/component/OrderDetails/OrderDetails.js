@@ -3,23 +3,27 @@ import {Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
+import OrderListPlaceholder from "../placeholder/OrderListPlaceholder";
 
 class OrderDetails extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             OrderListData: [],
             user_id: sessionStorage.getItem('UserID'),
+            isLoading: "",
+            MainDiv: "d-none",
         }
     }
 
     componentDidMount() {
         let user_id = this.state.user_id;
-        axios.get(ApiURL.OrderList + user_id).then(response => {
+        axios.get(ApiURL.OrderList + user_id).then((response) => {
             if (response.data.error === false) {
                 this.setState({
-                    OrderListData: response.data.data,
+                    OrderListData: response.data.data,isLoading: "d-none", MainDiv: " "
                 });
+                console.log('OrderListData',this.state.OrderListData);
             }
         }).catch(error => {
 
@@ -61,9 +65,13 @@ class OrderDetails extends Component {
 
         return (
             <Fragment>
-                <Container className="mt-3">
-                    {MyOrderListView}
-                </Container>
+                <OrderListPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <Container className="mt-3">
+                        <h5 className="section-title mt-4 mb-3 text-center">Order List</h5>
+                        {MyOrderListView}
+                    </Container>
+                </div>
             </Fragment>
         );
     }
