@@ -1,24 +1,26 @@
 import React, {Component, Fragment} from 'react';
 import {Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import hotel1 from "../../asset/images/hotel1.jpg";
 import {IoMdPin} from "react-icons/all";
 import {FaStar} from "react-icons/fa";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
+import AllRecommendedHotelPlaceholder from "../placeholder/AllRecommendedHotelPlaceholder";
 
 class AllRecommandedHotels extends Component {
     constructor(props) {
         super(props);
         this.state = {
             allRecommandedHotelData: [],
+            isLoading: "",
+            MainDiv: "d-none",
         }
     }
 
     componentDidMount() {
         window.scroll(0,0)
         axios.get(ApiURL.RecommendedHotel).then(response => {
-            this.setState({allRecommandedHotelData: response.data.data})
+            this.setState({allRecommandedHotelData: response.data.data, isLoading: "d-none", MainDiv: " "})
         }).catch(error => {
 
         });
@@ -70,12 +72,15 @@ class AllRecommandedHotels extends Component {
         });
         return (
             <Fragment>
-                <Container className="MostPopularHotelTop p-5">
-                    <h5 className="section-title text-center">All Recommended Hotel</h5>
-                    <div className="row">
-                        {allRecommandedHotelData}
-                    </div>
-                </Container>
+                <AllRecommendedHotelPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <Container className="MostPopularHotelTop p-5">
+                        <h5 className="section-title text-center">All Recommended Hotel</h5>
+                        <div className="row">
+                            {allRecommandedHotelData}
+                        </div>
+                    </Container>
+                </div>
             </Fragment>
         );
     }

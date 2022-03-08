@@ -6,19 +6,23 @@ import {Container} from "react-bootstrap";
 import hotel1 from "../../asset/images/hotel1.jpg";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
+import MostPopularHotelPlaceholder from "../placeholder/MostPopularHotelPlaceholder";
+import AllMostPopularHotelPlaceholder from "../placeholder/AllMostPopularHotelPlaceholder";
 
 class AllMostPopularHotels extends Component {
     constructor(props) {
         super(props);
         this.state = {
             allMostPopularHotelData: [],
+            isLoading: "",
+            MainDiv: "d-none",
         }
     }
 
     componentDidMount() {
         window.scroll(0,0)
         axios.get(ApiURL.AllHotel).then(response => {
-            this.setState({allMostPopularHotelData: response.data.data})
+            this.setState({allMostPopularHotelData: response.data.data, isLoading: "d-none", MainDiv: " "})
         }).catch(error => {
 
         });
@@ -72,12 +76,15 @@ class AllMostPopularHotels extends Component {
 
         return (
             <Fragment>
-                <Container className="MostPopularHotelTop p-5">
-                    <h5 className="section-title text-center">Most Popular Hotel</h5>
-                    <div className="row">
-                        {allMostPopularHotelData}
-                    </div>
-                </Container>
+                <AllMostPopularHotelPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <Container className="MostPopularHotelTop p-5">
+                        <h5 className="section-title text-center">All Most Popular Hotel</h5>
+                        <div className="row">
+                            {allMostPopularHotelData}
+                        </div>
+                    </Container>
+                </div>
             </Fragment>
         );
     }
