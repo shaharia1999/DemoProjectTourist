@@ -10,9 +10,11 @@ class UserVerification extends Component {
     constructor() {
         super();
         this.state={
+            seconds: "..",
             OtpCode:"",
             userRedirect:false,
             UserID: sessionStorage.getItem('UserID'),
+            ResendTime: sessionStorage.getItem('ResendTime'),
         }
         this.onUserRedirect=this.onUserRedirect.bind(this);
     }
@@ -28,6 +30,32 @@ class UserVerification extends Component {
                 <Redirect to="/user-login"/>
             )
         }
+    }
+
+    componentDidMount() {
+        let myInterval = setInterval(() => {
+            let endDate = new Date("March 8, 2022 20:30:00").getTime()+300000;
+            let today = new Date().getTime();
+
+            let timeDiff = endDate - today;
+            let seconds = 1000;
+
+            let timeSeconds = Math.floor(timeDiff / seconds)
+
+            timeSeconds = timeSeconds < 10 ? "0" + timeSeconds : timeSeconds
+
+            if (timeDiff > 0) {
+                this.setState({seconds: timeSeconds});
+            } else {
+                clearInterval(myInterval);
+            }
+
+        }, 1000);
+
+        return () => {
+            clearInterval(myInterval);
+        };
+
     }
 
     onOTPFromSubmit=(event)=> {
@@ -127,7 +155,7 @@ class UserVerification extends Component {
                                     <input type="text" onChange={this.OtpOnChange} className="form-control placeholder-text" placeholder="Enter Your OTP"/>
                                 </div>
                                 <Button id="OtpBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Verify</Button>
-                                <h1 className="forgotText text-center mb-5 mt-3"> <p className="signUpText">Resend</p> </h1>
+                                <h1 className="forgotText text-center mb-5 mt-3"> <p className="signUpText">{this.state.seconds}</p> </h1>
                             </Form>
                         </Col>
                     </Row>

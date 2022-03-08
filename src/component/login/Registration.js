@@ -141,6 +141,7 @@ class Registration extends Component {
                     })
                     RegistrationBtn.innerHTML="Registration";
                     sessionStorage.setItem("UserID",response.data.data.user_id);
+                    sessionStorage.setItem("ResendTime", Date.now());
                     this.setState({userRedirect:true});
                 }
                 else{

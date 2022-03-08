@@ -3,7 +3,9 @@ import {Col, Container, Row} from "react-bootstrap";
 import cardPhotoPlaceholder from "../../asset/images/cardPhotoPlaceholder.svg";
 class AllMostPopularHotelPlaceholder extends Component {
     render() {
+        let isLoading = this.props.isLoading;
         return (
+            <div className={isLoading}>
             <Container className="p-5">
                 <h5 className="section-title mt-4 text-center">All Most Popular Hotel</h5>
                 <Row className="mt-5">
@@ -108,6 +110,7 @@ class AllMostPopularHotelPlaceholder extends Component {
                     </Col>
                 </Row>
             </Container>
+            </div>
         );
     }
 }

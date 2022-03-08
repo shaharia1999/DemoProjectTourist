@@ -1,23 +1,25 @@
 import React, {Component, Fragment} from 'react';
 import {Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import hotel1 from "../../asset/images/hotel1.jpg";
 import {IoMdPin} from "react-icons/all";
-import {FaStar} from "react-icons/fa";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
 import {FaHotel} from "react-icons/fa";
+import AllTwentyFourHourDealPlaceholder from "../placeholder/AllTwentyFourHourDealPlaceholder";
+
 class AllTwentyFourHoursHotels extends Component {
     constructor(props) {
         super(props);
         this.state = {
             all24DealRoomData: [],
+            isLoading: "",
+            MainDiv: "d-none",
         }
     }
 
     componentDidMount() {
         axios.get(ApiURL.TwentyFourDealRoom).then(response => {
-            this.setState({all24DealRoomData: response.data.data})
+            this.setState({all24DealRoomData: response.data.data, isLoading: "d-none", MainDiv: " "})
         }).catch(error => {
 
         });
@@ -63,12 +65,15 @@ class AllTwentyFourHoursHotels extends Component {
 
         return (
             <Fragment>
-                <Container className="MostPopularHotelTop p-5">
-                    <h5 className="section-title text-center">All 24 Hours Deal Rooms</h5>
-                    <div className="row mt-2 mb-2">
-                        {all24DealRoomView}
-                    </div>
-                </Container>
+                <AllTwentyFourHourDealPlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <Container className="MostPopularHotelTop p-5">
+                        <h5 className="section-title text-center">All 24 Hours Deal Rooms</h5>
+                        <div className="row mt-2 mb-2">
+                            {all24DealRoomView}
+                        </div>
+                    </Container>
+                </div>
             </Fragment>
         );
     }
