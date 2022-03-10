@@ -19,7 +19,7 @@ class HomeSearch extends Component {
                             <div className="input-group searchUpText mb-3">
                                 <input type="text" className="form-control search-placeholder" placeholder="Search by City, Hotel or Location" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append">
-                                  <Link to="/homeSearch" className="btn pt-3 search-btn" type="button">Search</Link>
+                                  <Link to="/home-search" className="btn pt-3 search-btn" type="button">Search</Link>
                                 </div>
                             </div>
 
@@ -44,7 +44,6 @@ class HomeSearch extends Component {
                                 typeSpeed={50}
                                 hideCursorAfterText={true}
                             />
-
                         </Col>
                     </Row>
                 </Container>

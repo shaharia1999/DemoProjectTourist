@@ -6,8 +6,9 @@ import Footer from "../../component/common/footer/Footer";
 class CityHotelPage extends Component {
     constructor({match}) {
         super();
-        this.state={
-            city_id:match.params.city_id,
+        this.state = {
+            city_id: match.params.city_id,
+            city_name: match.params.city_name,
         }
     }
 
@@ -16,7 +17,7 @@ class CityHotelPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <HotelPerCity city_id={this.state.city_id}/>
+                <HotelPerCity city_id={this.state.city_id} city_name={this.state.city_name}/>
                 <Footer/>
             </Fragment>
         );

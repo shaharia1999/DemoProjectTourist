@@ -88,6 +88,8 @@ class RecommendedHotel extends Component {
             slidesToScroll: 1,
             centerMode: true,
             centerPadding: "20px",
+            adaptiveHeight: true,
+            swipeToSlide: true,
             nextArrow: <SampleNextArrow/>,
             prevArrow: <SamplePrevArrow/>,
             responsive: [

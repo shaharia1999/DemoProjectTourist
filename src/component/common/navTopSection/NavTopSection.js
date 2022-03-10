@@ -20,6 +20,7 @@ class NavTopSection extends Component {
 
     onLogout = () => {
         sessionStorage.removeItem('UserPhone');
+        sessionStorage.removeItem('UserID');
         this.setState({HomeRedirect: true});
     }
 

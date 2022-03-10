@@ -89,6 +89,8 @@ class MostPopularHotel extends Component {
             slidesToScroll: 1,
             centerMode: true,
             centerPadding: "20px",
+            adaptiveHeight: true,
+            swipeToSlide: true,
             nextArrow: <SampleNextArrow/>,
             prevArrow: <SamplePrevArrow/>,
             responsive: [
@@ -136,9 +138,9 @@ class MostPopularHotel extends Component {
 
         const myList = this.state.myData;
         const myView = myList.map((myHotel, i) => {
-            return <div className="row mt-2 mb-2 p-2" key={i}>
+            return <div className="row h-100 mt-2 mb-2 p-2" key={i}>
                 <Link to={"/hotel-details/" + myHotel.slug_name}
-                      className="TwentyFourHoursCard h-100 card TwentyFourHoursAnimation">
+                      className="TwentyFourHoursCard card TwentyFourHoursAnimation">
                     <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt=""/>
                     <div className="mostPopularHotelBoxCard">
                         <h6 className="mostPopularHotelTitle"><IoMdPin
