@@ -46,16 +46,16 @@ class AppRoute extends Component {
                            render={(props) => <RoomDetailsPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/hotel-details/:slug_name"
                            render={(props) => <HotelDetailsPage {...props} key={Date.now()}/>}/>
-                    <Route exact path="/hotel-per-city/:city_id"
+                    <Route exact path="/hotel-per-city/:city_id/:city_name"
                            render={(props) => <CityHotelPage {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/homeSearch" render={(props) => <HomeSearchPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/home-search" render={(props) => <HomeSearchPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/room-booking"
                            render={(props) => <RoomBookingPage {...props} key={Date.now()}/>}/>
 
                     <Route exact path="/user-login" render={(props) => <LoginPage {...props} key={Date.now()}/>}/>
-                    <Route exact path="/signUp" render={(props) => <RegistrationPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/sign-up" render={(props) => <RegistrationPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/user-verification"
                            render={(props) => <UserVerificationPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/user-verification-after-login"
@@ -97,9 +97,6 @@ class AppRoute extends Component {
 
                     <Route exact path="/search-page"
                            render={(props) => <SearchPagePlaceholder {...props} key={Date.now()}/>}/>
-
-                    <Route exact path="/demo"
-                           render={(props) => <OrderListPlaceholder {...props} key={Date.now()}/>}/>
 
                     <Route path="" component={NotFoundPage}/>
                 </Switch>

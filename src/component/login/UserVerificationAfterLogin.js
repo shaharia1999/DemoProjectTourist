@@ -13,6 +13,7 @@ class UserVerificationAfterLogin extends Component {
             OtpCodeForVerify:"",
             userRedirect:false,
             UserIDForVerify: sessionStorage.getItem('UserIDForVerify'),
+            ResendTime: sessionStorage.getItem('ResendTime'),
         }
         this.onUserRedirect=this.onUserRedirect.bind(this);
     }
@@ -30,12 +31,73 @@ class UserVerificationAfterLogin extends Component {
         }
     }
 
+    componentDidMount() {
+        this.ResendTime();
+    }
+
+
+    ResendTime=()=>{
+        var time = 20; // This is the time allowed
+        var saved_countdown = localStorage.getItem('saved_countdown');
+        if(saved_countdown == null) {
+            // Set the time we're counting down to using the time allowed
+            var new_countdown = new Date().getTime() + (time + 2) * 1000;
+            time = new_countdown;
+            localStorage.setItem('saved_countdown', new_countdown);
+        } else {
+            time = saved_countdown;
+        }
+
+        // Update the count down every 1 second
+        var x = setInterval(() => {
+            var now = new Date().getTime();
+            var distance = time - now;
+
+            let seconds = 1000;
+            let minutes = seconds * 60;
+            let timeMinutes = Math.floor((distance / minutes))
+            var timeSeconds = Math.floor((distance % minutes) / seconds)
+
+            timeMinutes = timeMinutes < 10 ? "0" + timeMinutes : timeMinutes
+            timeSeconds = timeSeconds < 10 ? "0" + timeSeconds : timeSeconds
+
+            let demo = document.getElementById('demo');
+
+            demo.innerHTML = timeMinutes + ":" + timeSeconds;
+            document.getElementById("Resend").style.visibility = "hidden";
+
+            if (distance <= 0) {
+                clearInterval(x);
+                localStorage.removeItem('saved_countdown');
+                document.getElementById("Resend").style.visibility = "visible";
+                document.getElementById("demo").style.visibility = "hidden";
+            }
+
+        }, 1000);
+    }
+
+    ResendOnClick=()=>{
+        let UserIDForVerify = this.state.UserIDForVerify;
+        axios.put(ApiURL.otpResend+UserIDForVerify+"/").then((response)=> {
+            if (response.data.error===false){
+                document.getElementById("demo").innerHTML = "01:10" ;
+                this.ResendTime();
+                document.getElementById("Resend").style.visibility = "hidden";
+                document.getElementById("demo").style.visibility = "visible";
+            }
+        }).catch((error)=> {
+
+        })
+    }
+
     onOTPFromSubmit=(event)=> {
         let UserIDForVerify = this.state.UserIDForVerify;
         let OtpCodeForVerify = this.state.OtpCodeForVerify;
 
         let OtpBtn = document.getElementById('OtpBtn');
         let OtpForm = document.getElementById('OtpForm');
+        let Resend = document.getElementById('Resend');
+        let demo = document.getElementById('demo');
 
         if (OtpCodeForVerify.length === 0) {
             toast.error('Otp Code is Required !', {
@@ -79,6 +141,8 @@ class UserVerificationAfterLogin extends Component {
                         progress: undefined,
                         autoClose: 3000,
                     });
+                    Resend.remove();
+                    demo.remove();
                     this.setState({userRedirect:true});
                     OtpForm.reset();
                 }
@@ -125,8 +189,11 @@ class UserVerificationAfterLogin extends Component {
                                     <input type="text" onChange={this.OtpOnChange} className="form-control placeholder-text" placeholder="Enter Your OTP"/>
                                 </div>
                                 <Button id="OtpBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Verify</Button>
-                                <h1 className="forgotText text-center mb-5 mt-3"> <p className="signUpText">Resend</p> </h1>
                             </Form>
+                            <div className="text-center">
+                                <h1 id="demo" className="forgotText text-center mb-1 mt-3"> <p className="signUpText"></p> </h1>
+                                <h6 onClick={this.ResendOnClick} className="forgotText text-white bg-white mb-1 mt-0"> <p id="Resend" className="signUpText">Resend</p> </h6>
+                            </div>
                         </Col>
                     </Row>
                     {this.onUserRedirect()}

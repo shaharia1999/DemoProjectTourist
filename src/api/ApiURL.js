@@ -10,6 +10,7 @@ class ApiUrl {
     static UserLogin = this.BaseUrl + "user-login/";    // User Login api done
     static otpSend = this.BaseUrl + "otp-verify/";    // Otp Send api done
     static otpSendLogin = this.BaseUrl + "otp-verify/";    // Login Otp api done
+    static otpResend = this.BaseUrl + "otp-resend/";    // Otp Resend After Registration api done
     static changePassword = this.BaseUrl + "change-user-password/";   // Change Password api done
     static ResetPasswordForMobile = this.BaseUrl + "reset-password/";  //Reset Password for send Mobile Number
     static ResetConfirmPasswordSet = this.BaseUrl + "reset-confirm-password/";  // Reset Password for send Mobile Number
@@ -22,12 +23,7 @@ class ApiUrl {
     static RecommendedHotel = this.BaseUrl + "recommended-hotels/";   // Home recommended hotel done
     static SingleRoom = this.BaseUrl + "single-room/";    // 24 hotel deals room details done
     static SingleHotelDetails = this.BaseUrl + "single-hotel-details/";   // Most Popular hotel details & Recommended hotel details api done
-
     static HotelByCity = this.BaseUrl + "hotel-by-city/?city_id=";   // Hotel By City Home Page to all Hotel & Hotel Details
-
-    static SessionCreate = this.BaseUrl + "session-create/";    // 24 hotel deals room details done
-    static CartsCreate = this.BaseUrl + "carts/";
-    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; //
 
     static Country = this.BaseUrl + "country/"  // country api call done
     static State = this.BaseUrl + "state/" // state api call done
@@ -36,6 +32,10 @@ class ApiUrl {
 
     static OrderList = this.BaseUrl + "booking-details/?user_id="  // Order list api call done
     static OrderDetails = this.BaseUrl + "booking-details/"  // Order list api call done
+
+    static SessionCreate = this.BaseUrl + "session-create/";    // 24 hotel deals room details done
+    static CartsCreate = this.BaseUrl + "carts/";
+    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; //
 
     static Contact = this.BaseUrl + "contact/";
 }

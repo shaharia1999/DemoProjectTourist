@@ -81,6 +81,13 @@
     box-shadow: 0 0 48px 0 rgba(0,0,0,0.1);
 }
 
+.SearchPageHotelCardPlaceholder{
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.125);
+    transition: 0.9s;
+    width: 100%;
+    background-color: #ffffff;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .formSearch-control {
         transition: none

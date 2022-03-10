@@ -81,7 +81,7 @@ class HomeSearchMain extends Component {
                                    aria-label="Recipient's username"
                                    aria-describedby="basic-addon2"/>
                             <div className="input-group-append">
-                                <Link to="/homeSearch" className="btn pt-3 search-btn" type="button">Search</Link>
+                                <Link to="/home-search" className="btn pt-3 search-btn" type="button">Search</Link>
                             </div>
                         </Col>
                     </Row>
@@ -244,7 +244,7 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel1} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                    <Link to="/hotel-details" className="HotelSearchTitle">
                                     <h5 className="HotelSearchTitle">Six Seasons Hotel
                                         <span className="SearchStarText">
                                         <i className="fa fa-star"> </i>
@@ -279,7 +279,7 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel2} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                    <Link to="/hotel-details" className="HotelSearchTitle">
                                     <h5 className="HotelSearchTitle">InterContinental Dhaka
                                         <span className="SearchStarText">
                                         <i className="fa fa-star"> </i>
@@ -313,7 +313,7 @@ class HomeSearchMain extends Component {
                                     <img className="SearchPageImage" src={hotel3} alt=""/>
                                 </Col>
                                 <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotelDetails" className="HotelSearchTitle">
+                                    <Link to="/hotel-details" className="HotelSearchTitle">
                                         <h5 className="HotelSearchTitle">The Raintree Hotel
                                             <span className="SearchStarText">
                                             <i className="fa fa-star"> </i>
@@ -332,56 +332,6 @@ class HomeSearchMain extends Component {
                                             <Button className="btn mx-1 FacilitiesBtn">Car Parking</Button>
                                             <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>
                                             <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>
-                                            {/*<button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
-                                                    data-placement="top" title="WiFi">
-                                                <FaWifi/>
-                                            </button>
-                                            <button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
-                                                    data-placement="top" title="Car Parking">
-                                                <FaCar/>
-                                            </button>
-                                            <button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
-                                                    data-placement="top" title="Breakfast">
-                                                <IoFastFood/>
-                                            </button>
-                                            <button type="button" className="btn mx-1 FacilitiesBtn" data-toggle="tooltip"
-                                                    data-placement="top" title="Swimming pool">
-                                                <FaSwimmingPool/>
-                                            </button>*/}
-                                        </li>
-                                    </ul>
-                                </Col>
-                                <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>
-                                    <div className="vl"> </div>
-                                    <h6 className="HotelSearchReview"> 20 Review</h6>
-                                    <h6 className="HotelPriceStart">From 3000 Tk/night</h6>
-                                </Col>
-                            </Row>
-
-                            <Row className="SearchPageHotelCard w-100 mb-4">
-                                <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>
-                                    <img className="SearchPageImage" src={hotel4} alt=""/>
-                                </Col>
-                                <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotelDetails" className="HotelSearchTitle">
-                                    <h5 className="HotelSearchTitle">Six Seasons Hotel
-                                        <span className="SearchStarText">
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        </span>
-                                    </h5>
-                                    </Link>
-                                    <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
-                                        className="LocationMapFont"/> Dhaka, bangladesh</h6>
-                                    <ul className="list-unstyled mb-2 d-md-flex">
-                                        <li className="">
-                                            <Button className="btn mx-1 FacilitiesBtn">WiFi</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Car Parking</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Air conditioning</Button>
                                         </li>
                                     </ul>
                                 </Col>

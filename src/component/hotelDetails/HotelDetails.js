@@ -8,8 +8,55 @@ import {Link} from "react-router-dom";
 import {FaHotel, FaStar} from "react-icons/fa";
 import HotelDetailsPlaceholder from "../placeholder/HotelDetailsPlaceholder";
 
-class HotelDetails extends Component {
+function SampleNextArrow(props) {
+    const {className, style, onClick} = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                fontSize: "40px",
+                right: "-40px",
+                zIndex: "15",
+                height: "35px",
+                width: "35px",
+                opacity: "1",
+                color: "White",
+                display: "block",
+                background: "#6d6d6d",
+                borderRadius: '50px',
+                boxShadow: '0 0 3px 0 #d4d4d4'
+            }}
+            onClick={onClick}
+        />
+    );
+}
 
+function SamplePrevArrow(props) {
+    const {className, style, onClick} = props;
+    return (
+        <button
+            className={className}
+            style={{
+                ...style,
+                fontSize: "40px",
+                left: "-40px",
+                zIndex: "15",
+                height: "35px",
+                width: "35px",
+                opacity: "1",
+                color: "White",
+                display: "block",
+                background: "#6d6d6d",
+                borderRadius: '50px',
+                boxShadow: '0 0 3px 0 #d4d4d4'
+            }}
+            onClick={onClick}
+        />
+    );
+}
+
+class HotelDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -103,8 +150,8 @@ class HotelDetails extends Component {
             slidesToScroll: 1,
             centerMode: true,
             centerPadding: "0px",
-            /*    nextArrow: <SampleNextArrow />,
-                prevArrow: <SamplePrevArrow />,*/
+            adaptiveHeight: true,
+            swipeToSlide: true,
             responsive: [
                 {
                     breakpoint: 1900,
@@ -158,6 +205,12 @@ class HotelDetails extends Component {
             autoplay: true,
             slidesToShow: 6,
             slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: "20px",
+            adaptiveHeight: true,
+            swipeToSlide: true,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
             responsive: [
                 {
                     breakpoint: 1024,
