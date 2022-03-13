@@ -108,6 +108,7 @@ class LogIn extends Component {
                     });
                     sessionStorage.setItem("UserID",response.data.data.user_id);
                     sessionStorage.setItem("UserPhone",response.data.data.user_phone);
+                    sessionStorage.setItem("AccessToken",response.data.access_token);
                     this.setState({userProfileRedirect:true});
                     LoginForm.reset();
                 }
@@ -123,6 +124,7 @@ class LogIn extends Component {
                 else if(response.status===201){
                     sessionStorage.setItem("UserID",response.data.data.user_id);
                     sessionStorage.setItem("UserPhone",response.data.data.user_phone);
+                    sessionStorage.setItem("AccessToken",response.data.access_token);
                     this.setState({userOtpVerificationRedirect:true});
                     LoginForm.reset();
                 }

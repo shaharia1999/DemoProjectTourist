@@ -33,9 +33,11 @@ class ApiUrl {
     static OrderList = this.BaseUrl + "booking-details/?user_id="  // Order list api call done
     static OrderDetails = this.BaseUrl + "booking-details/"  // Order list api call done
 
-    static SessionCreate = this.BaseUrl + "session-create/";    // 24 hotel deals room details done
-    static CartsCreate = this.BaseUrl + "carts/";
-    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; //
+    // static SessionCreate = this.BaseUrl + "session-create/";  
+    // static CartsCreate = this.BaseUrl + "carts/";
+    
+    static UserCartIdCheck = this.BaseUrl + "user-cart-id-check/"; 
+    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; 
 
     static Contact = this.BaseUrl + "contact/";
 }
