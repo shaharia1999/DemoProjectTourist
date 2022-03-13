@@ -14,6 +14,7 @@ import {FaUser} from "react-icons/fa";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
+import ProfilePagePlaceholder from "../placeholder/ProfilePagePlaceholder";
 
 class Profile extends Component {
     constructor() {
@@ -28,6 +29,8 @@ class Profile extends Component {
             date_of_birth: "",
             user_short_address: "",
             user_image: "",
+            isLoading: "",
+            MainDiv: "d-none",
         }
     }
 
@@ -43,6 +46,7 @@ class Profile extends Component {
                     date_of_birth: response.data.data.date_of_birth,
                     user_short_address: response.data.data.user_short_address,
                     user_image: response.data.data.user_image,
+                    isLoading: "d-none", MainDiv: " "
                 });
 
                 if (response.data.data.gender === '1') {
@@ -62,35 +66,38 @@ class Profile extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="p-5 d-flex justify-content-center">
-                    <Row className="ProfileCard shadow-sm">
-                        <Col xl={10} lg={10} md={10} sm={12} xs={12}>
-                            <div>
-                                <img className="profileImg mt-4" src={img1} alt=""/>
-                                <div className="mt-5">
-                                    <h6 className="profileTxt2"><GoDeviceMobile/> Mobile No:<span
-                                        className="profileTxt"> {this.state.user_phone}</span></h6>
-                                    <h6 className="profileTxt2"><FaUser/> Full Name:<span
-                                        className="profileTxt"> {this.state.user_name}</span></h6>
-                                    <h6 className="profileTxt2"><HiOutlineMail/> Email:<span
-                                        className="profileTxt"> {this.state.user_email}</span></h6>
-                                    <h6 className="profileTxt2"><BiIdCard/> NID Number:<span
-                                        className="profileTxt"> {this.state.user_national_id_card}</span></h6>
-                                    <h6 className="profileTxt2"><FaUserFriends/> Gender:<span
-                                        className="profileTxt"> {this.state.gender}</span></h6>
-                                    <h6 className="profileTxt2"><GoCalendar/> Date of Birth:<span
-                                        className="profileTxt"> {this.state.date_of_birth}</span></h6>
-                                    <h6 className="profileTxt2"><GiModernCity/> City:<span
-                                        className="profileTxt"> {this.state.city}</span></h6>
-                                    <h6 className="profileTxt2"><IoLocationOutline/> Address:<span
-                                        className="profileTxt"> {this.state.user_short_address}</span></h6>
+                <ProfilePagePlaceholder isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <Container className="p-5 d-flex justify-content-center">
+                        <Row className="ProfileCard shadow-sm">
+                            <Col xl={10} lg={10} md={10} sm={12} xs={12}>
+                                <div>
+                                    <img className="profileImg mt-4" src={img1} alt=""/>
+                                    <div className="mt-5">
+                                        <h6 className="profileTxt2"><GoDeviceMobile/> Mobile No:<span
+                                            className="profileTxt"> {this.state.user_phone}</span></h6>
+                                        <h6 className="profileTxt2"><FaUser/> Full Name:<span
+                                            className="profileTxt"> {this.state.user_name}</span></h6>
+                                        <h6 className="profileTxt2"><HiOutlineMail/> Email:<span
+                                            className="profileTxt"> {this.state.user_email}</span></h6>
+                                        <h6 className="profileTxt2"><BiIdCard/> NID Number:<span
+                                            className="profileTxt"> {this.state.user_national_id_card}</span></h6>
+                                        <h6 className="profileTxt2"><FaUserFriends/> Gender:<span
+                                            className="profileTxt"> {this.state.gender}</span></h6>
+                                        <h6 className="profileTxt2"><GoCalendar/> Date of Birth:<span
+                                            className="profileTxt"> {this.state.date_of_birth}</span></h6>
+                                        <h6 className="profileTxt2"><GiModernCity/> City:<span
+                                            className="profileTxt"> {this.state.city}</span></h6>
+                                        <h6 className="profileTxt2"><IoLocationOutline/> Address:<span
+                                            className="profileTxt"> {this.state.user_short_address}</span></h6>
+                                    </div>
+                                    <h1><Link to="/editProfile" className="btn ProfileEditBtnColorText mb-5 btn-block">Edit
+                                        Profile</Link></h1>
                                 </div>
-                                <h1><Link to="/editProfile" className="btn ProfileEditBtnColorText mb-5 btn-block">Edit
-                                    Profile</Link></h1>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
             </Fragment>
         );
     }

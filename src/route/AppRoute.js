@@ -33,8 +33,7 @@ import UserVerificationAfterLoginPage from "../pages/UserVerificationAfterLoginP
 import NotFoundPage from "../pages/404NotFoundPage/NotFoundPage";
 import OrderDetailsPage from "../pages/OrderDetailsPage/OrderDetailsPage";
 import OrderDetailsDescriptionPage from "../pages/OrderDetailsDescriptionPage/OrderDetailsDescriptionPage";
-import SearchPagePlaceholder from "../component/placeholder/SearchPagePlaceholder";
-import OrderListPlaceholder from "../component/placeholder/OrderListPlaceholder";
+import ProfilePagePlaceholder from "../component/placeholder/ProfilePagePlaceholder";
 
 class AppRoute extends Component {
     render() {
@@ -95,8 +94,8 @@ class AppRoute extends Component {
                     <Route exact path="/order-details/:booking_id"
                            render={(props) => <OrderDetailsDescriptionPage {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/search-page"
-                           render={(props) => <SearchPagePlaceholder {...props} key={Date.now()}/>}/>
+                    <Route exact path="/profile-page"
+                           render={(props) => <ProfilePagePlaceholder {...props} key={Date.now()}/>}/>
 
                     <Route path="" component={NotFoundPage}/>
                 </Switch>
