@@ -1,4 +1,4 @@
-.SeeMore{
+.SeeMore {
     background-color: #455A64;
     font-family: 'Roboto', sans-serif;
     border-radius: 2px;
@@ -7,10 +7,10 @@
     padding: 2px 8px 2px 8px;
     margin-left: 10px;
     color: #ffffff;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
-.SeeMore:hover{
+.SeeMore:hover {
     background-color: #C2185B;
     font-family: 'Roboto', sans-serif;
     border-radius: 2px;
@@ -19,7 +19,7 @@
     padding: 2px 8px 2px 8px;
     margin-left: 10px;
     color: #ffffff;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 .OrderNo {
@@ -143,14 +143,14 @@
     border: 1px solid #eaeaea;
 }
 
-.FormTo{
+.FormTo {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 18px !important;
     color: #000000 !important;
 }
 
-.NameText{
+.NameText {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px !important;

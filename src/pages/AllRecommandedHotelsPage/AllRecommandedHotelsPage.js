@@ -4,6 +4,9 @@ import AllRecommandedHotels from "../../component/AllRecommandedHotels/AllRecomm
 import Footer from "../../component/common/footer/Footer";
 
 class AllRecommandedHotelsPage extends Component {
+    componentDidMount() {
+        window.scroll(0,0)
+    }
     render() {
         return (
             <Fragment>

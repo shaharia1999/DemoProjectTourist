@@ -1,7 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import {Col, Container, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
-import OrderImage from "../../asset/images/city/city5.jpg"
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
 import OrderDetailsDescriptionPlaceholder from "../placeholder/OrderDetailsDescriptionPlaceholder";

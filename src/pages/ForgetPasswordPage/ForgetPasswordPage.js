@@ -4,6 +4,9 @@ import ForgetPassword from "../../component/login/ForgetPassword";
 import Footer from "../../component/common/footer/Footer";
 
 class ForgetPasswordPage extends Component {
+    componentDidMount() {
+        window.scroll(0,0)
+    }
     render() {
         return (
             <Fragment>

@@ -1,17 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
-import HotelPerCity from "../../component/HotelPerCity/HotelPerCity";
 import Footer from "../../component/common/footer/Footer";
+import ReferRewards from "../../component/ReferRewards/ReferRewards";
 
-class CityHotelPage extends Component {
-    constructor({match}) {
-        super();
-        this.state = {
-            city_id: match.params.city_id,
-            city_name: match.params.city_name,
-        }
-    }
-
+class ReferRewardsPage extends Component {
     componentDidMount() {
         window.scroll(0,0)
     }
@@ -20,11 +12,11 @@ class CityHotelPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <HotelPerCity city_id={this.state.city_id} city_name={this.state.city_name}/>
+                <ReferRewards/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default CityHotelPage;
+export default ReferRewardsPage;

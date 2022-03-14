@@ -33,7 +33,9 @@ import UserVerificationAfterLoginPage from "../pages/UserVerificationAfterLoginP
 import NotFoundPage from "../pages/404NotFoundPage/NotFoundPage";
 import OrderDetailsPage from "../pages/OrderDetailsPage/OrderDetailsPage";
 import OrderDetailsDescriptionPage from "../pages/OrderDetailsDescriptionPage/OrderDetailsDescriptionPage";
-import ProfilePagePlaceholder from "../component/placeholder/ProfilePagePlaceholder";
+import ReferRewardsPage from "../pages/ReferRewardsPage/ReferRewardsPage";
+import ReferEarnHistoryPage from "../pages/ReferHistoryPage/ReferEarnHistoryPage";
+import ReferPendingHistoryPage from "../pages/ReferHistoryPage/ReferPendingHistoryPage";
 
 class AppRoute extends Component {
     render() {
@@ -94,8 +96,12 @@ class AppRoute extends Component {
                     <Route exact path="/order-details/:booking_id"
                            render={(props) => <OrderDetailsDescriptionPage {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/profile-page"
-                           render={(props) => <ProfilePagePlaceholder {...props} key={Date.now()}/>}/>
+                    <Route exact path="/refer-rewards"
+                           render={(props) => <ReferRewardsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/refer-earn-history"
+                           render={(props) => <ReferEarnHistoryPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/refer-pending-history"
+                           render={(props) => <ReferPendingHistoryPage {...props} key={Date.now()}/>}/>
 
                     <Route path="" component={NotFoundPage}/>
                 </Switch>

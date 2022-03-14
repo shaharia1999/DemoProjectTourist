@@ -1,8 +1,9 @@
-.mostPopularHotelImage{
+.mostPopularHotelImage {
     width: 100%;
     height: 220px;
 }
-.mostPopularHotelBoxCard{
+
+.mostPopularHotelBoxCard {
     position: absolute;
     background-color: #000000;
     opacity: 0.7;
@@ -10,37 +11,42 @@
     width: 100% !important;
     margin-top: 190px;
 }
-.mostPopularHotelTitle{
+
+.mostPopularHotelTitle {
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
-    text-decoration: none!important;
+    text-decoration: none !important;
     color: #ffffff;
     font-weight: 300;
     margin: 5px 0 0 12px !important;
     opacity: 1;
 }
-.room-title{
+
+.room-title {
     font-family: 'Roboto', sans-serif;
-    font-size:16px;
-    cursor:pointer;
-    text-decoration: none!important;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none !important;
     color: #393939;
     margin-top: 3px;
     margin-left: 15px;
 }
-.TwentyFourHoursAnimation:hover{
+
+.TwentyFourHoursAnimation:hover {
     transform: scale(1.1);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-    text-decoration: none!important;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none !important;
 }
-.room-price{
+
+.room-price {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    text-decoration: none!important;
+    text-decoration: none !important;
     color: #C20035;
     margin-left: 15px;
-    margin-top: 0!important;
+    margin-top: 0 !important;
 }
+
 /*
 .TwentyFourHoursAnimation::before, .TwentyFourHoursAnimation::after {
     position: absolute;

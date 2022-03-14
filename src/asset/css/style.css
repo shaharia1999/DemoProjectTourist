@@ -32,6 +32,7 @@
 @import "rainbow.css";
 @import "placeholder.css";
 @import "password.css";
+@import "refer.css";
 
 input[type="radio"] {
     width: 20px;

@@ -1,21 +1,22 @@
-.whyChooseTop{
-   margin-top: 50px;
+.whyChooseTop {
+    margin-top: 50px;
 }
-.section-title{
+
+.section-title {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 28px;
     color: #414141;
 }
 
-.sectionSubTitle{
+.sectionSubTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #1d1d1d;
 }
 
-.choose-img{
+.choose-img {
     width: 100%;
     height: 80px;
 }

@@ -1,0 +1,84 @@
+.rewardCard {
+    border-radius: 0;
+    box-shadow: #1b1e21;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fefefe;
+}
+
+.earnCard {
+    border-radius: 5px;
+    box-shadow: #1b1e21;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeef2;
+}
+
+.pendingCard {
+    border-radius: 5px;
+    box-shadow: #1b1e21;
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6c9c9;
+}
+
+.referTextBig {
+  font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #195984;
+}
+
+.referAmountText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #a31250;
+}
+
+.referSeeText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #0f0f0f;
+}
+
+.referSeeText:hover {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+
+.referText1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #0f0f0f;
+}
+
+.MyReferCode{
+    color: #0f0f0f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.EarnCard {
+    border-radius: 0px !important;
+    margin: 10px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    background-color: #f0f0f0;
+    border: none !important;
+    box-shadow: 0 0 2px 0 #eaeaea;
+}

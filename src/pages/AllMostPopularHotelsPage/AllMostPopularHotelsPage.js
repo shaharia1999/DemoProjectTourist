@@ -4,6 +4,9 @@ import AllMostPopularHotels from "../../component/AllMostPopularHotels/AllMostPo
 import Footer from "../../component/common/footer/Footer";
 
 class AllMostPopularHotelsPage extends Component {
+    componentDidMount() {
+        window.scroll(0,0)
+    }
     render() {
         return (
             <Fragment>

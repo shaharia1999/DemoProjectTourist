@@ -21,6 +21,7 @@ class Profile extends Component {
         super();
         this.state = {
             user_id: sessionStorage.getItem('UserID'),
+            AccessToken:sessionStorage.getItem('AccessToken'),
             user_name: "",
             user_email: "",
             user_phone: "",
@@ -30,6 +31,9 @@ class Profile extends Component {
             user_short_address: "",
             user_image: "",
             isLoading: "",
+            // Wallet
+            total_earned_verify: "...",
+            total_earned_pending: "",
             MainDiv: "d-none",
         }
     }
@@ -48,7 +52,6 @@ class Profile extends Component {
                     user_image: response.data.data.user_image,
                     isLoading: "d-none", MainDiv: " "
                 });
-
                 if (response.data.data.gender === '1') {
                     this.setState({gender: 'Male'});
                 } else if (response.data.data.gender === '2') {
@@ -61,6 +64,23 @@ class Profile extends Component {
 
         });
 
+
+        // My Wallet Earn api call
+        let config = {
+            headers: {
+                Authorization: `Token ` + this.state.AccessToken
+            }
+        }
+        axios.get(ApiURL.MyWalletEarned + user_id + '/', config).then((response) => {
+            if (response.data.error === false) {
+                this.setState({
+                    total_earned_verify: response.data.total_earned_verify,
+                    total_earned_pending: response.data.total_earned_pending,
+                });
+            }
+        }).catch(error => {
+
+        });
     }
 
     render() {
@@ -73,6 +93,7 @@ class Profile extends Component {
                             <Col xl={10} lg={10} md={10} sm={12} xs={12}>
                                 <div>
                                     <img className="profileImg mt-4" src={img1} alt=""/>
+                                    <h6 className="profileTxt2 mt-4 text-center">Total Earned: <span className="walletText">{this.state.total_earned_verify}</span> ৳</h6>
                                     <div className="mt-5">
                                         <h6 className="profileTxt2"><GoDeviceMobile/> Mobile No:<span
                                             className="profileTxt"> {this.state.user_phone}</span></h6>

@@ -3,10 +3,8 @@ import {Link} from "react-router-dom";
 import {FaStar} from "react-icons/fa";
 import {IoMdPin} from "react-icons/all";
 import {Container} from "react-bootstrap";
-import hotel1 from "../../asset/images/hotel1.jpg";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
-import MostPopularHotelPlaceholder from "../placeholder/MostPopularHotelPlaceholder";
 import AllMostPopularHotelPlaceholder from "../placeholder/AllMostPopularHotelPlaceholder";
 
 class AllMostPopularHotels extends Component {
