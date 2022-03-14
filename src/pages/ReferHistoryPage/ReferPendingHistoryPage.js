@@ -1,9 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import NavTopSection from "../../component/common/navTopSection/NavTopSection";
 import Footer from "../../component/common/footer/Footer";
-import AllTwentyFourHoursHotels from "../../component/AllTwentyFourHoursHotels/AllTwentyFourHoursHotels";
+import ReferPendingHistory from "../../component/ReferHistory/ReferPendingHistory";
 
-class AllTwentyFourHoursHotelsPage extends Component {
+class ReferPendingHistoryPage extends Component {
     componentDidMount() {
         window.scroll(0,0)
     }
@@ -11,11 +11,11 @@ class AllTwentyFourHoursHotelsPage extends Component {
         return (
             <Fragment>
                 <NavTopSection/>
-                <AllTwentyFourHoursHotels/>
+                <ReferPendingHistory/>
                 <Footer/>
             </Fragment>
         );
     }
 }
 
-export default AllTwentyFourHoursHotelsPage;
+export default ReferPendingHistoryPage;

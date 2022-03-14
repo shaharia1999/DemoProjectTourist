@@ -12,7 +12,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 .search-btn:hover {
@@ -23,12 +23,12 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
 .search-btn:focus {
-    border: none!important;
-    box-shadow: none!important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .searchUpText {
@@ -64,24 +64,25 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
-.SearchPageImage{
+.SearchPageImage {
     width: 100%;
-    height: 150px!important;
-    padding: 0!important;
-    margin: 0px!important;
+    height: 150px !important;
+    padding: 0 !important;
+    margin: 0px !important;
 }
 
-.SearchPageHotelCard{
+.SearchPageHotelCard {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.125);
     transition: 0.9s;
     width: 100%;
     background-color: #fbfbfb;
 }
-.SearchPageHotelCard:hover{
-    box-shadow: 0 0 48px 0 rgba(0,0,0,0.1);
+
+.SearchPageHotelCard:hover {
+    box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.1);
 }
 
-.SearchPageHotelCardPlaceholder{
+.SearchPageHotelCardPlaceholder {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.125);
     transition: 0.9s;
     width: 100%;
@@ -226,134 +227,142 @@ textarea.form-control {
 }
 
 /* Home Search Collapse CSS */
-.porzotokCollapseBtn{
-    border-radius: 0!important;
+.porzotokCollapseBtn {
+    border-radius: 0 !important;
     border-color: #f8f8f8;
     background-color: #f8f8f8;
-    padding-top: 10px!important;
+    padding-top: 10px !important;
     margin-bottom: 8px;
     color: #000000;
 }
-.porzotokCollapseBtn:hover{
-    border-radius: 0!important;
+
+.porzotokCollapseBtn:hover {
+    border-radius: 0 !important;
     border-color: #f0f0f0;
     background-color: #f0f0f0;
     color: #000000;
 }
 
-.porzotokCollapseBtn:focus{
-    border-radius: 0!important;
-    border-color: #f0f0f0!important;
-    background-color: #f0f0f0!important;
-    box-shadow: none!important;
-    color: #000000!important;
+.porzotokCollapseBtn:focus {
+    border-radius: 0 !important;
+    border-color: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    box-shadow: none !important;
+    color: #000000 !important;
 }
 
-.porzotokCollapseMainTitle{
+.porzotokCollapseMainTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #000000;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-.porzotokCollapseBodyTitle{
+.porzotokCollapseBodyTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #000000;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-.porzotokCollapseSubTitle{
+.porzotokCollapseSubTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #000000;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-#more {display: none;}
-#more1 {display: none;}
+#more {
+    display: none;
+}
 
-.SeeAllBtn{
+#more1 {
+    display: none;
+}
+
+.SeeAllBtn {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    border-radius: 0!important;
+    border-radius: 0 !important;
     border-color: #f8f8f8;
     background-color: #f8f8f8;
     margin-bottom: 8px;
     color: #495057;
 }
-.SeeAllBtn:hover{
+
+.SeeAllBtn:hover {
     font-family: 'Roboto', sans-serif;
-    border-radius: 0!important;
+    border-radius: 0 !important;
     border-color: #f0f0f0;
     background-color: #f0f0f0;
     color: #495057;
 }
 
-.SeeAllBtn:focus{
+.SeeAllBtn:focus {
     font-family: 'Roboto', sans-serif;
-    border-radius: 0!important;
-    border-color: #f0f0f0!important;
-    background-color: #f0f0f0!important;
-    box-shadow: none!important;
-    color: #495057!important;
+    border-radius: 0 !important;
+    border-color: #f0f0f0 !important;
+    background-color: #f0f0f0 !important;
+    box-shadow: none !important;
+    color: #495057 !important;
 }
 
-.HotelSearchTitle{
+.HotelSearchTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #000000;
-    text-decoration: none!important;
+    text-decoration: none !important;
     margin-top: 20px;
 }
 
-.SearchStarText{
+.SearchStarText {
     font-size: 12px;
     color: #C20035;
     margin-left: 2px;
 }
 
-.SearchLocationMapTitle{
+.SearchLocationMapTitle {
     color: #1b1e21;
     font-size: 14px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
 }
 
-.FacilitiesBtn{
+.FacilitiesBtn {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    border-radius: 3px!important;
+    border-radius: 3px !important;
     border-color: #C20035;
     background-color: #ffffff;
     color: #000000;
-    cursor: auto!important;
+    cursor: auto !important;
     height: 24px;
     white-space: nowrap;
     padding: 0 8px 0 8px;
     margin-bottom: 4px;
 }
-.FacilitiesBtn:hover{
+
+.FacilitiesBtn:hover {
     font-family: 'Roboto', sans-serif;
-    border-radius: 3px!important;
+    border-radius: 3px !important;
     border-color: #C20035;
     background-color: #C20035;
     color: #ffffff;
-    cursor: auto!important;
+    cursor: auto !important;
 }
 
-.FacilitiesBtn:focus{
+.FacilitiesBtn:focus {
     font-family: 'Roboto', sans-serif;
-    border-radius: 3px!important;
-    border-color: #C20035!important;
-    background-color: #C20035!important;
-    box-shadow: none!important;
-    color: #ffffff!important;
-    cursor: auto!important;
+    border-radius: 3px !important;
+    border-color: #C20035 !important;
+    background-color: #C20035 !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    cursor: auto !important;
 }
 
 .vl {
@@ -365,7 +374,7 @@ textarea.form-control {
     top: 20%;
 }
 
-.HotelSearchReview{
+.HotelSearchReview {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -375,7 +384,7 @@ textarea.form-control {
     margin-left: 30%;
 }
 
-.HotelPriceStart{
+.HotelPriceStart {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;

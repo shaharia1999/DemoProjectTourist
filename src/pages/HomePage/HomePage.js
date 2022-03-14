@@ -9,8 +9,6 @@ import TwentyFourHoursDeal from "../../component/home/TwentyFourHoursDeal/Twenty
 import MostPopularHotel from "../../component/home/MostPopularHotel/MostPopularHotel";
 import PopularCity from "../../component/home/PopularCity/PopularCity";
 import RecommendedHotel from "../../component/home/RecommendedHotel/RecommendedHotel";
-import axios from "axios";
-import ApiURL from "../../api/ApiURL";
 
 class HomePage extends Component {
     

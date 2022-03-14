@@ -1,116 +1,118 @@
-.RoomCartListTitle{
+.RoomCartListTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 300;
     color: #1b1e21;
 }
 
-.RoomCartListPrice{
+.RoomCartListPrice {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #C20035;
 }
 
-.CheckOutBtn{
+.CheckOutBtn {
     background-color: #C20035;
     border-radius: 3px;
     padding: 15px;
 }
 
-.CheckOutBtn:hover{
+.CheckOutBtn:hover {
     background-color: #000000;
-    border-radius:3px;
-}
-
-.CheckOutBtn:focus{
-    background-color: #000000!important;
-    box-shadow: none!important;
     border-radius: 3px;
 }
 
-.CheckOutText{
+.CheckOutBtn:focus {
+    background-color: #000000 !important;
+    box-shadow: none !important;
+    border-radius: 3px;
+}
+
+.CheckOutText {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 300;
     color: #ffffff;
 }
 
-.CheckOutText:hover{
+.CheckOutText:hover {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #ffffff;
 }
 
-.RoomOnCartCard{
+.RoomOnCartCard {
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.125);
     transition: 0.9s;
     width: 100%;
     background-color: #fbfbfb;
     padding: 5px;
 }
-.RoomOnCartCard:hover{
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+
+.RoomOnCartCard:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.PromoCartCard{
+.PromoCartCard {
     width: 100%;
     padding: 0;
 }
 
-.TotalPriceCard{
+.TotalPriceCard {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.125);
     transition: 0.9s;
     width: 100%;
     background-color: #ffffff;
     padding: 5px;
 }
-.TotalPriceCard:hover{
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.1);
+
+.TotalPriceCard:hover {
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
 
-.RoomNameOnCard{
+.RoomNameOnCard {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #1b1e21;
 }
 
-.RoomPriceOnCard{
+.RoomPriceOnCard {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #C20035;
 }
 
-.CartRoomImage{
+.CartRoomImage {
     width: 100%;
-    height: 100px!important;
+    height: 100px !important;
     padding: 5px;
 }
 
-.CartDeleteBtn{
+.CartDeleteBtn {
     background-color: #fbfbfb !important;
-    border-color: #fbfbfb!important;
+    border-color: #fbfbfb !important;
     border-radius: 0;
-    margin-top: 15px!important;
+    margin-top: 15px !important;
 }
 
-.CartDeleteBtn:hover{
-    background-color: #fbfbfb!important;
-    border-color: #fbfbfb!important;
+.CartDeleteBtn:hover {
+    background-color: #fbfbfb !important;
+    border-color: #fbfbfb !important;
     border-radius: 0;
 }
 
-.CartDeleteBtn:focus{
-    background-color: #fbfbfb!important;
-    border-color: #fbfbfb!important;
+.CartDeleteBtn:focus {
+    background-color: #fbfbfb !important;
+    border-color: #fbfbfb !important;
     border-radius: 0;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
-.CartListTitle{
+.CartListTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -120,7 +122,7 @@
     padding: 5px;
 }
 
-.CartListCartTitle{
+.CartListCartTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -129,7 +131,7 @@
     margin-bottom: auto !important;
 }
 
-.SubTotalPriceTitle{
+.SubTotalPriceTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -138,7 +140,7 @@
     margin-bottom: 10px !important;
 }
 
-.PromoDiscountPriceTitle{
+.PromoDiscountPriceTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -147,7 +149,7 @@
     margin-bottom: 10px !important;
 }
 
-.TotalPriceTitle{
+.TotalPriceTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -156,7 +158,7 @@
     margin-bottom: 10px !important;
 }
 
-.PromoCodeBtn{
+.PromoCodeBtn {
     border-radius: 2px;
     font-weight: 300;
     font-size: 18px;
@@ -168,19 +170,19 @@
     height: 60px;
 }
 
-.PromoCodeBtn:hover{
+.PromoCodeBtn:hover {
     font-weight: 400;
     background-color: #0b7922 !important;
     border-color: #0b7922 !important;
     color: #ffffff;
 }
 
-.PromoCodeBtn:focus{
+.PromoCodeBtn:focus {
     border-color: #0b7922 !important;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
-.PromoUppercase{
+.PromoUppercase {
     text-transform: uppercase;
 }
 

@@ -1,39 +1,41 @@
-div [class^="col-"]{
-    padding-left:5px;
-    padding-right:5px;
+div [class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
 }
-.TwentyFourHoursCard{
+
+.TwentyFourHoursCard {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.9s;
     width: 100% !important;
     background-color: #ffffff;
     border-radius: 5px;
 }
-.TwentyFourHoursCard:hover{
-    box-shadow: 0 0 16px 0 rgba(0,0,0,0.1);
+
+.TwentyFourHoursCard:hover {
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
 
-.TwentyFourHoursCardPH{
+.TwentyFourHoursCardPH {
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
     transition: 0.9s;
     width: 100%;
-    min-height: 250px!important;
-    background-color: #ffffff!important;
+    min-height: 250px !important;
+    background-color: #ffffff !important;
     border-radius: 5px;
-    padding: 4px 1px 2px 1px!important;
+    padding: 4px 1px 2px 1px !important;
 }
 
-.TwentyFourHoursCardPH:hover{
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+.TwentyFourHoursCardPH:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
 }
 
-.twentyFourImage{
+.twentyFourImage {
     width: 100%;
     height: 200px;
     border-radius: 5px;
 }
 
-.TwentyFourHoursHotelBoxCard{
+.TwentyFourHoursHotelBoxCard {
     position: absolute;
     background-color: #000000;
     opacity: 0.7;
@@ -41,16 +43,18 @@ div [class^="col-"]{
     width: 100%;
     margin-top: 160px;
 }
-.TwentyFourHoursHotelTitle{
+
+.TwentyFourHoursHotelTitle {
     font-size: 12px;
     font-family: 'Roboto', sans-serif;
-    text-decoration: none!important;
+    text-decoration: none !important;
     color: #ffffff;
     font-weight: 300;
     margin: 3px 0 0 12px !important;
     opacity: 1;
 }
-.TwentyFourHoursHotelDiscountCard{
+
+.TwentyFourHoursHotelDiscountCard {
     position: absolute;
     background-color: #ffffff;
     opacity: 0.8;
@@ -60,59 +64,68 @@ div [class^="col-"]{
     margin-left: 10px;
     border-radius: 5px;
 }
-.TwentyFourHoursHotelDiscountTitle{
+
+.TwentyFourHoursHotelDiscountTitle {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    text-decoration: none!important;
+    text-decoration: none !important;
     color: #C20035;
     font-weight: 500;
     margin: 3px 0 0 12px !important;
     opacity: 1;
 }
-.TwentyFourHoursAnimation{
-    transition:1s;
+
+.TwentyFourHoursAnimation {
+    transition: 1s;
     cursor: pointer;
 }
-.TwentyFourHoursAnimation:hover{
+
+.TwentyFourHoursAnimation:hover {
     transform: scale(1.1);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
-    text-decoration: none!important;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none !important;
 }
-.roomStar{
+
+.roomStar {
     color: #C20035;
     font-size: 16px;
     margin-top: 0;
     margin-left: 7px;
     margin-bottom: 15px;
 }
-.TwentyFourHoursHotelIcon{
+
+.TwentyFourHoursHotelIcon {
     color: #C20035;
     font-size: 12px;
 }
-.TwentyFourHoursLocationIcon{
+
+.TwentyFourHoursLocationIcon {
     color: #C20035;
     font-size: 16px;
 }
-.roomTitle{
+
+.roomTitle {
     font-family: 'Roboto', sans-serif;
-    font-size:15px;
+    font-size: 15px;
     font-weight: 300;
-    cursor:pointer;
-    text-decoration: none!important;
+    cursor: pointer;
+    text-decoration: none !important;
     color: #393939;
     margin-top: 3px;
     margin-left: 15px;
 }
-.roomPrice{
+
+.roomPrice {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    text-decoration: none!important;
+    text-decoration: none !important;
     color: #C20035;
     margin-left: 15px;
     margin-top: 0 !important;
     margin-bottom: 15px;
 }
+
 /*
 .TwentyFourHoursAnimation::before, .TwentyFourHoursAnimation::after {
     position: absolute;

@@ -8,6 +8,5 @@ class SessionHelper {
     static RemoveUserID(){
         return sessionStorage.removeItem("UserID");
     }
-
 }
 export default SessionHelper;

@@ -1,4 +1,4 @@
-.ProfileCard{
+.ProfileCard {
     border-radius: 0;
     box-shadow: #1b1e21;
     height: auto;
@@ -6,26 +6,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff8f8;
+    background-color: #f8feff;
 }
 
-.profileImg{
+.profileImg {
     border-radius: 100%;
     height: 150px;
     width: 150px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid #abc4c4;
 }
 
-.profileTxt{
+.profileTxt {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 18px;
     color: #1b1e21;
 }
 
-.profileTxt2{
+.profileTxt2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -33,7 +34,7 @@
     margin-top: 15px;
 }
 
-.ProfileEditBtnColorText{
+.ProfileEditBtnColorText {
     border-radius: 2px;
     font-weight: 300;
     font-size: 16px;
@@ -46,14 +47,23 @@
     margin-top: 20px;
 }
 
-.ProfileEditBtnColorText:hover{
+.ProfileEditBtnColorText:hover {
     font-weight: 400;
     background-color: #C20035 !important;
     border-color: #C20035 !important;
     color: #ffffff;
 }
 
-.ProfileEditBtnColorText:focus{
+.ProfileEditBtnColorText:focus {
     border-color: #C20035 !important;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
+
+.walletText{
+    color: #C20035;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+

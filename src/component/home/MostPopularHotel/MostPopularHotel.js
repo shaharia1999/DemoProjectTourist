@@ -70,7 +70,7 @@ class MostPopularHotel extends Component {
 
     componentDidMount() {
         axios.get(ApiURL.AllHotel).then(response => {
-            if (response.status === 200) {
+            if (response.data.error === false) {
                 this.setState({myData: response.data.data, isLoading: "d-none", MainDiv: " "});
             }
         }).catch();

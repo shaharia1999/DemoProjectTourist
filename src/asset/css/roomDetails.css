@@ -1,90 +1,94 @@
-.PreviewImgLarge{
+.PreviewImgLarge {
     height: 380px;
     width: 100%;
-    border-radius: 5px!important;
+    border-radius: 5px !important;
 }
 
-.PreviewImgLarge:hover{
+.PreviewImgLarge:hover {
     height: 380px;
     width: 100%;
-    border-radius: 5px!important;
+    border-radius: 5px !important;
 }
 
-.PreviewImgLarge:focus{
+.PreviewImgLarge:focus {
     height: 380px;
     width: 100%;
-    border-radius: 5px!important;
+    border-radius: 5px !important;
 }
 
-.PreviewImgMapPlaceholder{
+.PreviewImgMapPlaceholder {
     height: 400px;
     width: 100%;
-    border-radius: 5px!important;
+    border-radius: 5px !important;
 }
 
-.PreviewImgSmall{
+.PreviewImgSmall {
     height: 130px;
     width: 100%;
     padding: 4px;
     border-radius: 5px;
 }
-.HotelTitle{
+
+.HotelTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 22px;
     color: #1b1e21;
 }
-.LocationMapFont{
+
+.LocationMapFont {
     color: #C20035;
     font-size: 12px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
- }
-.LocationMapTitle{
+}
+
+.LocationMapTitle {
     color: #1b1e21;
     font-size: 12px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
 }
-.HotelDetailsSubTitle{
+
+.HotelDetailsSubTitle {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px;
     color: #C20035;
 }
 
-.RoomDetailsPrice{
+.RoomDetailsPrice {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: #C20035;
 }
 
-.ReviewTitle{
+.ReviewTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
 }
 
-.ReviewDes{
+.ReviewDes {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 300;
 }
 
-.ReviewDescriptionText{
+.ReviewDescriptionText {
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 500;
 }
 
-.DescriptionDetails{
+.DescriptionDetails {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
 }
 
-.CartBtn{
+.CartBtn {
     border-radius: 0;
     font-weight: 300;
     font-size: 14px;
@@ -95,20 +99,20 @@
     border-color: #9b042d;
 }
 
-.CartBtn:hover{
+.CartBtn:hover {
     border-color: #9b042d;
     font-weight: 400;
     background-color: #9b042d;
     color: #ffffff;
 }
 
-.CartBtn:focus{
-    border-color: #9b042d!important;
-    background-color: #9b042d!important;
-    box-shadow: none!important;
+.CartBtn:focus {
+    border-color: #9b042d !important;
+    background-color: #9b042d !important;
+    box-shadow: none !important;
 }
 
-.BookBtn{
+.BookBtn {
     border-radius: 0;
     font-weight: 300;
     font-size: 14px;
@@ -118,49 +122,49 @@
     padding: 10px 15px;
 }
 
-.BookBtn:hover{
+.BookBtn:hover {
     font-weight: 400;
     background-color: #146f25;
     color: #f5f5f5;
 }
 
-.BookBtn:focus{
+.BookBtn:focus {
     border-color: #146f25;
     box-shadow: none;
 }
 
-.facilityDes{
+.facilityDes {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #1b1e21;
 }
 
-.hrBarColor{
+.hrBarColor {
     background-color: #f9f9f9;
 }
 
-.price1{
+.price1 {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 300;
     color: #1b1e21;
 }
 
-.price2{
+.price2 {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 300;
     color: #1b1e21;
 }
 
-.StarText{
+.StarText {
     font-size: 12px;
     color: #0f7424;
     margin-left: 4px;
 }
 
-.StarText2{
+.StarText2 {
     font-size: 12px;
     color: #C20035;
 }

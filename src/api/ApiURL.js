@@ -37,7 +37,10 @@ class ApiUrl {
     // static CartsCreate = this.BaseUrl + "carts/";
     
     static UserCartIdCheck = this.BaseUrl + "user-cart-id-check/"; 
-    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; 
+    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/";
+
+    static MyWalletEarned = this.BaseUrl + "my-earned/";  //Total Earn & Pending Api call done
+    static MyReferWalletHistory = this.BaseUrl + "my-earned-history/"; // Earn & Pending Api call done
 
     static Contact = this.BaseUrl + "contact/";
 }

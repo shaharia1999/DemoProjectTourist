@@ -37,7 +37,7 @@ class UserVerificationAfterLogin extends Component {
 
 
     ResendTime=()=>{
-        var time = 20; // This is the time allowed
+        var time = 300; // This is the time allowed
         var saved_countdown = localStorage.getItem('saved_countdown');
         if(saved_countdown == null) {
             // Set the time we're counting down to using the time allowed

@@ -69,7 +69,9 @@ class RecommendedHotel extends Component {
 
     componentDidMount() {
         axios.get(ApiURL.RecommendedHotel).then(response => {
-            this.setState({myData: response.data.data, isLoading: "d-none", MainDiv: " "})
+            if (response.data.error===false){
+                this.setState({myData: response.data.data, isLoading: "d-none", MainDiv: " "})
+            }
         }).catch(error => {
 
         });

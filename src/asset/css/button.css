@@ -1,27 +1,29 @@
-.badgeBtn{
-    box-shadow: none!important;
-}
-.badgeBtn:hover{
-    box-shadow: none!important;
-}
-.badgeBtn:focus{
-    box-shadow: none!important;
+.badgeBtn {
+    box-shadow: none !important;
 }
 
-.BookingBtn{
+.badgeBtn:hover {
+    box-shadow: none !important;
+}
+
+.badgeBtn:focus {
+    box-shadow: none !important;
+}
+
+.BookingBtn {
     background-color: #C20035;
     border-color: #C20035;
     border-radius: 3px;
-    padding:  15px 35px 15px 35px;
+    padding: 15px 35px 15px 35px;
 }
 
-.BookingBtn:hover{
+.BookingBtn:hover {
     background-color: #000000;
-    border-radius:3px;
+    border-radius: 3px;
 }
 
-.BookingBtn:focus{
-    background-color: #000000!important;
-    box-shadow: none!important;
+.BookingBtn:focus {
+    background-color: #000000 !important;
+    box-shadow: none !important;
     border-radius: 3px;
 }

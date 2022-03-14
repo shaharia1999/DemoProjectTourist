@@ -5,7 +5,6 @@ import {FaMapMarkerAlt} from "react-icons/all";
 import hotel1 from "../../asset/images/Hotel/HotelSarina.jpg"
 import hotel2 from "../../asset/images/Hotel/InterContinentalDhaka.jpg"
 import hotel3 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg"
-import hotel4 from "../../asset/images/Hotel/TheRaintreeHotel.jpg";
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 
@@ -46,22 +45,22 @@ class HomeSearchMain extends Component {
         });
     }
 
-    myFacilitiesFunction = () => {
-        let dots1 = document.getElementById("dots1");
-        let moreText1 = document.getElementById("more1");
-        let btnText1 = document.getElementById("myFacilitiesBtn");
-
-        if (dots1.style.display === "none") {
-            dots1.style.display = "inline";
-            btnText1.innerHTML = "See All";
-            moreText1.style.display = "none";
-        } else {
-            dots1.style.display = "none";
-            btnText1.innerHTML = "See Less";
-            moreText1.style.display = "inline";
-        }
-
-    }
+    // myFacilitiesFunction = () => {
+    //     let dots1 = document.getElementById("dots1");
+    //     let moreText1 = document.getElementById("more1");
+    //     let btnText1 = document.getElementById("myFacilitiesBtn");
+    //
+    //     if (dots1.style.display === "none") {
+    //         dots1.style.display = "inline";
+    //         btnText1.innerHTML = "See All";
+    //         moreText1.style.display = "none";
+    //     } else {
+    //         dots1.style.display = "none";
+    //         btnText1.innerHTML = "See Less";
+    //         moreText1.style.display = "inline";
+    //     }
+    //
+    // }
 
     function=()=>{
         ('[data-toggle="tooltip"]').tooltip()
@@ -344,8 +343,6 @@ class HomeSearchMain extends Component {
 
                         </Col>
                     </Row>
-
-
                 </Container>
             </Fragment>
         );

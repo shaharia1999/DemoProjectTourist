@@ -1,27 +1,27 @@
-.ph-item{
-    border: none!important;
+.ph-item {
+    border: none !important;
 }
 
-.PreviewImgLarge{
+.PreviewImgLarge {
     height: 100% !important;
     width: 100% !important;
-    border-radius: 5px!important;
-    max-height: 380px!important;
+    border-radius: 5px !important;
+    max-height: 380px !important;
 }
 
-.PreviewImgLargePlaceholder{
+.PreviewImgLargePlaceholder {
     height: 100% !important;
     width: 100% !important;
-    border-radius: 0px!important;
-    max-height: 220px!important;
+    border-radius: 0px !important;
+    max-height: 220px !important;
 }
 
-.ph-item-padding{
-    padding: 0px 0px 0px 0px!important;
-    margin: 15px 0px 15px 0px!important;
+.ph-item-padding {
+    padding: 0px 0px 0px 0px !important;
+    margin: 15px 0px 15px 0px !important;
 }
 
-.ph-item-padding1{
-    padding: 0px 0px 0px 0px!important;
-    margin: 0px 0px 0px 0px!important;
+.ph-item-padding1 {
+    padding: 0px 0px 0px 0px !important;
+    margin: 0px 0px 0px 0px !important;
 }
