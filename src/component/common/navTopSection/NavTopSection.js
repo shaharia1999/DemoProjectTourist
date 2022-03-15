@@ -14,6 +14,7 @@ class NavTopSection extends Component {
         super();
         this.state = {
             UserPhone: sessionStorage.getItem('UserPhone'),
+            UserName: sessionStorage.getItem('UserName'),
             onHomeRedirect: false,
         }
     }
@@ -73,8 +74,8 @@ class NavTopSection extends Component {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Link to="/"><img className="main-logo" src={porzotok} alt=""/></Link>
                                 <Nav className="ml-auto mr-5">
-                                    <Nav.Link> <NavLink exact className="navItem mx-2 nav-font"
-                                                        to="/">HOTEL</NavLink></Nav.Link>
+                                    <Link className="navItem mx-2 my-3 nav-font"
+                                          to="/">HOTEL</Link>
                                     <Link to="/" className="btn my-2"><i className="fa h4 fa-heart"> </i> <sup><span
                                         className="badge text-white bg-danger">3</span></sup></Link>
                                     <Link to="/notification" className="btn badgeBtn my-2"><i
@@ -130,8 +131,8 @@ class NavTopSection extends Component {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Link to="/"><img className="main-logo" src={porzotok} alt=""/></Link>
                                 <Nav className="ml-auto mr-5">
-                                    <Nav.Link> <NavLink exact className="navItem mx-2 nav-font"
-                                                        to="/">HOTEL</NavLink></Nav.Link>
+                                    <Link className="navItem mx-2 my-3 nav-font"
+                                                        to="/">HOTEL</Link>
                                     <Link to="/" className="btn my-2"><i className="fa h4 fa-heart"> </i> <sup><span
                                         className="badge text-white bg-danger">3</span></sup></Link>
                                     <Link to="/notification" className="btn badgeBtn my-2"><i
@@ -142,7 +143,7 @@ class NavTopSection extends Component {
 
                                     <Dropdown>
                                         <Dropdown.Toggle className="btn my-2 mx-2 logInBtn" id="dropdown-basic">
-                                            <a><FaUser/> USER ACCOUNT</a>
+                                            <a><FaUser/> Profile</a>
                                         </Dropdown.Toggle>
 
                                         <Dropdown.Menu className="navDropdownProfile">
