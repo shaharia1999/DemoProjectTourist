@@ -6,10 +6,10 @@ class HomeBanner extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="bg-light" fluid={true}>
-                    <div className="row">
-                        <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <img className="homeBannerImage" src={city5} alt=""/>
+                <Container className="bg-light m-0 p-0" fluid={true}>
+                    <div className="row m-0 p-0">
+                        <div className="homeBannerImage col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
                         </div>
                     </div>
                 </Container>

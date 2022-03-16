@@ -1,11 +1,8 @@
 class ApiUrl {
-    /*  static BaseUrl1 = "http://13.52.81.125:8000";*/
     static BaseUrl1 = "http://3.82.148.255";
 
     //API URL START
     static BaseUrl = "http://3.82.148.255/api/";
-    /* static BaseUrl = "http://3.82.148.255/api/";*/
-    /*   static BaseUrl = "http://13.52.81.125:8000/api/";*/
     static Registration = this.BaseUrl + "user/";    // User Registration api done
     static UserLogin = this.BaseUrl + "user-login/";    // User Login api done
     static otpSend = this.BaseUrl + "otp-verify/";    // Otp Send api done
@@ -18,7 +15,8 @@ class ApiUrl {
 
     static TwentyFourDealRoom = this.BaseUrl + "room-deals/";    // Home Twenty Four Deal Room done
     static AllHotel = this.BaseUrl + "hotel_details/";     // Home most popular done
-    static HomeCity = this.BaseUrl + "city/";     // Home city api call done
+    static MostPopularCity = this.BaseUrl + "popular-city/";     // Most Popular city api call done
+    static AllPopularCity = this.BaseUrl + "city/";     // All city api call done
     static City = this.BaseUrl + "city/";     // Home city api call done
     static RecommendedHotel = this.BaseUrl + "recommended-hotels/";   // Home recommended hotel done
     static SingleRoom = this.BaseUrl + "single-room/";    // 24 hotel deals room details done
@@ -32,9 +30,6 @@ class ApiUrl {
 
     static OrderList = this.BaseUrl + "booking-details/?user_id="  // Order list api call done
     static OrderDetails = this.BaseUrl + "booking-details/"  // Order list api call done
-
-    // static SessionCreate = this.BaseUrl + "session-create/";  
-    // static CartsCreate = this.BaseUrl + "carts/";
     
     static UserCartIdCheck = this.BaseUrl + "user-cart-id-check/"; 
     static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/";
@@ -42,6 +37,10 @@ class ApiUrl {
     static MyWalletEarned = this.BaseUrl + "my-earned/";  //Total Earn & Pending Api call done
     static MyReferWalletHistory = this.BaseUrl + "my-earned-history/"; // Earn & Pending Api call done
 
+    static HomeSearchHotelResult = this.BaseUrl + "search-result-web/?q="; // Home Search api call done
+
+    // static SessionCreate = this.BaseUrl + "session-create/";
+    // static CartsCreate = this.BaseUrl + "carts/";
     static Contact = this.BaseUrl + "contact/";
 }
 

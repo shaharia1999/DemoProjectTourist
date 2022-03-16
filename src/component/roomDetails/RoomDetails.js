@@ -133,7 +133,6 @@ class RoomDetails extends Component {
             });
         } else {
             cartSendBtn.innerHTML = "Sending...";
-
             let user_id = this.state.user_id;
             let config = {
                 headers: {
@@ -145,7 +144,6 @@ class RoomDetails extends Component {
                     this.setState({
                         cart_id: response.data.cart_id,
                     })
-                    let cart_id=this.state.cart_id;
                     let MyFormData=new FormData();
                     MyFormData.append("check_in_time",checkin_date);
                     MyFormData.append("check_out_time",checkout_date);
@@ -154,7 +152,8 @@ class RoomDetails extends Component {
 
                     axios.post(ApiUrl.AddToCartRoomDetails,MyFormData, config).then(response => {
                         if (response.data.error === false) {
-                            toast.sucess(response.data.message, {
+                            cartSendBtn.innerHTML = "Confirm Add To Cart";
+                            toast.success(response.data.message, {
                                 position: "top-center",
                                 theme: "colored",
                                 autoClose: 3000,
@@ -352,6 +351,7 @@ class RoomDetails extends Component {
                         </div>
                     </div>
                 </div>
+                <ToastContainer/>
                 {this.pageRedirect()}
             </Fragment>
         );

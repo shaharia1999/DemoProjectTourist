@@ -4,6 +4,7 @@ import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
 import {Container, Row} from "react-bootstrap";
 import PopularCityPlaceholder from "../../placeholder/PopularCityPlaceholder";
+import ApiUrl from "../../../api/ApiURL";
 
 class PopularCity extends Component {
     constructor(props) {
@@ -16,8 +17,8 @@ class PopularCity extends Component {
     }
 
     componentDidMount() {
-        axios.get(ApiURL.HomeCity).then(response => {
-            this.setState({myData: response.data, isLoading: "d-none", MainDiv: " "})
+        axios.get(ApiURL.MostPopularCity).then(response => {
+            this.setState({myData: response.data.data, isLoading: "d-none", MainDiv: " "})
         }).catch(error => {
 
         });
@@ -29,7 +30,7 @@ class PopularCity extends Component {
             return <div className="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6 p-2" key={i}>
                 <Link to={"hotel-per-city/" + myCity.city_id + "/" + myCity.city_name}
                       className="card popularCityAnimation">
-                    <img className="popularCityImage" src={myCity.city_image} alt=""/>
+                    <img className="popularCityImage" src={ApiUrl.BaseUrl1 + myCity.city_image} alt=""/>
                     <div className="popularCityTitle">{myCity.city_name}
                         <hr className="popularCityHrTag"/>
                     </div>
@@ -41,7 +42,9 @@ class PopularCity extends Component {
                 <PopularCityPlaceholder isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
                     <Container className="whyChooseTop bg-light p-5" fluid={true}>
-                        <h5 className="section-title text-center">Popular City</h5>
+                        <h6 className="section-title text-center">Popular City<Link to="/all-popular-city"
+                                                                                          className="btn SeeMore">See
+                            More</Link></h6>
                         <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different
                             marketplaces has so many demands on IT security related work. We focus on our learners, we
                             make a path for them to earn money and built their own career.</h6>

@@ -15,6 +15,7 @@ class CartList extends Component {
             MainDiv: "d-none",
         }
     }
+
     render() {
         return (
             <Fragment>

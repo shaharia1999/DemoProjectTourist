@@ -1,15 +1,11 @@
 import React, {Component, Fragment} from 'react';
-import NavTopSection from "../../component/common/navTopSection/NavTopSection";
-import Footer from "../../component/common/footer/Footer";
-import Refund from "../../component/other/Refund/Refund";
-import {Container, Row, Col, Button, Collapse, Form} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Container, Row, Col} from "react-bootstrap";
+
 class SearchPagePlaceholder extends Component {
     render() {
+        let isLoading = this.props.isLoading;
         return (
-            <Fragment>
-                <NavTopSection/>
-
+            <div className={isLoading}>
                 <Container className="">
                     <Row className="justify-content-center mb-4">
                         <Col xl={8} lg={8} md={8} sm={8} xs={8} className="input-group searchUpText mb-3">
@@ -187,13 +183,12 @@ class SearchPagePlaceholder extends Component {
                                     <div className="ph-item ph-item-padding mt-4 w-100">
                                         <div className="ph-col-12">
                                             <div className="ph-row p-0">
+                                                <div className="ph-col-8 mt-4 text-center big"> </div>
+                                                <div className="ph-col-4 empty big"> </div>
 
-                                                <div className="ph-col-8 mt-4 text-center big"></div>
-                                                <div className="ph-col-4 empty big"></div>
-
-                                                <div className="mt-5"></div>
-                                                <div className="ph-col-10 mt-5"></div>
-                                                <div className="ph-col-2 empty"></div>
+                                                <div className="mt-5"> </div>
+                                                <div className="ph-col-10 mt-5"> </div>
+                                                <div className="ph-col-2 empty"> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -202,11 +197,7 @@ class SearchPagePlaceholder extends Component {
                         </Col>
                     </Row>
                 </Container>
-
-
-
-                <Footer/>
-            </Fragment>
+            </div>
         );
     }
 }

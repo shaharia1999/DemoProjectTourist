@@ -36,6 +36,7 @@ import OrderDetailsDescriptionPage from "../pages/OrderDetailsDescriptionPage/Or
 import ReferRewardsPage from "../pages/ReferRewardsPage/ReferRewardsPage";
 import ReferEarnHistoryPage from "../pages/ReferHistoryPage/ReferEarnHistoryPage";
 import ReferPendingHistoryPage from "../pages/ReferHistoryPage/ReferPendingHistoryPage";
+import AllPopularCityPage from "../pages/AllPopularCityPage/AllPopularCityPage";
 
 class AppRoute extends Component {
     render() {
@@ -50,7 +51,7 @@ class AppRoute extends Component {
                     <Route exact path="/hotel-per-city/:city_id/:city_name"
                            render={(props) => <CityHotelPage {...props} key={Date.now()}/>}/>
 
-                    <Route exact path="/home-search" render={(props) => <HomeSearchPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/hotel-search/:SearchKey" render={(props) => <HomeSearchPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/cartList" render={(props) => <CartListPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/room-booking"
                            render={(props) => <RoomBookingPage {...props} key={Date.now()}/>}/>
@@ -92,6 +93,8 @@ class AppRoute extends Component {
                            render={(props) => <AllTwentyFourHoursHotelsPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/all-recommended-hotels"
                            render={(props) => <AllRecommandedHotelsPage {...props} key={Date.now()}/>}/>
+                    <Route exact path="/all-popular-city"
+                           render={(props) => <AllPopularCityPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/order" render={(props) => <OrderDetailsPage {...props} key={Date.now()}/>}/>
                     <Route exact path="/order-details/:booking_id"
                            render={(props) => <OrderDetailsDescriptionPage {...props} key={Date.now()}/>}/>
