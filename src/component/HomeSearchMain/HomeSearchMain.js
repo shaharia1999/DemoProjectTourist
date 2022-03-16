@@ -2,9 +2,6 @@ import React, {Component, Fragment} from 'react';
 import {Container, Row, Col, Button, Collapse, Form} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {FaMapMarkerAlt} from "react-icons/all";
-import hotel1 from "../../asset/images/Hotel/HotelSarina.jpg"
-import hotel2 from "../../asset/images/Hotel/InterContinentalDhaka.jpg"
-import hotel3 from "../../asset/images/Hotel/PanPacificSonargaonDhaka.jpg"
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 
@@ -20,22 +17,22 @@ class HomeSearchMain extends Component {
     }
 
 
-/*    myCityFunction = () => {
-        let dots = document.getElementById("dots");
-        let moreText = document.getElementById("more");
-        let btnText = document.getElementById("myCityBtn");
+    /*    myCityFunction = () => {
+            let dots = document.getElementById("dots");
+            let moreText = document.getElementById("more");
+            let btnText = document.getElementById("myCityBtn");
 
-        if (dots.style.display === "none") {
-            dots.style.display = "inline";
-            btnText.innerHTML = "See All";
-            moreText.style.display = "none";
-        } else {
-            dots.style.display = "none";
-            btnText.innerHTML = "See Less";
-            moreText.style.display = "inline";
-        }
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "See All";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "See Less";
+                moreText.style.display = "inline";
+            }
 
-    }*/
+        }*/
 
     componentDidMount() {
         axios.get(ApiUrl.City).then((response) => {
@@ -62,7 +59,7 @@ class HomeSearchMain extends Component {
     //
     // }
 
-    function=()=>{
+    function = () => {
         ('[data-toggle="tooltip"]').tooltip()
     }
 
@@ -70,6 +67,83 @@ class HomeSearchMain extends Component {
         const open = this.state.open;
         const open1 = this.state.open1;
         const open2 = this.state.open2;
+
+        const MyList=this.props.HotelDataData;
+        const HomeSearchHotelFacilities=this.props.HomeSearchHotelFacilities;
+        const SearchKey=this.props.SearchKey;
+
+        const MySearchView=MyList.map((SearchHotelList,i)=>{
+            return <Row className="SearchPageHotelCard w-100 mb-4" key={i}>
+                <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>
+                    <img className="SearchPageImage" src={ApiUrl.BaseUrl1 + SearchHotelList.image_url[0].Image} alt=""/>
+                </Col>
+                <Col xl={5} lg={5} md={5} sm={5} xs={5}>
+                    <Link to={"/hotel-details/" + SearchHotelList.slug_name} className="HotelSearchTitle">
+                        <h5 className="HotelSearchTitle">{SearchHotelList.hotel_name}
+
+                            {(() => {
+                                if (SearchHotelList.hotel_type_star_id === 1) {
+                                    return (
+                                        <span className="StarText">
+                                                  <i className="fa fa-star"> </i>
+                                        </span>
+                                    )
+                                } else if (SearchHotelList.hotel_type_star_id === 2) {
+                                    return (
+                                        <span className="StarText">
+                                                 <i className="fa fa-star"> </i><i className="fa fa-star"> </i>
+                                        </span>
+                                    )
+                                } else if (SearchHotelList.hotel_type_star_id === 3) {
+                                    return (
+                                        <span className="StarText">
+                                            <i className="fa fa-star"> </i><i className="fa fa-star"> </i><i
+                                            className="fa fa-star"> </i>
+                                        </span>
+                                    )
+                                } else if (SearchHotelList.hotel_type_star_id === 4) {
+                                    return (
+                                        <span className="StarText">
+                                                <i className="fa fa-star"> </i><i className="fa fa-star"> </i><i
+                                            className="fa fa-star"> </i><i className="fa fa-star"> </i>
+                                        </span>
+                                    )
+                                } else if (SearchHotelList.hotel_type_star_id === 5) {
+                                    return (
+                                        <span className="StarText">
+                                                <i className="fa fa-star"> </i><i className="fa fa-star"> </i><i
+                                            className="fa fa-star"> </i><i className="fa fa-star"> </i><i
+                                            className="fa fa-star"> </i>
+                                        </span>
+                                    )
+                                }
+                            })()}
+
+                        </h5>
+                    </Link>
+                    <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt className="LocationMapFont"/>
+                         {SearchHotelList.city.city_name} ,
+                        {SearchHotelList.city.state.country.country_name}
+                    </h6>
+
+                    <ul className="list-unstyled mb-2 justify-content-space-between d-flex">
+                    {SearchHotelList.hotel_facilities.map((MyFacilities,i) => (
+                            <li className="">
+                                <Button className="btn mx-1 FacilitiesBtn">{MyFacilities.facilites_name}</Button>
+                            </li>
+                    ))}
+                    </ul>
+
+                </Col>
+                <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>
+                    <div className="vl"></div>
+                    <h6 className="HotelSearchReview"> {SearchHotelList.avg_rating} Review</h6>
+                    <h6 className="HotelPriceStart">From {SearchHotelList.min_price} Tk/night</h6>
+                </Col>
+            </Row>
+        });
+
+
         return (
             <Fragment>
                 <Container className="">
@@ -105,7 +179,7 @@ class HomeSearchMain extends Component {
                                 </Collapse>
                             </div>
 
-                        {/*    <div className="pr-3" style={{width: 'auto'}}>
+                            {/*    <div className="pr-3" style={{width: 'auto'}}>
                                 <Button
                                     className="btn-block porzotokCollapseBtn porzotokCollapseMainTitle"
                                     onClick={() => this.setState({open1: !open1})}
@@ -160,7 +234,6 @@ class HomeSearchMain extends Component {
                                 </Collapse>
                             </div>*/}
 
-
                             <div className="pr-3" style={{width: 'auto'}}>
                                 <Button
                                     className="btn-block porzotokCollapseBtn porzotokCollapseMainTitle"
@@ -173,15 +246,15 @@ class HomeSearchMain extends Component {
                                     <Form id="example0">
                                         {this.state.CityData.map((AllCity) => (
                                             <Form.Group className="mb-2" controlId="formBasicCheckbox1">
-                                                 <Form.Check className="porzotokCollapseBodyTitle" type="checkbox"
-                                                  label={AllCity.city_name}/>
+                                                <Form.Check className="porzotokCollapseBodyTitle" type="checkbox"
+                                                            label={AllCity.city_name}/>
                                             </Form.Group>
                                         ))}
                                     </Form>
                                 </Collapse>
                             </div>
 
-                         {/*   <div className="pr-3" style={{width: 'auto'}}>
+                            {/*<div className="pr-3" style={{width: 'auto'}}>
                                 <Button
                                     className="btn-block porzotokCollapseBtn porzotokCollapseMainTitle"
                                     onClick={() => this.setState({open2: !open2})}
@@ -238,108 +311,74 @@ class HomeSearchMain extends Component {
                         </Col>
                         <Col xl={9} lg={9} md={9} sm={9} xs={9}>
 
-                            <Row className="SearchPageHotelCard w-100 mb-4">
-                                <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>
-                                    <img className="SearchPageImage" src={hotel1} alt=""/>
-                                </Col>
-                                <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotel-details" className="HotelSearchTitle">
-                                    <h5 className="HotelSearchTitle">Six Seasons Hotel
-                                        <span className="SearchStarText">
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        </span>
-                                    </h5>
-                                    </Link>
-                                    <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
-                                        className="LocationMapFont"/> Dhaka, bangladesh</h6>
-                                    <ul className="list-unstyled mb-2 d-md-flex">
-                                        <li className="">
-                                            <Button className="btn mx-1 FacilitiesBtn">WiFi</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Car Parking</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Air conditioning</Button>
-                                        </li>
-                                    </ul>
-                                </Col>
-                                <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>
-                                    <div className="vl"> </div>
-                                    <h6 className="HotelSearchReview"> 20 Review</h6>
-                                    <h6 className="HotelPriceStart">From 3000 Tk/night</h6>
-                                </Col>
-                            </Row>
+                            {MySearchView}
 
-                            <Row className="SearchPageHotelCard w-100 mb-4">
-                                <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>
-                                    <img className="SearchPageImage" src={hotel2} alt=""/>
-                                </Col>
-                                <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotel-details" className="HotelSearchTitle">
-                                    <h5 className="HotelSearchTitle">InterContinental Dhaka
-                                        <span className="SearchStarText">
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        <i className="fa fa-star"> </i>
-                                        </span>
-                                    </h5>
-                                    </Link>
-                                    <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
-                                        className="LocationMapFont"/> Dhaka, bangladesh</h6>
-                                    <ul className="list-unstyled mb-2 d-md-flex">
-                                        <li className="">
-                                            <Button className="btn mx-1 FacilitiesBtn">WiFi</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Air conditioning</Button>
-                                        </li>
-                                    </ul>
-                                </Col>
-                                <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>
-                                    <div className="vl"> </div>
-                                    <h6 className="HotelSearchReview"> 20 Review</h6>
-                                    <h6 className="HotelPriceStart">From 3000 Tk/night</h6>
-                                </Col>
-                            </Row>
-
-                            <Row className="SearchPageHotelCard w-100 mb-4">
-                                <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>
-                                    <img className="SearchPageImage" src={hotel3} alt=""/>
-                                </Col>
-                                <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>
-                                    <Link to="/hotel-details" className="HotelSearchTitle">
-                                        <h5 className="HotelSearchTitle">The Raintree Hotel
-                                            <span className="SearchStarText">
-                                            <i className="fa fa-star"> </i>
-                                            <i className="fa fa-star"> </i>
-                                            <i className="fa fa-star"> </i>
-                                            <i className="fa fa-star"> </i>
-                                            <i className="fa fa-star"> </i>
-                                            </span>
-                                        </h5>
-                                    </Link>
-                                    <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt
-                                        className="LocationMapFont"/> Dhaka, bangladesh</h6>
-                                    <ul className="list-unstyled mb-2 d-md-flex">
-                                        <li className="">
-                                            <Button className="btn mx-1 FacilitiesBtn">WiFi</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Car Parking</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>
-                                            <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>
-                                        </li>
-                                    </ul>
-                                </Col>
-                                <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>
-                                    <div className="vl"> </div>
-                                    <h6 className="HotelSearchReview"> 20 Review</h6>
-                                    <h6 className="HotelPriceStart">From 3000 Tk/night</h6>
-                                </Col>
-                            </Row>
+                            {/*<Row className="SearchPageHotelCard w-100 mb-4">*/}
+                            {/*    <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>*/}
+                            {/*        <img className="SearchPageImage" src={hotel2} alt=""/>*/}
+                            {/*    </Col>*/}
+                            {/*    <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>*/}
+                            {/*        <Link to="/hotel-details" className="HotelSearchTitle">*/}
+                            {/*            <h5 className="HotelSearchTitle">InterContinental Dhaka*/}
+                            {/*                <span className="SearchStarText">*/}
+                            {/*            <i className="fa fa-star"> </i>*/}
+                            {/*            <i className="fa fa-star"> </i>*/}
+                            {/*            <i className="fa fa-star"> </i>*/}
+                            {/*            <i className="fa fa-star"> </i>*/}
+                            {/*            <i className="fa fa-star"> </i>*/}
+                            {/*            </span>*/}
+                            {/*            </h5>*/}
+                            {/*        </Link>*/}
+                            {/*        <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt*/}
+                            {/*            className="LocationMapFont"/> Dhaka, bangladesh</h6>*/}
+                            {/*        <ul className="list-unstyled mb-2 d-md-flex">*/}
+                            {/*            <li className="">*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">WiFi</Button>*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">Air conditioning</Button>*/}
+                            {/*            </li>*/}
+                            {/*        </ul>*/}
+                            {/*    </Col>*/}
+                            {/*    <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>*/}
+                            {/*        <div className="vl"></div>*/}
+                            {/*        <h6 className="HotelSearchReview"> 20 Review</h6>*/}
+                            {/*        <h6 className="HotelPriceStart">From 3000 Tk/night</h6>*/}
+                            {/*    </Col>*/}
+                            {/*</Row>*/}
+                            {/*<Row className="SearchPageHotelCard w-100 mb-4">*/}
+                            {/*    <Col className="pl-0" xl={4} lg={4} md={4} sm={4} xs={4}>*/}
+                            {/*        <img className="SearchPageImage" src={hotel3} alt=""/>*/}
+                            {/*    </Col>*/}
+                            {/*    <Col className="" xl={5} lg={5} md={5} sm={5} xs={5}>*/}
+                            {/*        <Link to="/hotel-details" className="HotelSearchTitle">*/}
+                            {/*            <h5 className="HotelSearchTitle">The Raintree Hotel*/}
+                            {/*                <span className="SearchStarText">*/}
+                            {/*                <i className="fa fa-star"> </i>*/}
+                            {/*                <i className="fa fa-star"> </i>*/}
+                            {/*                <i className="fa fa-star"> </i>*/}
+                            {/*                <i className="fa fa-star"> </i>*/}
+                            {/*                <i className="fa fa-star"> </i>*/}
+                            {/*                </span>*/}
+                            {/*            </h5>*/}
+                            {/*        </Link>*/}
+                            {/*        <h6 className="SearchLocationMapTitle"><FaMapMarkerAlt*/}
+                            {/*            className="LocationMapFont"/> Dhaka, bangladesh</h6>*/}
+                            {/*        <ul className="list-unstyled mb-2 d-md-flex">*/}
+                            {/*            <li className="">*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">WiFi</Button>*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">Car Parking</Button>*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">Breakfast</Button>*/}
+                            {/*                <Button className="btn mx-1 FacilitiesBtn">Swimming pool</Button>*/}
+                            {/*            </li>*/}
+                            {/*        </ul>*/}
+                            {/*    </Col>*/}
+                            {/*    <Col className="" xl={3} lg={3} md={3} sm={3} xs={3}>*/}
+                            {/*        <div className="vl"></div>*/}
+                            {/*        <h6 className="HotelSearchReview"> 20 Review</h6>*/}
+                            {/*        <h6 className="HotelPriceStart">From 3000 Tk/night</h6>*/}
+                            {/*    </Col>*/}
+                            {/*</Row>*/}
 
                         </Col>
                     </Row>

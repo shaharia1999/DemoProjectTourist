@@ -1,25 +1,55 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import TypeWriterEffect from 'react-typewriter-effect';
-import {Link} from "react-router-dom";
+import {Redirect} from "react-router-dom";
+import {toast, ToastContainer} from "react-toastify";
 
 class HomeSearch extends Component {
+    constructor() {
+        super();
+        this.state={
+            SearchKey:"",
+            SearchRedirectStatus: false,
+        }
+        this.SearchOnChange=this.SearchOnChange.bind(this);
+        this.SearchOnClick=this.SearchOnClick.bind(this);
+        this.searchRedirect=this.searchRedirect.bind(this);
+    }
+
+    SearchOnChange(event){
+        let SearchKey=  event.target.value;
+        this.setState({SearchKey:SearchKey});
+    }
+
+    SearchOnClick(){
+        if(this.state.SearchKey.length>=2){
+            this.setState({SearchRedirectStatus:true})
+        }else{
+            toast.error('Please write minimum 2 letter!', {
+                position: "top-center",
+                theme:"colored",
+                autoClose: 3000,
+            });
+        }
+    }
+
+    searchRedirect(){
+        if(this.state.SearchRedirectStatus===true){
+            return <Redirect to={"/hotel-search/"+this.state.SearchKey}/>
+        }
+    }
+
     render() {
         return (
             <Fragment>
                 <Container fluid={true} className="homeSearch">
                     <Row className="justify-content-center">
                         <Col xl={6} lg={6} md={6} sm={12} xs={12} className="text-center">
-                            {/* <div className="input-group searchTop">
-                                    <input type="text" className="formSearch-control" aria-label="Text input with segmented dropdown button"/>
-                                    <button type="button" className="btn site-btn"><i className="fa fa-search"></i></button>
-                                </div>*/}
-                            {/*   <h4 className="searchUpText justify-content-center mb-4">*/}
 
                             <div className="input-group searchUpText mb-3">
-                                <input type="text" className="form-control search-placeholder" placeholder="Search by City, Hotel or Location" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                                <input onChange={this.SearchOnChange} type="text" className="form-control search-placeholder" placeholder="Search by City, Hotel or Location" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
                                 <div className="input-group-append">
-                                  <Link to="/home-search" className="btn pt-3 search-btn" type="button">Search</Link>
+                                  <button onClick={this.SearchOnClick} className="btn pt-1 search-btn" type="button">Search</button>
                                 </div>
                             </div>
 
@@ -47,6 +77,8 @@ class HomeSearch extends Component {
                         </Col>
                     </Row>
                 </Container>
+                <ToastContainer/>
+                {this.searchRedirect()}
             </Fragment>
         );
     }
