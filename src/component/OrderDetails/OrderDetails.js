@@ -23,7 +23,6 @@ class OrderDetails extends Component {
                 this.setState({
                     OrderListData: response.data.data,isLoading: "d-none", MainDiv: " "
                 });
-                console.log('OrderListData',this.state.OrderListData);
             }
         }).catch(error => {
 

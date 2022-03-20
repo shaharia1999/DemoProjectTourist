@@ -31,16 +31,15 @@ class ApiUrl {
     static OrderList = this.BaseUrl + "booking-details/?user_id="  // Order list api call done
     static OrderDetails = this.BaseUrl + "booking-details/"  // Order list api call done
     
-    static UserCartIdCheck = this.BaseUrl + "user-cart-id-check/"; 
-    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/";
+    static UserCartIdCheck = this.BaseUrl + "user-cart-id-check/";  // Cart id check api
+    static AddToCartRoomDetails = this.BaseUrl + "add-to-cart-room/"; // Add to cart room api
+    static AllCartList = this.BaseUrl + "user-cart-details/?u_id="; // Cart List api
 
     static MyWalletEarned = this.BaseUrl + "my-earned/";  //Total Earn & Pending Api call done
     static MyReferWalletHistory = this.BaseUrl + "my-earned-history/"; // Earn & Pending Api call done
 
     static HomeSearchHotelResult = this.BaseUrl + "search-result-web/?q="; // Home Search api call done
 
-    // static SessionCreate = this.BaseUrl + "session-create/";
-    // static CartsCreate = this.BaseUrl + "carts/";
     static Contact = this.BaseUrl + "contact/";
 }
 

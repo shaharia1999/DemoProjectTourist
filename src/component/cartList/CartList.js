@@ -1,22 +1,76 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import room1 from "../../../src/asset/images/room/room1.jpg"
-import room2 from "../../../src/asset/images/room/room2.jpg"
-import room3 from "../../../src/asset/images/room/room3.jpg"
 import {ImArrowRight2} from "react-icons/all";
 import CartListPlaceholder from "../placeholder/CartListPlaceholder";
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
+import ApiUrl from "../../api/ApiURL";
 
 class CartList extends Component {
     constructor(props) {
         super(props);
         this.state={
+            user_id: sessionStorage.getItem('UserID'),
+            CartListData:[],
             isLoading:"",
             MainDiv: "d-none",
         }
     }
 
+    componentDidMount() {
+        let user_id = this.state.user_id;
+        axios.get(ApiURL.AllCartList + user_id).then((response,i) => {
+            if (response.data.error === false) {
+                this.setState({
+                    CartListData: response.data.data.cart_room_data,
+                    isLoading: "d-none", MainDiv: " "
+                });
+            }
+        }).catch(error => {
+
+        });
+    }
+
     render() {
+
+        const MyList = this.state.CartListData;
+        const MyCartListView = MyList.map((MyCartListData, i) => {
+            return  <Col className="p-2" key={i} xl={12} lg={12} md={12} sm={12} xs={12} >
+                    <Row className="RoomOnCartCard w-100">
+                        <Col xl={2} lg={2} md={2} sm={2} xs={2}>
+                            <Link to={"/roomDetails/" + MyCartListData.room_details.room_id}>
+                            <img className="PreviewImgLarge w-100"
+                                 src={ApiUrl.BaseUrl1 + MyCartListData.room_details.image_url[0].Image}
+                                 alt=""/>
+                            </Link>
+                        </Col>
+
+                        <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                            <Link to={"/roomDetails/" + MyCartListData.room_details.room_id}>
+                                <h6 className="CartListCartTitle">{MyCartListData.room_details.room_name}</h6>
+                            </Link>
+                        </Col>
+
+                        <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                            <h6 className="CartListCartTitle">{MyCartListData.check_in_date}</h6>
+                        </Col>
+                        <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                            <h6 className="CartListCartTitle">{MyCartListData.check_out_date}</h6>
+                        </Col>
+                        <Col xl={1} lg={1} md={1} sm={1} xs={1}>
+                            <h6 className="CartListCartTitle">{MyCartListData.static_week_regular_price} TK</h6>
+                        </Col>
+                        <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                            <h6 className="CartListCartTitle">{MyCartListData.total_amount} TK</h6>
+                        </Col>
+                        <Col xl={1} lg={1} md={1} sm={1} xs={1}>
+                            <Button className="btn text-danger CartDeleteBtn"><i className="fa fa-trash-alt"> </i> </Button>
+                        </Col>
+                    </Row>
+            </Col>
+        });
+
         return (
             <Fragment>
                 <CartListPlaceholder isLoading={this.state.isLoading}/>
@@ -30,14 +84,10 @@ class CartList extends Component {
                     </Row>
                     <div className="p-5">
                         <Row>
-                            <Col className="p-2" key={1} xl={12} lg={12} md={12} sm={12} xs={12} >
+                            <Col className="p-2" xl={12} lg={12} md={12} sm={12} xs={12} >
                                 <Row className="RoomOnCartCard w-100">
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
                                         <h6 className="CartListTitle">IMAGE</h6>
-                                    </Col>
-
-                                    <Col xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListTitle">ROOM NUMBER</h6>
                                     </Col>
 
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
@@ -45,102 +95,30 @@ class CartList extends Component {
                                     </Col>
 
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <h6 className="CartListTitle">CHECK IN</h6>
+                                    </Col>
+
+                                    <Col xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <h6 className="CartListTitle">CHECK OUT</h6>
+                                    </Col>
+
+                                    <Col xl={1} lg={1} md={1} sm={1} xs={1}>
                                         <h6 className="CartListTitle">PRICE</h6>
                                     </Col>
 
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListTitle">ACTION</h6>
+                                        <h6 className="CartListTitle">TOTAL PRICE</h6>
                                     </Col>
 
-                                    <Col xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListTitle">TOTAL PRICE</h6>
+                                    <Col xl={1} lg={1} md={1} sm={1} xs={1}>
+                                        <h6 className="CartListTitle">ACTION</h6>
                                     </Col>
                                 </Row>
                             </Col>
                         </Row>
 
                         <Row>
-                            <Col className="p-2" key={1} xl={12} lg={12} md={12} sm={12} xs={12} >
-                                <Row className="RoomOnCartCard w-100">
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <img className="CartRoomImage" src={room1} alt=""/>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">#12345</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">A room assigned to one person</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">9000 TK</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <Button className="btn text-danger CartDeleteBtn"><i className="fa fa-trash-alt"> </i> </Button>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">15000 TK</h6>
-                                    </Col>
-                                </Row>
-                            </Col>
-
-                            <Col className="p-2" key={1} xl={12} lg={12} md={12} sm={12} xs={12} >
-                                <Row className="RoomOnCartCard w-100">
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <img className="CartRoomImage" src={room2} alt=""/>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">#12345</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">A room assigned to one person</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">6000 TK</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <Button className="btn text-danger CartDeleteBtn"><i className="fa fa-trash-alt"> </i> </Button>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">15000 TK</h6>
-                                    </Col>
-                                </Row>
-                            </Col>
-
-                            <Col className="p-2" key={1} xl={12} lg={12} md={12} sm={12} xs={12} >
-                                <Row className="RoomOnCartCard w-100">
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <img className="CartRoomImage" src={room3} alt=""/>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">#12345</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">A room assigned to one person</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">3000 TK</h6>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <Button className="btn text-danger CartDeleteBtn"><i className="fa fa-trash-alt"> </i> </Button>
-                                    </Col>
-                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListCartTitle">15000 TK</h6>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            {/*<Col className="p-2" key={1} xl={3} lg={3} md={3} sm={4} xs={6}>
-                                <Card className="RoomOnCartCard w-100">
-                                    <img className="CartRoomImage" src={room1} alt=""/>
-                                    <Card.Body>
-                                        <h5 className="RoomNameOnCard m-0 p-0">DELUXE KING SPECIAL SUPER ROOM</h5>
-                                        <p className="RoomPriceOnCard m-0 p-0">Total Price: 3000TK</p>
-                                    </Card.Body>
-                                    <div className="input-group m-0 p-0 w-100">
-                                        <Button className="btn text-danger w-100 CartDeleteBtn"><i
-                                            className="fa fa-trash-alt"> </i> </Button>
-                                    </div>
-                                </Card>
-                            </Col>*/}
+                            {MyCartListView}
                         </Row>
 
 

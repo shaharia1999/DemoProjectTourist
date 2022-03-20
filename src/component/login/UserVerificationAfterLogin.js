@@ -64,6 +64,7 @@ class UserVerificationAfterLogin extends Component {
             let demo = document.getElementById('demo');
 
             demo.innerHTML = timeMinutes + ":" + timeSeconds;
+
             document.getElementById("Resend").style.visibility = "hidden";
 
             if (distance <= 0) {
