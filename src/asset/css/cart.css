@@ -53,6 +53,7 @@
 
 .RoomOnCartCard:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    text-decoration: none!important;
 }
 
 .PromoCartCard {
@@ -129,6 +130,27 @@
     color: #1b1e21;
     margin-top: 25px !important;
     margin-bottom: auto !important;
+    text-decoration: none!important;
+}
+
+.CartListCartTitle:hover {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1b1e21;
+    margin-top: 25px !important;
+    margin-bottom: auto !important;
+    text-decoration: none!important;
+}
+
+.CartListCartTitle:focus {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #1b1e21;
+    margin-top: 25px !important;
+    margin-bottom: auto !important;
+    text-decoration: none!important;
 }
 
 .SubTotalPriceTitle {

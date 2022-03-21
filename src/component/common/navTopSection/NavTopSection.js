@@ -15,6 +15,7 @@ class NavTopSection extends Component {
         this.state = {
             UserPhone: sessionStorage.getItem('UserPhone'),
             UserName: sessionStorage.getItem('UserName'),
+            IsActive: sessionStorage.getItem('IsActive'),
             onHomeRedirect: false,
         }
     }
@@ -23,6 +24,8 @@ class NavTopSection extends Component {
         sessionStorage.removeItem('UserPhone');
         sessionStorage.removeItem('UserID');
         sessionStorage.removeItem('AccessToken');
+        sessionStorage.removeItem('UserName');
+        sessionStorage.removeItem('IsActive');
         this.setState({HomeRedirect: true});
     }
 
@@ -90,7 +93,7 @@ class NavTopSection extends Component {
                     {this.onHomeRedirect()}
                 </Fragment>
             );
-        } else {
+        } else{
             return (
                 <Fragment>
                     <Container fluid={true} className="nav1BackgroundCard">

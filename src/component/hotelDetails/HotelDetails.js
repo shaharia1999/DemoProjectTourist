@@ -71,6 +71,7 @@ class HotelDetails extends Component {
             hotel_type_star_id: "",
             reviews: [],
             RelatedRoom: [],
+            HotelFacilitiesDetails:[],
             isLoading: "",
             MainDiv: "d-none",
         }
@@ -80,9 +81,6 @@ class HotelDetails extends Component {
     componentDidMount() {
         this.hotelTypeStarId();
         axios.get(ApiUrl.SingleHotelDetails + this.state.slug_name + '/').then(response => {
-            /*this.setState({myData:response.data.data})
-            console.log('myData',response.data.data);
-            console.log('room_name',response.data.data.room_name);*/
             if (response.data.error === false) {
                 this.setState({
                     HotelName: response.data.data.hotel_name,
@@ -98,6 +96,8 @@ class HotelDetails extends Component {
                     rating: response.data.data.reviews.rating,
 
                     RelatedRoom: response.data.data.room_details,
+                    HotelFacilitiesDetails: response.data.data.hotel_facilities_details,
+
                     isLoading: "d-none", MainDiv: " "
                 })
             } else {
@@ -308,8 +308,12 @@ class HotelDetails extends Component {
                                         <hr className="w-100"/>
                                         <div>
                                             <h6 className="RoomDetailsPrice">Facilities</h6>
-                                            <h6 className="facilityDes"> Free Wifi, AC & TV, Card Payment, CcTV Cameras,
-                                                King Sized Bed</h6>
+
+                                            {this.state.HotelFacilitiesDetails.map((myHotelFacilitiesDetails, i) => (
+                                                <h6 className="facilityDes"
+                                                    key={i}> {myHotelFacilitiesDetails.facilites_name}</h6>
+                                            ))}
+
                                         </div>
                                         <div className="col-lg-8 col-md-8 col-sm-12 col-12">
                                             <h6 className="mt-3 mb-2 RoomDetailsPrice">Map View</h6>

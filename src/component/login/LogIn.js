@@ -110,6 +110,7 @@ class LogIn extends Component {
                     sessionStorage.setItem("UserPhone",response.data.data.user_phone);
                     sessionStorage.setItem("UserName",response.data.data.user_name);
                     sessionStorage.setItem("AccessToken",response.data.access_token);
+                    sessionStorage.setItem("IsActive",response.data.data.is_active);
                     this.setState({userProfileRedirect:true});
                     LoginForm.reset();
                 }
@@ -127,6 +128,7 @@ class LogIn extends Component {
                     sessionStorage.setItem("UserPhone",response.data.data.user_phone);
                     sessionStorage.setItem("UserName",response.data.data.user_name);
                     sessionStorage.setItem("AccessToken",response.data.access_token);
+                    sessionStorage.setItem("IsActive",response.data.data.is_active);
                     this.setState({userOtpVerificationRedirect:true});
                     LoginForm.reset();
                 }
@@ -168,7 +170,7 @@ class LogIn extends Component {
                                 <Button id="LogInBtn" type="submit" className="btn SendBtnColorText btn-block">Login</Button>
                             </Form>
                             <h1 className="forgotText text-center mt-3"> <Link to="/forget-password" className="signUpText">Forgot Password</Link> </h1>
-                            <h1 className="forgotText text-center mt-5 mb-4"> Don't Have an Account ? <Link to="/sign-up" className="signUpText">SignUp</Link></h1>
+                            <h1 className="forgotText text-center mt-3 mb-4"> Don't Have an Account ? <Link to="/sign-up" className="signUpText">SignUp</Link></h1>
                         </Col>
                     </Row>
                     {this.onUserProfileRedirect()}

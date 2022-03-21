@@ -22,23 +22,27 @@ class CartListPlaceholder extends Component {
                                     </Col>
 
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListTitle">ROOM NUMBER</h6>
-                                    </Col>
-
-                                    <Col xl={2} lg={2} md={2} sm={2} xs={2}>
                                         <h6 className="CartListTitle">ROOM NAME</h6>
                                     </Col>
 
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <h6 className="CartListTitle">CHECK IN</h6>
+                                    </Col>
+
+                                    <Col xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <h6 className="CartListTitle">CHECK OUT</h6>
+                                    </Col>
+
+                                    <Col xl={1} lg={1} md={1} sm={1} xs={1}>
                                         <h6 className="CartListTitle">PRICE</h6>
                                     </Col>
 
                                     <Col xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListTitle">ACTION</h6>
+                                        <h6 className="CartListTitle">TOTAL PRICE</h6>
                                     </Col>
 
-                                    <Col xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <h6 className="CartListTitle">TOTAL PRICE</h6>
+                                    <Col xl={1} lg={1} md={1} sm={1} xs={1}>
+                                        <h6 className="CartListTitle">ACTION</h6>
                                     </Col>
                                 </Row>
                             </Col>
@@ -46,6 +50,61 @@ class CartListPlaceholder extends Component {
 
                         <Row>
                             <Col className="p-2" xl={12} lg={12} md={12} sm={12} xs={12} >
+                                <Row className="RoomOnCartCard mb-2 w-100">
+                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <img className="CartRoomImagePH" src={cardPhotoPlaceholder} alt=""/>
+                                    </Col>
+                                    <Col xl={2} lg={2} md={2} sm={6} xs={6}>
+                                        <div className="CartItemCardPH ph-item h-100 w-100">
+                                            <div className="ph-col-12">
+                                                <div className="ph-row">
+                                                    <div className="ph-col-12"/>
+                                                    <div className="ph-col-12"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <div className="CartItemCardPH ph-item h-100 w-100">
+                                            <div className="ph-col-12">
+                                                <div className="ph-row">
+                                                    <div className="ph-col-12"/>
+                                                    <div className="ph-col-12"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <div className="CartItemCardPH ph-item h-100 w-100">
+                                            <div className="ph-col-12">
+                                                <div className="ph-row">
+                                                    <div className="ph-col-12"/>
+                                                    <div className="ph-col-12"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <div className="CartItemCardPH ph-item h-100 w-100">
+                                            <div className="ph-col-12">
+                                                <div className="ph-row">
+                                                    <div className="ph-col-12"/>
+                                                    <div className="ph-col-12"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                    <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
+                                        <div className="CartItemCardPH ph-item h-100 w-100">
+                                            <div className="ph-col-12">
+                                                <div className="ph-row">
+                                                    <div className="ph-col-12"/>
+                                                    <div className="ph-col-12"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+                                </Row>
                                 <Row className="RoomOnCartCard mb-2 w-100">
                                     <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
                                         <img className="CartRoomImagePH" src={cardPhotoPlaceholder} alt=""/>

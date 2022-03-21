@@ -99,7 +99,7 @@ class OrderDetailsDescription extends Component {
                                     </div>
                                     <div className="p-4 col-xl-3 col-lg-3 col-sm-3 col-md-3">
                                <span className="text-right">
-                                    <h6 className="OrderBigAmount">৳ 14000.00</h6>
+                                    <h6 className="OrderBigAmount">৳ {my_order.total_amount}</h6>
                                </span>
                                     </div>
                                 </div>
@@ -121,9 +121,9 @@ class OrderDetailsDescription extends Component {
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-sm-3 col-md-3">
                                <span className="text-right">
-                                    <h6 className="OrderAmount mr-4">৳ 14000.00</h6>
+                                    <h6 className="OrderAmount mr-4">৳ {this.state.OrderDetailsDescriptionData.total_amount}</h6>
                                     <h6 className="OrderAmount mr-4">(-)৳ 0.00</h6>
-                                    <h6 className="OrderAmount mr-4">৳ 14000.00</h6>
+                                    <h6 className="OrderAmount mr-4">৳ {this.state.OrderDetailsDescriptionData.total_amount}</h6>
                                </span>
                                 </div>
                             </div>
