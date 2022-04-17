@@ -10,7 +10,7 @@ class WhyChoose extends Component {
             <Fragment>
                 <Container className="justify-content-center whyChooseTop">
                     <h5 className="section-title text-center">Why Choose</h5>
-                    <h6 className="sectionSubTitle text-center">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
+                    <h6 className="sectionSubTitle text-center">One-stop solution for hotel booking service</h6>
                     <Row className="pt-5">
                         <Col className="" xl={4} lg={4} md={4} sm={6} xs={6}>
                             <div className="m-2 p-3">

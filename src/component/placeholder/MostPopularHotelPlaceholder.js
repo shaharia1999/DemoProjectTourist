@@ -8,7 +8,7 @@ class MostPopularHotelPlaceholder extends Component {
             <div className={isLoading}>
                 <Container fluid={true} className="bg-light p-5">
                     <h5 className="section-title mt-4 text-center">Most Popular Hotel</h5>
-                    <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
+                    <h6 className="sectionSubTitle text-center mb-5">Find your best hotel from our Most Popular Hotel</h6>
                     <Row>
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="TwentyFourHoursCardPH ph-item h-100 w-100">
