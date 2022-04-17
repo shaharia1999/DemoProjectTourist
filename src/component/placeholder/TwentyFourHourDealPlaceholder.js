@@ -9,7 +9,7 @@ class TwentyFourHourDealPlaceholder extends Component {
             <div className={isLoading}>
                 <Container fluid={true} className="bg-light p-5">
                     <h5 className="section-title mt-4 text-center">24 Hours Deal</h5>
-                    <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different marketplaces has so many demands on IT security related work. We focus on our learners, we make a path for them to earn money and built their own career.</h6>
+                    <h6 className="sectionSubTitle text-center mb-5">This offer is for a limited time, book an instant hotel now</h6>
                     <div className="row p-0">
                         <div className="col-lg-2 col-md-2 col-sm-6 col-6">
                             <div className="TwentyFourHoursCardPH ph-item h-100 w-100">

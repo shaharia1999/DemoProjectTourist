@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import city5 from "../../../asset/images/city/city5.jpg"
 import {Container} from "react-bootstrap";
 
 class HomeBanner extends Component {

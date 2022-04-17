@@ -65,9 +65,9 @@ class HomeSearch extends Component {
                                 }}
                                 cursorColor="white"
                                 multiText={[
-                                    'HEY THERE, THIS IS A PORZOTOK WEBSITE',
-                                    'IT CONTAINS OF TWO TYPES...',
-                                    'LET’S DISCOVER BANGLADESH TOGETHER'
+                                    // 'HEY THERE, THIS IS A PORZOTOK WEBSITE',
+                                    //  'IT CONTAINS OF TWO TYPES...',
+                                     'LET’S DISCOVER BANGLADESH TOGETHER'
                                 ]}
                                 loop={true}
                                 nextTextDelay={1000}

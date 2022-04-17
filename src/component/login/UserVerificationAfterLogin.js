@@ -37,7 +37,7 @@ class UserVerificationAfterLogin extends Component {
 
 
     ResendTime=()=>{
-        var time = 300; // This is the time allowed
+        var time = 20; // This is the time allowed
         var saved_countdown = localStorage.getItem('saved_countdown');
         if(saved_countdown == null) {
             // Set the time we're counting down to using the time allowed
@@ -61,10 +61,8 @@ class UserVerificationAfterLogin extends Component {
             timeMinutes = timeMinutes < 10 ? "0" + timeMinutes : timeMinutes
             timeSeconds = timeSeconds < 10 ? "0" + timeSeconds : timeSeconds
 
-            let demo = document.getElementById('demo');
-
+            var demo = document.getElementById('demo');
             demo.innerHTML = timeMinutes + ":" + timeSeconds;
-
             document.getElementById("Resend").style.visibility = "hidden";
 
             if (distance <= 0) {
@@ -193,7 +191,7 @@ class UserVerificationAfterLogin extends Component {
                             </Form>
                             <div className="text-center">
                                 <h1 id="demo" className="forgotText text-center mb-1 mt-3"> <p className="signUpText"></p> </h1>
-                                <h6 onClick={this.ResendOnClick} className="forgotText text-white bg-white mb-1 mt-0"> <p id="Resend" className="signUpText">Resend</p> </h6>
+                                <Button onClick={this.ResendOnClick} className="forgotText text-white bg-white mb-1 mt-0"> <p id="Resend" className="signUpText">Resend</p> </Button>
                             </div>
                         </Col>
                     </Row>

@@ -1,8 +1,10 @@
 class ApiUrl {
-    static BaseUrl1 = "http://3.82.148.255";
+    //static BaseUrl1 = "http://3.82.148.255";
+    static BaseUrl1 = "https://api.porzotok.com";
 
     //API URL START
-    static BaseUrl = "http://3.82.148.255/api/";
+    //static BaseUrl = "http://3.82.148.255/api/";
+    static BaseUrl = "https://api.porzotok.com/api/";
     static Registration = this.BaseUrl + "user/";    // User Registration api done
     static UserLogin = this.BaseUrl + "user-login/";    // User Login api done
     static otpSend = this.BaseUrl + "otp-verify/";    // Otp Send api done

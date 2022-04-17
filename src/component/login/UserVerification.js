@@ -16,9 +16,22 @@ class UserVerification extends Component {
             userRedirect:false,
             UserID: sessionStorage.getItem('UserID'),
             ResendTime: sessionStorage.getItem('ResendTime'),
+            saved_countdown: localStorage.getItem('saved_countdown'),
+            Resend: false,
+            demo: true,
         }
         this.onUserRedirect=this.onUserRedirect.bind(this);
     }
+
+    // TimeDistanceOnChange=()=>{
+    //     if(this.state.saved_countdown===true){
+    //         return(
+    //             <div>
+    //
+    //             </div>
+    //         )
+    //     }
+    // }
 
     OtpOnChange=(event)=>{
         let OtpCode=event.target.value;
@@ -213,8 +226,15 @@ class UserVerification extends Component {
                                 <Button id="OtpBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Verify</Button>
                             </Form>
                             <div className="text-center">
+
+                                {/*<h1 id="demo" className="forgotText text-center mb-1 mt-3"> <p className="signUpText">{this.state.minutes}:{this.state.seconds}</p> </h1>*/}
+                                {/*<h6 onClick={this.ResendOnClick} className="forgotText btn text-white bg-white mb-1 mt-0"> <p id="Resend" className="signUpText">Resend</p> </h6>*/}
+
+
                                 <h1 id="demo" className="forgotText text-center mb-1 mt-3"> <p className="signUpText">{this.state.minutes}:{this.state.seconds}</p> </h1>
                                 <h6 onClick={this.ResendOnClick} className="forgotText btn text-white bg-white mb-1 mt-0"> <p id="Resend" className="signUpText">Resend</p> </h6>
+
+
                             </div>
                         </Col>
                     </Row>

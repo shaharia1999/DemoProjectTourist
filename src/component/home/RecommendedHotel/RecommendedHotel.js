@@ -187,9 +187,7 @@ class RecommendedHotel extends Component {
                         <h6 className="section-title text-center">Recommended Hotel<Link to="/all-recommended-hotels"
                                                                                           className="btn SeeMore">See
                             More</Link></h6>
-                        <h6 className="sectionSubTitle text-center mb-5">Our dream is to make Cyber heroes. Different
-                            marketplaces has so many demands on IT security related work. We focus on our learners, we
-                            make a path for them to earn money and built their own career.</h6>
+                        <h6 className="sectionSubTitle text-center mb-5">Porzotok, 1st ever complete online hotel reservation system in Bangladesh.</h6>
                         <Slider ref={c => (this.slider = c)} {...settings}>
                             {myView}
                         </Slider>

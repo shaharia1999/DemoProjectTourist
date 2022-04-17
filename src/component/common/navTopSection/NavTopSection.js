@@ -44,11 +44,10 @@ class NavTopSection extends Component {
                             <Col xl={6} lg={6} md={6} sm={12} xs={12}>
                                 <ul className="list-unstyled">
                                     <li className="mt-2"><a className="nav1Text"> <BsFillPhoneVibrateFill/> Call us:
-                                        +880
-                                        1779224640</a><a className="nav1Text ml-4"><MdEmail/> Email:
+                                        +880 1886663989</a><a className="nav1Text ml-4"><MdEmail/> Email:
                                         info@porzotok.com</a>
-                                        <Link to="/helpCenter" className="nav1Text mt-2">HelpLine</Link>
-                                        <Link to="/support" className="nav1Text mt-2">Support</Link>
+                                        {/*<Link to="/helpCenter" className="nav1Text mt-2">HelpLine</Link>*/}
+                                        {/*<Link to="/support" className="nav1Text mt-2">Support</Link>*/}
                                     </li>
                                 </ul>
                             </Col>
