@@ -1,11 +1,17 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {ImArrowRight2} from "react-icons/all";
+import {ImArrowRight2} from "react-icons/im";
 import CartListPlaceholder from "../placeholder/CartListPlaceholder";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
 import ApiUrl from "../../api/ApiURL";
+import img1 from '../../asset/images/h1.jpg'
+import img2 from '../../asset/images/h2.jpg'
+import img3 from '../../asset/images/h3.jpg'
+import img4 from '../../asset/images/h4.webp'
+import img5 from '../../asset/images//h5.jpg'
+import img6 from '../../asset/images/h6.jpg'
 
 class CartList extends Component {
     constructor(props) {
@@ -79,7 +85,11 @@ class CartList extends Component {
                 <Container className="TopSection pb-5 text-center shadow-sm bg-white">
                     <Row className="p-2 bg-light text-center">
                         <Col className="p-3" key={1} xl={12} lg={12} md={12} sm={12} xs={12}>
-                            <h5 className="RoomCartListTitle"> ROOM CART LIST</h5>
+                        <div class="py-2 text-center bg-light w-100 bodyCard ">
+                                <h1 class="mb-3 w-100">ROOM CART LIST</h1>
+                            
+                        </div>
+                            {/* <h5 className="RoomCartListTitle"> </h5> */}
                         </Col>
                     </Row>
                     <div className="p-5">

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
-import {IoMdPin} from "react-icons/all";
+import {IoMdPin} from "react-icons/io";
 import {FaStar} from "react-icons/fa";
 import {Image} from "react-bootstrap";
 import ApiURL from "../../api/ApiURL";

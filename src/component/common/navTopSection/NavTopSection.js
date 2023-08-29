@@ -5,7 +5,12 @@ import instagram from "../../../asset/images/instagram.svg";
 import twitter from "../../../asset/images/twitter.svg";
 import youtube from "../../../asset/images/youtube.svg";
 import {FaUser, FaCartPlus} from "react-icons/fa";
-import {BsFillPhoneVibrateFill, MdEmail, MdLogout, FaList, VscKey, GiWallet} from "react-icons/all";
+import {BsFillPhoneVibrateFill} from "react-icons/bs";
+import { FaList} from "react-icons/fa";
+import { MdEmail} from "react-icons/md";
+import { MdLogout} from "react-icons/md";
+// import {VscKey} from "react-icons/vs";
+import { GiWallet} from "react-icons/gi";
 import porzotok from "../../../asset/images/Porzotok.png";
 import {Link, Redirect} from "react-router-dom";
 
@@ -156,7 +161,8 @@ class NavTopSection extends Component {
                                             <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
                                                                  to="/refer-rewards"><GiWallet/> REFER REWARDS</Link></Dropdown.Item>
                                             <Dropdown.Item><Link className="my-2 mx-2 navDropdownProfileText"
-                                                                 to="/change-password"><VscKey/> CHANGE PASSWORD</Link></Dropdown.Item>
+                                                                //  to="/change-password"><VscKey/> CHANGE PASSWORD</Link></Dropdown.Item>
+                                                                 to="/change-password">CHANGE PASSWORD</Link></Dropdown.Item>
                                             <Dropdown.Item><Link onClick={this.onLogout}
                                                                  className="my-2 mx-2 navDropdownProfileText"
                                                                  to="/"><MdLogout/> LOGOUT</Link></Dropdown.Item>

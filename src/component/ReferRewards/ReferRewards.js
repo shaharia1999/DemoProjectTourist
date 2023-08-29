@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {
     BsArrowRightCircle,
-} from "react-icons/all";
+} from "react-icons/bs";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";

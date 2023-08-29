@@ -1,12 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import {FaStar} from "react-icons/fa";
-import {IoMdPin} from "react-icons/all";
+import {IoMdPin} from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-import ApiURL from "../../../api/ApiURL";
+// import ApiURL from "../../../api/ApiURL";
 import {Container} from "react-bootstrap";
 import MostPopularHotelPlaceholder from "../../placeholder/MostPopularHotelPlaceholder";
 
@@ -69,11 +69,11 @@ class MostPopularHotel extends Component {
     }
 
     componentDidMount() {
-        axios.get(ApiURL.AllHotel).then(response => {
-            if (response.data.error === false) {
-                this.setState({myData: response.data.data, isLoading: "d-none", MainDiv: " "});
-            }
-        }).catch();
+        // axios.get(ApiURL.AllHotel).then(response => {
+        //     if (response.data.error === false) {
+        //         this.setState({myData: response.data.data, isLoading: "d-none", MainDiv: " "});
+        //     }
+        // }).catch();
     }
 
     render() {
@@ -141,7 +141,7 @@ class MostPopularHotel extends Component {
             return <div className="row h-100 mt-2 mb-2 p-2" key={i}>
                 <Link to={"/hotel-details/" + myHotel.slug_name}
                       className="TwentyFourHoursCard card TwentyFourHoursAnimation">
-                    <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt=""/>
+                    {/* <img className="mostPopularHotelImage" src={ApiURL.BaseUrl1 + myHotel.image_url[0].Image} alt=""/> */}
                     <div className="mostPopularHotelBoxCard">
                         <h6 className="mostPopularHotelTitle"><IoMdPin
                             className="TwentyFourHoursLocationIcon"/> {myHotel.city.city_name} , {myHotel.city.state.country.country_name}

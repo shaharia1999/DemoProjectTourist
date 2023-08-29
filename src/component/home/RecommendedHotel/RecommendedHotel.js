@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Link} from "react-router-dom";
 import {FaStar} from "react-icons/fa";
-import {IoMdPin} from "react-icons/all";
+import {IoMdPin} from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

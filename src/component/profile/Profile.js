@@ -3,14 +3,14 @@ import {Col, Container, Row} from "react-bootstrap";
 import img1 from "../../asset/images/img1.png";
 import {
     BiIdCard,
-    FaUserFriends,
-    GiModernCity,
-    GoCalendar,
-    GoDeviceMobile,
-    HiOutlineMail,
-    IoLocationOutline
-} from "react-icons/all";
-import {FaUser} from "react-icons/fa";
+
+} from "react-icons/bi";
+import {   GiModernCity} from "react-icons/gi";
+import { GoCalendar,    GoDeviceMobile,} from "react-icons/go";
+import {   HiOutlineMail} from "react-icons/hi";
+import {    IoLocationOutline} from "react-icons/io5";
+
+import {FaUser,  FaUserFriends} from "react-icons/fa";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";

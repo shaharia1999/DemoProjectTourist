@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import cardPhotoPlaceholder from "../../asset/images/cardPhotoPlaceholder.svg";
+import img1 from '../../asset/images/h1.jpg'
+import img2 from '../../asset/images/h2.jpg'
+import img3 from '../../asset/images/h3.jpg'
+import img4 from '../../asset/images/h4.webp'
+import img5 from '../../asset/images//h5.jpg'
+import img6 from '../../asset/images/h6.jpg'
 
 class CartListPlaceholder extends Component {
     render() {
@@ -10,7 +16,10 @@ class CartListPlaceholder extends Component {
                 <Container className="TopSection pb-5 text-center shadow-sm bg-white">
                     <Row className="p-2 bg-light text-center">
                         <Col className="p-3" key={1} xl={12} lg={12} md={12} sm={12} xs={12}>
-                            <h5 className="RoomCartListTitle"> ROOM CART LIST</h5>
+                        <div class="py-2 text-center bg-light w-100 bodyCard ">
+                                <h1 class="mb-3 w-100">ROOM CART LIST</h1>
+                            
+                        </div>
                         </Col>
                     </Row>
                     <div className="p-5">
@@ -52,14 +61,13 @@ class CartListPlaceholder extends Component {
                             <Col className="p-2" xl={12} lg={12} md={12} sm={12} xs={12} >
                                 <Row className="RoomOnCartCard mb-2 w-100">
                                     <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <img className="CartRoomImagePH" src={cardPhotoPlaceholder} alt=""/>
+                                        <img className="CartRoomImagePH" src={img1} alt=""/>
                                     </Col>
                                     <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                    <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,8 +76,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,8 +85,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,8 +94,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,8 +103,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -107,14 +111,13 @@ class CartListPlaceholder extends Component {
                                 </Row>
                                 <Row className="RoomOnCartCard mb-2 w-100">
                                     <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <img className="CartRoomImagePH" src={cardPhotoPlaceholder} alt=""/>
+                                        <img className="CartRoomImagePH" src={img2} alt=""/>
                                     </Col>
                                     <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -123,8 +126,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,8 +135,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -143,8 +144,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -153,8 +153,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,14 +161,13 @@ class CartListPlaceholder extends Component {
                                 </Row>
                                 <Row className="RoomOnCartCard mb-2 w-100">
                                     <Col className="" xl={2} lg={2} md={2} sm={2} xs={2}>
-                                        <img className="CartRoomImagePH" src={cardPhotoPlaceholder} alt=""/>
+                                        <img className="CartRoomImagePH" src={img3} alt=""/>
                                     </Col>
                                     <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -178,8 +176,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,8 +185,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,8 +194,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -208,8 +203,7 @@ class CartListPlaceholder extends Component {
                                         <div className="CartItemCardPH ph-item h-100 w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -228,8 +222,7 @@ class CartListPlaceholder extends Component {
                                         <div className="ph-item CartSmallItemCardPH w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -247,8 +240,7 @@ class CartListPlaceholder extends Component {
                                         <div className="ph-item CartSmallItemCardPH w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p>Development</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -266,8 +258,7 @@ class CartListPlaceholder extends Component {
                                         <div className="ph-item CartSmallItemCardPH w-100">
                                             <div className="ph-col-12">
                                                 <div className="ph-row">
-                                                    <div className="ph-col-12"/>
-                                                    <div className="ph-col-12"/>
+                                                     <p className='text-right'>$50000</p>
                                                 </div>
                                             </div>
                                         </div>

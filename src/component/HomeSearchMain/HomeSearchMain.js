@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Container, Row, Col, Button, Collapse, Form} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {FaMapMarkerAlt} from "react-icons/all";
+import {FaMapMarkerAlt} from "react-icons/fa";
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 

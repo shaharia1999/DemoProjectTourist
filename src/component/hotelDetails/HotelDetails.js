@@ -1,11 +1,11 @@
 import React, {Component, Fragment} from 'react';
-import {FaMapMarkerAlt, IoMdPin} from "react-icons/all";
+import { IoMdPin} from "react-icons/io";
 import Slider from "react-slick";
 import ApiURL from "../../api/ApiURL";
 import axios from "axios";
 import ApiUrl from "../../api/ApiURL";
 import {Link} from "react-router-dom";
-import {FaHotel, FaStar} from "react-icons/fa";
+import {FaHotel, FaStar,FaMapMarkerAlt,} from "react-icons/fa";
 import HotelDetailsPlaceholder from "../placeholder/HotelDetailsPlaceholder";
 
 function SampleNextArrow(props) {

@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import ApiURL from "../../../api/ApiURL";
 import {FaHotel} from "react-icons/fa";
-import {IoMdPin} from "react-icons/all";
+import {IoMdPin} from "react-icons/io";
 import {Container} from "react-bootstrap";
 import TwentyFourHourDealPlaceholder from "../../placeholder/TwentyFourHourDealPlaceholder";
 
