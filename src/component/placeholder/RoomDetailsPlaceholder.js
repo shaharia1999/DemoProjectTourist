@@ -4,7 +4,7 @@ import img2 from '../../asset/images/c0.png'
 import img3 from '../../asset/images/c8.jpg'
 import img4 from '../../asset/images/c2.jpg'
 import img5 from '../../asset/images//c6.jpg'
-import img6 from '../../asset/images/c4.webp'
+import img6 from '../../asset/images/travel.jpg'
 import img7 from '../../asset/images/c5.jpg'
 import {Link, Redirect} from "react-router-dom";
 import { AiFillEye } from 'react-icons/ai';

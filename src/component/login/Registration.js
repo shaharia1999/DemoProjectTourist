@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Button, Col, Container, Form, Row} from "react-bootstrap";
+import {Button, Col, Container, Form, Modal, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,6 +18,16 @@ class Registration extends Component {
             confirm_password:"",
             refer_code:"",
             userRedirect: false,
+            FaqModal1:false,
+            FaqModal2:false,
+            FaqModal3:false,
+            open: true,
+            open1: true,
+            open2: true,
+            CountryData: [],
+            StateData: [],
+            CityData:[],
+            StateByCity:''
         };
         this.onUserRedirect=this.onUserRedirect.bind(this);
     }
@@ -29,7 +39,29 @@ class Registration extends Component {
             )
         }
     }
+    handleClose1=()=>{
+        this.setState({ FaqModal1:false})
+        
+    }
 
+    handleOpen1=()=>{
+        this.setState({ FaqModal1:true})
+        console.log('data');
+    }
+
+    handleClose2=()=>{
+        this.setState({ FaqModal2:false})
+    }
+    handleOpen2=()=>{
+        this.setState({ FaqModal2:true})
+    }
+
+    handleClose3=()=>{
+        this.setState({ FaqModal3:false})
+    }
+    handleOpen3=()=>{
+        this.setState({ FaqModal3:true})
+    }
     user_nameOnChange=(event)=>{
         let user_name=event.target.value;
         this.setState(({user_name:user_name}))
@@ -195,7 +227,8 @@ class Registration extends Component {
                                 <div className="form-group">
                                     <input onChange={this.refer_codeOnChange} type="text" className="form-control placeholder-text" placeholder="Enter Refer Code"/>
                                 </div>
-                                <Button id="RegistrationBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Registration</Button>
+                                {/* <Button id="RegistrationBtn" type="submit" className="btn SendBtnColorText mb-5 btn-block">Registration</Button> */}
+                                <Button id="RegistrationBtn" type="" onClick={this.handleOpen1} className="btn SendBtnColorText mb-5 btn-block cursor-pointer">Registration</Button>
                             </Form>
                         </Col>
                         <Col xl={1} lg={1} md={1} sm={12} xs={12}>
@@ -204,6 +237,20 @@ class Registration extends Component {
                     </Row>
                 </Container>
                 {this.onUserRedirect()}
+                <Modal size="lg" show={this.state.FaqModal1} aria-labelledby="contained-modal-title-vcenter" onHide={this.handleClose1}>
+                        <Modal.Header closeButton>
+                            <h6> </h6>
+                        </Modal.Header>
+                        <Modal.Body className="p-3">
+                            <p className="notificationQuestion">Sorry Sir         !!!!!!!! </p>
+                            <p className="notificationDes text-justify">HEY THERE, THIS IS ONLY FOR  VISIONAL WEBSITE</p>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button className="notificationModalBtn btn-sm" variant="danger" onClick={this.handleClose1}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 <ToastContainer/>
             </Fragment>
         );

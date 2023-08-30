@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {Button, Col, Container, Form, Row} from "react-bootstrap";
+import {Button, Col, Container, Form, Modal, Row} from "react-bootstrap";
 import Porzotok from "../../asset/images/Porzotok.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,6 +15,16 @@ class LogIn extends Component {
             user_password:"",
             userProfileRedirect:false,
             userOtpVerificationRedirect:false,
+            FaqModal1:false,
+            FaqModal2:false,
+            FaqModal3:false,
+            open: true,
+            open1: true,
+            open2: true,
+            CountryData: [],
+            StateData: [],
+            CityData:[],
+            StateByCity:''
         };
     }
 
@@ -26,7 +36,29 @@ class LogIn extends Component {
             )
         }
     }
+    handleClose1=()=>{
+        this.setState({ FaqModal1:false})
+        
+    }
 
+    handleOpen1=()=>{
+        this.setState({ FaqModal1:true})
+        console.log('data');
+    }
+
+    handleClose2=()=>{
+        this.setState({ FaqModal2:false})
+    }
+    handleOpen2=()=>{
+        this.setState({ FaqModal2:true})
+    }
+
+    handleClose3=()=>{
+        this.setState({ FaqModal3:false})
+    }
+    handleOpen3=()=>{
+        this.setState({ FaqModal3:true})
+    }
     onUserOtpVerificationRedirect(){
         if(this.state.userOtpVerificationRedirect===true){
             return(
@@ -167,7 +199,8 @@ class LogIn extends Component {
                                 <div className="form-group">
                                     <input type={this.state.type} onChange={this.passwordLoginOnChange} type="password" className="form-control placeholder-text inputPassword" placeholder="Enter Password"/>
                                 </div>
-                                <Button id="LogInBtn" type="submit" className="btn SendBtnColorText btn-block">Login</Button>
+                                {/* <Button id="LogInBtn" type="submit" className="btn SendBtnColorText btn-block">Login</Button> */}
+                                <Button id="LogInBtn" onClick={this.handleOpen1}  className="btn SendBtnColorText btn-block  cursor-pointer">Login</Button>
                             </Form>
                             <h1 className="forgotText text-center mt-3"> <Link to="/forget-password" className="signUpText">Forgot Password</Link> </h1>
                             <h1 className="forgotText text-center mt-3 mb-4"> Don't Have an Account ? <Link to="/sign-up" className="signUpText">SignUp</Link></h1>
@@ -175,8 +208,25 @@ class LogIn extends Component {
                     </Row>
                     {this.onUserProfileRedirect()}
                     {this.onUserOtpVerificationRedirect()}
+                
+
                 </Container>
+                <Modal size="lg" show={this.state.FaqModal1} aria-labelledby="contained-modal-title-vcenter" onHide={this.handleClose1}>
+                        <Modal.Header closeButton>
+                            <h6> </h6>
+                        </Modal.Header>
+                        <Modal.Body className="p-3">
+                            <p className="notificationQuestion">Sorry Sir       !!!!!!!! </p>
+                            <p className="notificationDes text-justify">HEY THERE, THIS IS ONLY FOR  VISIONAL WEBSITE</p>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button className="notificationModalBtn btn-sm" variant="danger" onClick={this.handleClose1}>
+                                Close
+                            </Button>
+                        </Modal.Footer>
+                    </Modal>
                 <ToastContainer/>
+                
             </Fragment>
         );
     }

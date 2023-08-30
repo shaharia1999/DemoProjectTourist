@@ -19,7 +19,7 @@ class RoomBooking extends Component {
             CountryData: [],
             StateData: [],
             CityData:[],
-            StateByCity:'',
+            StateByCity:''
         }
     }
 
