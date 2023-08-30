@@ -28,7 +28,8 @@ class TwentyFourHourDealPlaceholder extends Component {
                                         <p>
                                         Browse properties offering long-term stays, many at reduced monthly rates.
                                         </p>
-                                    <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                        <Link to='all-twenty-four-hotels' className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore</Button></Link>
+                                  
                                
                                     </Card.Body>
                                 </div>
@@ -38,12 +39,12 @@ class TwentyFourHourDealPlaceholder extends Component {
                             <div className="TwentyFourHoursCardPH ph-item h-100 w-100">
                                 <img className="w-100" src={img2} alt=""/>
                                 <div className="ph-col-12">
-                                      <Card.Body className='p-0 m-0 bodyCard'>
+                                      <Card.Body className="p-0 m-0 bodyCard">
                                         <h4>Holiday Inn Express</h4>
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                 <Link to='all-twenty-four-hotels' className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore</Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -57,7 +58,7 @@ class TwentyFourHourDealPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                 <Link to='all-twenty-four-hotels' className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore</Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -71,7 +72,7 @@ class TwentyFourHourDealPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                 <Link to='all-twenty-four-hotels' className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore</Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -85,7 +86,7 @@ class TwentyFourHourDealPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                 <Link to='all-twenty-four-hotels' className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore</Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -99,7 +100,7 @@ class TwentyFourHourDealPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                 <Link to='all-twenty-four-hotels' className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore</Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>

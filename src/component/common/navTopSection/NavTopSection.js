@@ -83,7 +83,7 @@ class NavTopSection extends Component {
                                 <Nav className="ml-auto mr-5">
                                     <Link className="navItem mx-2 my-3 nav-font"
                                           to="/">HOTEL</Link>
-                                    <Link to="/" className="btn my-2"><i className="fa h4 fa-heart"> </i> <sup><span
+                                    <Link to="/all-recommended-hotels" className="btn my-2"><i className="fa h4 fa-heart"> </i> <sup><span
                                         className="badge text-white bg-danger">3</span></sup></Link>
                                     <Link to="/notification" className="btn badgeBtn my-2"><i
                                         className="fa h4 fa-bell"> </i> <sup><span

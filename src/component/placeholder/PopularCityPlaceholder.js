@@ -7,6 +7,7 @@ import img4 from '../../asset/images/d3.jpg'
 import img5 from '../../asset/images/d4.jpg'
 import img6 from '../../asset/images/d5.jpg'
 import img7 from '../../asset/images/d6.jpg'
+import {Link, Redirect} from "react-router-dom";
 class PopularCityPlaceholder extends Component {
     render() {
         // let isLoading=this.props.isLoading;
@@ -18,7 +19,7 @@ class PopularCityPlaceholder extends Component {
                     <Row className="p-0">
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="PopularCityCardPH ph-item h-100 w-100">
-                                <img className="w-100 h-100" src={img6} alt=""/>
+                            <Link to='/hotel-per-city/:city_id/:city_name'> <img className="w-100 h-100" src={img6} alt=""/></Link>
                                {/* <div className="ph-col-12">
                                     <div className="ph-row">
                                         <div className="ph-col-12"/>
@@ -30,27 +31,28 @@ class PopularCityPlaceholder extends Component {
                         </Col>
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="PopularCityCardPH ph-item h-100 w-100">
-                                <img className="w-100 h-100" src={img2} alt=""/>
+                            <Link to='/hotel-per-city/:city_id/:city_name'> <img className="w-100 h-100" src={img2} alt=""/></Link>
                             </div>
                         </Col>
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="PopularCityCardPH ph-item h-100 w-100">
-                                <img className="w-100 h-100" src={img3} alt=""/>
+                                <Link to='/hotel-per-city/:city_id/:city_name'> <img className="w-100 h-100" src={img4} alt=""/></Link>
+                               
                             </div>
                         </Col>
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="PopularCityCardPH ph-item h-100 w-100">
-                                <img className="w-100 h-100" src={img4} alt=""/>
+                           <Link to='/hotel-per-city/:city_id/:city_name'> <img className="w-100 h-100" src={img5} alt=""/></Link>
                             </div>
                         </Col>
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="PopularCityCardPH ph-item h-100 w-100">
-                                <img className="w-100 h-100" src={img5} alt=""/>
+                       <Link to='/hotel-per-city/:city_id/:city_name'> <img className="w-100 h-100" src={img6} alt=""/></Link>
                             </div>
                         </Col>
                         <Col xl={2} lg={2} md={2} sm={6} xs={6}>
                             <div className="PopularCityCardPH ph-item h-100 w-100">
-                                <img className="w-100 h-100" src={img7} alt=""/>
+                                 <Link to='/hotel-per-city/:city_id/:city_name'> <img className="w-100 h-100" src={img7} alt=""/></Link>
                             </div>
                         </Col>
                     </Row>

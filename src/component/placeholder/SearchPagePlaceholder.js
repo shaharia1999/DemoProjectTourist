@@ -12,10 +12,10 @@ class SearchPagePlaceholder extends Component {
  
     render()
      {
-        let isLoading = this.props.isLoading;
-       
+        // let isLoading = this.props.isLoading;
+   
         return (
-            <div className={isLoading}>
+            // <div className={isLoading}>
                 <Container className="">
                     <Row className="justify-content-center mb-4 mt-2">
                         {/* <Col xl={8} lg={8} md={8} sm={8} xs={8} className="input-group searchUpText mb-3">
@@ -262,7 +262,7 @@ class SearchPagePlaceholder extends Component {
                         </Col>
                     </Row>
                 </Container>
-            </div>
+            // </div>
         );
     }
 }

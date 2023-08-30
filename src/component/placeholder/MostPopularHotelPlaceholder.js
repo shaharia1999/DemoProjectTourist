@@ -29,7 +29,7 @@ class MostPopularHotelPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                        <Button className='bg-white rounded-pill'>Explore</Button>
+                                        <Link to="/all-most-popular-hotels" className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore </Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ class MostPopularHotelPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                  <Link to="/all-most-popular-hotels" className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore </Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ class MostPopularHotelPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                  <Link to="/all-most-popular-hotels" className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore </Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -71,7 +71,9 @@ class MostPopularHotelPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                               
+                                 <Link to="/all-most-popular-hotels" className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore </Button></Link>
+
                                     </Card.Body>
                                 </div>
                             </div>
@@ -85,7 +87,7 @@ class MostPopularHotelPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                  <Link to="/all-most-popular-hotels" className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore </Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>
@@ -99,7 +101,7 @@ class MostPopularHotelPlaceholder extends Component {
                                         <p>
                                         Some quick example text to build on the card .
                                         </p>
-                                 <Button className='bg-white rounded-pill'><Link to='/hotel-search/dhaka' className='text-decoration-none text-white'>Explore</Link></Button>
+                                  <Link to="/all-most-popular-hotels" className='text-decoration-none text-white'><Button className='bg-white rounded-pill'>Explore </Button></Link>
                                     </Card.Body>
                                 </div>
                             </div>

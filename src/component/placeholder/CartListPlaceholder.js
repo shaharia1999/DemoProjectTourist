@@ -213,7 +213,7 @@ class CartListPlaceholder extends Component {
                         </Row>
 
 
-                        <Row>
+                        {/* <Row>
                             <Col className="" xl={8} lg={8} md={8} sm={8} xs={8} >
                             </Col>
                             <Col className="" xl={4} lg={4} md={4} sm={4} xs={4} >
@@ -229,9 +229,9 @@ class CartListPlaceholder extends Component {
                                     </Col>
                                 </Row>
                             </Col>
-                        </Row>
+                        </Row> */}
 
-                        <Row>
+                        {/* <Row>
                             <Col className="" xl={6} lg={6} md={6} sm={6} xs={6} >
                             </Col>
                             <Col className="" xl={6} lg={6} md={6} sm={6} xs={6} >
@@ -247,9 +247,9 @@ class CartListPlaceholder extends Component {
                                     </Col>
                                 </Row>
                             </Col>
-                        </Row>
+                        </Row> */}
 
-                        <Row>
+                        {/* <Row>
                             <Col className="" xl={8} lg={8} md={8} sm={8} xs={8} >
                             </Col>
                             <Col className="" xl={4} lg={4} md={4} sm={4} xs={4} >
@@ -265,7 +265,7 @@ class CartListPlaceholder extends Component {
                                     </Col>
                                 </Row>
                             </Col>
-                        </Row>
+                        </Row> */}
                     </div>
                 </Container>
             </div>

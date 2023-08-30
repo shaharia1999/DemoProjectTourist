@@ -116,11 +116,12 @@
 .CartListTitle {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     color: #1b1e21;
     margin-top: auto !important;
     margin-bottom: auto !important;
     padding: 5px;
+
 }
 
 .CartListCartTitle {
