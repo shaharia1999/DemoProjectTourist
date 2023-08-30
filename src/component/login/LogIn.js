@@ -216,7 +216,7 @@ class LogIn extends Component {
                             <h6> </h6>
                         </Modal.Header>
                         <Modal.Body className="p-3">
-                            <p className="notificationQuestion">Sorry Sir       !!!!!!!! </p>
+                            <p className="notificationQuestion">Sorry Sir       !!!!!!!! !</p>
                             <p className="notificationDes text-justify">HEY THERE, THIS IS ONLY FOR  VISIONAL WEBSITE</p>
                         </Modal.Body>
                         <Modal.Footer>
